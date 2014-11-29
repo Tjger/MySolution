@@ -5,9 +5,6 @@ Imports System
 Imports Common
 
 Public Class clsEmail
-
-
-
     Public Shared Function SendEmail(ByVal sEmailSubject As String, ByVal EmailAddress As String, ByVal sBodyMes As String, Optional ByRef sErrMsg As String = "") As Boolean
         Dim eMail As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage
         Dim IsBodyHTML As Boolean = False
