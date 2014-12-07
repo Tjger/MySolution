@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class Home
+Partial Public Class index
 End Class

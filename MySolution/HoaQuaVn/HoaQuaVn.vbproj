@@ -429,7 +429,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="MasterPage\Home.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -595,7 +594,6 @@
     <Content Include="MasterPage\BackEnd\images\themeforest.png" />
     <Content Include="MasterPage\BackEnd\images\uploadfile.png" />
     <Content Include="MasterPage\BackEnd\images\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\index.html" />
     <Content Include="MasterPage\BackEnd\js\bootstrap-timepicker.min.js" />
     <Content Include="MasterPage\BackEnd\js\bootstrap-wizard.min.js" />
     <Content Include="MasterPage\BackEnd\js\bootstrap-wysihtml5.js" />
@@ -648,6 +646,8 @@
     <Content Include="MasterPage\BackEnd\js\select2.min.js" />
     <Content Include="MasterPage\BackEnd\js\toggles.min.js" />
     <Content Include="MasterPage\BackEnd\js\wysihtml5-0.3.0.min.js" />
+    <Content Include="MasterPage\ProductManager.aspx" />
+    <Content Include="MasterPage\Admin.aspx" />
     <Content Include="packages.config" />
     <Content Include="Admin\fonts\fontawesome-webfont862f.eot" />
     <Content Include="Admin\fonts\fontawesome-webfont862f.ttf" />
@@ -661,7 +661,6 @@
     <Content Include="Admin\fonts\weathericons-regular-webfont.ttf" />
     <Content Include="Admin\fonts\weathericons-regular-webfont.woff" />
     <Content Include="Admin\fonts\weathericons-regular-webfontd41d.eot" />
-    <Content Include="MasterPage\BackEnd\Admin.Master" />
     <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.eot" />
     <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.ttf" />
     <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.woff" />
@@ -674,6 +673,7 @@
     <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.ttf" />
     <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.woff" />
     <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="MasterPage\BackEnd\AdminPage.Master" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -753,19 +753,26 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\Home.aspx.designer.vb">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="MasterPage\BackEnd\AdminPage.Master.designer.vb">
+      <DependentUpon>AdminPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\Home.aspx.vb">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="MasterPage\BackEnd\AdminPage.Master.vb">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\ProductManager.aspx.designer.vb">
+      <DependentUpon>ProductManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\ProductManager.aspx.vb">
+      <DependentUpon>ProductManager.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\Admin.Master.designer.vb">
-      <DependentUpon>Admin.Master</DependentUpon>
+    <Compile Include="MasterPage\Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\Admin.Master.vb">
-      <DependentUpon>Admin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="MasterPage\Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

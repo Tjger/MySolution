@@ -1,15 +1,14 @@
-﻿Imports System.Diagnostics
+﻿Imports Common
 Imports System.Reflection
 Imports Common.Var
 Imports System.IO
 Imports System.Windows.Forms
 Imports System.Text
 Imports System.Security.Cryptography
-Imports System.Collections.Generic
+
 Imports System.Text.RegularExpressions
 Imports System.IO.Ports
 
-Imports System.Drawing
 Imports System
 Imports System.Runtime.InteropServices
 
@@ -30,17 +29,12 @@ Public Class Core
 
 #Region "Log"
 
-
     Public Shared Function WhoCalledMe() As String
         Dim st As StackTrace = New StackTrace()
         Dim sf As StackFrame = st.GetFrame(1)
         Dim mb As MethodBase = sf.GetMethod()
         Return mb.Name
     End Function
-
-
-
-
 
 #End Region
 
@@ -234,70 +228,8 @@ Public Class Core
         End Try
     End Function
 
-
 #End Region
 
-#Region "Calculation"
-
-    Public Shared Function GetAge(ByVal Date1 As Date, ByVal Date2 As Date) As Integer
-        Dim nYear, nMonth, nDay As Integer
-        Dim d1, d2 As Date
-        Dim nMaxDay As Integer
-        Try
-            nYear = DateDiff(DateInterval.Year, Date1, Date2)
-
-            nMaxDay = Date.DaysInMonth(Date1.Year, Date1.Month)
-            If Date1.Day > nMaxDay Then
-                d1 = New Date(Date1.Year, Date1.Month, nMaxDay)
-            Else
-                d1 = New Date(Date1.Year, Date1.Month, Date1.Day)
-            End If
-
-            nMaxDay = Date.DaysInMonth(Date1.Year, Date2.Month)
-            If Date1.Day > nMaxDay Then
-                d2 = New Date(Date1.Year, Date2.Month, nMaxDay)
-            Else
-                d2 = New Date(Date1.Year, Date2.Month, Date1.Day)
-            End If
-
-            nMonth = DateDiff(DateInterval.Month, d1, d2)
-
-            nMaxDay = Date.DaysInMonth(Date1.Year, Date1.Month)
-            If Date1.Day > nMaxDay Then
-                d1 = New Date(Date1.Year, Date1.Month, nMaxDay)
-            Else
-                d1 = New Date(Date1.Year, Date1.Month, Date1.Day)
-            End If
-
-            nMaxDay = Date.DaysInMonth(Date1.Year, Date1.Month)
-            If Date2.Day > nMaxDay Then
-                d2 = New Date(Date1.Year, Date1.Month, nMaxDay)
-            Else
-                d2 = New Date(Date1.Year, Date1.Month, Date2.Day)
-            End If
-
-            nDay = DateDiff(DateInterval.Day, d1, d2)
-
-            If nMonth > 0 Then
-                Return nYear
-            ElseIf nMonth < 0 Then
-                Return nYear - 1
-            Else
-                If nDay >= 0 Then
-                    Return nYear
-                Else
-                    Return nYear - 1
-                End If
-            End If
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return -1
-        End Try
-    End Function
-
-    
-
-#End Region
 
 #Region "Automated Complete"
 
@@ -350,296 +282,8 @@ Public Class Core
     '    End Try
     'End Sub
 
-
-    Public Shared Function GetDateTimeByTimeZone(ByRef time As Date) As String
-        Dim timeFormated As String
-        If Var.sSchTimeFmt = 12 Then
-            timeFormated = CType(time, Date).ToString("hh:mm tt")
-        Else
-            timeFormated = CType(time, Date).ToString("HH:mm")
-        End If
-        Return timeFormated
-    End Function
-
-    
-
-
-
     
 #End Region
-
-#Region "Retriver"
-
-    
-
-    
-
-    Public Shared Function GetEmpName(ByVal sEmpID As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-
-        Try
-            If sEmpID = "" Then Return ""
-            sSQL = "SELECT NickName FROM Emp WHERE EmpID = " & SQLStr(sEmpID)
-
-            sResult = Var.DBAMain.ExecuteScalar(sSQL)
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-
-
-    Public Shared Function GetEmpCateName(ByVal sEmpCategoryID As String) As String
-        Dim EmpCateName As String = String.Empty
-        Try
-            Dim sSQL As String = String.Format("SELECT EmpCategoryDesc FROM EmpCategory WHERE EmpCategoryID= {0}", Core.SQLStr(sEmpCategoryID))
-            Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSQL, ds)
-            If ds.Tables(0).Rows.Count > 0 Then
-                EmpCateName = ds.Tables(0).Rows(0)("EmpCategoryDesc")
-            End If
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-        Return EmpCateName
-    End Function
-
-    Public Shared Function GetEmpCateID(sEmpID As String) As String
-        Dim EmpCateID As String = String.Empty
-        Try
-            Dim sSQL As String = String.Format("SELECT ec.EmpCategoryID FROM Emp e INNER JOIN EmpCategory ec on e.EmpCategoryID=ec.EmpCategoryID WHERE e.EmpID=" & Core.SQLStr(sEmpID))
-            Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSQL, ds)
-            If ds.Tables(0).Rows.Count > 0 Then
-                EmpCateID = ds.Tables(0).Rows(0)("EmpCategoryID")
-            End If
-
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-        Return EmpCateID
-    End Function
-
-    
-
-
-    Public Shared Function GetEmpFullName(ByVal sEmpID As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-
-        Try
-            If sEmpID = "" Then Return ""
-            sSQL = "SELECT SurName + ' '+ EmpName AS FullName FROM Emp WHERE EmpID = " & SQLStr(sEmpID)
-
-            sResult = Var.DBAMain.ExecuteScalar(sSQL)
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    Public Shared Function GetEmpByNickName(ByVal sNickName As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-
-        Try
-            If sNickName = "" Then Return ""
-            sSQL = "SELECT EmpID FROM Emp WHERE NickName = " & SQLStr(sNickName)
-
-            sResult = Var.DBAMain.ExecuteScalar(sSQL)
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    Public Shared Function GetEmpNameList(ByVal sEmpID As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-        Dim ds As New DataSet
-        Try
-            If sEmpID = "" Then Return ""
-            sEmpID = "'" & sEmpID.Replace(",", "','") & "'"
-            sSQL = "SELECT NickName FROM Emp WHERE EmpID IN(" & sEmpID & ")"
-
-            Var.DBAMain.FillDataset(sSQL, ds)
-
-            For Each dr As DataRow In ds.Tables(0).Rows
-                If sResult <> "" Then sResult &= ","
-                sResult &= dr("NickName") & ""
-            Next
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    
-
-    Public Shared Function GetEmpGender(ByVal sEmpID As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-
-        Try
-            sSQL = "SELECT Gender FROM Emp WHERE EmpID = " & SQLStr(sEmpID)
-
-            sResult = Var.DBAMain.ExecuteScalar(sSQL)
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    
-
-    Public Shared Function GetGuestTitle(ByVal sGuestID As String) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-
-        Try
-            sSQL = "SELECT T.Title FROM Guest G LEFT OUTER JOIN GuestTitle T ON G.Title = T.TitleID WHERE G.GuestID = " & SQLStr(sGuestID)
-            sResult = Var.DBAMain.ExecuteScalar(sSQL)
-
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    Public Shared Function GetGuestName(ByVal sGuestID As String, Optional ByVal bName1 As Boolean = True, Optional ByVal bName2 As Boolean = True) As String
-        Dim sSQL As String
-        Dim sResult As String = ""
-        Dim ds As New DataSet
-        Dim dr As DataRow
-
-        Try
-            If sGuestID = "" Then Return ""
-            sSQL = "SELECT FirstName,LastName,FirstName2,LastName2,RoomNo FROM Guest WHERE GuestID = " & SQLStr(sGuestID)
-            Var.DBAMain.FillDataset(sSQL, ds, "Guest")
-
-            If ds.Tables("Guest").Rows.Count > 0 Then
-                dr = ds.Tables("Guest").Rows(0)
-
-                'sResult = dr("Name1")
-                'If IsDBNull(dr("Name2")) = False Then
-                '    If Trim(dr("Name2")) <> "" Then
-                '        sResult &= "/" & dr("Name2")
-                '    End If
-                'End If
-                If bName1 AndAlso bName2 Then
-                    sResult = GetGuestName(dr("FirstName") & "", dr("LastName"), dr("FirstName2") & "", dr("LastName2") & " - " & dr("RoomNo") & "")
-                ElseIf bName1 Then
-                    sResult = GetGuestName(dr("FirstName") & "", dr("LastName") & "", "", "")
-                ElseIf bName2 Then
-                    sResult = GetGuestName(dr("FirstName2") & "", dr("LastName2") & "", "", "")
-                End If
-
-            End If
-        Catch ex As Exception
-            'Log.LogError("Core", WhoCalledMe, ex.Message)
-        End Try
-
-        Return sResult
-    End Function
-
-    
-
-    Public Shared Function GetGuestName(ByVal sName1 As String, ByVal sName2 As String) As String
-        Try
-            If sName2.Trim <> "" Then
-
-                Return sName1 & "/" & sName2
-            Else
-                Return sName1
-            End If
-        Catch ex As Exception
-            'Log.LogError(Name, WhoCalledMe, ex.Message)
-            Return ""
-        End Try
-    End Function
-
-    Public Shared Sub GetGuestName(ByRef dt As DataTable)
-        Dim dr As DataRow
-        If dt Is Nothing Then Exit Sub
-        Try
-            For Each dr In dt.Rows
-                dr("GuestName") = GetGuestName(dr("FirstName") & "", dr("LastName") & "", dr("FirstName2") & "", dr("LastName2") & "")
-            Next
-        Catch ex As Exception
-            'Log.LogError(Name, WhoCalledMe, ex.Message)
-        End Try
-    End Sub
-
-    Public Shared Function GetGuestName(ByVal sFirstName As String, ByVal sLastName As String, ByVal sFirstName2 As String, ByVal sLastName2 As String) As String
-        Dim sName1 As String = ""
-        Dim sName2 As String = ""
-        Try
-            If Var.bName1Reverse Then
-                sName1 = sLastName & IIf(sFirstName = "", "", Var.sNameDelimeter) & sFirstName
-            Else
-                sName1 = sFirstName & IIf(sLastName = "", "", Var.sNameDelimeter) & sLastName
-            End If
-
-
-            If sFirstName2.Trim <> "" OrElse sLastName2.Trim <> "" Then
-                If Var.bName2Reverse Then
-                    sName2 = sLastName2 & IIf(sFirstName2 = "", "", Var.sNameDelimeter) & sFirstName2
-                Else
-                    sName2 = sFirstName2 & IIf(sLastName2 = "", "", Var.sNameDelimeter) & sLastName2
-                End If
-
-            End If
-
-            If sName2 <> "" Then
-                Return sName1 & "/" & sName2
-            Else
-                Return sName1
-            End If
-
-        Catch ex As Exception
-            'Log.LogError(Name, WhoCalledMe, ex.Message)
-            Return ""
-        End Try
-    End Function
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-    
 
     Public Shared Function GetFieldByCondition(ByVal sTable As String, ByVal sRetriveField As String, ByVal sConditionField As String, ByVal sConditionValue As String, Optional ByVal sRevID As String = "") As String
 
@@ -662,8 +306,6 @@ Public Class Core
             Return ""
         End Try
     End Function
-
-#End Region
 
 #Region "System Setting"
     '==========Get Regional Date Format================================
@@ -753,52 +395,10 @@ ByVal cchData As Integer) As Integer
 
     End Sub
 
-    
-
-    Public Shared Sub SetFormSize(ByRef frm As System.Windows.Forms.Form, Optional ByVal nWidth As Integer = 1024, Optional ByVal nHeight As Integer = 738)
-
-        Dim Size As Drawing.Size
-        Dim ScreenX As Integer
-        Dim ScreenY As Integer
-
-
-        Size.Height = nHeight
-        Size.Width = nWidth
-
-        frm.Size = Size
-
-        ScreenX = Screen.PrimaryScreen.Bounds.Width
-        ScreenY = Screen.PrimaryScreen.Bounds.Height
-
-        frm.StartPosition = FormStartPosition.Manual
-        frm.Left = (ScreenX - nWidth) / 2
-        frm.Top = (ScreenY - 30 - nHeight) / 2
-
-        FormKey_Enable(frm)
-
-    End Sub
-
-
-
-
-
     Public Shared Function SplitWords(ByVal s As String) As String()
         Return Regex.Split(s, "\W+")
     End Function
 
-    
-
-    
-
-    
-
-    
-
-    
-
-
-
-    
 #End Region
 
 #Region "Utility"
@@ -1048,205 +648,6 @@ ByVal cchData As Integer) As Integer
     End Function
 #End Region
 
-
-
-#Region "Statement Print"
-    Public Structure TransCriteria
-        Public sMembershipID As String
-        Public sMembershipIDList As String
-        Public sTransStatusList As String
-        Public sSourceRevIDLIst As String
-        Public dtStartDate As Date
-        Public dtEndDate As Date
-        Public sStatementNo As String
-        Public sStatementNoList As String
-        Public sStatementStatusList As String
-        Public dtStatementMonth As Date
-        Public nAccNo As Integer
-        Public bCurrentAccount As Boolean
-        Public bIgnoreVoid As Boolean
-        Public bIgnoreRedirect As Boolean
-        Public bIgnoreRefund As Boolean
-        Public bIgnoreMemPay As Boolean
-        Public dtExpStart As Date
-        Public dtExpEnd As Date
-
-    End Structure
-
-    
-
-    
-
-    
-
-    
-
-    Public Shared Function GetTemplateInfo(ByVal sTemplateID As String) As DataRow
-        Dim sSQL As String
-        Dim ds As New DataSet
-        Try
-            sSQL = "SELECT * FROM PrintTemplate WHERE PrintTemplateID = " & SQLStr(sTemplateID) & " AND RevID = " & SQLStr(Var.sRevID)
-            If Var.DBAMain.FillDataset(sSQL, ds, "PrintTemplate") = False Then Return Nothing
-
-            If ds.Tables(0).Rows.Count = 0 Then Return Nothing
-
-            Return ds.Tables(0).Rows(0)
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return Nothing
-        Finally
-            Var.DBAMain.Disconnect()
-        End Try
-    End Function
-
-    
-
-    Public Shared Function DetectTemplateScript(ByVal sTemplateID As String, ByRef dr As DataRow) As Boolean
-        Dim sPath As String
-        Try
-            dr = Core.GetTemplateInfo(sTemplateID)
-            If dr Is Nothing Then Return False
-            sPath = dr("FilePath") & ""
-            sPath = sPath.Replace(".mrt", ".ext")
-            Return System.IO.File.Exists(sPath)
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return False
-        End Try
-    End Function
-#End Region
-
-
-    Private Shared bAppExit As Boolean
-    Private Shared nSoftKeyID As Integer
-    Public Shared Sub FormKey_Enable(ByRef frm As Form)
-        Try
-
-            frm.KeyPreview = True
-            AddHandler frm.KeyDown, AddressOf Form_KeyDown
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-    End Sub
-
-    Private Shared Sub Form_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
-        Try
-
-            If e.Alt = False AndAlso e.Control AndAlso e.KeyCode = Keys.K Then
-                CallSoftKey()
-            End If
-
-            If e.Alt AndAlso e.Control = False AndAlso e.KeyCode = Keys.F4 Then
-                sender.close()
-            End If
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-
-    End Sub
-
-    Public Shared Function IsSoftKey() As Boolean
-        Try
-            Return File.Exists("./SoftKey.exe")
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return False
-        End Try
-    End Function
-
-    Public Shared Sub CallSoftKey()
-        Dim oskProcess As Process
-        'Dim p As Process
-        Try
-            Dim progFile As String = "C:\Program Files\Common Files\Microsoft Shared\ink\TabTip.exe"
-
-            If File.Exists(progFile) Then
-                Dim keyboardPath As String = Path.GetFullPath(progFile)
-                oskProcess = Process.Start(keyboardPath)
-            Else
-                'If p Is Nothing OrElse p.HasExited Then
-                '    If p IsNot Nothing AndAlso p.HasExited Then
-                '        p.Close()
-                '    End If
-
-                '    p = Process.Start("osk")
-                '    Var.oskProcessID = p.Id
-
-                'End If
-            End If
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-
-    End Sub
-
-    Public Shared Sub CloseSoftKey()
-
-        Try
-            Dim progFile As String = "C:\Program Files\Common Files\Microsoft Shared\ink\TabTip.exe"
-            Dim oskProcessArray() As Process
-
-            If File.Exists(progFile) Then
-                oskProcessArray = Process.GetProcessesByName("TabTip")
-            Else
-                oskProcessArray = Process.GetProcessesByName("osk")
-            End If
-
-            For Each onscreenProcess As Process In oskProcessArray
-                onscreenProcess.Kill()
-            Next
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-
-    End Sub
-
-    
-
-    
-
-    
-
-
-
-
-    Private Shared Sub Ctrl_Enter(ByVal sender As Object, ByVal e As System.EventArgs)
-        Core.CallSoftKey()
-
-    End Sub
-
-
-    Private Shared Sub Ctrl_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
-        Core.CloseSoftKey()
-    End Sub
-    Private Shared Sub Application_Exit(ByVal sender As Object, ByVal e As System.EventArgs)
-        Dim SoftKeyProcess As Process
-        'Dim p As Process
-        Try
-            'SoftKeyProcess = Process.GetProcessesByName("SoftKey")
-            'For Each p In SoftKeyProcess
-            '    p.Kill()
-            'Next
-            SoftKeyProcess = Process.GetProcessById(nSoftKeyID)
-            If SoftKeyProcess Is Nothing = False Then
-                SoftKeyProcess.Kill()
-            End If
-
-        Catch ex As Exception
-            ''Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-
-    End Sub
-
-    
-
-
-
     Public Shared Function ReadFile(ByVal sPath As String) As String
         Dim sTemp As String
         Try
@@ -1260,8 +661,6 @@ ByVal cchData As Integer) As Integer
             Return ""
         End Try
     End Function
-
-    
 
     Public Shared Function GetAssemblyType(ByRef objAssembly As System.Reflection.Assembly, ByVal sClassName As String, ByRef objType As Type) As Boolean
         If objAssembly Is Nothing Then
@@ -1300,8 +699,6 @@ ByVal cchData As Integer) As Integer
             Return False
         End Try
     End Function
-
-    
 
     Public Shared Function GetCodePropery(ByRef objType As Type, ByRef objInstance As Object, ByVal sPropertyName As String, ByRef sPropertyValue As Object) As Boolean
         Dim rslt As Object
@@ -1417,190 +814,6 @@ ByVal cchData As Integer) As Integer
         End Try
     End Sub
 
-    Public Shared Sub CompareDatatable2(ByRef dt1 As DataTable, ByRef dt2 As DataTable, ByVal sIDColumn As String, ByVal sNameColumn As String, ByVal sNotesColumn As String, ByRef sEdit As String)
-        Dim sFilter As String
-        Dim rows() As DataRow
-        Dim dr As DataRow
-
-        Try
-
-            For Each dr In dt2.Rows
-                If dr.RowState <> DataRowState.Deleted Then
-                    sFilter = sIDColumn & " = " & SQLStr(dr(sIDColumn))
-                    rows = dt1.Select(sFilter)
-                    If rows Is Nothing = False AndAlso rows.Length > 0 Then
-                        If dr(sNotesColumn) <> rows(0)(sNotesColumn) Then
-                            If sEdit <> "" Then sEdit &= ","
-                            sEdit &= dr(sNameColumn) & " [" & rows(0)(sNotesColumn) & "] -> [" & dr(sNotesColumn) & "]"
-                        End If
-
-                    End If
-                End If
-
-            Next
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-        End Try
-    End Sub
-
-    Public Shared Function IsDOBMonth(ByRef dt1 As Object, ByRef dt2 As Object) As Boolean
-        Dim d1, d2 As Date
-        Try
-            If IsDBNull(dt1) OrElse IsDBNull(dt2) Then
-                Return False
-            End If
-
-            If IsDate(dt1) = False OrElse IsDate(dt2) = False Then
-                Return False
-            End If
-            d1 = CDate(dt1)
-            d2 = CDate(dt2)
-
-            If d1.Month = d2.Month Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return False
-        End Try
-    End Function
-
-    Public Shared Function IsDOB(ByRef dt1 As Object, ByRef dt2 As Object) As Boolean
-        Dim d1, d2 As Date
-        Try
-            If IsDBNull(dt1) OrElse IsDBNull(dt2) Then
-                Return False
-            End If
-
-            If IsDate(dt1) = False OrElse IsDate(dt2) = False Then
-                Return False
-            End If
-            d1 = CDate(dt1)
-            d2 = CDate(dt2)
-
-            If d1.Month = d2.Month AndAlso d1.Day = d2.Day Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return False
-        End Try
-    End Function
-
-    
-
-    Public Shared Function GetMemRevID() As String
-        Dim sSQL As String
-        Try
-            sSQL = "SELECT TOP 1 RevID FROM Rev WHERE RevType = " & Core.SQLStr(CInt(Var.RevType.Membership))
-            Return Var.DBAMain.ExecuteScalar(sSQL)
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return ""
-        End Try
-    End Function
-
-    Public Shared Function CountTable(ByRef dt As DataTable, ByVal sFilter As String, ByVal ParamArray sGroupColumn() As String) As Integer
-        Dim dr() As DataRow
-        Dim sGroup(sGroupColumn.Length) As String
-        Dim count As Integer = 0
-        Dim bCount As Boolean
-        Try
-            If dt Is Nothing Then Return 0
-            dr = dt.Select(sFilter)
-
-            For Each r As DataRow In dr
-                bCount = False
-                For i As Integer = 0 To sGroupColumn.Length - 1
-                    If sGroup(i) <> r(sGroupColumn(i)) Then
-                        sGroup(i) = r(sGroupColumn(i))
-                        bCount = True
-                    End If
-                Next
-
-                If bCount Then
-                    count += 1
-                End If
-            Next
-
-            Return count
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return 0
-        End Try
-    End Function
-
-    Public Shared Function AggregateCount(ByRef dt As DataTable, ByRef Group As List(Of String), ByVal TableFilter As String) As DataTable
-        Dim dr() As DataRow
-        Dim result As New DataTable
-        Dim Filter As String
-        Dim newdr As DataRow
-        Dim rows() As DataRow
-        Try
-            If dt Is Nothing Then Return Nothing
-
-            For i As Integer = 0 To Group.Count - 1
-                result.Columns.Add(Group(i), dt.Columns(Group(i)).DataType)
-            Next
-            result.Columns.Add("Count", GetType(Integer))
-
-            rows = dt.Select(TableFilter)
-            For Each r As DataRow In rows
-                Filter = ""
-                For i As Integer = 0 To Group.Count - 1
-                    If Filter <> "" Then
-                        Filter &= " AND "
-                    End If
-
-                    If IsDBNull(r(Group(i))) Then
-                        Filter &= Group(i) & " IS NULL"
-                    Else
-                        Filter &= Group(i) & " = "
-                        Select Case dt.Columns(Group(i)).DataType.ToString
-                            Case GetType(String).ToString
-                                Filter &= Core.SQLStr(r(Group(i)))
-                            Case GetType(Date).ToString
-                                Filter &= Core.SQLStr(CDate(r(Group(i))).ToString(Var.sSQLDateTimeFmt))
-                            Case GetType(Double).ToString, GetType(Integer).ToString
-                                Filter &= r(Group(i))
-                        End Select
-                    End If
-
-                Next
-
-                dr = result.Select(Filter)
-                If dr Is Nothing OrElse dr.Length = 0 Then
-                    newdr = result.NewRow
-                    For i As Integer = 0 To Group.Count - 1
-                        newdr(Group(i)) = r(Group(i))
-                    Next
-
-                    newdr("Count") = 1
-                    result.Rows.Add(newdr)
-                Else
-                    dr(0)("Count") = dr(0)("Count") + 1
-                End If
-
-
-            Next
-
-            Return result
-
-        Catch ex As Exception
-            'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
-            Return Nothing
-        End Try
-    End Function
-
-    
-
     Public Shared Function GetIPAddress() As String
         Try
             'Dim strHostName As String
@@ -1657,23 +870,37 @@ ByVal cchData As Integer) As Integer
 
     End Sub
 
-
     Public Shared Function IsDBNullOrStringEmpty(ByVal sObj As Object) As Boolean
         Dim bFlag As Boolean = True
         Try
-            If Not IsDBNull(sObj) Then
-                If TypeOf sObj Is String Then
-                    If Not String.IsNullOrEmpty(sObj) Then
+            If Not IsNothing(sObj) Then
+                If Not IsDBNull(sObj) Then
+                    If TypeOf sObj Is String Then
+                        If Not String.IsNullOrEmpty(sObj) Then
+                            bFlag = False
+                        End If
+                    Else
                         bFlag = False
                     End If
-                Else
-                    bFlag = False
                 End If
             End If
+
         Catch ex As Exception
             'Log.LogError(Name, Core.WhoCalledMe, ex.Message)
         End Try
         Return bFlag
     End Function
 
+    Public Shared Sub InitAppSettingForDBA()
+        Try
+            Var.sDBServer = System.Configuration.ConfigurationManager.AppSettings("DBServer")
+            Var.sDatabase = System.Configuration.ConfigurationManager.AppSettings("Database")
+            Var.sDBDNS = System.Configuration.ConfigurationManager.AppSettings("DBDNS")
+            Var.sDBUser = System.Configuration.ConfigurationManager.AppSettings("DBUser")
+            Var.sPassword = System.Configuration.ConfigurationManager.AppSettings("DBPassword")
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
