@@ -648,23 +648,6 @@ ByVal cchData As Integer) As Integer
     End Function
 #End Region
 
-    Public Shared Function GetID(ByVal sIdFieldName As String, ByVal sTableName As String) As Object
-        Dim sReturn As Object
-        Try
-            Dim sSql As String = " SELECT Max(" & sIdFieldName & ") FROM " & sTableName
-            sReturn = Var.DBAMain.ExecuteScalar(sSql)
-            If Core.IsDBNullOrStringEmpty(sReturn) = False Then
-                sReturn = sReturn + 1
-            Else
-                sReturn = 1
-            End If
-
-        Catch ex As Exception
-
-        End Try
-        Return sReturn
-    End Function
-
     Public Shared Function ReadFile(ByVal sPath As String) As String
         Dim sTemp As String
         Try

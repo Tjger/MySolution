@@ -197,11 +197,11 @@
 
                     <li class="parent"><a href="#"><i class="fa fa-suitcase"></i><span>Quản lý</span></a>
                         <ul class="children">
+                            <li><a href="GroupProductManager.aspx">Nhóm sản phẩm</a></li>
                             <li><a href="ProductManager.aspx">Sản phẩm</a></li>
-                            <li><a href="#">Nhóm sản phẩm</a></li>
+                            <li><a href="#">Combo</a></li>
                             <li><a href="#">SEO</a></li>
                             <li><a href="#">Đơn hàng</a></li>
-
                         </ul>
                     </li>
 

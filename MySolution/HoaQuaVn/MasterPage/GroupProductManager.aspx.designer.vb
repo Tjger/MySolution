@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ProductManager
+Partial Public Class GroupProductManager
 
     '''<summary>
     '''GridView1 control.
