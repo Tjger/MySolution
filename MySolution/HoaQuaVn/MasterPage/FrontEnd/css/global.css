@@ -292,7 +292,7 @@ border-left: 1px solid #e5e5e5;
 
 .pic-one
 {
-background-image: url("../image/pic-top.png");
+background-image: url("../image/step.png");
 background-size: cover;
 border-radius: 2%;
 float: left;
@@ -744,12 +744,29 @@ float:left;
 .bg-testimo
 {
 	font-family: 'Pacifico';
-    color:red;
+color: orange;
 	font-size:24px;
 	text-align:center;
     float: left;
     height: 147px;
     width: 279px;
+}
+
+.bg-testimo h4
+{
+margin-top: 10px;
+margin-bottom: -4px;
+}
+
+.bg-testimo span
+{
+display: block;
+ font-family: "Roboto Condensed";
+}
+
+.bg-testimo strong
+{
+ font-family: "Roboto Condensed";
 }
 
 .guest-order-detail-combo

@@ -651,10 +651,6 @@
     <Content Include="MasterPage\FrontEnd\css\global.css" />
     <Content Include="MasterPage\FrontEnd\css\jqx.base.css" />
     <Content Include="MasterPage\FrontEnd\css\social.css" />
-    <Content Include="MasterPage\FrontEnd\Detail-c1.html" />
-    <Content Include="MasterPage\FrontEnd\Detail-c2.html" />
-    <Content Include="MasterPage\FrontEnd\Detail-c3.html" />
-    <Content Include="MasterPage\FrontEnd\Detail-special.html" />
     <Content Include="MasterPage\FrontEnd\image\01.png" />
     <Content Include="MasterPage\FrontEnd\image\02.jpg" />
     <Content Include="MasterPage\FrontEnd\image\02.png" />
@@ -828,7 +824,6 @@
     <Content Include="MasterPage\FrontEnd\image\step.png" />
     <Content Include="MasterPage\FrontEnd\image\t01.png" />
     <Content Include="MasterPage\FrontEnd\image\t_i xu_ng.jpg" />
-    <Content Include="MasterPage\FrontEnd\Index-bak.html" />
     <Content Include="MasterPage\FrontEnd\Index.aspx" />
     <Content Include="MasterPage\FrontEnd\Index.html" />
     <Content Include="MasterPage\FrontEnd\js\countDownTimer.js" />

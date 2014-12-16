@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucPopupDetails.ascx.vb" Inherits="HoaQuaVn.ucPopupDetails" %>
 <div class="remodal" data-remodal-id="modal">
-    <h1>Thông tin chi tiết Combo 1</h1>
+    <h1>Thông tin đặt hàng</h1>
     <div class="guest-order-detail-combo">
         <div class="guest-order-info">
 
@@ -15,37 +15,44 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtGuestName" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtGuestName" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br />
+                        </td>
                     </tr>
                     <tr>
                         <td>So dien thoai</td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtGuestMobile" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtGuestMobile" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br />
+                        </td>
                     </tr>
                     <tr>
                         <td>Email</td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtGuestMail" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <td>Ten</td>
+                        <td>Message<asp:Button ID="Button1" runat="server" Text="Button" CausesValidation="false"  />
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            <textarea id="txtMessage" runat="server"></textarea></td>
+                            <textarea id="txtGuestMes" runat="server"></textarea></td>
                     </tr>
                 </table>
             </div>
 
         </div>
         <div class="guest-order-action">
-            
+
             <a class="remodal-cancel" href="#">Hủy</a>
-            <asp:Button  ID="btnOk"  Text="Đồng ý"  runat="server" CssClass="remodal-confirm" />
+            <asp:Button ID="btnOk" Text="Đồng ý" runat="server" OnClick="btnOk_Click" />
         </div>
 
     </div>

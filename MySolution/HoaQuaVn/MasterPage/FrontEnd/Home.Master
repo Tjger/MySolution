@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Home.master.vb" Inherits="HoaQuaVn.Home" %>
 
-<%@ Register src="../../UserControl/Popup/ucPopupDetails.ascx" tagname="ucPopupDetails" tagprefix="uc1" %>
+<%@ Register Src="../../UserControl/Popup/ucPopupDetails.ascx" TagName="ucPopupDetails" TagPrefix="uc1" %>
 
 <!DOCTYPE html>
 
@@ -209,14 +209,13 @@
                     </div>
                 </div>
                 <div class="bg-testimo">
-                    <h4>-Business hours-</h4>
-                    <span style="display: block;">Monday - Sunday</span>
-                    <strong>08:00 Am to 10:00 Pm</strong>
+                    <h4>Business hours</h4>
+                    <span>Monday - Sunday</span>
+                    <strong>08:00 Am - 10:00 Pm</strong>
                 </div>
                 <div class="bg-testimo">
-                    <h4>-Call for support-</h4>
-                    <span style="display: block;">0914.081.180</span>
-
+                    <h4>Call for support</h4>
+                    <span>0914.081.180</span>
                 </div>
                 <div class="empty">
                     <div class="topseller"></div>
@@ -275,15 +274,13 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
-                    <uc1:ucPopupDetails ID="ucPopupDetails1" runat="server" />
+                    <%--<uc1:ucPopupDetails ID="ucPopupDetails1" runat="server" />--%>
                 </form>
 
             </div>
 
         </div>
         <div id="powered"></div>
-
-
         <div id="footer">
             <div class="page-logo" style="float: left;">
             </div>
@@ -329,8 +326,8 @@
         </div>
     </div>
 
-  
-<!-- BEGIN Modal PANEL --><div class="remodal" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
+    <!-- BEGIN Modal PANEL -->
+    <div class="remodal" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
         <div class="detail-combo">
             <img src="image/combo/01.jpg" />
         </div>
