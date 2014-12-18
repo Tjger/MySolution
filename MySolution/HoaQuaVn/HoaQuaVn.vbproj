@@ -445,8 +445,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="MasterPage\AddNewGroup.aspx" />
-    <Content Include="MasterPage\AddNewItem.aspx" />
     <Content Include="MasterPage\BackEnd\ajax\accordion.html" />
     <Content Include="MasterPage\BackEnd\ajax\panel.html" />
     <Content Include="MasterPage\BackEnd\ajax\remote.html" />
@@ -648,6 +646,9 @@
     <Content Include="MasterPage\BackEnd\js\select2.min.js" />
     <Content Include="MasterPage\BackEnd\js\toggles.min.js" />
     <Content Include="MasterPage\BackEnd\js\wysihtml5-0.3.0.min.js" />
+    <Content Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx" />
+    <Content Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx" />
+    <Content Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx" />
     <Content Include="MasterPage\FrontEnd\css\global.css" />
     <Content Include="MasterPage\FrontEnd\css\jqx.base.css" />
     <Content Include="MasterPage\FrontEnd\css\social.css" />
@@ -852,8 +853,6 @@
     <Content Include="MasterPage\FrontEnd\src\jquery.remodal.css" />
     <Content Include="MasterPage\FrontEnd\src\jquery.remodal.js" />
     <Content Include="MasterPage\FrontEnd\Temp.html" />
-    <Content Include="MasterPage\GroupProductManager.aspx" />
-    <Content Include="MasterPage\ProductManager.aspx" />
     <Content Include="MasterPage\Admin.aspx" />
     <Content Include="packages.config" />
     <Content Include="Admin\fonts\fontawesome-webfont862f.eot" />
@@ -969,25 +968,32 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\AddNewGroup.aspx.designer.vb">
-      <DependentUpon>AddNewGroup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\AddNewGroup.aspx.vb">
-      <DependentUpon>AddNewGroup.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\AddNewItem.aspx.designer.vb">
-      <DependentUpon>AddNewItem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\AddNewItem.aspx.vb">
-      <DependentUpon>AddNewItem.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="MasterPage\BackEnd\AdminPage.Master.designer.vb">
       <DependentUpon>AdminPage.Master</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\BackEnd\AdminPage.Master.vb">
       <DependentUpon>AdminPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx.designer.vb">
+      <DependentUpon>ucGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx.vb">
+      <DependentUpon>ucGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx.designer.vb">
+      <DependentUpon>ucItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx.vb">
+      <DependentUpon>ucItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.designer.vb">
+      <DependentUpon>ucReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.vb">
+      <DependentUpon>ucReceipt.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage\FrontEnd\Home.Master.designer.vb">
@@ -1002,20 +1008,6 @@
     </Compile>
     <Compile Include="MasterPage\FrontEnd\Index.aspx.vb">
       <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\GroupProductManager.aspx.designer.vb">
-      <DependentUpon>GroupProductManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\GroupProductManager.aspx.vb">
-      <DependentUpon>GroupProductManager.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\ProductManager.aspx.designer.vb">
-      <DependentUpon>ProductManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\ProductManager.aspx.vb">
-      <DependentUpon>ProductManager.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="MasterPage\Admin.aspx.designer.vb">
