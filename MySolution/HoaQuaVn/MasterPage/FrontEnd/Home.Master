@@ -30,16 +30,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<%--<body>
-    <form id="form1" runat="server">
-        <div>
-
-
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
-</body>--%>
 
 <body>
     <div id="page-default">
@@ -54,16 +44,6 @@
             <div class="search-autocomplete" id="search_autocomplete" style="display: none;"></div>
 
         </div>
-        <!--  <div class="nav-menu">
-		
-		<div class="iconflickr"></div>
-		<div class="icongoogle"></div>
-           <div class="icontwitter"></div>
-		   <div class="iconfacebook"></div>
-		  
-        </div> -->
-
-
 
         <div class="nav-menu">
             <div class="iconhome"></div>
@@ -193,15 +173,7 @@
             <div class="title-category">
                 <!-- <div class="category-padding">Đặc tính</div> -->
                 <div id="menu5">
-                    <!-- <ul>
-                        <li class="level"><a href="#">Xoài</a></li>
-                        <li class="level"><a href="#">Cam</a></li>
-                        <li class="level"><a href="#">Bưởi</a></li>
-			<li class="level"><a href="#">Nho</a></li>
-			<li class="level"><a href="#">Dứa</a></li>
-			<li class="level"><a href="#">Chôm chôm</a></li>
 
-                    </ul> -->
                 </div>
                 <div class="testimo">
                     <div class="pic-comment">
@@ -274,7 +246,7 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
-                    <%--<uc1:ucPopupDetails ID="ucPopupDetails1" runat="server" />--%>
+                  
                 </form>
 
             </div>
@@ -312,7 +284,7 @@
                     <li><a href="#">Tin tức</a></li>
                 </ul>
             </div>
-            <div class="register-logo" style="float: right;">
+           <%-- <div class="register-logo" style="float: right;">--%>
             </div>
         </div>
         <div id="powered">

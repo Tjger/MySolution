@@ -850,6 +850,10 @@
     <Content Include="MasterPage\FrontEnd\js\jssor.js" />
     <Content Include="MasterPage\FrontEnd\js\jssor.slider.js" />
     <Content Include="MasterPage\FrontEnd\libs\jquery-loader.js" />
+    <Content Include="MasterPage\FrontEnd\News.aspx" />
+    <Content Include="MasterPage\FrontEnd\News2.aspx" />
+    <Content Include="MasterPage\FrontEnd\News3.aspx" />
+    <Content Include="MasterPage\FrontEnd\News4.aspx" />
     <Content Include="MasterPage\FrontEnd\src\jquery.remodal.css" />
     <Content Include="MasterPage\FrontEnd\src\jquery.remodal.js" />
     <Content Include="MasterPage\FrontEnd\Temp.html" />
@@ -1015,6 +1019,34 @@
     </Compile>
     <Compile Include="MasterPage\Admin.aspx.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News.aspx.designer.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News.aspx.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News2.aspx.designer.vb">
+      <DependentUpon>News2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News2.aspx.vb">
+      <DependentUpon>News2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News3.aspx.designer.vb">
+      <DependentUpon>News3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News3.aspx.vb">
+      <DependentUpon>News3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News4.aspx.designer.vb">
+      <DependentUpon>News4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\FrontEnd\News4.aspx.vb">
+      <DependentUpon>News4.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
