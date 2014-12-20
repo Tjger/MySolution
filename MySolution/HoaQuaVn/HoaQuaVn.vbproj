@@ -522,7 +522,6 @@
     <Content Include="FrontEnd\image\list-title.png" />
     <Content Include="FrontEnd\image\loading.gif" />
     <Content Include="FrontEnd\image\loading2.gif" />
-    <Content Include="FrontEnd\image\Location.JPG" />
     <Content Include="FrontEnd\image\logo.png" />
     <Content Include="FrontEnd\image\man.png" />
     <Content Include="FrontEnd\image\moc-ipad.png" />
