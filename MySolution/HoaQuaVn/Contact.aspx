@@ -1,50 +1,31 @@
-﻿<%@ Page Title="Contact" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.vb" Inherits="HoaQuaVn.Contact" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Contact.aspx.vb" Inherits="HoaQuaVn.Contact" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <hgroup class="title">
-        <h1><%: Title %>.</h1>
-        <h2>Your contact page.</h2>
-    </hgroup>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="news-title">Liên Hệ</div>
+      <div id="powered"></div>
+    <div class="location-image">
+        <img src="FrontEnd/image/combo/location.jpg" />
+    </div>
+    <div class="location-infomation">
+        <div class="location-title"><span>Thông Tin Liên Lạc</span></div>
+        <ul>
+            <li>Hoa Quả Việt Nam</li>
+            <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
+            <li>ĐT: 0914.081.180</li>
+            <li>hoaquavietnam168@gmail.com</li>
+        </ul>
+ 
+    </div>
+    <div class="location-infomation">
 
-    <section class="contact">
-        <header>
-            <h3>Phone:</h3>
-        </header>
-        <p>
-            <span class="label">Main:</span>
-            <span>425.555.0100</span>
-        </p>
-        <p>
-            <span class="label">After Hours:</span>
-            <span>425.555.0199</span>
-        </p>
-    </section>
-
-    <section class="contact">
-        <header>
-            <h3>Email:</h3>
-        </header>
-        <p>
-            <span class="label">Support:</span>
-            <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-        </p>
-        <p>
-            <span class="label">Marketing:</span>
-            <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-        </p>
-        <p>
-            <span class="label">General:</span>
-            <span><a href="mailto:General@example.com">General@example.com</a></span>
-        </p>
-    </section>
-
-    <section class="contact">
-        <header>
-            <h3>Address:</h3>
-        </header>
-        <p>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399
-        </p>
-    </section>
+        <div class="location-title"><span>Mạng Xã Hội</span></div>
+        <ul>
+            <li><a href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></li>
+            <li><a href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></li>
+            <li>Yahoo: </li>
+            <li>Spyke: </li>
+        </ul>
+    </div>
 </asp:Content>

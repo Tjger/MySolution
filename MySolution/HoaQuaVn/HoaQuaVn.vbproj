@@ -128,7 +128,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -429,6 +428,184 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="FrontEnd\image\01.png" />
+    <Content Include="FrontEnd\image\02.jpg" />
+    <Content Include="FrontEnd\image\02.png" />
+    <Content Include="FrontEnd\image\03.jpg" />
+    <Content Include="FrontEnd\image\03.png" />
+    <Content Include="FrontEnd\image\04.jpg" />
+    <Content Include="FrontEnd\image\04.png" />
+    <Content Include="FrontEnd\image\a01.png" />
+    <Content Include="FrontEnd\image\a02.png" />
+    <Content Include="FrontEnd\image\a03.png" />
+    <Content Include="FrontEnd\image\a04.png" />
+    <Content Include="FrontEnd\image\a06.png" />
+    <Content Include="FrontEnd\image\a07.png" />
+    <Content Include="FrontEnd\image\a08.png" />
+    <Content Include="FrontEnd\image\a09.png" />
+    <Content Include="FrontEnd\image\a10.png" />
+    <Content Include="FrontEnd\image\a11.png" />
+    <Content Include="FrontEnd\image\a12.png" />
+    <Content Include="FrontEnd\image\a13.png" />
+    <Content Include="FrontEnd\image\a14.png" />
+    <Content Include="FrontEnd\image\a15.png" />
+    <Content Include="FrontEnd\image\a16.png" />
+    <Content Include="FrontEnd\image\a17.png" />
+    <Content Include="FrontEnd\image\a18.png" />
+    <Content Include="FrontEnd\image\a19.png" />
+    <Content Include="FrontEnd\image\a20.png" />
+    <Content Include="FrontEnd\image\a21.png" />
+    <Content Include="FrontEnd\image\award.png" />
+    <Content Include="FrontEnd\image\b02.png" />
+    <Content Include="FrontEnd\image\b03.png" />
+    <Content Include="FrontEnd\image\b05.png" />
+    <Content Include="FrontEnd\image\b06.png" />
+    <Content Include="FrontEnd\image\b07.png" />
+    <Content Include="FrontEnd\image\b10.png" />
+    <Content Include="FrontEnd\image\b11.png" />
+    <Content Include="FrontEnd\image\b12.png" />
+    <Content Include="FrontEnd\image\b13.png" />
+    <Content Include="FrontEnd\image\b14.png" />
+    <Content Include="FrontEnd\image\b16.png" />
+    <Content Include="FrontEnd\image\b17.png" />
+    <Content Include="FrontEnd\image\b18.png" />
+    <Content Include="FrontEnd\image\b20.png" />
+    <Content Include="FrontEnd\image\b21.png" />
+    <Content Include="FrontEnd\image\back-dice-02.jpg" />
+    <Content Include="FrontEnd\image\back-dice.png" />
+    <Content Include="FrontEnd\image\back.jpg" />
+    <Content Include="FrontEnd\image\best.png" />
+    <Content Include="FrontEnd\image\border-coppyright.png" />
+    <Content Include="FrontEnd\image\browser-icons.png" />
+    <Content Include="FrontEnd\image\c1.png" />
+    <Content Include="FrontEnd\image\c1a.png" />
+    <Content Include="FrontEnd\image\c2.png" />
+    <Content Include="FrontEnd\image\c3.png" />
+    <Content Include="FrontEnd\image\child.png" />
+    <Content Include="FrontEnd\image\close.png" />
+    <Content Include="FrontEnd\image\combo.png" />
+    <Content Include="FrontEnd\image\combo\01.jpg" />
+    <Content Include="FrontEnd\image\combo\02.jpg" />
+    <Content Include="FrontEnd\image\combo\03.jpg" />
+    <Content Include="FrontEnd\image\combo\04.jpg" />
+    <Content Include="FrontEnd\image\combo\05.jpg" />
+    <Content Include="FrontEnd\image\combo\06.jpg" />
+    <Content Include="FrontEnd\image\combo\07.jpg" />
+    <Content Include="FrontEnd\image\combo\08.jpg" />
+    <Content Include="FrontEnd\image\combo\09.jpg" />
+    <Content Include="FrontEnd\image\combo\10.jpg" />
+    <Content Include="FrontEnd\image\combo\11.jpg" />
+    <Content Include="FrontEnd\image\combo\12.jpg" />
+    <Content Include="FrontEnd\image\combo\c1.png" />
+    <Content Include="FrontEnd\image\combo\c11.png" />
+    <Content Include="FrontEnd\image\combo\c12.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-01.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-02.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-03.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-04.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-05.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-06.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-07.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-08.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-09.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-10.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-11.jpg" />
+    <Content Include="FrontEnd\image\combo\thumb-12.jpg" />
+    <Content Include="FrontEnd\image\Fruit.jpg" />
+    <Content Include="FrontEnd\image\global.css" />
+    <Content Include="FrontEnd\image\home.png" />
+    <Content Include="FrontEnd\image\icon-ft.png" />
+    <Content Include="FrontEnd\image\icon-hot.png" />
+    <Content Include="FrontEnd\image\icon-search.png" />
+    <Content Include="FrontEnd\image\Icon-Slider-12-jQuery.png" />
+    <Content Include="FrontEnd\image\Icon-Slider-12-No-jQuery.png" />
+    <Content Include="FrontEnd\image\list-title.png" />
+    <Content Include="FrontEnd\image\loading.gif" />
+    <Content Include="FrontEnd\image\loading2.gif" />
+    <Content Include="FrontEnd\image\Location.JPG" />
+    <Content Include="FrontEnd\image\logo.png" />
+    <Content Include="FrontEnd\image\man.png" />
+    <Content Include="FrontEnd\image\moc-ipad.png" />
+    <Content Include="FrontEnd\image\moc-iphone.png" />
+    <Content Include="FrontEnd\image\news.png" />
+    <Content Include="FrontEnd\image\news\01.jpg" />
+    <Content Include="FrontEnd\image\news\02.jpg" />
+    <Content Include="FrontEnd\image\news\03.jpg" />
+    <Content Include="FrontEnd\image\news\04.jpg" />
+    <Content Include="FrontEnd\image\p1.jpg" />
+    <Content Include="FrontEnd\image\p2.jpg" />
+    <Content Include="FrontEnd\image\p3.jpg" />
+    <Content Include="FrontEnd\image\pic-top.png" />
+    <Content Include="FrontEnd\image\pic-two.png" />
+    <Content Include="FrontEnd\image\pic.png" />
+    <Content Include="FrontEnd\image\play.png" />
+    <Content Include="FrontEnd\image\product.png" />
+    <Content Include="FrontEnd\image\properti.png" />
+    <Content Include="FrontEnd\image\Register.png" />
+    <Content Include="FrontEnd\image\slider.png" />
+    <Content Include="FrontEnd\image\social-icons\dribbble.png" />
+    <Content Include="FrontEnd\image\social-icons\facebook.png" />
+    <Content Include="FrontEnd\image\social-icons\flickr.png" />
+    <Content Include="FrontEnd\image\social-icons\googleplus.png" />
+    <Content Include="FrontEnd\image\social-icons\pinterest.png" />
+    <Content Include="FrontEnd\image\social-icons\twitter.png" />
+    <Content Include="FrontEnd\image\social\icons\aim.png" />
+    <Content Include="FrontEnd\image\social\icons\angellist.png" />
+    <Content Include="FrontEnd\image\social\icons\apple.png" />
+    <Content Include="FrontEnd\image\social\icons\behance.png" />
+    <Content Include="FrontEnd\image\social\icons\blogger.png" />
+    <Content Include="FrontEnd\image\social\icons\cargo.png" />
+    <Content Include="FrontEnd\image\social\icons\delicious.png" />
+    <Content Include="FrontEnd\image\social\icons\deviantart.png" />
+    <Content Include="FrontEnd\image\social\icons\digg.png" />
+    <Content Include="FrontEnd\image\social\icons\dopplr.png" />
+    <Content Include="FrontEnd\image\social\icons\dribbble.png" />
+    <Content Include="FrontEnd\image\social\icons\email.png" />
+    <Content Include="FrontEnd\image\social\icons\ember.png" />
+    <Content Include="FrontEnd\image\social\icons\evernote.png" />
+    <Content Include="FrontEnd\image\social\icons\facebook.png" />
+    <Content Include="FrontEnd\image\social\icons\flickr.png" />
+    <Content Include="FrontEnd\image\social\icons\forrst.png" />
+    <Content Include="FrontEnd\image\social\icons\github.png" />
+    <Content Include="FrontEnd\image\social\icons\google.png" />
+    <Content Include="FrontEnd\image\social\icons\googleplus.png" />
+    <Content Include="FrontEnd\image\social\icons\gowalla.png" />
+    <Content Include="FrontEnd\image\social\icons\grooveshark.png" />
+    <Content Include="FrontEnd\image\social\icons\html5.png" />
+    <Content Include="FrontEnd\image\social\icons\icloud.png" />
+    <Content Include="FrontEnd\image\social\icons\instagram.png" />
+    <Content Include="FrontEnd\image\social\icons\lastfm.png" />
+    <Content Include="FrontEnd\image\social\icons\linkedin.png" />
+    <Content Include="FrontEnd\image\social\icons\metacafe.png" />
+    <Content Include="FrontEnd\image\social\icons\mixx.png" />
+    <Content Include="FrontEnd\image\social\icons\myspace.png" />
+    <Content Include="FrontEnd\image\social\icons\netvibes.png" />
+    <Content Include="FrontEnd\image\social\icons\newsvine.png" />
+    <Content Include="FrontEnd\image\social\icons\orkut.png" />
+    <Content Include="FrontEnd\image\social\icons\paypal.png" />
+    <Content Include="FrontEnd\image\social\icons\picasa.png" />
+    <Content Include="FrontEnd\image\social\icons\pinterest.png" />
+    <Content Include="FrontEnd\image\social\icons\plurk.png" />
+    <Content Include="FrontEnd\image\social\icons\posterous.png" />
+    <Content Include="FrontEnd\image\social\icons\reddit.png" />
+    <Content Include="FrontEnd\image\social\icons\rss.png" />
+    <Content Include="FrontEnd\image\social\icons\skype.png" />
+    <Content Include="FrontEnd\image\social\icons\stumbleupon.png" />
+    <Content Include="FrontEnd\image\social\icons\technorati.png" />
+    <Content Include="FrontEnd\image\social\icons\tumblr.png" />
+    <Content Include="FrontEnd\image\social\icons\twitter.png" />
+    <Content Include="FrontEnd\image\social\icons\vimeo.png" />
+    <Content Include="FrontEnd\image\social\icons\wordpress.png" />
+    <Content Include="FrontEnd\image\social\icons\xing.png" />
+    <Content Include="FrontEnd\image\social\icons\yahoo.png" />
+    <Content Include="FrontEnd\image\social\icons\yelp.png" />
+    <Content Include="FrontEnd\image\social\icons\youtube.png" />
+    <Content Include="FrontEnd\image\social\icons\zerply.png" />
+    <Content Include="FrontEnd\image\social\icons\zootool.png" />
+    <Content Include="FrontEnd\image\special.png" />
+    <Content Include="FrontEnd\image\step.png" />
+    <Content Include="FrontEnd\image\t01.png" />
+    <Content Include="FrontEnd\image\t_i xu_ng.jpg" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -442,422 +619,250 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="MasterPage\BackEnd\ajax\accordion.html" />
-    <Content Include="MasterPage\BackEnd\ajax\panel.html" />
-    <Content Include="MasterPage\BackEnd\ajax\remote.html" />
-    <Content Include="MasterPage\BackEnd\ajax\tabs.html" />
-    <Content Include="MasterPage\BackEnd\css\animate.delay.css" />
-    <Content Include="MasterPage\BackEnd\css\animate.min.css" />
-    <Content Include="MasterPage\BackEnd\css\bootstrap-override.css" />
-    <Content Include="MasterPage\BackEnd\css\bootstrap-timepicker.min.css" />
-    <Content Include="MasterPage\BackEnd\css\bootstrap-wysihtml5.css" />
-    <Content Include="MasterPage\BackEnd\css\bootstrap.min.css" />
-    <Content Include="MasterPage\BackEnd\css\codemirror\codemirror.css" />
-    <Content Include="MasterPage\BackEnd\css\codemirror\theme\ambiance.css" />
-    <Content Include="MasterPage\BackEnd\css\colorpicker.css" />
-    <Content Include="MasterPage\BackEnd\css\dropzone.css" />
-    <Content Include="MasterPage\BackEnd\css\font-awesome.min.css" />
-    <Content Include="MasterPage\BackEnd\css\fullcalendar.css" />
-    <Content Include="MasterPage\BackEnd\css\images\animated-overlay.html" />
-    <Content Include="MasterPage\BackEnd\css\images\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\css\jquery-ui-1.10.3.css" />
-    <Content Include="MasterPage\BackEnd\css\jquery.gritter.css" />
-    <Content Include="MasterPage\BackEnd\css\jquery.tagsinput.css" />
-    <Content Include="MasterPage\BackEnd\css\morris.css" />
-    <Content Include="MasterPage\BackEnd\css\pace.css" />
-    <Content Include="MasterPage\BackEnd\css\prettyPhoto.css" />
-    <Content Include="MasterPage\BackEnd\css\select2.css" />
-    <Content Include="MasterPage\BackEnd\css\style.calendar.css" />
-    <Content Include="MasterPage\BackEnd\css\style.datatables.css" />
-    <Content Include="MasterPage\BackEnd\css\style.default.css" />
-    <Content Include="MasterPage\BackEnd\css\toggles.css" />
-    <Content Include="MasterPage\BackEnd\css\weather-icons.min.css" />
-    <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.svg" />
-    <Content Include="MasterPage\BackEnd\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.svg" />
-    <Content Include="MasterPage\BackEnd\holder.js\100x100.html" />
-    <Content Include="MasterPage\BackEnd\holder.js\100x120.html" />
-    <Content Include="MasterPage\BackEnd\holder.js\60x60.html" />
-    <Content Include="MasterPage\BackEnd\holder.js\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\calendar-arrow.png" />
-    <Content Include="MasterPage\BackEnd\images\close-white.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_background.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_hex.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_hsb_b.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_hsb_h.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_hsb_s.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_indic.gif" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_overlay.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_rgb_b.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_rgb_g.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_rgb_r.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_select.gif" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\colorpicker_submit.png" />
-    <Content Include="MasterPage\BackEnd\images\colorpicker\select2.png" />
-    <Content Include="MasterPage\BackEnd\images\datatables\sort_asc.png" />
-    <Content Include="MasterPage\BackEnd\images\datatables\sort_desc.png" />
-    <Content Include="MasterPage\BackEnd\images\droparrows.png" />
-    <Content Include="MasterPage\BackEnd\images\dropdown-arrow.png" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader1.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader10.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader11.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader12.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader13.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader14.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader15.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader16.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader17.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader18.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader19.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader2.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader20.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader21.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader22.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader23.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader24.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader25.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader26.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader27.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader28.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader29.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader3.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader30.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader4.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader5.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader6.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader7.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader8.gif" />
-    <Content Include="MasterPage\BackEnd\images\loaders\loader9.gif" />
-    <Content Include="MasterPage\BackEnd\images\logo-primary.png" />
-    <Content Include="MasterPage\BackEnd\images\logo.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media-audio.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media-doc.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media1.jpg" />
-    <Content Include="MasterPage\BackEnd\images\photos\media2.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media3.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media4.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media5.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media6.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\media7.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\profile-big.jpg" />
-    <Content Include="MasterPage\BackEnd\images\photos\profile.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\user1.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\user2.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\user3.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\user4.png" />
-    <Content Include="MasterPage\BackEnd\images\photos\user5.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\btnNext.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\btnPrevious.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\contentPattern.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\loader.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\sprite.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_rounded\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_square\btnNext.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_square\btnPrevious.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_square\loader.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_square\sprite.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\dark_square\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\default_thumb.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\btnNext.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\btnPrevious.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\contentPatternBottom.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\contentPatternLeft.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\contentPatternRight.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\contentPatternTop.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\default_thumbnail.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\loader.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\sprite.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\facebook\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_rounded\btnNext.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_rounded\btnPrevious.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_rounded\loader.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_rounded\sprite.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_rounded\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_square\btnNext.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_square\btnPrevious.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_square\sprite.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\light_square\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\loader.gif" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\sprite.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\sprite_next.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\sprite_prev.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\sprite_x.png" />
-    <Content Include="MasterPage\BackEnd\images\prettyphoto\sprite_y.png" />
-    <Content Include="MasterPage\BackEnd\images\select2-spinner.gif" />
-    <Content Include="MasterPage\BackEnd\images\select2.png" />
-    <Content Include="MasterPage\BackEnd\images\select2x2.png" />
-    <Content Include="MasterPage\BackEnd\images\spritemap%402x.html" />
-    <Content Include="MasterPage\BackEnd\images\spritemap.html" />
-    <Content Include="MasterPage\BackEnd\images\themeforest.png" />
-    <Content Include="MasterPage\BackEnd\images\uploadfile.png" />
-    <Content Include="MasterPage\BackEnd\images\_div style=.html" />
-    <Content Include="MasterPage\BackEnd\js\bootstrap-timepicker.min.js" />
-    <Content Include="MasterPage\BackEnd\js\bootstrap-wizard.min.js" />
-    <Content Include="MasterPage\BackEnd\js\bootstrap-wysihtml5.js" />
-    <Content Include="MasterPage\BackEnd\js\bootstrap.min.js" />
-    <Content Include="MasterPage\BackEnd\js\charts.js" />
-    <Content Include="MasterPage\BackEnd\js\ckeditor\adapters\jquery.js" />
-    <Content Include="MasterPage\BackEnd\js\ckeditor\ckeditor.js" />
-    <Content Include="MasterPage\BackEnd\js\codemirror\codemirror.js" />
-    <Content Include="MasterPage\BackEnd\js\codemirror\formatting.js" />
-    <Content Include="MasterPage\BackEnd\js\codemirror\mode\javascript.js" />
-    <Content Include="MasterPage\BackEnd\js\codemirror\mode\xml.js" />
-    <Content Include="MasterPage\BackEnd\js\colorpicker.js" />
-    <Content Include="MasterPage\BackEnd\js\custom.js" />
-    <Content Include="MasterPage\BackEnd\js\dashboard.js" />
-    <Content Include="MasterPage\BackEnd\js\dropzone.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.categories.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.crosshair.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.pie.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.resize.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.spline.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\jquery.flot.symbol.min.js" />
-    <Content Include="MasterPage\BackEnd\js\flot\plugins\curvedLines.js" />
-    <Content Include="MasterPage\BackEnd\js\fullcalendar.min.js" />
-    <Content Include="MasterPage\BackEnd\js\gmaps.js" />
-    <Content Include="MasterPage\BackEnd\js\holder.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-1.11.1.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-jvectormap-1.2.2.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-jvectormap-us-aea-en.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-jvectormap-world-mill-en.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-migrate-1.2.1.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery-ui-1.10.3.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.autogrow-textarea.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.cookies.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.dataTables.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.gritter.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.maskedinput.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.mousewheel.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.prettyPhoto.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.sparkline.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.tagsinput.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.ui.touch-punch.min.js" />
-    <Content Include="MasterPage\BackEnd\js\jquery.validate.min.js" />
-    <Content Include="MasterPage\BackEnd\js\modernizr.min.js" />
-    <Content Include="MasterPage\BackEnd\js\moment.min.js" />
-    <Content Include="MasterPage\BackEnd\js\morris.min.js" />
-    <Content Include="MasterPage\BackEnd\js\pace.min.js" />
-    <Content Include="MasterPage\BackEnd\js\raphael-2.1.0.min.js" />
-    <Content Include="MasterPage\BackEnd\js\retina.min.js" />
-    <Content Include="MasterPage\BackEnd\js\select2.min.js" />
-    <Content Include="MasterPage\BackEnd\js\toggles.min.js" />
-    <Content Include="MasterPage\BackEnd\js\wysihtml5-0.3.0.min.js" />
-    <Content Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx" />
-    <Content Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx" />
-    <Content Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx" />
-    <Content Include="MasterPage\FrontEnd\css\global.css" />
-    <Content Include="MasterPage\FrontEnd\css\jqx.base.css" />
-    <Content Include="MasterPage\FrontEnd\css\social.css" />
-    <Content Include="MasterPage\FrontEnd\image\01.png" />
-    <Content Include="MasterPage\FrontEnd\image\02.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\02.png" />
-    <Content Include="MasterPage\FrontEnd\image\03.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\03.png" />
-    <Content Include="MasterPage\FrontEnd\image\04.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\04.png" />
-    <Content Include="MasterPage\FrontEnd\image\a01.png" />
-    <Content Include="MasterPage\FrontEnd\image\a02.png" />
-    <Content Include="MasterPage\FrontEnd\image\a03.png" />
-    <Content Include="MasterPage\FrontEnd\image\a04.png" />
-    <Content Include="MasterPage\FrontEnd\image\a06.png" />
-    <Content Include="MasterPage\FrontEnd\image\a07.png" />
-    <Content Include="MasterPage\FrontEnd\image\a08.png" />
-    <Content Include="MasterPage\FrontEnd\image\a09.png" />
-    <Content Include="MasterPage\FrontEnd\image\a10.png" />
-    <Content Include="MasterPage\FrontEnd\image\a11.png" />
-    <Content Include="MasterPage\FrontEnd\image\a12.png" />
-    <Content Include="MasterPage\FrontEnd\image\a13.png" />
-    <Content Include="MasterPage\FrontEnd\image\a14.png" />
-    <Content Include="MasterPage\FrontEnd\image\a15.png" />
-    <Content Include="MasterPage\FrontEnd\image\a16.png" />
-    <Content Include="MasterPage\FrontEnd\image\a17.png" />
-    <Content Include="MasterPage\FrontEnd\image\a18.png" />
-    <Content Include="MasterPage\FrontEnd\image\a19.png" />
-    <Content Include="MasterPage\FrontEnd\image\a20.png" />
-    <Content Include="MasterPage\FrontEnd\image\a21.png" />
-    <Content Include="MasterPage\FrontEnd\image\award.png" />
-    <Content Include="MasterPage\FrontEnd\image\b02.png" />
-    <Content Include="MasterPage\FrontEnd\image\b03.png" />
-    <Content Include="MasterPage\FrontEnd\image\b05.png" />
-    <Content Include="MasterPage\FrontEnd\image\b06.png" />
-    <Content Include="MasterPage\FrontEnd\image\b07.png" />
-    <Content Include="MasterPage\FrontEnd\image\b10.png" />
-    <Content Include="MasterPage\FrontEnd\image\b11.png" />
-    <Content Include="MasterPage\FrontEnd\image\b12.png" />
-    <Content Include="MasterPage\FrontEnd\image\b13.png" />
-    <Content Include="MasterPage\FrontEnd\image\b14.png" />
-    <Content Include="MasterPage\FrontEnd\image\b16.png" />
-    <Content Include="MasterPage\FrontEnd\image\b17.png" />
-    <Content Include="MasterPage\FrontEnd\image\b18.png" />
-    <Content Include="MasterPage\FrontEnd\image\b20.png" />
-    <Content Include="MasterPage\FrontEnd\image\b21.png" />
-    <Content Include="MasterPage\FrontEnd\image\back-dice-02.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\back-dice.png" />
-    <Content Include="MasterPage\FrontEnd\image\back.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\best.png" />
-    <Content Include="MasterPage\FrontEnd\image\border-coppyright.png" />
-    <Content Include="MasterPage\FrontEnd\image\browser-icons.png" />
-    <Content Include="MasterPage\FrontEnd\image\c1.png" />
-    <Content Include="MasterPage\FrontEnd\image\c1a.png" />
-    <Content Include="MasterPage\FrontEnd\image\c2.png" />
-    <Content Include="MasterPage\FrontEnd\image\c3.png" />
-    <Content Include="MasterPage\FrontEnd\image\child.png" />
-    <Content Include="MasterPage\FrontEnd\image\close.png" />
-    <Content Include="MasterPage\FrontEnd\image\combo.png" />
-    <Content Include="MasterPage\FrontEnd\image\combo\01.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\02.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\03.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\04.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\05.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\06.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\07.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\08.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\09.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\10.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\11.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\12.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\c1.png" />
-    <Content Include="MasterPage\FrontEnd\image\combo\c11.png" />
-    <Content Include="MasterPage\FrontEnd\image\combo\c12.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-01.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-02.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-03.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-04.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-05.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-06.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-07.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-08.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-09.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-10.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-11.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\combo\thumb-12.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\Fruit.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\global.css" />
-    <Content Include="MasterPage\FrontEnd\image\home.png" />
-    <Content Include="MasterPage\FrontEnd\image\icon-ft.png" />
-    <Content Include="MasterPage\FrontEnd\image\icon-hot.png" />
-    <Content Include="MasterPage\FrontEnd\image\icon-search.png" />
-    <Content Include="MasterPage\FrontEnd\image\Icon-Slider-12-jQuery.png" />
-    <Content Include="MasterPage\FrontEnd\image\Icon-Slider-12-No-jQuery.png" />
-    <Content Include="MasterPage\FrontEnd\image\list-title.png" />
-    <Content Include="MasterPage\FrontEnd\image\loading.gif" />
-    <Content Include="MasterPage\FrontEnd\image\loading2.gif" />
-    <Content Include="MasterPage\FrontEnd\image\logo.png" />
-    <Content Include="MasterPage\FrontEnd\image\man.png" />
-    <Content Include="MasterPage\FrontEnd\image\moc-ipad.png" />
-    <Content Include="MasterPage\FrontEnd\image\moc-iphone.png" />
-    <Content Include="MasterPage\FrontEnd\image\news.png" />
-    <Content Include="MasterPage\FrontEnd\image\p1.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\p2.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\p3.jpg" />
-    <Content Include="MasterPage\FrontEnd\image\pic-top.png" />
-    <Content Include="MasterPage\FrontEnd\image\pic-two.png" />
-    <Content Include="MasterPage\FrontEnd\image\pic.png" />
-    <Content Include="MasterPage\FrontEnd\image\play.png" />
-    <Content Include="MasterPage\FrontEnd\image\product.png" />
-    <Content Include="MasterPage\FrontEnd\image\properti.png" />
-    <Content Include="MasterPage\FrontEnd\image\Register.png" />
-    <Content Include="MasterPage\FrontEnd\image\slider.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\dribbble.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\facebook.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\flickr.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\googleplus.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\pinterest.png" />
-    <Content Include="MasterPage\FrontEnd\image\social-icons\twitter.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\aim.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\angellist.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\apple.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\behance.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\blogger.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\cargo.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\delicious.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\deviantart.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\digg.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\dopplr.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\dribbble.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\email.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\ember.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\evernote.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\facebook.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\flickr.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\forrst.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\github.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\google.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\googleplus.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\gowalla.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\grooveshark.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\html5.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\icloud.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\instagram.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\lastfm.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\linkedin.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\metacafe.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\mixx.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\myspace.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\netvibes.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\newsvine.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\orkut.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\paypal.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\picasa.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\pinterest.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\plurk.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\posterous.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\reddit.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\rss.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\skype.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\stumbleupon.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\technorati.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\tumblr.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\twitter.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\vimeo.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\wordpress.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\xing.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\yahoo.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\yelp.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\youtube.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\zerply.png" />
-    <Content Include="MasterPage\FrontEnd\image\social\icons\zootool.png" />
-    <Content Include="MasterPage\FrontEnd\image\special.png" />
-    <Content Include="MasterPage\FrontEnd\image\step.png" />
-    <Content Include="MasterPage\FrontEnd\image\t01.png" />
-    <Content Include="MasterPage\FrontEnd\image\t_i xu_ng.jpg" />
-    <Content Include="MasterPage\FrontEnd\Index.aspx" />
-    <Content Include="MasterPage\FrontEnd\Index.html" />
-    <Content Include="MasterPage\FrontEnd\js\countDownTimer.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.cs-CZ.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.de-DE.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.en-CA.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.en-US.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.fr-FR.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.he-IL.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.hr-HR.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.hu-HU.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.it-IT.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.ja-JP.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.lt.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.ru-RU.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.culture.sa-IN.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\globalize.js" />
-    <Content Include="MasterPage\FrontEnd\js\globalization\ReadMe.txt" />
-    <Content Include="MasterPage\FrontEnd\js\jquery-1.9.1.min.js" />
-    <Content Include="MasterPage\FrontEnd\js\jqxcalendar.js" />
-    <Content Include="MasterPage\FrontEnd\js\jqxcore.js" />
-    <Content Include="MasterPage\FrontEnd\js\jqxdatetimeinput.js" />
-    <Content Include="MasterPage\FrontEnd\js\jssor.js" />
-    <Content Include="MasterPage\FrontEnd\js\jssor.slider.js" />
-    <Content Include="MasterPage\FrontEnd\libs\jquery-loader.js" />
-    <Content Include="MasterPage\FrontEnd\News.aspx" />
-    <Content Include="MasterPage\FrontEnd\News2.aspx" />
-    <Content Include="MasterPage\FrontEnd\News3.aspx" />
-    <Content Include="MasterPage\FrontEnd\News4.aspx" />
-    <Content Include="MasterPage\FrontEnd\src\jquery.remodal.css" />
-    <Content Include="MasterPage\FrontEnd\src\jquery.remodal.js" />
-    <Content Include="MasterPage\FrontEnd\Temp.html" />
-    <Content Include="MasterPage\Admin.aspx" />
+    <Content Include="BackEnd\ajax\accordion.html" />
+    <Content Include="BackEnd\ajax\panel.html" />
+    <Content Include="BackEnd\ajax\remote.html" />
+    <Content Include="BackEnd\ajax\tabs.html" />
+    <Content Include="BackEnd\css\animate.delay.css" />
+    <Content Include="BackEnd\css\animate.min.css" />
+    <Content Include="BackEnd\css\bootstrap-override.css" />
+    <Content Include="BackEnd\css\bootstrap-timepicker.min.css" />
+    <Content Include="BackEnd\css\bootstrap-wysihtml5.css" />
+    <Content Include="BackEnd\css\bootstrap.min.css" />
+    <Content Include="BackEnd\css\codemirror\codemirror.css" />
+    <Content Include="BackEnd\css\codemirror\theme\ambiance.css" />
+    <Content Include="BackEnd\css\colorpicker.css" />
+    <Content Include="BackEnd\css\dropzone.css" />
+    <Content Include="BackEnd\css\font-awesome.min.css" />
+    <Content Include="BackEnd\css\fullcalendar.css" />
+    <Content Include="BackEnd\css\images\animated-overlay.html" />
+    <Content Include="BackEnd\css\images\_div style=.html" />
+    <Content Include="BackEnd\css\jquery-ui-1.10.3.css" />
+    <Content Include="BackEnd\css\jquery.gritter.css" />
+    <Content Include="BackEnd\css\jquery.tagsinput.css" />
+    <Content Include="BackEnd\css\morris.css" />
+    <Content Include="BackEnd\css\pace.css" />
+    <Content Include="BackEnd\css\prettyPhoto.css" />
+    <Content Include="BackEnd\css\select2.css" />
+    <Content Include="BackEnd\css\style.calendar.css" />
+    <Content Include="BackEnd\css\style.datatables.css" />
+    <Content Include="BackEnd\css\style.default.css" />
+    <Content Include="BackEnd\css\toggles.css" />
+    <Content Include="BackEnd\css\weather-icons.min.css" />
+    <Content Include="BackEnd\fonts\fontawesome-webfont862f.svg" />
+    <Content Include="BackEnd\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BackEnd\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="BackEnd\holder.js\100x100.html" />
+    <Content Include="BackEnd\holder.js\100x120.html" />
+    <Content Include="BackEnd\holder.js\60x60.html" />
+    <Content Include="BackEnd\holder.js\_div style=.html" />
+    <Content Include="BackEnd\images\calendar-arrow.png" />
+    <Content Include="BackEnd\images\close-white.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_background.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_hex.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_indic.gif" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_overlay.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_select.gif" />
+    <Content Include="BackEnd\images\colorpicker\colorpicker_submit.png" />
+    <Content Include="BackEnd\images\colorpicker\select2.png" />
+    <Content Include="BackEnd\images\datatables\sort_asc.png" />
+    <Content Include="BackEnd\images\datatables\sort_desc.png" />
+    <Content Include="BackEnd\images\droparrows.png" />
+    <Content Include="BackEnd\images\dropdown-arrow.png" />
+    <Content Include="BackEnd\images\loaders\loader1.gif" />
+    <Content Include="BackEnd\images\loaders\loader10.gif" />
+    <Content Include="BackEnd\images\loaders\loader11.gif" />
+    <Content Include="BackEnd\images\loaders\loader12.gif" />
+    <Content Include="BackEnd\images\loaders\loader13.gif" />
+    <Content Include="BackEnd\images\loaders\loader14.gif" />
+    <Content Include="BackEnd\images\loaders\loader15.gif" />
+    <Content Include="BackEnd\images\loaders\loader16.gif" />
+    <Content Include="BackEnd\images\loaders\loader17.gif" />
+    <Content Include="BackEnd\images\loaders\loader18.gif" />
+    <Content Include="BackEnd\images\loaders\loader19.gif" />
+    <Content Include="BackEnd\images\loaders\loader2.gif" />
+    <Content Include="BackEnd\images\loaders\loader20.gif" />
+    <Content Include="BackEnd\images\loaders\loader21.gif" />
+    <Content Include="BackEnd\images\loaders\loader22.gif" />
+    <Content Include="BackEnd\images\loaders\loader23.gif" />
+    <Content Include="BackEnd\images\loaders\loader24.gif" />
+    <Content Include="BackEnd\images\loaders\loader25.gif" />
+    <Content Include="BackEnd\images\loaders\loader26.gif" />
+    <Content Include="BackEnd\images\loaders\loader27.gif" />
+    <Content Include="BackEnd\images\loaders\loader28.gif" />
+    <Content Include="BackEnd\images\loaders\loader29.gif" />
+    <Content Include="BackEnd\images\loaders\loader3.gif" />
+    <Content Include="BackEnd\images\loaders\loader30.gif" />
+    <Content Include="BackEnd\images\loaders\loader4.gif" />
+    <Content Include="BackEnd\images\loaders\loader5.gif" />
+    <Content Include="BackEnd\images\loaders\loader6.gif" />
+    <Content Include="BackEnd\images\loaders\loader7.gif" />
+    <Content Include="BackEnd\images\loaders\loader8.gif" />
+    <Content Include="BackEnd\images\loaders\loader9.gif" />
+    <Content Include="BackEnd\images\logo-primary.png" />
+    <Content Include="BackEnd\images\logo.png" />
+    <Content Include="BackEnd\images\photos\media-audio.png" />
+    <Content Include="BackEnd\images\photos\media-doc.png" />
+    <Content Include="BackEnd\images\photos\media1.jpg" />
+    <Content Include="BackEnd\images\photos\media2.png" />
+    <Content Include="BackEnd\images\photos\media3.png" />
+    <Content Include="BackEnd\images\photos\media4.png" />
+    <Content Include="BackEnd\images\photos\media5.png" />
+    <Content Include="BackEnd\images\photos\media6.png" />
+    <Content Include="BackEnd\images\photos\media7.png" />
+    <Content Include="BackEnd\images\photos\profile-big.jpg" />
+    <Content Include="BackEnd\images\photos\profile.png" />
+    <Content Include="BackEnd\images\photos\user1.png" />
+    <Content Include="BackEnd\images\photos\user2.png" />
+    <Content Include="BackEnd\images\photos\user3.png" />
+    <Content Include="BackEnd\images\photos\user4.png" />
+    <Content Include="BackEnd\images\photos\user5.png" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\btnNext.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\btnPrevious.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\contentPattern.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\loader.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\sprite.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_rounded\_div style=.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_square\btnNext.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_square\btnPrevious.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_square\loader.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_square\sprite.html" />
+    <Content Include="BackEnd\images\prettyphoto\dark_square\_div style=.html" />
+    <Content Include="BackEnd\images\prettyphoto\default_thumb.png" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\btnNext.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\btnPrevious.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternBottom.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternLeft.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternRight.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternTop.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\default_thumbnail.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\loader.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\sprite.html" />
+    <Content Include="BackEnd\images\prettyphoto\facebook\_div style=.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_rounded\btnNext.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_rounded\btnPrevious.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_rounded\loader.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_rounded\sprite.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_rounded\_div style=.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_square\btnNext.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_square\btnPrevious.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_square\sprite.html" />
+    <Content Include="BackEnd\images\prettyphoto\light_square\_div style=.html" />
+    <Content Include="BackEnd\images\prettyphoto\loader.gif" />
+    <Content Include="BackEnd\images\prettyphoto\sprite.png" />
+    <Content Include="BackEnd\images\prettyphoto\sprite_next.png" />
+    <Content Include="BackEnd\images\prettyphoto\sprite_prev.png" />
+    <Content Include="BackEnd\images\prettyphoto\sprite_x.png" />
+    <Content Include="BackEnd\images\prettyphoto\sprite_y.png" />
+    <Content Include="BackEnd\images\select2-spinner.gif" />
+    <Content Include="BackEnd\images\select2.png" />
+    <Content Include="BackEnd\images\select2x2.png" />
+    <Content Include="BackEnd\images\spritemap%402x.html" />
+    <Content Include="BackEnd\images\spritemap.html" />
+    <Content Include="BackEnd\images\themeforest.png" />
+    <Content Include="BackEnd\images\uploadfile.png" />
+    <Content Include="BackEnd\images\_div style=.html" />
+    <Content Include="BackEnd\js\bootstrap-timepicker.min.js" />
+    <Content Include="BackEnd\js\bootstrap-wizard.min.js" />
+    <Content Include="BackEnd\js\bootstrap-wysihtml5.js" />
+    <Content Include="BackEnd\js\bootstrap.min.js" />
+    <Content Include="BackEnd\js\charts.js" />
+    <Content Include="BackEnd\js\ckeditor\adapters\jquery.js" />
+    <Content Include="BackEnd\js\ckeditor\ckeditor.js" />
+    <Content Include="BackEnd\js\codemirror\codemirror.js" />
+    <Content Include="BackEnd\js\codemirror\formatting.js" />
+    <Content Include="BackEnd\js\codemirror\mode\javascript.js" />
+    <Content Include="BackEnd\js\codemirror\mode\xml.js" />
+    <Content Include="BackEnd\js\colorpicker.js" />
+    <Content Include="BackEnd\js\custom.js" />
+    <Content Include="BackEnd\js\dashboard.js" />
+    <Content Include="BackEnd\js\dropzone.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.categories.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.spline.min.js" />
+    <Content Include="BackEnd\js\flot\jquery.flot.symbol.min.js" />
+    <Content Include="BackEnd\js\flot\plugins\curvedLines.js" />
+    <Content Include="BackEnd\js\fullcalendar.min.js" />
+    <Content Include="BackEnd\js\gmaps.js" />
+    <Content Include="BackEnd\js\holder.js" />
+    <Content Include="BackEnd\js\jquery-1.11.1.min.js" />
+    <Content Include="BackEnd\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="BackEnd\js\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="BackEnd\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="BackEnd\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="BackEnd\js\jquery-ui-1.10.3.min.js" />
+    <Content Include="BackEnd\js\jquery.autogrow-textarea.js" />
+    <Content Include="BackEnd\js\jquery.cookies.js" />
+    <Content Include="BackEnd\js\jquery.dataTables.min.js" />
+    <Content Include="BackEnd\js\jquery.gritter.min.js" />
+    <Content Include="BackEnd\js\jquery.maskedinput.min.js" />
+    <Content Include="BackEnd\js\jquery.mousewheel.js" />
+    <Content Include="BackEnd\js\jquery.prettyPhoto.js" />
+    <Content Include="BackEnd\js\jquery.sparkline.min.js" />
+    <Content Include="BackEnd\js\jquery.tagsinput.min.js" />
+    <Content Include="BackEnd\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="BackEnd\js\jquery.validate.min.js" />
+    <Content Include="BackEnd\js\modernizr.min.js" />
+    <Content Include="BackEnd\js\moment.min.js" />
+    <Content Include="BackEnd\js\morris.min.js" />
+    <Content Include="BackEnd\js\pace.min.js" />
+    <Content Include="BackEnd\js\raphael-2.1.0.min.js" />
+    <Content Include="BackEnd\js\retina.min.js" />
+    <Content Include="BackEnd\js\select2.min.js" />
+    <Content Include="BackEnd\js\toggles.min.js" />
+    <Content Include="BackEnd\js\wysihtml5-0.3.0.min.js" />
+    <Content Include="BackEnd\UserControl\GroupManagement\ucGroup.ascx" />
+    <Content Include="BackEnd\UserControl\ItemManagement\ucItem.ascx" />
+    <Content Include="BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx" />
+    <Content Include="FrontEnd\css\global.css" />
+    <Content Include="FrontEnd\css\jqx.base.css" />
+    <Content Include="FrontEnd\css\social.css" />
+    <Content Include="Detail.aspx" />
+    <Content Include="Detail2.aspx" />
+    <Content Include="Detail3.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="FrontEnd\js\countDownTimer.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.cs-CZ.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.de-DE.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.en-CA.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.en-US.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.fr-FR.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.he-IL.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.hr-HR.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.hu-HU.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.it-IT.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.ja-JP.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.lt.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.ru-RU.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.culture.sa-IN.js" />
+    <Content Include="FrontEnd\js\globalization\globalize.js" />
+    <Content Include="FrontEnd\js\globalization\ReadMe.txt" />
+    <Content Include="FrontEnd\js\jquery-1.9.1.min.js" />
+    <Content Include="FrontEnd\js\jqxcalendar.js" />
+    <Content Include="FrontEnd\js\jqxcore.js" />
+    <Content Include="FrontEnd\js\jqxdatetimeinput.js" />
+    <Content Include="FrontEnd\js\jssor.js" />
+    <Content Include="FrontEnd\js\jssor.slider.js" />
+    <Content Include="FrontEnd\libs\jquery-loader.js" />
+    <Content Include="Introduce.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="News2.aspx" />
+    <Content Include="News3.aspx" />
+    <Content Include="News4.aspx" />
+    <Content Include="FrontEnd\src\jquery.remodal.css" />
+    <Content Include="FrontEnd\src\jquery.remodal.js" />
+    <Content Include="Admin.aspx" />
     <Content Include="packages.config" />
     <Content Include="Admin\fonts\fontawesome-webfont862f.eot" />
     <Content Include="Admin\fonts\fontawesome-webfont862f.ttf" />
@@ -871,34 +876,35 @@
     <Content Include="Admin\fonts\weathericons-regular-webfont.ttf" />
     <Content Include="Admin\fonts\weathericons-regular-webfont.woff" />
     <Content Include="Admin\fonts\weathericons-regular-webfontd41d.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.ttf" />
-    <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfont862f.woff" />
-    <Content Include="MasterPage\BackEnd\fonts\fontawesome-webfontd41d.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="MasterPage\BackEnd\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="MasterPage\BackEnd\fonts\glyphicons-halflings-regulard41d.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.eot" />
-    <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.ttf" />
-    <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfont.woff" />
-    <Content Include="MasterPage\BackEnd\fonts\weathericons-regular-webfontd41d.eot" />
-    <Content Include="MasterPage\BackEnd\AdminPage.Master" />
-    <Content Include="MasterPage\FrontEnd\font\Pacifico.ttf" />
-    <Content Include="MasterPage\FrontEnd\image\step.psd" />
-    <Content Include="MasterPage\FrontEnd\image\text-list.psd" />
-    <Content Include="MasterPage\FrontEnd\Home.Master" />
+    <Content Include="BackEnd\fonts\fontawesome-webfont862f.eot" />
+    <Content Include="BackEnd\fonts\fontawesome-webfont862f.ttf" />
+    <Content Include="BackEnd\fonts\fontawesome-webfont862f.woff" />
+    <Content Include="BackEnd\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="BackEnd\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="BackEnd\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BackEnd\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BackEnd\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="BackEnd\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="BackEnd\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="BackEnd\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="BackEnd\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="BackEnd\AdminPage.Master" />
+    <Content Include="FrontEnd\font\Pacifico.ttf" />
+    <Content Include="FrontEnd\Home.Master" />
+    <Content Include="FrontEnd\image\step.psd" />
+    <Content Include="FrontEnd\image\text-list.psd" />
+    <None Include="My Project\PublishProfiles\Publish.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="UserControl\ListProduct\ucListProduct.ascx" />
-    <Content Include="UserControl\News\ucNews.ascx" />
-    <Content Include="UserControl\Popup\ucPopupDetails.ascx" />
-    <Content Include="UserControl\Properties\ucProductProperties.ascx" />
-    <Content Include="UserControl\Properties\ucProperties.ascx" />
+    <Content Include="FrontEnd\UserControl\ListProduct\ucListProduct.ascx" />
+    <Content Include="FrontEnd\UserControl\News\ucNews.ascx" />
+    <Content Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx" />
+    <Content Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx" />
+    <Content Include="FrontEnd\UserControl\Properties\ucProperties.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -913,13 +919,6 @@
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="About.aspx.designer.vb">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="About.aspx.vb">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Account\Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -962,90 +961,111 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\AdminPage.Master.designer.vb">
+    <Compile Include="BackEnd\AdminPage.Master.designer.vb">
       <DependentUpon>AdminPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\AdminPage.Master.vb">
+    <Compile Include="BackEnd\AdminPage.Master.vb">
       <DependentUpon>AdminPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx.designer.vb">
+    <Compile Include="BackEnd\UserControl\GroupManagement\ucGroup.ascx.designer.vb">
       <DependentUpon>ucGroup.ascx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\GroupManagement\ucGroup.ascx.vb">
+    <Compile Include="BackEnd\UserControl\GroupManagement\ucGroup.ascx.vb">
       <DependentUpon>ucGroup.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx.designer.vb">
+    <Compile Include="BackEnd\UserControl\ItemManagement\ucItem.ascx.designer.vb">
       <DependentUpon>ucItem.ascx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\ItemManagement\ucItem.ascx.vb">
+    <Compile Include="BackEnd\UserControl\ItemManagement\ucItem.ascx.vb">
       <DependentUpon>ucItem.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.designer.vb">
+    <Compile Include="BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.designer.vb">
       <DependentUpon>ucReceipt.ascx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.vb">
+    <Compile Include="BackEnd\UserControl\ReceiptManagement\ucReceipt.ascx.vb">
       <DependentUpon>ucReceipt.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\Home.Master.designer.vb">
+    <Compile Include="Detail.aspx.designer.vb">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.aspx.vb">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Detail2.aspx.designer.vb">
+      <DependentUpon>Detail2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail2.aspx.vb">
+      <DependentUpon>Detail2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Detail3.aspx.designer.vb">
+      <DependentUpon>Detail3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail3.aspx.vb">
+      <DependentUpon>Detail3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Home.Master.designer.vb">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\Home.Master.vb">
+    <Compile Include="FrontEnd\Home.Master.vb">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\Index.aspx.designer.vb">
+    <Compile Include="Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\Index.aspx.vb">
+    <Compile Include="Index.aspx.vb">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\Admin.aspx.designer.vb">
+    <Compile Include="Admin.aspx.designer.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\Admin.aspx.vb">
+    <Compile Include="Admin.aspx.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News.aspx.designer.vb">
+    <Compile Include="Introduce.aspx.designer.vb">
+      <DependentUpon>Introduce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Introduce.aspx.vb">
+      <DependentUpon>Introduce.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.vb">
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News.aspx.vb">
+    <Compile Include="News.aspx.vb">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News2.aspx.designer.vb">
+    <Compile Include="News2.aspx.designer.vb">
       <DependentUpon>News2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News2.aspx.vb">
+    <Compile Include="News2.aspx.vb">
       <DependentUpon>News2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News3.aspx.designer.vb">
+    <Compile Include="News3.aspx.designer.vb">
       <DependentUpon>News3.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News3.aspx.vb">
+    <Compile Include="News3.aspx.vb">
       <DependentUpon>News3.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News4.aspx.designer.vb">
+    <Compile Include="News4.aspx.designer.vb">
       <DependentUpon>News4.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\FrontEnd\News4.aspx.vb">
+    <Compile Include="News4.aspx.vb">
       <DependentUpon>News4.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -1068,45 +1088,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Site.Master.designer.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Master.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControl\ListProduct\ucListProduct.ascx.designer.vb">
+    <Compile Include="FrontEnd\UserControl\ListProduct\ucListProduct.ascx.designer.vb">
       <DependentUpon>ucListProduct.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ListProduct\ucListProduct.ascx.vb">
+    <Compile Include="FrontEnd\UserControl\ListProduct\ucListProduct.ascx.vb">
       <DependentUpon>ucListProduct.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\News\ucNews.ascx.designer.vb">
+    <Compile Include="FrontEnd\UserControl\News\ucNews.ascx.designer.vb">
       <DependentUpon>ucNews.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\News\ucNews.ascx.vb">
+    <Compile Include="FrontEnd\UserControl\News\ucNews.ascx.vb">
       <DependentUpon>ucNews.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\Popup\ucPopupDetails.ascx.designer.vb">
+    <Compile Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx.designer.vb">
       <DependentUpon>ucPopupDetails.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Popup\ucPopupDetails.ascx.vb">
+    <Compile Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx.vb">
       <DependentUpon>ucPopupDetails.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\Properties\ucProductProperties.ascx.designer.vb">
+    <Compile Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx.designer.vb">
       <DependentUpon>ucProductProperties.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Properties\ucProductProperties.ascx.vb">
+    <Compile Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx.vb">
       <DependentUpon>ucProductProperties.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\Properties\ucProperties.ascx.designer.vb">
+    <Compile Include="FrontEnd\UserControl\Properties\ucProperties.ascx.designer.vb">
       <DependentUpon>ucProperties.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Properties\ucProperties.ascx.vb">
+    <Compile Include="FrontEnd\UserControl\Properties\ucProperties.ascx.vb">
       <DependentUpon>ucProperties.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -1116,13 +1129,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1144,13 +1150,11 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="MasterPage\FrontEnd\home\" />
+    <Folder Include="FrontEnd\home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.vbproj">
