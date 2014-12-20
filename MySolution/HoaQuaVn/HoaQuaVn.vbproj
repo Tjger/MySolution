@@ -499,6 +499,7 @@
     <Content Include="FrontEnd\image\combo\c1.png" />
     <Content Include="FrontEnd\image\combo\c11.png" />
     <Content Include="FrontEnd\image\combo\c12.jpg" />
+    <Content Include="FrontEnd\image\combo\location.JPG" />
     <Content Include="FrontEnd\image\combo\thumb-01.jpg" />
     <Content Include="FrontEnd\image\combo\thumb-02.jpg" />
     <Content Include="FrontEnd\image\combo\thumb-03.jpg" />
@@ -519,6 +520,8 @@
     <Content Include="FrontEnd\image\icon-search.png" />
     <Content Include="FrontEnd\image\Icon-Slider-12-jQuery.png" />
     <Content Include="FrontEnd\image\Icon-Slider-12-No-jQuery.png" />
+    <Content Include="FrontEnd\image\lab.png" />
+    <Content Include="FrontEnd\image\like.png" />
     <Content Include="FrontEnd\image\list-title.png" />
     <Content Include="FrontEnd\image\loading.gif" />
     <Content Include="FrontEnd\image\loading2.gif" />
@@ -534,6 +537,7 @@
     <Content Include="FrontEnd\image\p1.jpg" />
     <Content Include="FrontEnd\image\p2.jpg" />
     <Content Include="FrontEnd\image\p3.jpg" />
+    <Content Include="FrontEnd\image\paperplane.png" />
     <Content Include="FrontEnd\image\pic-top.png" />
     <Content Include="FrontEnd\image\pic-two.png" />
     <Content Include="FrontEnd\image\pic.png" />
