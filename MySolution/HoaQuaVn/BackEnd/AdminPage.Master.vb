@@ -5,4 +5,12 @@
 
     End Sub
 
+    Protected Sub lblSignOut_Click(sender As Object, e As EventArgs)
+        Try
+            Session.Abandon()
+            Response.Redirect("Login.aspx")
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

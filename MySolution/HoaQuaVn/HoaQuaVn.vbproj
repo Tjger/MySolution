@@ -428,6 +428,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\style.css" />
+    <Content Include="font\fontawesome-webfont.svg" />
     <Content Include="FrontEnd\image\01.png" />
     <Content Include="FrontEnd\image\02.jpg" />
     <Content Include="FrontEnd\image\02.png" />
@@ -610,8 +614,13 @@
     <Content Include="FrontEnd\image\t01.png" />
     <Content Include="FrontEnd\image\t_i xu_ng.jpg" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg2.jpg" />
+    <Content Include="Images\bg3.jpg" />
+    <Content Include="Images\blurred.jpg" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\noise.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -834,6 +843,7 @@
     <Content Include="Detail.aspx" />
     <Content Include="Detail2.aspx" />
     <Content Include="Detail3.aspx" />
+    <Content Include="Images\wood_pattern.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="FrontEnd\js\countDownTimer.js" />
     <Content Include="FrontEnd\js\globalization\globalize.culture.cs-CZ.js" />
@@ -859,6 +869,9 @@
     <Content Include="FrontEnd\js\jssor.slider.js" />
     <Content Include="FrontEnd\libs\jquery-loader.js" />
     <Content Include="Introduce.aspx" />
+    <Content Include="js\jquery.placeholder.min.js" />
+    <Content Include="js\modernizr.custom.63321.js" />
+    <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="News2.aspx" />
     <Content Include="News3.aspx" />
@@ -896,6 +909,10 @@
     <Content Include="FrontEnd\Home.Master" />
     <Content Include="FrontEnd\image\step.psd" />
     <Content Include="FrontEnd\image\text-list.psd" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="font\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome-webfont.woff" />
     <None Include="My Project\PublishProfiles\Publish.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -1042,6 +1059,13 @@
     </Compile>
     <Compile Include="Introduce.aspx.vb">
       <DependentUpon>Introduce.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="News.aspx.designer.vb">
