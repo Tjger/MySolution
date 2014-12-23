@@ -232,7 +232,7 @@
 .form-2 h1 .log-in,
 .form-2 h1 .sign-up {
     display: inline-block;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 .form-2 h1 .log-in {
