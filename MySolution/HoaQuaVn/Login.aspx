@@ -11,8 +11,8 @@
     <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/modernizr.custom.63321.js"></script>
+    <link rel="stylesheet" type="text/css" href="BackEnd/css/style.css" />
+    <script src="BackEnd/js/modernizr.custom.63321.js"></script>
     <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     <style>
         body {
@@ -21,20 +21,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-
-        <!-- Codrops top bar -->
-        <div class="codrops-top">
-            <a href="http://tympanus.net/Tutorials/RealtimeGeolocationNode/">
-                <strong>&laquo; Previous Demo: </strong>Real-Time Geolocation Service with Node.js
-                </a>
-            <span class="right">
-                <a href="http://tympanus.net/codrops/?p=11372">
-                    <strong>Back to the Codrops Article</strong>
-                </a>
-            </span>
-        </div>
-        <!--/ Codrops top bar -->
+    <div class="container">     
 
         <header>
 
@@ -43,10 +30,7 @@
             <h2>Hệ thống quản lý</h2>
 
 
-            <div class="support-note">
-                <span class="note-ie">Sorry, only modern browsers.</span>
-            </div>
-
+        
         </header>
 
         <section class="main">
@@ -63,7 +47,7 @@
                    <%-- <input type="password" name="password" placeholder="Mật khẩu" class="showpassword">--%>
                 </p>
                 <p class="clearfix">
-                    <asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" OnClick="btnLogin_Click" />
+                    <asp:Button ID="btnLogin" Width="305px" runat="server" Text="Đăng nhập" OnClick="btnLogin_Click" />
                     <%--<input type="submit" name="submit" value="Đăng nhập">--%>
                 </p>
             </form>
