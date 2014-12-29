@@ -17,7 +17,8 @@
 
 <asp:Label ID="Label1" runat="server" Text="Item Name"></asp:Label>
 <asp:TextBox ID="txtItemName" runat="server" Width="184px"></asp:TextBox>
-<asp:CheckBox ID="chkHot" Text="  Bán chạy" runat="server" />
+<asp:CheckBox ID="chkActive" Text="Active" runat="server" />
+<asp:CheckBox ID="chkHot" Text="Hot" runat="server" />
 <br />
 
 <asp:Label ID="Label2" runat="server" Text="Group"></asp:Label>

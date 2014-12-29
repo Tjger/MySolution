@@ -17,9 +17,9 @@
     <script src="<%: ResolveUrl("~/BackEnd/js/nicEdit-latest.js")%>"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
-   
+
 </head>
-    
+
 <body>
 
     <header>
@@ -45,12 +45,12 @@
                     </form>--%>
 
                     <div class="btn-group btn-group-list btn-group-notification">
-                         <!-- dropdown-menu -->
+                        <!-- dropdown-menu -->
                     </div>
                     <!-- btn-group -->
 
                     <div class="btn-group btn-group-list btn-group-messages">
-                         <!-- dropdown-menu -->
+                        <!-- dropdown-menu -->
                     </div>
                     <!-- btn-group -->
 
@@ -78,7 +78,7 @@
         <div class="mainwrapper">
             <div class="leftpanel">
                 <div class="media profile-left">
- <%--                   <a class="pull-left profile-thumb" href="profile.html">
+                    <%--                   <a class="pull-left profile-thumb" href="profile.html">
                         <img class="img-circle" src="images/photos/profile.png" alt="">
                     </a>--%>
                     <div class="media-body">
@@ -88,17 +88,21 @@
                 </div>
                 <!-- media -->
 
-              <%--  <h5 class="leftpanel-title">Navigation</h5>--%>
+                <%--  <h5 class="leftpanel-title">Navigation</h5>--%>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="parent"><a href="#"><i class="fa fa-suitcase"></i><span>Quản lý</span></a>
+                    <li class="parent"><a href="#"><i class="fa fa-suitcase"></i>Quản Trị</a>
                         <ul class="children">
                             <li><a href="Admin.aspx?module=1">Nhóm sản phẩm</a></li>
                             <li><a href="Admin.aspx?module=2">Sản phẩm</a></li>
                             <li><a href="Admin.aspx?module=3">Combo</a></li>
                             <li><a href="Admin.aspx?module=4">SEO</a></li>
-                             <li><a href="Admin.aspx?module=5">Tin Tức</a></li>
+                            <li><a href="Admin.aspx?module=5">Tin Tức</a></li>
                         </ul>
-                    </li>                    
+                    </li>
+                    <%--  <li class="parent"><a href="Admin.aspx?module=2"><i class="fa fa-suitcase"></i><span>Sản phẩm</span></a></li>
+                    <li class="parent"><a href="Admin.aspx?module=3"><i class="fa fa-suitcase"></i><span>Combo</span></a></li>
+                    <li class="parent"><a href="Admin.aspx?module=4"><i class="fa fa-suitcase"></i><span>SEO</span></a></li>
+                    <li class="parent"><a href="Admin.aspx?module=5"><i class="fa fa-suitcase"></i><span>Tin Tức</span></a></li>--%>
                 </ul>
             </div>
             <!-- leftpanel -->
@@ -110,7 +114,7 @@
                             <a href="Admin.aspx"><i class="fa fa-home"></i></a>
                         </div>
                         <div class="media-body">
-                            <%--<ul class="breadcrumb">
+                           <%-- <ul class="breadcrumb">
                                 <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
                                 <li>
                                     <asp:ContentPlaceHolder ID="PageTitle1" runat="server">
@@ -118,11 +122,11 @@
                                     </asp:ContentPlaceHolder>
                                 </li>
                             </ul>--%>
-<%--                            <h4>
+                     <%--       <h4>
                                 <asp:ContentPlaceHolder ID="PageTitle" runat="server">
                                     Thống Kê
                                 </asp:ContentPlaceHolder>
-                            </h4>--%>                            
+                            </h4>--%>
                         </div>
                     </div>
                     <!-- media -->

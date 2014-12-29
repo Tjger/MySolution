@@ -1,15 +1,14 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucCombo.ascx.vb" Inherits="HoaQuaVn.ucCombo" %>
 
-<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="155px" Width="895px">
-    <AlternatingRowStyle BackColor="White" />
-    <EditRowStyle BackColor="#7C6F57" />
-    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#E3EAEB" />
-    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-    <SortedAscendingCellStyle BackColor="#F8FAFA" />
-    <SortedAscendingHeaderStyle BackColor="#246B61" />
-    <SortedDescendingCellStyle BackColor="#D4DFE1" />
-    <SortedDescendingHeaderStyle BackColor="#15524A" />
+<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="155px" Width="895px" CssClass="table" AutoGenerateColumns="False">
+    <Columns>
+        <asp:BoundField DataField="ComboID" HeaderText="ID" />
+        <asp:BoundField DataField="ComboName" HeaderText="Name" />
+        <asp:CheckBoxField DataField="Active" HeaderText="Active" />  
+        <asp:BoundField DataField="ComboPrice" HeaderText="Price" />
+        <asp:BoundField DataField="Description" HeaderText="Description" />
+        <asp:HyperLinkField DataNavigateUrlFields="ComboID" DataNavigateUrlFormatString="~/Admin.aspx?module=7&m=1&Id={0}" Text="View Detail" />
+    </Columns>
+
+    <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />
 </asp:GridView>
