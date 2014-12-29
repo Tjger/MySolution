@@ -8,6 +8,7 @@ Public Class index
         ComboManagement = 3
         SEOManagement = 4
         ClearSession = 5
+        NewsManagement = 6
     End Enum
 
     Private sModule As String = String.Empty
@@ -29,8 +30,14 @@ Public Class index
                             Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItem.ascx")
                             Panel1.Controls.Add(uc)
                         Case ModuleType.ComboManagement
-
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucCombo.ascx")
+                            Panel1.Controls.Add(uc)
                         Case ModuleType.SEOManagement
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/SeoManagement/ucSEO.ascx")
+                            Panel1.Controls.Add(uc)
+                        Case ModuleType.NewsManagement
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/NewsManagement/ucNews.ascx")
+                            Panel1.Controls.Add(uc)
                         Case ModuleType.ClearSession
                             Session.Abandon()
                             Response.Redirect("Admin.aspx")

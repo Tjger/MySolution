@@ -372,6 +372,10 @@
     <Content Include="Admin\widgets.html" />
     <Content Include="Admin\wysiwyg.html" />
     <Content Include="Admin\_div style=.html" />
+    <Content Include="BackEnd\js\nicEdit-latest.js" />
+    <Content Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx" />
+    <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
+    <Content Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx" />
     <Content Include="Contact.aspx" />
     <Content Include="BackEnd\css\demo.css" />
     <Content Include="BackEnd\css\font-awesome.css" />
@@ -918,6 +922,27 @@
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx.designer.vb">
+      <DependentUpon>ucCombo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx.vb">
+      <DependentUpon>ucCombo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\NewsManagement\ucNews.ascx.designer.vb">
+      <DependentUpon>ucNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\NewsManagement\ucNews.ascx.vb">
+      <DependentUpon>ucNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx.designer.vb">
+      <DependentUpon>ucSEO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx.vb">
+      <DependentUpon>ucSEO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>

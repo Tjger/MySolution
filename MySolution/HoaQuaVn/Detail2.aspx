@@ -223,7 +223,7 @@
                 </table>
             </div>
         <div class="purchase">
-            <div style="margin-top: -8px; font-weight: bold;"> <span><a href="../../Detail.aspx">Chi Tiết</a></span></div>
+            <div style="margin-top: -8px; font-weight: bold;"> <span><a href="../../Detail3.aspx">Chi Tiết</a></span></div>
         </div>
         <div class="combo-price">
             <div class="price-format">

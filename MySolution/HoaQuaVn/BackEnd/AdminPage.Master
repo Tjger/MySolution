@@ -14,7 +14,9 @@
     <link href="css/style.default.css" rel="stylesheet" />
     <link href="css/morris.css" rel="stylesheet" />
     <link href="css/select2.css" rel="stylesheet" />
-      
+    <script src="<%: ResolveUrl("~/BackEnd/js/nicEdit-latest.js")%>"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
    
 </head>
     
@@ -38,9 +40,9 @@
 
                 <div class="pull-right">
 
-                    <form class="form form-search" action="http://themepixels.com/demo/webpage/chain/search-results.html">
+                    <%--                    <form class="form form-search" action="http://themepixels.com/demo/webpage/chain/search-results.html">
                         <input type="search" class="form-control" placeholder="Search" />
-                    </form>
+                    </form>--%>
 
                     <div class="btn-group btn-group-list btn-group-notification">
                          <!-- dropdown-menu -->

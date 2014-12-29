@@ -1,5 +1,5 @@
 ﻿Imports Common
-Public Class ucGroup
+Public Class ucSEO
     Inherits System.Web.UI.UserControl
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -12,11 +12,11 @@ Public Class ucGroup
 
     Private Sub BindData()
         Try
-            Dim sSql As String = "SELECT * FROM ItemGroup"
+            Dim sSql As String = "SELECT * FROM SEO"
             Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSql, ds, "Group")
-            If ds.Tables("Group").Rows.Count > 0 Then
-                GridView1.DataSource = ds.Tables("Group")
+            Var.DBAMain.FillDataset(sSql, ds, "SEO")
+            If ds.Tables("SEO").Rows.Count > 0 Then
+                GridView1.DataSource = ds.Tables("SEO")
                 GridView1.DataBind()
             End If
         Catch ex As Exception
@@ -36,10 +36,10 @@ Public Class ucGroup
 
     Protected Sub GridView1_RowUpdating(sender As Object, e As GridViewUpdateEventArgs)
         'viet sql update
-        Dim sGroupID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
-        Dim sGroupName As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtGroupName"), TextBox).Text
+        Dim sSEOID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
+        Dim sSEO As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtSEO"), TextBox).Text
         Dim iResult As Integer = 0
-        Dim sSQL As String = "Update ItemGroup SET GroupName= " & Core.SQLStr(sGroupName) & " WHERE GroupID = " & Core.SQLStr(sGroupID)
+        Dim sSQL As String = "Update SEO SET SEO= " & Core.SQLStr(sSEO) & " WHERE SeoID = " & Core.SQLStr(sSEOID)
         Var.DBAMain.Execute(sSQL, iResult)
         If iResult > 0 Then
             GridView1.EditIndex = -1
@@ -74,10 +74,9 @@ Public Class ucGroup
 
     Protected Sub GridView1_RowDeleting(sender As Object, e As GridViewDeleteEventArgs)
         Try
-            Dim sGroupID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
-            'Dim sGroupName As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtGroupName"), TextBox).Text
+            Dim sSeoID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
             Dim iResult As Integer = 0
-            Dim sSQL As String = "DELETE FROM ItemGroup WHERE GroupID = " & Core.SQLStr(sGroupID)
+            Dim sSQL As String = "DELETE FROM SEO WHERE SeoID = " & Core.SQLStr(sSeoID)
             Var.DBAMain.Execute(sSQL, iResult)
             If iResult > 0 Then
                 BindData()
@@ -89,12 +88,12 @@ Public Class ucGroup
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
-            If txtGroupNameNew.Text <> "" Then
+            If txtSEONew.Text <> "" Then
                 Dim iResult As Integer = 0
-                Dim sSQL As String = String.Format("INSERT INTO ItemGroup (GroupName) VALUES ({0})", Core.SQLStr(txtGroupNameNew.Text))
+                Dim sSQL As String = String.Format("INSERT INTO SEO (SEO) VALUES ({0})", Core.SQLStr(txtSEONew.Text))
                 Var.DBAMain.Execute(sSQL, iResult)
                 If iResult > 0 Then
-                    txtGroupNameNew.Text = ""
+                    txtSEONew.Text = ""
                     BindData()
                 End If
             End If
