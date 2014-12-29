@@ -42,8 +42,6 @@ Public Class ucItem
             sHot = "0"
         End If
 
-
-
         Dim sSql As String = String.Format("INSERT INTO Item (ItemID, ItemName, Description,GroupID,Hot) VALUES ({0},{1},{2},{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(cboGroup.SelectedValue), sHot)
         If Var.DBAMain.Execute(sSql) Then
             Response.Redirect("Admin.aspx?module=2")

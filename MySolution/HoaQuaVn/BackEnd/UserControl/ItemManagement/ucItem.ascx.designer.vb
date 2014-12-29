@@ -86,6 +86,15 @@ Partial Public Class ucItem
     Protected WithEvents txtDescription As Global.System.Web.UI.HtmlControls.HtmlTextArea
 
     '''<summary>
+    '''chkHot control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkHot As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''btnSave control.
     '''</summary>
     '''<remarks>
