@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucItem.ascx.vb" Inherits="HoaQuaVn.ucItem" %>
- <style>
-        input[type="text"], input[type="submit"], select, textarea, Button{
+<%--<style>
+    input[type="text"], input[type="submit"], select, textarea, Button {
     border: 3px solid #ebe6e2;
     border-radius: 5px;
     display: block;
@@ -16,7 +16,7 @@
     </style>
 
 <asp:Label ID="Label1" runat="server" Text="Item Name"></asp:Label>
-<asp:TextBox ID="txtItemName" runat="server"  Width="184px"></asp:TextBox>
+<asp:TextBox ID="txtItemName" runat="server" Width="184px"></asp:TextBox>
 <br />
 
 
@@ -33,13 +33,13 @@
 <textarea id="txtDescription" runat="server" width="400px" height="400px"></textarea>
 <br />
 <asp:CheckBox ID="chkHot" Text="  Bán chạy" runat="server" />
-<br/>
-<div style="width:100px;float:left;">
+<br />
+<div style="width: 100px; float: left;">
 <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
 </div>
-<div style="width:100px;">
+<div style="width: 100px;">
 <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
-</div>
+</div>--%>
 <div class="list-item">
 <asp:GridView ID="GridView1" CssClass="table" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="155px" Width="895px" AutoGenerateColumns="False">
    
@@ -48,7 +48,7 @@
         <asp:BoundField DataField="ItemName" HeaderText="Item Name" />
         <asp:BoundField DataField="ItemPrice" HeaderText="Price" />
         
-        <asp:HyperLinkField  DataNavigateUrlFields="ItemID" DataNavigateUrlFormatString="~/Admin.aspx?module=2?Id={0}" Text="View Detail" />
+        <asp:HyperLinkField  DataNavigateUrlFields="ItemID" DataNavigateUrlFormatString="~/Admin.aspx?module=6&Id={0}" Text="View Detail" />
     </Columns>
    
     <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />

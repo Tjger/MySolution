@@ -2,13 +2,15 @@
 Imports System.Web.UI.WebControls
 Public Class index
     Inherits System.Web.UI.Page
+
     Private Enum ModuleType
         GroupManagement = 1
         ItemManagement = 2
         ComboManagement = 3
         SEOManagement = 4
-        ClearSession = 5
-        NewsManagement = 6
+        NewsManagement = 5
+        ItemDetail = 6
+        ComboDetail = 7
     End Enum
 
     Private sModule As String = String.Empty
@@ -38,22 +40,25 @@ Public Class index
                         Case ModuleType.NewsManagement
                             Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/NewsManagement/ucNews.ascx")
                             Panel1.Controls.Add(uc)
-                        Case ModuleType.ClearSession
-                            Session.Abandon()
-                            Response.Redirect("Admin.aspx")
+                        Case ModuleType.ItemDetail
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItemDetail.ascx")
+                            Panel1.Controls.Add(uc)
+                        Case ModuleType.ComboDetail
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucComboDetail.ascx")
+                            Panel1.Controls.Add(uc)
                     End Select
                 Else
                     Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ReceiptManagement/ucReceipt.ascx")
                     Panel1.Controls.Add(uc)
                 End If
             End If
-           
+
 
         Catch ex As Exception
             Dim sMsg As String = String.Empty
             sMsg = "Login Error !"
         End Try
-       
+
     End Sub
 
 End Class

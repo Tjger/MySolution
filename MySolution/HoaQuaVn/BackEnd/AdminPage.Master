@@ -59,7 +59,7 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li><a href="Admin.aspx?module=5"><i class="glyphicon glyphicon-log-out"></i>Thoát</a></li>
+                            <li><a href="Login.aspx"><i class="glyphicon glyphicon-log-out"></i>Thoát</a></li>
                         </ul>
                     </div>
                     <!-- btn-group -->
@@ -96,6 +96,7 @@
                             <li><a href="Admin.aspx?module=2">Sản phẩm</a></li>
                             <li><a href="Admin.aspx?module=3">Combo</a></li>
                             <li><a href="Admin.aspx?module=4">SEO</a></li>
+                             <li><a href="Admin.aspx?module=5">Tin Tức</a></li>
                         </ul>
                     </li>                    
                 </ul>
