@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Login Form Styling</title>
+    <title>Hoa Qua Viet Nam - Admin</title>
     <meta name="description" content="Custom Login Form Styling with CSS3" />
     <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
     <meta name="author" content="Codrops" />
@@ -31,12 +31,12 @@
             <form class="form-2" runat="server">
                 <h1><span class="log-in">Đăng nhập hệ thống</span> </h1>
                 <p class="float">
-                    <label for="login"><i class="icon-user"></i>Tên đăng nhập</label>
+                    <label for="login"><%--<i class="icon-user"></i>--%>Tên đăng nhập</label>
                     <asp:TextBox ID="txtUserName" runat="server"  placeholder="Tên tài khoản hoặc email"></asp:TextBox>
                     <%--<input type="text" name="login" placeholder="Tên tài khoản hoặc email">--%>
                 </p>
                 <p class="float">
-                    <label for="password"><i class="icon-lock"></i>Mật khẩu</label>
+                    <label for="password"><%--<i class="icon-lock"></i>--%>Mật khẩu</label>
                     <asp:TextBox ID="txtPwd" TextMode="Password" runat="server" placeholder="Mật khẩu" class="showpassword"></asp:TextBox>
                    <%-- <input type="password" name="password" placeholder="Mật khẩu" class="showpassword">--%>
                 </p>

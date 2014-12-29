@@ -374,6 +374,8 @@
     <Content Include="Admin\_div style=.html" />
     <Content Include="BackEnd\js\nicEdit-latest.js" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx" />
+    <Content Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx" />
+    <Content Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
     <Content Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx" />
     <Content Include="Contact.aspx" />
@@ -928,6 +930,20 @@
     </Compile>
     <Compile Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx.vb">
       <DependentUpon>ucCombo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx.designer.vb">
+      <DependentUpon>ucComboDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx.vb">
+      <DependentUpon>ucComboDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx.designer.vb">
+      <DependentUpon>ucItemDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx.vb">
+      <DependentUpon>ucItemDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\UserControl\NewsManagement\ucNews.ascx.designer.vb">
