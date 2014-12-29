@@ -21,16 +21,10 @@
     </style>
 </head>
 <body>
-    <div class="container">     
-
+    <div class="container">
         <header>
-
             <h1><strong>Hoa Qua Viet Nam - Admin</strong> </h1>
-
-            <h2>Hệ thống quản lý 2014</h2>
-
-
-        
+            <h2>Hệ thống quản lý 2014</h2>        
         </header>
 
         <section class="main">

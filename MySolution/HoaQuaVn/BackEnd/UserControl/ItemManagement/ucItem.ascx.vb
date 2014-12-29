@@ -33,12 +33,21 @@ Public Class ucItem
         End Try
     End Sub
 
-    'Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-    '    Dim sItemID As Integer = Core.GetID("ItemID", "Item")
-    '    Dim sSql As String = String.Format("INSERT INTO Item (ItemID, ItemName, Description,GroupID) VALUES ({0},{1})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(cboGroup.SelectedValue))
-    '    If Var.DBAMain.Execute(sSql) Then
-    '        Response.Redirect("GroupProductManager.aspx")
-    '    End If
-    'End Sub
+    Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim sItemID As Integer = Core.GetID("ItemID", "Item")
+        Dim sHot As String = String.Empty
+        If chkHot.Checked Then
+            sHot = "1"
+        Else
+            sHot = "0"
+        End If
+
+       
+
+        Dim sSql As String = String.Format("INSERT INTO Item (ItemID, ItemName, Description,GroupID,Hot) VALUES ({0},{1},{2},{3})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(cboGroup.SelectedValue))
+        If Var.DBAMain.Execute(sSql) Then
+            Response.Redirect("Admin.aspx?module=2")
+        End If
+    End Sub
 
 End Class
