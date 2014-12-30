@@ -14,14 +14,18 @@
 <br />
 <asp:Label ID="Label6" runat="server" Text="Item List"></asp:Label>
 <br />
-<asp:CheckBoxList ID="chkItemList" runat="server"  Width="96px">
+<asp:CheckBoxList ID="chkItemList" runat="server"  Width="120px">
 </asp:CheckBoxList>
 <br />
-<div style="width: 100px; float: left;">
-   <asp:Button ID="btnSave" runat="server" Text="Save" />
-</div>
-<div style="width: 100px;">
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+<div style="margin-top:18px;">
+    <div style="width: 100px; float: left;width:50%;">
+        <div style="float:right;margin-right:7px;">
+        <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
+            </div>
+    </div>
+    <div style="width: 100px;width:50%;">
+        <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
+    </div>
 </div>
 
 

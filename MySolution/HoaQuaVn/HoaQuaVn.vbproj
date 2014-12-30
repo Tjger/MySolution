@@ -377,6 +377,10 @@
     <Content Include="Admin\wysiwyg.html" />
     <Content Include="Admin\_div style=.html" />
     <Content Include="BackEnd\css\control-style.css" />
+    <Content Include="BackEnd\js\accordion.js" />
+    <Content Include="BackEnd\js\common-script.js" />
+    <Content Include="BackEnd\js\jquery-2.0.2.min.js" />
+    <Content Include="BackEnd\js\jquery.nicescroll.js" />
     <Content Include="BackEnd\js\nicEdit-latest.js" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx" />
@@ -1241,6 +1245,7 @@
     <Content Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx" />
     <Content Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx" />
     <Content Include="FrontEnd\UserControl\Properties\ucProperties.ascx" />
+    <Content Include="UpLoad\Images\3-Details.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,21 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucGroup.ascx.vb" Inherits="HoaQuaVn.ucGroup" %>
 
-<asp:Label ID="Label1" runat="server" Text="Group Name"></asp:Label>
-<asp:TextBox ID="txtGroupNameNew" runat="server"></asp:TextBox>
-<asp:Button ID="btnSave" runat="server" Text="Save" />
-<br />
-<br />
+<div>
+    <table>
+        <tr>
+            <td width="90px">
+                <asp:Label ID="Label1" runat="server" Text="Group Name"></asp:Label>
+            </td>
+             <td>
+                 <asp:TextBox ID="txtGroupNameNew" runat="server" ></asp:TextBox>
+            </td>
+             <td>
+                 <asp:Button ID="btnSave" runat="server" Text="Save" />
+            </td>
+        </tr>
+    </table>
+</div>
+
 <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="199px" Width="603px" AutoGenerateColumns="False" AllowPaging="True"   OnRowDataBound="GridView1_RowDataBound" OnRowEditing="GridView1_RowEditing"  OnRowDeleting="GridView1_RowDeleting" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowUpdating="GridView1_RowUpdating" CssClass="table">
     <Columns>
         <asp:BoundField DataField="GroupID" HeaderText="ID" ItemStyle-Width="40" ReadOnly="true" />

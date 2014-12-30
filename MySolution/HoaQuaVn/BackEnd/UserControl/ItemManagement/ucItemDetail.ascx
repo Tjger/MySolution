@@ -1,78 +1,121 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucItemDetail.ascx.vb" Inherits="HoaQuaVn.ucItemDetail" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
-<style>
-    input[type="text"], input[type="submit"], select,  Button {
-        border: 3px solid #ebe6e2;
-        border-radius: 5px;
-        display: block;
-        font-family: "Lato",Calibri,Arial,sans-serif;
-        font-size: 13px;
-        font-weight: 400;
-        font-weight: 400;
-        margin-bottom: 5px;
-        padding: 5px;
-        transition: all 0.3s ease-out 0s;
-        width: 100%;
-    }
-</style>
 
-<asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-<asp:TextBox ID="txtItemName" runat="server" Width="184px"></asp:TextBox>
-<br />
-<asp:Label ID="Label6" runat="server" Text="Price"></asp:Label>
-<asp:TextBox ID="txtItemPrice" runat="server" Width="184px"></asp:TextBox>
-<br />
-<asp:Label ID="Label13" runat="server" Text="Xuất Xứ"></asp:Label>
-<asp:TextBox ID="txtFromWhere" runat="server" Width="184px"></asp:TextBox>
-<br />
-<asp:Label ID="Label14" runat="server" Text="Unit"></asp:Label>
-<asp:TextBox ID="txtUnitValue" runat="server" Width="184px"></asp:TextBox>
-<br />
-<asp:CheckBox ID="chkActive" Text="Active" runat="server" Checked="True" />
-<asp:CheckBox ID="chkHot" Text="Hot" runat="server" />
-<br />
 
-<asp:Label ID="Label2" runat="server" Text="Group"></asp:Label>
-<asp:DropDownList ID="cboGroup" runat="server" Width="300px">
-</asp:DropDownList>
-<br />
+<div style="background:red;height:200px;width:200px;">
+    
+    <div style="height:200px;width:200px;"><asp:Image ID="pic" Width="200px" Height="200px" runat="server" /></div>
+    <div>    <asp:FileUpload ID="FileUpload2" runat="server" /></div>
+</div>
+<div style="line-height: 30px;margin-top:36px;" class="item-info">
 
-<asp:Label ID="Label3" runat="server" Text="Image"></asp:Label>
-<asp:FileUpload ID="FileUpload1" runat="server" />
-<br />
-<asp:Label ID="Label7" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng người lớn/100gr/ngày"></asp:Label>
-<br />
-<asp:Label ID="Label8" runat="server" Text="Vitamin"></asp:Label>
-<br />
-<asp:TextBox ID="txtAdultVitamin" runat="server" Width="184px">5.0%</asp:TextBox>
-<br />
-<br />
-<asp:Label ID="Label9" runat="server" Text="Năng Lượng"></asp:Label>
-<br />
-<asp:TextBox ID="txtAdultEnergy" runat="server" Width="184px">5.0%</asp:TextBox>
-<br />
+    <table>
+        <tr>
+            <td>
+                <asp:CheckBox ID="chkActive" Text="Trang thai" runat="server" Checked="True" />
+                <asp:CheckBox ID="chkHot" Text="Hot" runat="server" /></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+            </td>
 
-<asp:Label ID="Label10" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng trẻ em/100gr/ngày"></asp:Label>
-<br />
-<asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label>
-<br />
-<asp:TextBox ID="txtChildVitamin" runat="server" Width="184px">5.0%</asp:TextBox>
-<br />
 
-<asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label>
-<br />
-<asp:TextBox ID="txtChildEnergy" runat="server" Width="184px">5.0%</asp:TextBox>
-<br />
-<br />
-<asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
-<br />
+            <td>
+                <asp:Label ID="Label6" runat="server" Text="Price"></asp:Label>
 
-<CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server"></CKEditor:CKEditorControl>
-<br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtItemName" runat="server" Width="184px"></asp:TextBox>
+            </td>
+            <td>
 
-<asp:Label ID="Label5" runat="server" Text="Thông tin hàm lượng Vitamin và chất khoáng"></asp:Label>
-<br />
-<CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server">
+                <asp:TextBox ID="txtItemPrice" runat="server" Width="184px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label13" runat="server" Text="Xuất Xứ"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label14" runat="server" Text="Unit"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <asp:TextBox ID="txtFromWhere" runat="server" Width="184px"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="txtUnitValue" runat="server" Width="184px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                <asp:Label ID="Label2" runat="server" Text="Group"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:DropDownList ID="cboGroup" runat="server" Width="300px">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="Label3" runat="server" Text="HInh anh san pham"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="Label7" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng người lớn/100gr/ngày"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label8" runat="server" Text="Vitamin"></asp:Label></td>
+            <td>
+                <asp:Label ID="Label9" runat="server" Text="Năng Lượng"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtAdultVitamin" runat="server" Width="184px">5.0%</asp:TextBox></td>
+            <td>
+                <asp:TextBox ID="txtAdultEnergy" runat="server" Width="184px">5.0%</asp:TextBox></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                <asp:Label ID="Label10" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng trẻ em/100gr/ngày"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label></td>
+            <td>
+                <asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox ID="txtChildVitamin" runat="server" Width="184px">5.0%</asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="txtChildEnergy" runat="server" Width="184px">5.0%</asp:TextBox></td>
+        </tr>
+
+    </table>
+</div>
+<div>
+    <span>Thông tin hàm lượng Vitamin và chất khoáng</span>
+    <div>
+        <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server">
 <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
 	<tbody>
 		<tr>
@@ -133,15 +176,19 @@
 		</tr>
 	</tbody>
 </table>
-<p>
-	&nbsp;</p>
-  
+
 </CKEditor:CKEditorControl>
-<br />
-<br />
-<div style="width: 100px; float: left;">
-    <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
+    </div>
+
 </div>
-<div style="width: 100px;">
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
+
+<div style="margin-top:18px;">
+    <div style="width: 100px; float: left;width:50%;">
+        <div style="float:right;margin-right:7px;">
+        <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
+            </div>
+    </div>
+    <div style="width: 100px;width:50%;">
+        <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
+    </div>
 </div>

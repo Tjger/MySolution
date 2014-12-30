@@ -14,6 +14,42 @@ Option Explicit On
 Partial Public Class ucItemDetail
 
     '''<summary>
+    '''pic control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pic As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''FileUpload2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents FileUpload2 As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''chkActive control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkActive As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''chkHot control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkHot As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -23,15 +59,6 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtItemName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Label6 control.
     '''</summary>
     '''<remarks>
@@ -39,6 +66,15 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtItemName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtItemPrice control.
@@ -59,15 +95,6 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label13 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtFromWhere control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtFromWhere As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Label14 control.
     '''</summary>
     '''<remarks>
@@ -77,6 +104,15 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label14 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''txtFromWhere control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtFromWhere As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtUnitValue control.
     '''</summary>
     '''<remarks>
@@ -84,24 +120,6 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtUnitValue As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''chkActive control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents chkActive As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
-    '''chkHot control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents chkHot As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Label2 control.
@@ -158,15 +176,6 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtAdultVitamin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtAdultVitamin As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Label9 control.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label9 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtAdultVitamin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtAdultVitamin As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtAdultEnergy control.
@@ -203,15 +221,6 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label11 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtChildVitamin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtChildVitamin As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Label12 control.
     '''</summary>
     '''<remarks>
@@ -221,6 +230,15 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label12 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''txtChildVitamin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtChildVitamin As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtChildEnergy control.
     '''</summary>
     '''<remarks>
@@ -228,33 +246,6 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtChildEnergy As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Label4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtDescription control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtDescription As Global.CKEditor.NET.CKEditorControl
-
-    '''<summary>
-    '''Label5 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtVitaminElement control.
