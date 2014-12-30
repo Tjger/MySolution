@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="css/global.css" />
     <link rel="stylesheet" type="text/css" href="css/social.css" />
-  cc
+    cc
+   
     <link rel="stylesheet" href="css/jqx.base.css" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext" rel="stylesheet" type="text/css" />
 
@@ -171,7 +172,6 @@
             <div class="title-category">
                 <!-- <div class="category-padding">Đặc tính</div> -->
                 <div id="menu5">
-
                 </div>
                 <div class="testimo">
                     <div class="pic-comment">
@@ -240,11 +240,11 @@
             <div class="list-combo" style="height: 1201px;">
 
                 <form id="form1" runat="server">
-                    
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                   
-                  
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
                 </form>
 
             </div>
@@ -282,19 +282,21 @@
                     <li><a href="#">Tin tức</a></li>
                 </ul>
             </div>
-           <%-- <div class="register-logo" style="float: right;">--%>
-            </div>
-        </div>
-        <div id="powered">
-            <div class="container">
-                <div class="copyright">
-                    <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
-                    </span>
-                </div>
-                <div class="mutilestore hidden-phone"></div>
-            </div>
+            <%-- <div class="register-logo" style="float: right;">--%>
         </div>
     </div>
+    <div id="powered">
+        <div class="container">
+            <div class="copyright">
+                <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
+                    </span>
+            </div>
+            <div class="mutilestore hidden-phone"></div>
+        </div>
+    </div>
+
+
+   
 
     <!-- BEGIN Modal PANEL -->
     <div class="remodal" data-remodal-id="modal1" data-remodal-options="hashTracking: false">

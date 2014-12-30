@@ -1,22 +1,32 @@
 ﻿Imports Common
 Public Class ucItemDetail
     Inherits System.Web.UI.UserControl
+    Private ClsName = "ucItemDetail"
+    Private Shared sID As String = String.Empty
+    Private Shared sMode As String = String.Empty
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not IsPostBack Then
-            LoadCboGroup()
-            Core.InitAppSettingForDBA()
-            Var.DBAMain = New Common.DBA(False)
-            Dim sID As String = String.Empty
-            If Request.QueryString.Keys.Count > 0 Then
-                sID = Request.QueryString("ID").ToString()
-                If sID <> "" Then
-                    LoadItemInfo(sID)
+        Try
+            If Not IsPostBack Then
+                LoadCboGroup()
+                Core.InitAppSettingForDBA()
+                Var.DBAMain = New Common.DBA(False)
+                If Request.QueryString.Keys.Count > 0 Then
+                    sMode = Request.QueryString("m").ToString()
+                    Select Case sMode
+                        Case 1 'Edit
+                            sID = Request.QueryString("ID").ToString()
+                            LoadItemInfo(sID)
+
+                        Case Else 'New
+
+                    End Select
                 End If
-
-
             End If
-        End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "LoadItemInfo", ex.Message)
+        End Try
+       
 
     End Sub
 
@@ -26,13 +36,62 @@ Public Class ucItemDetail
             Dim ds As New DataSet
             Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
             If ds.Tables("LoadItemInfo").Rows.Count > 0 Then
-                txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemName")
-                txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
-                cboGroup.SelectedValue = ds.Tables("LoadItemInfo").Rows(0)("GroupID")
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemName")) Then
+                    txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemName")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
+                    txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("GroupID")) Then
+                    cboGroup.SelectedValue = ds.Tables("LoadItemInfo").Rows(0)("GroupID")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Active")) Then
+                    chkActive.Checked = ds.Tables("LoadItemInfo").Rows(0)("Active")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Hot")) Then
+                    chkHot.Checked = ds.Tables("LoadItemInfo").Rows(0)("Hot")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemPrice")) Then
+                    txtItemPrice.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemPrice")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("FromWhere")) Then
+                    txtFromWhere.Text = ds.Tables("LoadItemInfo").Rows(0)("FromWhere")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("UnitValue")) Then
+                    txtUnitValue.Text = ds.Tables("LoadItemInfo").Rows(0)("UnitValue")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("AdultVitamin")) Then
+                    txtAdultVitamin.Text = ds.Tables("LoadItemInfo").Rows(0)("AdultVitamin")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("AdultEnergy")) Then
+                    txtAdultEnergy.Text = ds.Tables("LoadItemInfo").Rows(0)("AdultEnergy")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ChildVitamin")) Then
+                    txtChildVitamin.Text = ds.Tables("LoadItemInfo").Rows(0)("ChildVitamin")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ChildEnergy")) Then
+                    txtChildEnergy.Text = ds.Tables("LoadItemInfo").Rows(0)("ChildEnergy")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")) Then
+                    txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
+                End If
+
             End If
 
         Catch ex As Exception
-
+            Log.LogError(ClsName, "LoadItemInfo", ex.Message)
         End Try
 
     End Sub
@@ -47,23 +106,53 @@ Public Class ucItemDetail
             cboGroup.DataValueField = "GroupID"
             cboGroup.DataBind()
         Catch ex As Exception
-
+            Log.LogError(ClsName, "LoadCboGroup", ex.Message)
         End Try
     End Sub
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim sItemID As Integer = Core.GetID("ItemID", "Item")
-        Dim sHot As String = String.Empty
-        If chkHot.Checked Then
-            sHot = "1"
-        Else
-            sHot = "0"
-        End If
+        Try
+            Dim sItemID As Integer = Core.GetID("ItemID", "Item")
+            Dim sActive As String = String.Empty
+            Dim sSql As String = String.Empty
+            Dim sHot As String = String.Empty
+            If chkActive.Checked Then
+                sActive = "1"
+            Else
+                sActive = "0"
+            End If
 
-        Dim sSql As String = String.Format("INSERT INTO Item (ItemID, ItemName, Description,GroupID,Hot) VALUES ({0},{1},{2},{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(cboGroup.SelectedValue), sHot)
-        If Var.DBAMain.Execute(sSql) Then
-            Response.Redirect("Admin.aspx?module=2")
-        End If
+            If chkHot.Checked Then
+                sHot = "1"
+            Else
+                sHot = "0"
+            End If
+
+            Select Case sMode
+                Case 1
+                    sItemID = sID
+                    sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description={1}, GroupID={2}, ItemPrice={3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12} WHERE ItemID={13}" _
+                                        , Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
+                                          , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
+                                          , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sItemID))
+                Case Else
+                    sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo)"
+                    sSql &= String.Format(" VALUES (N{0},{1},{2},{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12})" _
+                                        , Core.SQLStr(txtItemName.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
+                                          , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
+                                          , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                          , Core.SQLStr(txtVitaminElement.Text))
+
+            End Select
+
+            If Var.DBAMain.Execute(sSql) Then
+                Response.Redirect("Admin.aspx?module=2")
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "btnSave_Click", ex.Message)
+        End Try
+       
     End Sub
 
 

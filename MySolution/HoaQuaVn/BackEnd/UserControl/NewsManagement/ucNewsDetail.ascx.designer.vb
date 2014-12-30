@@ -74,7 +74,7 @@ Partial Public Class ucNewsDetail
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDescription As Global.System.Web.UI.HtmlControls.HtmlTextArea
+    Protected WithEvents txtDescription As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''Label6 control.

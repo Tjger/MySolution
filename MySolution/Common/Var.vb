@@ -23,7 +23,8 @@ Public Class Var
     Public Shared sNameDelimeter As String = ""
     Public Shared sDateFmtTelrik As String = "{0:MM/dd/yyyy}" ' for telerik
 
-
+    Public Shared bArchivedAuditLog As Boolean = False
+    Public Shared iArchivedPeriod As Integer = 30
     Public Shared DBAMain As DBA
     Public Shared sRevID As String = ""
     Public Shared sSiteID As String

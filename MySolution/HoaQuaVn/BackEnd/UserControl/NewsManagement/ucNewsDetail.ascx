@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucNewsDetail.ascx.vb" Inherits="HoaQuaVn.ucNewsDetail" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Label ID="Label1" runat="server" Text="Item Name"></asp:Label>
 <asp:TextBox ID="txtItemName" runat="server" Height="16px" Width="184px"></asp:TextBox>
 <br />
@@ -9,7 +10,7 @@
 <br />
 <asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
 <br />
-<textarea id="txtDescription" runat="server"></textarea>
+<CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server"></CKEditor:CKEditorControl>
 <br />
 <asp:Label ID="Label6" runat="server" Text="Item List"></asp:Label>
 <br />

@@ -1,30 +1,37 @@
 ﻿Imports Common
 Public Class ucComboDetail
     Inherits System.Web.UI.UserControl
+    Private ClsName = "ucComboDetail"
     Private Shared sID As String = String.Empty
     Private dtComboItem As DataTable
     Private Shared sMode As String = String.Empty
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not IsPostBack Then
+        Try
+            If Not IsPostBack Then
 
-            Core.InitAppSettingForDBA()
-            Var.DBAMain = New Common.DBA(False)
+                Core.InitAppSettingForDBA()
+                Var.DBAMain = New Common.DBA(False)
 
-            If Request.QueryString.Keys.Count > 0 Then
-                sMode = Request.QueryString("m").ToString()
-                Select Case sMode
-                    Case 1 'Edit
-                        sID = Request.QueryString("ID").ToString()
-                        LoadItemInfo(sID)
+                If Request.QueryString.Keys.Count > 0 Then
+                    sMode = Request.QueryString("m").ToString()
+                    Select Case sMode
+                        Case 1 'Edit
+                            sID = Request.QueryString("ID").ToString()
+                            LoadItemInfo(sID)
 
-                    Case Else 'New
+                        Case Else 'New
 
-                End Select
+                    End Select
 
-                LoadItemList()
+                    LoadItemList()
 
+                End If
             End If
-        End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "Page_Load", ex.Message)
+        End Try
+       
     End Sub
 
     Private Sub LoadItemInfo(ByVal sID As String)
@@ -46,7 +53,7 @@ Public Class ucComboDetail
             End If
           
         Catch ex As Exception
-
+            Log.LogError(ClsName, "LoadItemInfo", ex.Message)
         End Try
 
     End Sub
@@ -81,32 +88,37 @@ Public Class ucComboDetail
             
 
         Catch ex As Exception
-
+            Log.LogError(ClsName, "LoadItemList", ex.Message)
         End Try
     End Sub
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim sItemID As Integer = Core.GetID("ItemID", "Item")
-        Dim sActive As String = String.Empty
-        Dim sSql As String = String.Empty
-        If chkActive.Checked Then
-            sActive = "1"
-        Else
-            sActive = "0"
-        End If
-        Select Case sMode
-            Case 1
-                sItemID = sID
-                sSql = String.Format("UPDATE Combo SET ComboName={0},ComboPrice={1}, Description=N{2},Active={3} WHERE ComboID={4}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(sActive), Core.SQLStr(sItemID))
-            Case Else
+        Try
+            Dim sItemID As Integer = Core.GetID("ItemID", "Item")
+            Dim sActive As String = String.Empty
+            Dim sSql As String = String.Empty
+            If chkActive.Checked Then
+                sActive = "1"
+            Else
+                sActive = "0"
+            End If
+            Select Case sMode
+                Case 1
+                    sItemID = sID
+                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3} WHERE ComboID={4}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(sActive), Core.SQLStr(sItemID))
+                Case Else
 
-                sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active) VALUES ({0},{1},{2},N{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.InnerText), Core.SQLStr(sActive))
+                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active) VALUES (N{0},{1},N{2},N{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.InnerText), Core.SQLStr(sActive))
 
-        End Select
-        If Var.DBAMain.Execute(sSql) Then
-            AddComboItem()
-            Response.Redirect("Admin.aspx?module=3")
-        End If
+            End Select
+            If Var.DBAMain.Execute(sSql) Then
+                AddComboItem()
+                Response.Redirect("Admin.aspx?module=3")
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "btnSave_Click", ex.Message)
+        End Try
+       
 
     End Sub
 
@@ -131,7 +143,7 @@ Public Class ucComboDetail
 
 
         Catch ex As Exception
-
+            Log.LogError(ClsName, "AddComboItem", ex.Message)
         End Try
     End Sub
 

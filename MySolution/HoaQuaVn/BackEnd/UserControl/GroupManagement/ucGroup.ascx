@@ -1,7 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucGroup.ascx.vb" Inherits="HoaQuaVn.ucGroup" %>
-<asp:Content ID="Content1" runat="server" contentplaceholderid="PageTitle">
-    Nhóm Sản Phẩm
-</asp:Content>
+
 <asp:Label ID="Label1" runat="server" Text="Group Name"></asp:Label>
 <asp:TextBox ID="txtGroupNameNew" runat="server"></asp:TextBox>
 <asp:Button ID="btnSave" runat="server" Text="Save" />

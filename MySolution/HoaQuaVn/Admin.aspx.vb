@@ -18,42 +18,42 @@ Public Class index
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
 
-            If String.IsNullOrEmpty(Session("isLogin")) Then
-                Response.Redirect("Login.aspx")
+            'If String.IsNullOrEmpty(Session("isLogin")) Then
+            '    Response.Redirect("Login.aspx")
+            'Else
+
+            'End If
+
+            Dim sModule As String = String.Empty
+            If Request.QueryString.Keys.Count > 0 Then
+                sModule = Request.QueryString("module").ToString()
+                Select Case Convert.ToInt32(sModule)
+                    Case ModuleType.GroupManagement
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/GroupManagement/ucGroup.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.ItemManagement
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItem.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.ComboManagement
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucCombo.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.SEOManagement
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/SeoManagement/ucSEO.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.NewsManagement
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/NewsManagement/ucNews.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.ItemDetail
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItemDetail.ascx")
+                        Panel1.Controls.Add(uc)
+                    Case ModuleType.ComboDetail
+                        Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucComboDetail.ascx")
+                        Panel1.Controls.Add(uc)
+                End Select
             Else
-                Dim sModule As String = String.Empty
-                If Request.QueryString.Keys.Count > 0 Then
-                    sModule = Request.QueryString("module").ToString()
-                    Select Case Convert.ToInt32(sModule)
-                        Case ModuleType.GroupManagement
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/GroupManagement/ucGroup.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.ItemManagement
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItem.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.ComboManagement
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucCombo.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.SEOManagement
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/SeoManagement/ucSEO.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.NewsManagement
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/NewsManagement/ucNews.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.ItemDetail
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ItemManagement/ucItemDetail.ascx")
-                            Panel1.Controls.Add(uc)
-                        Case ModuleType.ComboDetail
-                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucComboDetail.ascx")
-                            Panel1.Controls.Add(uc)
-                    End Select
-                Else
-                    Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ReceiptManagement/ucReceipt.ascx")
-                    Panel1.Controls.Add(uc)
-                End If
+                Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ReceiptManagement/ucReceipt.ascx")
+                Panel1.Controls.Add(uc)
             End If
-
-
         Catch ex As Exception
             Dim sMsg As String = String.Empty
             sMsg = "Login Error !"

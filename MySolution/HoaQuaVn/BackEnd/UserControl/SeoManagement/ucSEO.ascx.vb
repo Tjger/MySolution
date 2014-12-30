@@ -1,13 +1,19 @@
 ﻿Imports Common
 Public Class ucSEO
     Inherits System.Web.UI.UserControl
+    Private ClsName = "ucSEO"
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not IsPostBack Then
-            Core.InitAppSettingForDBA()
-            Var.DBAMain = New Common.DBA(False)
-            BindData()
-        End If
+        Try
+            If Not IsPostBack Then
+                Core.InitAppSettingForDBA()
+                Var.DBAMain = New Common.DBA(False)
+                BindData()
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "Page_Load", ex.Message)
+        End Try
+       
     End Sub
 
     Private Sub BindData()
@@ -20,7 +26,7 @@ Public Class ucSEO
                 GridView1.DataBind()
             End If
         Catch ex As Exception
-
+            Log.LogError(ClsName, "BindData", ex.Message)
         End Try
     End Sub
 
@@ -35,16 +41,21 @@ Public Class ucSEO
     End Sub
 
     Protected Sub GridView1_RowUpdating(sender As Object, e As GridViewUpdateEventArgs)
+        Try
+            Dim sSEOID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
+            Dim sSEO As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtSEO"), TextBox).Text
+            Dim iResult As Integer = 0
+            Dim sSQL As String = "Update SEO SET SEO= " & Core.SQLStr(sSEO) & " WHERE SeoID = " & Core.SQLStr(sSEOID)
+            Var.DBAMain.Execute(sSQL, iResult)
+            If iResult > 0 Then
+                GridView1.EditIndex = -1
+                BindData()
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "GridView1_RowUpdating", ex.Message)
+        End Try
         'viet sql update
-        Dim sSEOID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
-        Dim sSEO As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtSEO"), TextBox).Text
-        Dim iResult As Integer = 0
-        Dim sSQL As String = "Update SEO SET SEO= " & Core.SQLStr(sSEO) & " WHERE SeoID = " & Core.SQLStr(sSEOID)
-        Var.DBAMain.Execute(sSQL, iResult)
-        If iResult > 0 Then
-            GridView1.EditIndex = -1
-            BindData()
-        End If
+        
 
     End Sub
 
@@ -53,7 +64,7 @@ Public Class ucSEO
             GridView1.PageIndex = e.NewPageIndex
             BindData()
         Catch ex As Exception
-
+            Log.LogError(ClsName, "gvPerson_PageIndexChanging", ex.Message)
         End Try
     End Sub
 
@@ -68,7 +79,7 @@ Public Class ucSEO
             End If
 
         Catch ex As Exception
-
+            Log.LogError(ClsName, "GridView1_RowDataBound", ex.Message)
         End Try
     End Sub
 
@@ -82,7 +93,7 @@ Public Class ucSEO
                 BindData()
             End If
         Catch ex As Exception
-
+            Log.LogError(ClsName, "GridView1_RowDeleting", ex.Message)
         End Try
     End Sub
 
@@ -99,7 +110,7 @@ Public Class ucSEO
             End If
 
         Catch ex As Exception
-
+            Log.LogError(ClsName, "btnSave_Click", ex.Message)
         End Try
     End Sub
 End Class
