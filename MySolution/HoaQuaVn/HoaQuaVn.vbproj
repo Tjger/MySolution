@@ -376,6 +376,7 @@
     <Content Include="Admin\widgets.html" />
     <Content Include="Admin\wysiwyg.html" />
     <Content Include="Admin\_div style=.html" />
+    <Content Include="BackEnd\css\control-style.css" />
     <Content Include="BackEnd\js\nicEdit-latest.js" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx" />
