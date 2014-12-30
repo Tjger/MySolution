@@ -14,8 +14,8 @@
     <link href="css/style.default.css" rel="stylesheet" />
     <link href="css/morris.css" rel="stylesheet" />
     <link href="css/select2.css" rel="stylesheet" />
-    <script src="<%: ResolveUrl("~/BackEnd/js/nicEdit-latest.js")%>"></script>
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+<%--    <script src="<%: ResolveUrl("~/BackEnd/js/nicEdit-latest.js")%>"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>--%>
 
 
 </head>

@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucItemDetail.ascx.vb" Inherits="HoaQuaVn.ucItemDetail" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <style>
     input[type="text"], input[type="submit"], select, textarea, Button {
         border: 3px solid #ebe6e2;
@@ -40,15 +41,14 @@
 <br />
 <asp:TextBox ID="txtAdultEnergy" runat="server" Width="184px"></asp:TextBox>
 <br />
-<br />
-<br />
+
 <asp:Label ID="Label10" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng trẻ em/100gr/ngày"></asp:Label>
 <br />
 <asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label>
 <br />
 <asp:TextBox ID="txtChildVitamin" runat="server" Width="184px"></asp:TextBox>
 <br />
-<br />
+
 <asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label>
 <br />
 <asp:TextBox ID="txtChildEnergy" runat="server" Width="184px"></asp:TextBox>
@@ -56,32 +56,23 @@
 <br />
 <asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
 <br />
-<textarea id="txtDescription" runat="server" width="400px"></textarea>
+
+<CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server"></CKEditor:CKEditorControl>
 <br />
-<br />
-<br />
+
 <asp:Label ID="Label5" runat="server" Text="Hàm Lượng Vitamin"></asp:Label>
 <br />
-<textarea id="txtVitaminElement" runat="server" width="400px">
-    <ul>
-        <li>Vitamin A - 76 IU</li>
-        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-        <li>Niacin - 0.785 mg</li>
-        <li>Axit Folic - 24 mcg</li>
-        <li>Axit Pantothenic - 0.394 mg</li>
-        <li>Vitamin B6 - 0.433 mg</li>
-        <li>Vitamin C - 10.3 mg</li>
-        <li>Vitamin E - 0.12 mg</li>
-        <li>Vitamin K - 0.6 mcg</li>
-    </ul>    
-    </textarea>
+<CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server"></CKEditor:CKEditorControl>
+<%--<textarea id="txtVitaminElement" runat="server" width="400px">
+
+</textarea>--%>
 <br />
 <br />
 <br />
 <asp:Label ID="Label6" runat="server" Text="Hàm Lượng Chất Khoáng"></asp:Label>
 <br />
-<textarea id="txtMineralsElement" runat="server" width="400px"></textarea>
+<%--<CKEditor:CKEditorControl ID="txtMineralsElement" BasePath="/ckeditor/" runat="server"></CKEditor:CKEditorControl>--%>
+<%--<textarea id="" runat="server" width="400px"></textarea>--%>
 <br />
 <br />
 <div style="width: 100px; float: left;">

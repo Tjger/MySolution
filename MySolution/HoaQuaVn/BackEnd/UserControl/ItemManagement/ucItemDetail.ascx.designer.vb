@@ -191,7 +191,7 @@ Partial Public Class ucItemDetail
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDescription As Global.System.Web.UI.HtmlControls.HtmlTextArea
+    Protected WithEvents txtDescription As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''Label5 control.
@@ -209,7 +209,7 @@ Partial Public Class ucItemDetail
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtVitaminElement As Global.System.Web.UI.HtmlControls.HtmlTextArea
+    Protected WithEvents txtVitaminElement As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''Label6 control.
@@ -219,15 +219,6 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtMineralsElement control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtMineralsElement As Global.System.Web.UI.HtmlControls.HtmlTextArea
 
     '''<summary>
     '''btnSave control.
