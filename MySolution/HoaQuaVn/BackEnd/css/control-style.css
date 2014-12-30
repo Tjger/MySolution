@@ -1,0 +1,14 @@
+﻿
+input[type="text"], input[type="submit"], select, textarea, Button {
+    border: 3px solid #ebe6e2;
+    border-radius: 5px;
+    display: block;
+    font-family: "Lato",Calibri,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition: all 0.3s ease-out 0s;
+    width: 100%;
+}
