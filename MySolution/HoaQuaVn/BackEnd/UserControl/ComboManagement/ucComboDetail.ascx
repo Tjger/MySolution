@@ -3,6 +3,7 @@
 <asp:TextBox ID="txtItemName" runat="server" Height="16px" Width="184px"></asp:TextBox>
 <br />
 <asp:CheckBox ID="chkActive" Text="Active" runat="server" />
+<br />
 <asp:Label ID="Label5" runat="server" Text="Item Price"></asp:Label>
 <asp:TextBox ID="txtItemPrice" runat="server" Height="16px" Width="184px"></asp:TextBox>
 <br />

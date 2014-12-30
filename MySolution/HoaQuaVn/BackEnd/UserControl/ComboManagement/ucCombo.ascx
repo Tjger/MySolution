@@ -12,3 +12,5 @@
 
     <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />
 </asp:GridView>
+
+<asp:Button ID="btnAddNew" runat="server" Text="Add New" Width="80px" DataNavigateUrlFormatString="~/Admin.aspx?module=7&m=0" />
