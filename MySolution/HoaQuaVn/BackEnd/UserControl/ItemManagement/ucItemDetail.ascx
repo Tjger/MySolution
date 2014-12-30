@@ -64,20 +64,18 @@
 <br />
 <textarea id="txtVitaminElement" runat="server" width="400px">
     <ul>
-<li>Vitamin A - 76 IU</li>
-<li>Vitamin B1 (thiamine) - 0.037mg</li>
-</ul>
-    
-    
-    Vitamin B2 (riboflavin) - 0.086mg
-    Niacin - 0.785 mg
-    Axit Folic - 24 mcg
-    Axit Pantothenic - 0.394 mg
-    Vitamin B6 - 0.433 mg
-    Vitamin C - 10.3 mg
-    Vitamin E - 0.12 mg
-    Vitamin K - 0.6 mcg
-</textarea>
+        <li>Vitamin A - 76 IU</li>
+        <li>Vitamin B1 (thiamine) - 0.037mg</li>
+        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
+        <li>Niacin - 0.785 mg</li>
+        <li>Axit Folic - 24 mcg</li>
+        <li>Axit Pantothenic - 0.394 mg</li>
+        <li>Vitamin B6 - 0.433 mg</li>
+        <li>Vitamin C - 10.3 mg</li>
+        <li>Vitamin E - 0.12 mg</li>
+        <li>Vitamin K - 0.6 mcg</li>
+    </ul>    
+    </textarea>
 <br />
 <br />
 <br />

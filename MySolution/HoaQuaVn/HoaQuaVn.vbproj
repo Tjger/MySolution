@@ -377,6 +377,7 @@
     <Content Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx" />
     <Content Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
+    <Content Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx" />
     <Content Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx" />
     <Content Include="Contact.aspx" />
     <Content Include="BackEnd\css\demo.css" />
@@ -951,6 +952,13 @@
     </Compile>
     <Compile Include="BackEnd\UserControl\NewsManagement\ucNews.ascx.vb">
       <DependentUpon>ucNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx.designer.vb">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx.vb">
+      <DependentUpon>ucNewsDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx.designer.vb">

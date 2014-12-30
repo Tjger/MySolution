@@ -17,4 +17,7 @@ Public Class ucCombo
         End If
     End Sub
 
+    Protected Sub btnAddNew_Click(sender As Object, e As EventArgs) Handles btnAddNew.Click
+        'DataNavigateUrlFormatString="~/Admin.aspx?module=7&m=0"
+    End Sub
 End Class
