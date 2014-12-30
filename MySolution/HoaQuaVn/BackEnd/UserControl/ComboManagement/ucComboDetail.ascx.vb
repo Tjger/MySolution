@@ -42,7 +42,7 @@ Public Class ucComboDetail
                 Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
                 If ds.Tables("LoadItemInfo").Rows.Count > 0 Then
                     txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboName")
-                    txtDescription.InnerText = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                    txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
                     chkActive.Checked = ds.Tables("LoadItemInfo").Rows(0)("Active")
                     txtItemPrice.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboPrice")
                 End If
@@ -105,10 +105,10 @@ Public Class ucComboDetail
             Select Case sMode
                 Case 1
                     sItemID = sID
-                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3} WHERE ComboID={4}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Value), Core.SQLStr(sActive), Core.SQLStr(sItemID))
+                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3} WHERE ComboID={4}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(sItemID))
                 Case Else
 
-                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active) VALUES (N{0},{1},N{2},N{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.InnerText), Core.SQLStr(sActive))
+                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active) VALUES (N{0},{1},N{2},N{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive))
 
             End Select
             If Var.DBAMain.Execute(sSql) Then
