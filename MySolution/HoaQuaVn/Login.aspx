@@ -16,15 +16,15 @@
     <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     <style>
         body {
-            background: #e1c192 url(images/wood_pattern.jpg);
+            background: none repeat scroll 0 0 #428bca;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1><strong>Hoa Qua Viet Nam - Admin</strong> </h1>
-            <h2>Hệ thống quản lý 2014</h2>        
+            <h1><strong>Hệ Thống Quản Lý</strong> </h1>
+            <h2>Hoa Quả Việt Nam</h2>        
         </header>
 
         <section class="main">

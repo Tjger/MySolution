@@ -1,6 +1,6 @@
 ﻿.item-info table td span {
 
-    color:red;
+    /*color:#63ae12;*/
 }
 input[type="text"], input[type="submit"], select, textarea, Button {
     border: 3px solid #ebe6e2;

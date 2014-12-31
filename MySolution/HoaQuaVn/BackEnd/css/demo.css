@@ -52,7 +52,7 @@ a {
 	margin: 0;
 	position: relative;
 	font-weight: 300;
-	color: #666;
+	color: white;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.6);
 }
 
@@ -61,7 +61,7 @@ a {
 	font-weight: 300;
 	margin: 0;
 	padding: 15px 0 5px 0;
-	color: #666;
+	color: white;
 	font-family: Cambria, Georgia, serif;
 	font-style: italic;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.6);

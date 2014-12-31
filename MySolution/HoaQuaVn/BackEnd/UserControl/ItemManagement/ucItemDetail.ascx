@@ -2,54 +2,58 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 
-<div style="background:red;height:200px;width:200px;">
-    
-    <div style="height:200px;width:200px;"><asp:Image ID="pic" Width="200px" Height="200px" runat="server" /></div>
-    <div>    <asp:FileUpload ID="FileUpload2" runat="server" /></div>
+<div style="height: 200px; width: 200px;">
+
+    <div style="height: 200px; width: 200px;">
+        <asp:Image ID="pic" Width="200px" Height="200px" runat="server" />
+    </div>
+    <div>
+        <asp:FileUpload ID="FileUpload2" runat="server" />
+    </div>
 </div>
-<div style="line-height: 30px;margin-top:36px;" class="item-info">
+<div style="line-height: 30px; margin-top: 36px;" class="item-info">
 
     <table>
         <tr>
             <td>
-                <asp:CheckBox ID="chkActive" Text="Trang thai" runat="server" Checked="True" />
+                <asp:CheckBox ID="chkActive" Text="Active" runat="server" Checked="True" /></td>
+            <td>
                 <asp:CheckBox ID="chkHot" Text="Hot" runat="server" /></td>
         </tr>
         <tr>
             <td>
                 <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
             </td>
-
-
+         
             <td>
                 <asp:Label ID="Label6" runat="server" Text="Price"></asp:Label>
-
             </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:TextBox ID="txtItemName" runat="server" Width="184px"></asp:TextBox>
-            </td>
-            <td>
-
-                <asp:TextBox ID="txtItemPrice" runat="server" Width="184px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
+           
             <td>
                 <asp:Label ID="Label13" runat="server" Text="Xuất Xứ"></asp:Label>
             </td>
+            
             <td>
                 <asp:Label ID="Label14" runat="server" Text="Unit"></asp:Label>
             </td>
         </tr>
         <tr>
             <td>
-
-                <asp:TextBox ID="txtFromWhere" runat="server" Width="184px"></asp:TextBox>
+                <asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
             </td>
+           
             <td>
-                <asp:TextBox ID="txtUnitValue" runat="server" Width="184px"></asp:TextBox>
+
+                <asp:TextBox ID="txtItemPrice" runat="server"></asp:TextBox>
+            </td>
+            
+            <td>
+
+                <asp:TextBox ID="txtFromWhere" runat="server"></asp:TextBox>
+            </td>
+          
+            <td>
+                <asp:TextBox ID="txtUnitValue" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -59,23 +63,15 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <asp:DropDownList ID="cboGroup" runat="server" Width="300px">
+            <td colspan="2">
+                <asp:DropDownList ID="cboGroup" runat="server">
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Label ID="Label3" runat="server" Text="HInh anh san pham"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>
-                <asp:FileUpload ID="FileUpload1" runat="server" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
                 <asp:Label ID="Label7" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng người lớn/100gr/ngày"></asp:Label></td>
+            
         </tr>
         <tr>
             <td>
@@ -83,39 +79,47 @@
             <td>
                 <asp:Label ID="Label9" runat="server" Text="Năng Lượng"></asp:Label>
             </td>
+           
         </tr>
         <tr>
             <td>
-                <asp:TextBox ID="txtAdultVitamin" runat="server" Width="184px">5.0%</asp:TextBox></td>
+                <asp:TextBox ID="txtAdultVitamin" runat="server">5.0%</asp:TextBox></td>
             <td>
-                <asp:TextBox ID="txtAdultEnergy" runat="server" Width="184px">5.0%</asp:TextBox></td>
+                <asp:TextBox ID="txtAdultEnergy" runat="server">5.0%</asp:TextBox></td>
+            
         </tr>
+
         <tr>
             <td colspan="2">
 
                 <asp:Label ID="Label10" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng trẻ em/100gr/ngày"></asp:Label>
             </td>
         </tr>
+
         <tr>
-            <td>
+             <td>
                 <asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label></td>
             <td>
                 <asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label></td>
         </tr>
+
         <tr>
             <td>
-                <asp:TextBox ID="txtChildVitamin" runat="server" Width="184px">5.0%</asp:TextBox>
+                <asp:TextBox ID="txtChildVitamin" runat="server">5.0%</asp:TextBox>
             </td>
             <td>
-                <asp:TextBox ID="txtChildEnergy" runat="server" Width="184px">5.0%</asp:TextBox></td>
+                <asp:TextBox ID="txtChildEnergy" runat="server">5.0%</asp:TextBox></td>
         </tr>
-
     </table>
 </div>
+<br />
+<br />
 <div>
     <span>Thông tin hàm lượng Vitamin và chất khoáng</span>
+    <br />
+    <br />
     <div>
-        <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server">
+        <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">
 <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
 	<tbody>
 		<tr>
@@ -182,13 +186,13 @@
 
 </div>
 
-<div style="margin-top:18px;">
-    <div style="width: 100px; float: left;width:50%;">
-        <div style="float:right;margin-right:7px;">
-        <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
-            </div>
+<div style="margin-top: 18px;">
+    <div style="width: 100px; float: left; width: 50%;">
+        <div style="float: right; margin-right: 7px;">
+            <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
+        </div>
     </div>
-    <div style="width: 100px;width:50%;">
+    <div style="width: 100px; width: 50%;">
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
     </div>
 </div>
