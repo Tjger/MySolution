@@ -28,7 +28,7 @@
             </ItemTemplate>
         </asp:TemplateField>
         <asp:CommandField ShowEditButton ="true" ItemStyle-Width="60" />
-        <asp:CommandField ShowDeleteButton="True" ItemStyle-Width="60"/>
+<%--        <asp:CommandField ShowDeleteButton="True" ItemStyle-Width="60"/>--%>
 
     </Columns>
     <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />

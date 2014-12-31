@@ -97,7 +97,7 @@
                             <li><a href="Admin.aspx?module=2">Sản phẩm</a></li>
                             <li><a href="Admin.aspx?module=3">Combo</a></li>
                             <li><a href="Admin.aspx?module=4">SEO</a></li>
-                            <li><a href="Admin.aspx?module=5">Tin Tức</a></li>
+                 <%--           <li><a href="Admin.aspx?module=5">Tin Tức</a></li>--%>
                         </ul>
                     </li>
                     <%--  <li class="parent"><a href="Admin.aspx?module=2"><i class="fa fa-suitcase"></i><span>Sản phẩm</span></a></li>

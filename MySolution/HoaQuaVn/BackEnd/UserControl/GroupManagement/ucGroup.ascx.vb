@@ -39,7 +39,7 @@ Public Class ucGroup
         Dim sGroupID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
         Dim sGroupName As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtGroupName"), TextBox).Text
         Dim iResult As Integer = 0
-        Dim sSQL As String = "Update ItemGroup SET GroupName= " & Core.SQLStr(sGroupName) & " WHERE GroupID = " & Core.SQLStr(sGroupID)
+        Dim sSQL As String = "Update ItemGroup SET GroupName=N" & Core.SQLStr(sGroupName) & " WHERE GroupID = " & Core.SQLStr(sGroupID)
         Var.DBAMain.Execute(sSQL, iResult)
         If iResult > 0 Then
             GridView1.EditIndex = -1
@@ -91,7 +91,7 @@ Public Class ucGroup
         Try
             If txtGroupNameNew.Text <> "" Then
                 Dim iResult As Integer = 0
-                Dim sSQL As String = String.Format("INSERT INTO ItemGroup (GroupName) VALUES ({0})", Core.SQLStr(txtGroupNameNew.Text))
+                Dim sSQL As String = String.Format("INSERT INTO ItemGroup (GroupName) VALUES (N{0})", Core.SQLStr(txtGroupNameNew.Text))
                 Var.DBAMain.Execute(sSQL, iResult)
                 If iResult > 0 Then
                     txtGroupNameNew.Text = ""

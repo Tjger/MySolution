@@ -14,22 +14,22 @@ Option Explicit On
 Partial Public Class ucItemDetail
 
     '''<summary>
-    '''pic control.
+    '''Avatar control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents pic As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents Avatar As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''FileUpload2 control.
+    '''FileUpload1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents FileUpload2 As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
     '''chkActive control.
@@ -68,24 +68,6 @@ Partial Public Class ucItemDetail
     Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtItemName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtItemPrice control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtItemPrice As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Label13 control.
     '''</summary>
     '''<remarks>
@@ -102,6 +84,24 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label14 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtItemName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtItemPrice control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtItemPrice As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtFromWhere control.
@@ -138,24 +138,6 @@ Partial Public Class ucItemDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboGroup As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Label3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''FileUpload1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
     '''Label7 control.

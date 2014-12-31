@@ -10,7 +10,7 @@ Public Class ucItemDetail
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Not IsPostBack Then
-                pic.ImageUrl = "~/Upload/Images/3-Details.png"
+
                 LoadCboGroup()
                 Core.InitAppSettingForDBA()
                 Var.DBAMain = New Common.DBA(False)
@@ -91,6 +91,9 @@ Public Class ucItemDetail
                     txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
                 End If
 
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")) Then
+                    Avatar.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")
+                End If
             End If
 
         Catch ex As Exception
@@ -134,25 +137,25 @@ Public Class ucItemDetail
 
             Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
             Dim sFileName As String = String.Empty
-            Dim sFileNameThums As String = String.Empty
-            sFileName = (tempPath & Convert.ToString("Images/")) + FileUpload1.FileName
+            'Dim sFileNameThums As String = String.Empty
+            sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
             FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
 
             Select Case sMode
                 Case 1
                     sItemID = sID
-                    sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description={1}, GroupID={2}, ItemPrice={3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12} WHERE ItemID={13}" _
+                    sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description={1}, GroupID={2}, ItemPrice={3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12},ItemImageURL={13} WHERE ItemID={14}" _
                                         , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                           , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
                                           , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
-                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sItemID))
+                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName), Core.SQLStr(sItemID))
                 Case Else
-                    sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo)"
-                    sSql &= String.Format(" VALUES (N{0},{1},{2},{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12})" _
+                    sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo,ItemImageURL)"
+                    sSql &= String.Format(" VALUES (N{0},{1},{2},{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13})" _
                                         , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                           , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
                                           , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
-                                          , Core.SQLStr(txtVitaminElement.Text))
+                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName))
 
             End Select
 

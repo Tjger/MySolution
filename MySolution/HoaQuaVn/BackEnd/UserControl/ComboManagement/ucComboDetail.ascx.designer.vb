@@ -14,24 +14,6 @@ Option Explicit On
 Partial Public Class ucComboDetail
 
     '''<summary>
-    '''Label1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtItemName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''chkActive control.
     '''</summary>
     '''<remarks>
@@ -39,6 +21,15 @@ Partial Public Class ucComboDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chkActive As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Label1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label5 control.
@@ -50,6 +41,15 @@ Partial Public Class ucComboDetail
     Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''txtItemName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtItemName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtItemPrice control.
     '''</summary>
     '''<remarks>
@@ -57,24 +57,6 @@ Partial Public Class ucComboDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtItemPrice As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Label4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtDescription control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtDescription As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''Label6 control.
@@ -93,6 +75,24 @@ Partial Public Class ucComboDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chkItemList As Global.System.Web.UI.WebControls.CheckBoxList
+
+    '''<summary>
+    '''Label4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtDescription control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDescription As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''btnSave control.

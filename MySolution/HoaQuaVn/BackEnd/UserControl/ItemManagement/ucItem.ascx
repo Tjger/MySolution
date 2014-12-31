@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucItem.ascx.vb" Inherits="HoaQuaVn.ucItem" %>
-
+<asp:Label ID="Label1" runat="server" Text="Item List"></asp:Label>
 <asp:GridView ID="GridView1" CssClass="table" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="155px" Width="895px" AutoGenerateColumns="False">
 
     <Columns>
         <asp:BoundField DataField="ItemID" HeaderText="ID" />
-        <asp:BoundField DataField="ItemImageURL" HeaderText="ItemImageURL" />
+        <asp:ImageField  DataImageUrlField="ItemImageURL" ControlStyle-Height="30" ControlStyle-Width="30" HeaderText="Image" />
         <asp:BoundField DataField="ItemName" HeaderText="Name" />
         <asp:CheckBoxField DataField="Active" HeaderText="Active" />
         <asp:CheckBoxField DataField="Hot" HeaderText="Hot" />

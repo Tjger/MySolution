@@ -30,29 +30,30 @@
 
 <div style="margin-top: 18px;">
     <div style="float:left;" >
-        <asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
-        <br />
-        <CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server" Width="726px"></CKEditor:CKEditorControl>
-        <br />
-    </div>
-
-    <div  style="   float: left;margin-left: 23px;width: 896px;">
         <asp:Label ID="Label6" runat="server" Text="Item List"></asp:Label>
         <br />
         <asp:CheckBoxList ID="chkItemList" runat="server" Width="120px"  style=" border: 1px solid #d3d3d3; border-radius: 5px;padding: 5px;">
         </asp:CheckBoxList>
         <br />
+        
+    </div>
+
+    <div  style="   float: left;margin-left: 23px;width: 896px;">
+        <asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
+        <br />
+        <CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server" Width="726px"></CKEditor:CKEditorControl>
+        <br />
     </div>
 </div>
 
 
-<div style="margin-top: 190px;float: left;">
-    <div style="width: 100px; float: left; width: 50%;">
+<div style="margin-left: 325px;margin-top: 470px;">
+    <div style="float: left;">
         <div style="float: right; margin-right: 7px;">
             <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
         </div>
     </div>
-    <div style="width: 100px; width: 50%;">
+    <div >
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
     </div>
 </div>

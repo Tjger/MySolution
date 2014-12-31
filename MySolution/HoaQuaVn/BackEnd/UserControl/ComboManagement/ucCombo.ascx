@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucCombo.ascx.vb" Inherits="HoaQuaVn.ucCombo" %>
-
+<asp:Label ID="Label1" runat="server" Text="Combo List"></asp:Label>
 <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="155px" Width="895px" CssClass="table" AutoGenerateColumns="False">
     <Columns>
         <asp:BoundField DataField="ComboID" HeaderText="ID" />
