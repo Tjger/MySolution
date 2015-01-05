@@ -11,6 +11,7 @@ Public Class index
         NewsManagement = 5
         ItemDetail = 6
         ComboDetail = 7
+        NewsDetail = 8
     End Enum
 
     Private sModule As String = String.Empty
@@ -45,6 +46,9 @@ Public Class index
                             Panel1.Controls.Add(uc)
                         Case ModuleType.ComboDetail
                             Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ComboManagement/ucComboDetail.ascx")
+                            Panel1.Controls.Add(uc)
+                        Case ModuleType.NewsDetail
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/NewsManagement/ucNewsDetail.ascx")
                             Panel1.Controls.Add(uc)
                     End Select
                 Else

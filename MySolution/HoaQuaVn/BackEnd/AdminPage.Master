@@ -98,7 +98,7 @@
                       <li ><a href="Admin.aspx?module=2"><i class="fa fa-suitcase"></i><span>Sản phẩm</span></a></li>
                     <li ><a href="Admin.aspx?module=3"><i class="fa fa-navicon"></i><span>Combo</span></a></li>
                     <li ><a href="Admin.aspx?module=4"><i class="fa fa-magic"></i><span>SEO</span></a></li>
-                    <%--<li><a href="Admin.aspx?module=5"><i class="fa fa-pencil-square-o"></i><span>Tin Tức</span></a></li>--%>
+                    <li><a href="Admin.aspx?module=5"><i class="fa fa-pencil-square-o"></i><span>Tin Tức</span></a></li>
                 </ul>
             </div>
             <!-- leftpanel -->
