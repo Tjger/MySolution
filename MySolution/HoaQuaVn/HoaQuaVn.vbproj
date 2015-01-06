@@ -859,7 +859,7 @@
     <Content Include="FrontEnd\css\global.css" />
     <Content Include="FrontEnd\css\jqx.base.css" />
     <Content Include="FrontEnd\css\social.css" />
-    <Content Include="Detail.aspx" />
+    <Content Include="Combo.aspx" />
     <Content Include="Detail2.aspx" />
     <Content Include="Detail3.aspx" />
     <Content Include="Images\wood_pattern.jpg" />
@@ -1064,11 +1064,11 @@
       <DependentUpon>ucReceipt.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Detail.aspx.designer.vb">
-      <DependentUpon>Detail.aspx</DependentUpon>
+    <Compile Include="Combo.aspx.designer.vb">
+      <DependentUpon>Combo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Detail.aspx.vb">
-      <DependentUpon>Detail.aspx</DependentUpon>
+    <Compile Include="Combo.aspx.vb">
+      <DependentUpon>Combo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Detail2.aspx.designer.vb">

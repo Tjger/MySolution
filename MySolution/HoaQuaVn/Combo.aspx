@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Detail.aspx.vb" Inherits="HoaQuaVn.Detail" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Combo.aspx.vb" Inherits="HoaQuaVn.Detail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -8,55 +8,28 @@
         <div style="width: 826px;">
 
             <div style="float: left; width: 350px; text-align: center;">
-                <img src="FrontEnd/image/combo/c1.png">
+                <div>
+                    <img src="FrontEnd/image/combo/c1.png">
+                </div>
+                <div class="price-format" style="color:#83e361;">
+                    <span>
+                        <asp:Label ID="lblPrice" runat="server" Text="Label"></asp:Label></span>
+                </div>
             </div>
+
             <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px; height: 241px;">
 
                 <div class="combo-1">
-                    <span>COMBO 1</span>
+                    <span>
+                        <asp:Label ID="lblComboName" runat="server" Text="Label"></asp:Label></span>
                 </div>
 
                 <div class="description-detail">
-                    <span>Thích hợp cho việc trải nghiệm các loại trái cây tuyệt vời của 3 miền</span>
+                    <span>
+                        <asp:Label ID="lblDescription" runat="server" Text="Label"></asp:Label></span>
                 </div>
                 <div class="combo-details">
-                    <table width="500px">
-                        <tr>
-                            <td>Bưởi da xanh</td>
-                            <td>1,0 -1,2 kg</td>
-                            <td>Bến Tre</td>
-
-
-                        </tr>
-                        <tr>
-                            <td>Ổi sữa Đài Loan</td>
-                            <td>0,8 -1,2 kg</td>
-                            <td>Tiền Giang</td>
-
-
-                        </tr>
-                        <tr>
-                            <td>Xoài cát Hòa Lộc</td>
-                            <td>0,8 -1,2 kg</td>
-                            <td>Xoài cát Hòa Lộc</td>
-
-
-                        </tr>
-                        <tr>
-                            <td>Sapoche</td>
-                            <td>1,0 -1,5 kg</td>
-                            <td>Tiền Giang</td>
-
-
-                        </tr>
-                        <tr>
-                            <td>Cam Khe Mây</td>
-                            <td>0,8-1,2 kg</td>
-                            <td>Hà Tĩnh</td>
-
-
-                        </tr>
-                    </table>
+                    <asp:Label ID="lblItemList" runat="server" Text="Label"></asp:Label>
                 </div>
 
 
@@ -101,14 +74,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <textarea ID="txtMessage" runat="server" style="width: 550px; height: 95px;"></textarea></td>
+                        <textarea id="txtMessage" runat="server" style="width: 550px; height: 95px;"></textarea></td>
                 </tr>
             </table>
             <div class="guest-order-action">
                 <%--<asp:Button ID="btnBack" runat="server" Text="Quay lại" CssClass="remodal-cancel" OnClick="btnBack_Click"/>--%>
                 <a class="remodal-cancel" href="index.aspx">Quay lại</a>
-     <%--           <a class="remodal-confirm" href="#">Đặt hàng</a>--%>
-                <asp:Button ID="btnOk" runat="server" Text="Đặt hàng" CssClass="remodal-confirm" OnClick="btnOk_Click"/>
+                <%--           <a class="remodal-confirm" href="#">Đặt hàng</a>--%>
+                <asp:Button ID="btnOk" runat="server" Text="Đặt hàng" CssClass="remodal-confirm" OnClick="btnOk_Click" />
             </div>
         </div>
 
@@ -164,14 +137,14 @@
                     </tr>
                 </table>
             </div>
-        <div class="purchase">
-            <div style="margin-top: -8px; font-weight: bold;"> <span><a href="../../Detail2.aspx">Chi Tiết</a></span></div>
-        </div>
-        <div class="combo-price">
-            <div class="price-format">
-            400.000 VNĐ
+            <div class="purchase">
+                <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Detail2.aspx">Chi Tiết</a></span></div>
             </div>
-        </div>
+            <div class="combo-price">
+                <div class="price-format">
+                    400.000 VNĐ
+                </div>
+            </div>
         </div>
         <div class="combo-row-1">
             <div class="combo-1">
@@ -222,15 +195,15 @@
                     </tr>
                 </table>
             </div>
-        <div class="purchase">
-            <div style="margin-top: -8px; font-weight: bold;"> <span><a href="../../Detail3.aspx">Chi Tiết</a></span></div>
-        </div>
-        <div class="combo-price">
-            <div class="price-format">
-           500.000 VNĐ
+            <div class="purchase">
+                <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Detail3.aspx">Chi Tiết</a></span></div>
+            </div>
+            <div class="combo-price">
+                <div class="price-format">
+                    500.000 VNĐ
+                </div>
             </div>
         </div>
-        </div>
     </div>
-  
+
 </asp:Content>

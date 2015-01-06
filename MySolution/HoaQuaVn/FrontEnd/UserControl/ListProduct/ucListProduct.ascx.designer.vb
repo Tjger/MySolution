@@ -12,4 +12,13 @@ Option Explicit On
 
 
 Partial Public Class ucListProduct
+
+    '''<summary>
+    '''dtlComboList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtlComboList As Global.System.Web.UI.WebControls.DataList
 End Class

@@ -407,7 +407,7 @@ margin-left: 6px;
 width: 400px;
  text-align: left;
     height: 30px;
-    box-shadow: 6px 5px 0 0 #83e361;
+   
 }
 .description-detail
 {
@@ -425,6 +425,7 @@ width: 400px;
     font-size: 14px;
     line-height: 27px;
     width: 418px;
+     text-align: center;
 }
 .list-combo
 {
@@ -471,6 +472,7 @@ border-left: 1px solid #e5e5e5;
     margin-top: 8px;
     margin-left: 9px;
     width: 218px;
+    height: 34px;
 }
 
 .purchase

@@ -14,6 +14,42 @@ Option Explicit On
 Partial Public Class Detail
 
     '''<summary>
+    '''lblPrice control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblComboName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblComboName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblDescription control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDescription As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblItemList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblItemList As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''txtGuestName control.
     '''</summary>
     '''<remarks>
