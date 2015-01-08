@@ -11,25 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Combo
+Partial Public Class Item
 
     '''<summary>
-    '''lblPrice control.
+    '''ItemImage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ItemImage As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''lblComboName control.
+    '''lblItemPrice control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblComboName As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblItemPrice As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblDescription control.

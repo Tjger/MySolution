@@ -24,7 +24,7 @@ Public Class ucComboDetail
 
                     End Select
 
-                    LoadItemList()
+
 
                 End If
             End If
@@ -41,15 +41,28 @@ Public Class ucComboDetail
                 Dim ds As New DataSet
                 Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
                 If ds.Tables("LoadItemInfo").Rows.Count > 0 Then
-                    txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboName")
-                    txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
-                    chkActive.Checked = ds.Tables("LoadItemInfo").Rows(0)("Active")
-                    txtItemPrice.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboPrice")
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ComboName")) Then
+                        txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboName")
+                    End If
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
+                        txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                    End If
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Active")) Then
+                        chkActive.Checked = ds.Tables("LoadItemInfo").Rows(0)("Active")
+                    Else
+                        chkActive.Checked = False
+                    End If
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ComboPrice")) Then
+                        txtItemPrice.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboPrice")
+                    End If
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemList")) Then
+                        txtItemList.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemList")
+                    End If
                 End If
-                sSql = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
+                'sSql = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
 
-                Var.DBAMain.FillDataset(sSql, ds, "LoadComboItem")
-                dtComboItem = ds.Tables("LoadComboItem")
+                'Var.DBAMain.FillDataset(sSql, ds, "LoadComboItem")
+                'dtComboItem = ds.Tables("LoadComboItem")
             End If
           
         Catch ex As Exception
@@ -58,39 +71,41 @@ Public Class ucComboDetail
 
     End Sub
 
-    Private Sub LoadItemList()
-        Try
-            Dim sSql As String = "SELECT ItemID,ItemName FROM Item WHERE Active='1'"
-            Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSql, ds, "LoadItemList")
-            chkItemList.DataSource = ds
 
-            chkItemList.DataTextField = "ItemName"
 
-            chkItemList.DataValueField = "ItemID"
+    'Private Sub LoadItemList()
+    '    Try
+    '        Dim sSql As String = "SELECT ItemID,ItemName FROM Item WHERE Active='1'"
+    '        Dim ds As New DataSet
+    '        Var.DBAMain.FillDataset(sSql, ds, "LoadItemList")
+    '        chkItemList.DataSource = ds
 
-            chkItemList.DataBind()
+    '        chkItemList.DataTextField = "ItemName"
 
-            If Core.IsDBNullOrStringEmpty(dtComboItem) = False Then
+    '        chkItemList.DataValueField = "ItemID"
 
-                If dtComboItem.Rows.Count > 0 Then
-                    For Each li As ListItem In chkItemList.Items
-                        Dim dr() As DataRow = dtComboItem.Select("ItemID=" & Core.SQLStr(li.Value))
-                        If dr.Count > 0 Then
-                            li.Selected = True
-                        End If
+    '        chkItemList.DataBind()
 
-                    Next
-                End If
+    '        If Core.IsDBNullOrStringEmpty(dtComboItem) = False Then
 
-            End If
+    '            If dtComboItem.Rows.Count > 0 Then
+    '                For Each li As ListItem In chkItemList.Items
+    '                    Dim dr() As DataRow = dtComboItem.Select("ItemID=" & Core.SQLStr(li.Value))
+    '                    If dr.Count > 0 Then
+    '                        li.Selected = True
+    '                    End If
 
-            
+    '                Next
+    '            End If
 
-        Catch ex As Exception
-            Log.LogError(ClsName, "LoadItemList", ex.Message)
-        End Try
-    End Sub
+    '        End If
+
+
+
+    '    Catch ex As Exception
+    '        Log.LogError(ClsName, "LoadItemList", ex.Message)
+    '    End Try
+    'End Sub
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
@@ -105,14 +120,14 @@ Public Class ucComboDetail
             Select Case sMode
                 Case 1
                     sItemID = sID
-                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3} WHERE ComboID={4}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(sItemID))
+                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4} WHERE ComboID={5}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sItemID))
                 Case Else
 
-                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active) VALUES (N{0},{1},N{2},N{3},{4})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive))
+                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active,ItemList) VALUES (N{0},{1},N{2},N{3},{4},N{5})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text))
 
             End Select
             If Var.DBAMain.Execute(sSql) Then
-                AddComboItem()
+
                 Response.Redirect("Admin.aspx?module=3")
             End If
         Catch ex As Exception
@@ -122,30 +137,31 @@ Public Class ucComboDetail
 
     End Sub
 
-    Private Sub AddComboItem()
-        Try
-            Dim sSql As String = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
-            Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSql, ds, "DeleteOldItem")
 
-            If ds.Tables("DeleteOldItem").Rows.Count > 0 Then
-                sSql = "DELETE FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
-                Var.DBAMain.Execute(sSql)
-            End If
+    'Private Sub AddComboItem()
+    '    Try
+    '        Dim sSql As String = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
+    '        Dim ds As New DataSet
+    '        Var.DBAMain.FillDataset(sSql, ds, "DeleteOldItem")
 
-            For Each li As ListItem In chkItemList.Items
-                If li.Selected Then
-                    sSql = String.Format("INSERT INTO ComboItem (ComboID,ItemID) VALUES ({0},{1})", Core.SQLStr(sID), Core.SQLStr(li.Value))
-                    Var.DBAMain.Execute(sSql)
-                End If
-            Next
+    '        If ds.Tables("DeleteOldItem").Rows.Count > 0 Then
+    '            sSql = "DELETE FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
+    '            Var.DBAMain.Execute(sSql)
+    '        End If
+
+    '        For Each li As ListItem In chkItemList.Items
+    '            If li.Selected Then
+    '                sSql = String.Format("INSERT INTO ComboItem (ComboID,ItemID) VALUES ({0},{1})", Core.SQLStr(sID), Core.SQLStr(li.Value))
+    '                Var.DBAMain.Execute(sSql)
+    '            End If
+    '        Next
 
 
 
-        Catch ex As Exception
-            Log.LogError(ClsName, "AddComboItem", ex.Message)
-        End Try
-    End Sub
+    '    Catch ex As Exception
+    '        Log.LogError(ClsName, "AddComboItem", ex.Message)
+    '    End Try
+    'End Sub
 
     Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Response.Redirect("Admin.aspx?module=3")

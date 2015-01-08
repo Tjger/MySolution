@@ -14,9 +14,9 @@ body
     overflow-x: hidden;
 }
 .news-image {
-   float: left;
+ 
     height: 310px;
-    margin-left: 20px;
+    margin-left: 225px;
     width: 420px;
        margin-top: 10px;
 }
@@ -134,7 +134,7 @@ float:left;
     font-size: 14px;
     margin-left: 10px;
     margin-top: 11px;
-    width: 278px;
+    width: 275px;
 	color:#5e5e5e;
 }
 
@@ -1106,6 +1106,7 @@ width: 278px;
     line-height: 13px;
     margin-left: 5px;
     width: 235px;
+       height: 100px;
 }
 
     .combo-info table

@@ -37,6 +37,8 @@
                 <asp:CheckBox ID="chkActive" Text="Active" runat="server" Checked="True" /></td>
             <td>
                 <asp:CheckBox ID="chkHot" Text="Hot" runat="server" /></td>
+            <%--<td>
+                <asp:CheckBox ID="chkShow" Text="ShowInHomePage" runat="server" /></td>--%>
         </tr>
         <tr>
             <td>

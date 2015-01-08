@@ -3,7 +3,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-    </p>
     <uc1:ucProperties ID="ucProperties1" runat="server" />
 </asp:Content>

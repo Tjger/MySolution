@@ -59,22 +59,22 @@ Partial Public Class ucComboDetail
     Protected WithEvents txtItemPrice As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Label6 control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''chkItemList control.
+    '''txtItemList control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents chkItemList As Global.System.Web.UI.WebControls.CheckBoxList
+    Protected WithEvents txtItemList As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''Label4 control.

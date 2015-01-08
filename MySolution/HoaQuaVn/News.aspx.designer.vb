@@ -14,6 +14,33 @@ Option Explicit On
 Partial Public Class News
 
     '''<summary>
+    '''lblNewTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblNewTitle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''NewImage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NewImage As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''lblNewDes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblNewDes As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''ucNews control.
     '''</summary>
     '''<remarks>

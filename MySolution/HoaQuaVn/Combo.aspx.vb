@@ -1,7 +1,7 @@
 ﻿Imports Common
-Public Class Detail
+Public Class Combo
     Inherits System.Web.UI.Page
-    Private ClsName = "ucCombo"
+    Private ClsName = "Combo"
     Public sID As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
@@ -56,7 +56,7 @@ Public Class Detail
                 End If
             End If
 
-          
+
 
         Catch ex As Exception
             Log.LogError(ClsName, "Page_Load", ex.Message)

@@ -891,6 +891,7 @@
     <Content Include="Introduce.aspx" />
     <Content Include="BackEnd\js\jquery.placeholder.min.js" />
     <Content Include="BackEnd\js\modernizr.custom.63321.js" />
+    <Content Include="Item.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="News2.aspx" />
@@ -1119,6 +1120,13 @@
     </Compile>
     <Compile Include="Introduce.aspx.vb">
       <DependentUpon>Introduce.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Item.aspx.designer.vb">
+      <DependentUpon>Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Item.aspx.vb">
+      <DependentUpon>Item.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.vb">

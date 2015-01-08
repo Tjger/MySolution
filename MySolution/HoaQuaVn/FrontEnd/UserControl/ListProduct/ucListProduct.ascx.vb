@@ -1,7 +1,7 @@
 ﻿Imports Common
 Public Class ucListProduct
     Inherits System.Web.UI.UserControl
-    Private ClsName = "ucCombo"
+    Private ClsName = "ucListProduct"
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
@@ -24,7 +24,7 @@ Public Class ucListProduct
             End If
 
         Catch ex As Exception
-            Log.LogError(ClsName, "Page_Load", ex.Message)
+            Log.LogError(ClsName, "LoadCombo", ex.Message)
         End Try
     End Sub
 End Class
