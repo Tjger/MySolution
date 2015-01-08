@@ -632,6 +632,7 @@
     <Content Include="FrontEnd\image\social\icons\zootool.png" />
     <Content Include="FrontEnd\image\step.png" />
     <Content Include="FrontEnd\image\t01.png" />
+    <Content Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\bg2.jpg" />
@@ -1032,6 +1033,13 @@
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx.designer.vb">
+      <DependentUpon>ucTopseller.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx.vb">
+      <DependentUpon>ucTopseller.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>

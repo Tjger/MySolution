@@ -23,6 +23,15 @@ Partial Public Class Home
     Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
+    '''ucTopseller1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ucTopseller1 As Global.HoaQuaVn.ucTopseller
+
+    '''<summary>
     '''form1 control.
     '''</summary>
     '''<remarks>
