@@ -11,23 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ucReceipt
+Partial Public Class List_News
 
     '''<summary>
-    '''ReceiptCalendar control.
+    '''dtlComboList control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ReceiptCalendar As Global.System.Web.UI.WebControls.Calendar
-
-    '''<summary>
-    '''GridView1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents dtlComboList As Global.System.Web.UI.WebControls.DataList
 End Class

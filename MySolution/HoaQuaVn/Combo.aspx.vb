@@ -2,7 +2,7 @@
 Public Class Combo
     Inherits System.Web.UI.Page
     Private ClsName = "Combo"
-    Public sID As String = String.Empty
+    Private sID As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Core.InitAppSettingForDBA()
@@ -10,6 +10,7 @@ Public Class Combo
             If Request.QueryString.Count > 0 Then
                 sID = Request.QueryString("id")
                 LoadComboDetail()
+
             End If
 
         End If
@@ -53,6 +54,13 @@ Public Class Combo
                     lblDescription.Text = ds.Tables("LoadComboDetail").Rows(0)("Description")
                     lblItemList.Text = ds.Tables("LoadComboDetail").Rows(0)("ItemList")
                     lblPrice.Text = ds.Tables("LoadComboDetail").Rows(0)("ComboPrice")
+                End If
+
+                sSQL = "SELECT * FROM Combo WHERE ComboID <>" & Core.SQLStr(sID) & " AND Active='1'"
+                Var.DBAMain.FillDataset(sSQL, ds, "LoadComboRelateDetail")
+                If ds.Tables("LoadComboRelateDetail").Rows.Count > 0 Then
+                    dtlComboRelateList.DataSource = ds.Tables("LoadComboRelateDetail")
+                    dtlComboRelateList.DataBind()
                 End If
             End If
 

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Item.aspx.vb" Inherits="HoaQuaVn.Item" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -8,15 +9,15 @@
 
             <div style="float: left; width: 350px; text-align: center;">
                 <div>
-                    <asp:Image ID="ItemImage" runat="server" Width="209px" Height="152px"/>
+                    <asp:Image ID="ItemImage" runat="server" Width="209px" Height="152px" />
                 </div>
-                <div class="price-format" style="color:#83e361;">
+                <div class="price-format" style="color: #83e361;">
                     <span>
                         <asp:Label ID="lblItemPrice" runat="server" Text=""></asp:Label></span>
                 </div>
             </div>
 
-            <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px; ">
+            <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px;">
 
                 <div class="combo-1">
                     <span>
@@ -87,6 +88,25 @@
     </div>
     <div style="float: left;">
         <div style="margin-left: 17px;">SẢN PHẨM CÙNG LOẠI</div>
+
+
+        <div class="combo-collection">
+            <asp:DataList ID="dtlItemRelativeLists" runat="server" RepeatColumns="4">
+                <ItemTemplate>
+                    <div class="box combo-cycle">
+                        <div class="imagecombo">
+                            <asp:Image ID="NewImageRelative" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
+                        </div>
+                        <div class="comboname ">
+                            <span>
+                                <a href="../../Item.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                                    <asp:Label ID="lblItemNameRelative" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a></span>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:DataList>
+        </div>
+
 
     </div>
 </asp:Content>
