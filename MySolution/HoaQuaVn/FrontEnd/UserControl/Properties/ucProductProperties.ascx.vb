@@ -4,13 +4,49 @@ Public Class ucProductProperties
     Private ClsName = "ucProductProperties"
     Public pagingDataList As New PagedDataSource()
     Public iCount As Integer = 0
+    Public sAction As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        lbPrev.Visible = False
+        Core.InitAppSettingForDBA()
+        Var.DBAMain = New Common.DBA(False)
         If Not IsPostBack Then
-            lbPrev.Visible = False
-            Core.InitAppSettingForDBA()
-            Var.DBAMain = New Common.DBA(False)
             LoadCombo()
+
+            If Request.QueryString.Count > 0 Then
+                sAction = Request.QueryString("action")
+
+                If sAction = "next" Then
+                    CurrentPage += 1
+
+                    If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
+                        lbNext.Visible = False
+                        lbPrev.Visible = True
+                        LoadCombo()
+                    Else
+                        LoadCombo()
+                    End If
+                Else
+                    CurrentPage -= 1
+                    If CurrentPage = 0 Then
+                        lbPrev.Visible = False
+                        lbNext.Visible = True
+                        LoadCombo()
+
+                    Else
+
+                        LoadCombo()
+                    End If
+                End If
+            End If
+
         End If
+
+      
+       
+
+
+
     End Sub
 
     Sub LoadCombo()
@@ -19,19 +55,18 @@ Public Class ucProductProperties
         Try
             sSQL = "SELECT * FROM Item WHERE Active='1' "
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
-           
+
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
                 pagingDataList.DataSource = ds.Tables("LoadCombo").DefaultView()
                 pagingDataList.AllowPaging = True
                 pagingDataList.PageSize = 12
                 pagingDataList.CurrentPageIndex = CurrentPage
-                lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
-                If pagingDataList.PageCount > 1 Then
-
-                    lbNext.Visible = True
-                Else
-                    lbNext.Visible = False
+                If Not IsPostBack Then
+                    lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
                 End If
+
+
+               
 
                 ViewState("iCount") = pagingDataList.PageCount.ToString()
                 dtlItemList.DataSource = pagingDataList
@@ -57,40 +92,31 @@ Public Class ucProductProperties
         End Set
     End Property
 
-    Protected Sub lbPrev_Click(sender As Object, e As EventArgs)
-        Try
-            CurrentPage -= 1
-            If CurrentPage = 0 Then
-                lbPrev.Visible = False
-                lbNext.Visible = True
-                LoadCombo()
-
-            Else
-
-                LoadCombo()
-            End If
+    'Protected Sub lbPrev_Click(sender As Object, e As EventArgs)
+    '    Try
 
 
-        Catch ex As Exception
-            Log.LogError(ClsName, "LoadCombo", ex.Message)
-        End Try
-    End Sub
 
-    Protected Sub lbNext_Click(sender As Object, e As EventArgs)
-        Try
-            CurrentPage += 1
+    '    Catch ex As Exception
+    '        Log.LogError(ClsName, "LoadCombo", ex.Message)
+    '    End Try
+    'End Sub
 
-            If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
-                lbNext.Visible = False
-                lbPrev.Visible = True
-                LoadCombo()
-            Else
-                LoadCombo()
-            End If
+    'Protected Sub lbNext_Click(sender As Object, e As EventArgs)
+    '    Try
+    '        CurrentPage += 1
 
-        Catch ex As Exception
-            Log.LogError(ClsName, "LoadCombo", ex.Message)
-        End Try
+    '        If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
+    '            lbNext.Visible = False
+    '            lbPrev.Visible = True
+    '            LoadCombo()
+    '        Else
+    '            LoadCombo()
+    '        End If
 
-    End Sub
+    '    Catch ex As Exception
+    '        Log.LogError(ClsName, "LoadCombo", ex.Message)
+    '    End Try
+
+    'End Sub
 End Class

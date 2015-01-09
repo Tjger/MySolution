@@ -1,6 +1,26 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucProductProperties.ascx.vb" Inherits="HoaQuaVn.ucProductProperties" %>
+<script type="text/javascript">
+    $(function () {
 
-<div class="combo-collection">
+
+        $("#<%= lbNext.ClientID%>").click(function (event) {
+
+            event.preventDefault(); 
+            $("#dataItem").load("index.aspx?action=next #dataItem");
+
+
+        });
+        $("#<%= lbPrev.ClientID%>").click(function (event) {
+
+            event.preventDefault(); 
+            $("#dataItem").load("index.aspx?action=prev #dataItem");
+
+
+        });
+
+    });
+</script>
+<div class="combo-collection" id="dataItem">
     <asp:DataList ID="dtlItemList" runat="server" RepeatColumns="4">
         <ItemTemplate>
             <div class="box combo-cycle">
@@ -16,10 +36,10 @@
         </ItemTemplate>
     </asp:DataList>
 </div>
-<div style="float:left;width:100%;text-align:center;">
+<div style="float: left; width: 100%; text-align: center;">
 
-    <asp:LinkButton ID="lbPrev" runat="server" OnClick="lbPrev_Click">Trước</asp:LinkButton>        
-    <asp:label id="lblShow" runat="server"></asp:label>
-    <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">Sau</asp:LinkButton>
-   
+    <asp:LinkButton ID="lbPrev" runat="server">Trước</asp:LinkButton>
+    <asp:Label ID="lblShow" runat="server"></asp:Label>
+    <asp:LinkButton ID="lbNext" runat="server">Sau</asp:LinkButton>
+
 </div>
