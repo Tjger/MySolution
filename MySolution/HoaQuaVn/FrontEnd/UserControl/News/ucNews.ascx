@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucNews.ascx.vb" Inherits="HoaQuaVn.ucNews" %>
+ <div class="product-news" style="margin-right: 228px; float: left;"></div>
 <div class="box-news">
     <asp:DataList ID="dtlComboList" runat="server" RepeatColumns="1">
         <ItemTemplate>

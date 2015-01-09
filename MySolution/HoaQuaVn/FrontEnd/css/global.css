@@ -292,7 +292,7 @@ text-align: center;
      background-color: #fff;
     float: left;
     height: auto;
-    padding-bottom: 70px;
+    padding-bottom: 158px;
 }
 
 #main-content-detail
@@ -420,11 +420,11 @@ width: 400px;
 }
 .combo-details table
 {
-   background: none repeat scroll 0 0 whitesmoke;
+ 
     border-radius: 0 0 2px 2px;
     font-size: 14px;
     line-height: 27px;
-    width: 418px;
+    width: 418px !important;
      text-align: center;
 }
 .list-combo
@@ -580,6 +580,7 @@ color:white;
 {
     
     float: left;
+    margin-left:22px;
     width: 442px;
 }
 .combo-option
@@ -590,7 +591,7 @@ color:white;
 
 .combo-collection
 {
-    width: 440px;
+    width: 100%;
     float:left;
 }
 
@@ -948,6 +949,7 @@ width: 278px;
     float: left;
     height: 6px;
 }
+
 .powered1.bestseller {
     background: url("../image/icon-hot.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     color: white;
