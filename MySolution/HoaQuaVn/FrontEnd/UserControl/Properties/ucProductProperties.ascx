@@ -18,7 +18,7 @@
 </div>
 <div style="float:left;width:100%;text-align:center;">
 
-    <asp:LinkButton ID="lbPrev" runat="server" OnClick="lbPrev_Click">Trước</asp:LinkButton>        
+    <asp:LinkButton ID="lblPrev" runat="server" OnClick="lbPrev_Click">Trước</asp:LinkButton>        
     <asp:label id="lblShow" runat="server"></asp:label>
     <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">Sau</asp:LinkButton>
    
