@@ -67,28 +67,42 @@ Public Class ucNewsDetail
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
-            Dim sItemID As Integer = Core.GetID("ItemID", "Item")
+
             Dim sActive As String = String.Empty
             Dim sSql As String = String.Empty
             Dim sDescription As String = ""
+            Dim bSaveImage As Boolean = True
+            Dim sFileName As String = String.Empty
             If chkActive.Checked Then
                 sActive = "1"
             Else
                 sActive = "0"
             End If
 
-            Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
-            Dim sFileName As String = String.Empty
-            'Dim sFileNameThums As String = String.Empty
-            sFileName = "~/" & (tempPath & Convert.ToString("Images/News/")) & FileUpload1.FileName
-            FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+            If FileUpload1.FileName = "" Then
+                bSaveImage = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+
+                'Dim sFileNameThums As String = String.Empty
+                sFileName = "~/" & (tempPath & Convert.ToString("Images/News/")) & FileUpload1.FileName
+                FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+
+            End If
 
             Select Case sMode
                 Case 1
-                    sItemID = sID
-                    sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Image={3}, Active={4}, DateInput={5} WHERE AutoID={6}" _
-                                        , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text), Core.SQLStr(sFileName) _
-                                          , Core.SQLStr(sActive), Core.SQLStr(Date.Now), Core.SQLStr(sItemID))
+
+                    If bSaveImage Then
+                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4}, Image={5} WHERE AutoID={6}" _
+              , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text) _
+                , Core.SQLStr(sActive), Core.SQLStr(Date.Now), Core.SQLStr(sFileName), Core.SQLStr(sID))
+                    Else
+                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4} WHERE AutoID={5}" _
+                                     , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text) _
+                                       , Core.SQLStr(sActive), Core.SQLStr(Date.Now), Core.SQLStr(sID))
+                    End If
+                 
                 Case Else
                     sSql = "INSERT INTO News ( Title, SubContent, MainContent, Image, Active, DateInput)"
                     sSql &= String.Format(" VALUES (N{0},N{1},N{2},{3},{4},{5})" _

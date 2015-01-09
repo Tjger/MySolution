@@ -45,7 +45,7 @@ Public Class ucSEO
             Dim sSEOID As String = GridView1.Rows(e.RowIndex).Cells(0).Text
             Dim sSEO As String = DirectCast(GridView1.Rows(e.RowIndex).FindControl("txtSEO"), TextBox).Text
             Dim iResult As Integer = 0
-            Dim sSQL As String = "Update SEO SET SEO= " & Core.SQLStr(sSEO) & " WHERE SeoID = " & Core.SQLStr(sSEOID)
+            Dim sSQL As String = "Update SEO SET SEO= N" & Core.SQLStr(sSEO) & " WHERE SeoID = " & Core.SQLStr(sSEOID)
             Var.DBAMain.Execute(sSQL, iResult)
             If iResult > 0 Then
                 GridView1.EditIndex = -1
@@ -101,7 +101,7 @@ Public Class ucSEO
         Try
             If txtSEONew.Text <> "" Then
                 Dim iResult As Integer = 0
-                Dim sSQL As String = String.Format("INSERT INTO SEO (SEO) VALUES ({0})", Core.SQLStr(txtSEONew.Text))
+                Dim sSQL As String = String.Format("INSERT INTO SEO (SEO) VALUES (N{0})", Core.SQLStr(txtSEONew.Text))
                 Var.DBAMain.Execute(sSQL, iResult)
                 If iResult > 0 Then
                     txtSEONew.Text = ""

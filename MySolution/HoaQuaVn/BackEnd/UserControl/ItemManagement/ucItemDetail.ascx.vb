@@ -123,6 +123,8 @@ Public Class ucItemDetail
             Dim sSql As String = String.Empty
             Dim sHot As String = String.Empty
             Dim sDescription As String = ""
+            Dim bSaveImage As Boolean = True
+            Dim sFileName As String = String.Empty
             If chkActive.Checked Then
                 sActive = "1"
             Else
@@ -134,24 +136,41 @@ Public Class ucItemDetail
             Else
                 sHot = "0"
             End If
+            If FileUpload1.FileName = "" Then
+                bSaveImage = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
 
-            Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
-            Dim sFileName As String = String.Empty
-            'Dim sFileNameThums As String = String.Empty
-            sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
-            FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+                'Dim sFileNameThums As String = String.Empty
+                sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
+                FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+
+            End If
+
+           
 
             Select Case sMode
                 Case 1
+
                     sItemID = sID
-                    sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description={1}, GroupID={2}, ItemPrice={3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12},ItemImageURL={13} WHERE ItemID={14}" _
-                                        , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
-                                          , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
-                                          , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
-                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName), Core.SQLStr(sItemID))
+                    If bSaveImage Then
+                        sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description=N{1}, GroupID={2}, ItemPrice=N{3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12},ItemImageURL={13} WHERE ItemID={14}" _
+                                       , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
+                                         , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
+                                         , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                         , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName), Core.SQLStr(sItemID))
+                    Else
+                        sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description=N{1}, GroupID={2}, ItemPrice=N{3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12} WHERE ItemID={13}" _
+                                       , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
+                                         , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
+                                         , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                         , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sItemID))
+                    End If
+
+                   
                 Case Else
                     sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo,ItemImageURL)"
-                    sSql &= String.Format(" VALUES (N{0},{1},{2},{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13})" _
+                    sSql &= String.Format(" VALUES (N{0},N{1},{2},N{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13})" _
                                         , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                           , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
                                           , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _

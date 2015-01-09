@@ -651,13 +651,27 @@ ByVal cchData As Integer) As Integer
     Public Shared Function GetID(ByVal sIdFieldName As String, ByVal sTableName As String) As Object
         Dim sReturn As Object
         Try
+            Dim ds As New DataSet
             Dim sSql As String = " SELECT Max(" & sIdFieldName & ") FROM " & sTableName
             sReturn = Var.DBAMain.ExecuteScalar(sSql)
+            Dim bReturn As Boolean = True
             If Core.IsDBNullOrStringEmpty(sReturn) = False Then
                 sReturn = sReturn + 1
             Else
                 sReturn = 1
             End If
+            'While bReturn
+            '    sSql = "SELECT * FROM " & sTableName & " WHERE " & sIdFieldName & " = " & sReturn
+            '    Var.DBAMain.FillDataset(sSql, ds, "GetID")
+            '    If ds.Tables("GetID").Rows.Count > 0 Then
+            '        sReturn = sReturn + 1
+            '    Else
+            '        bReturn = False
+            '    End If
+            'End While
+           
+
+            
 
         Catch ex As Exception
 

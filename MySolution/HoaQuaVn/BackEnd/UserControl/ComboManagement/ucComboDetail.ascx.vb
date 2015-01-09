@@ -45,7 +45,7 @@ Public Class ucComboDetail
                         txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ComboName")
                     End If
                     If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
-                        txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                        txtSubcontent.InnerText = ds.Tables("LoadItemInfo").Rows(0)("Description")
                     End If
                     If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Active")) Then
                         chkActive.Checked = ds.Tables("LoadItemInfo").Rows(0)("Active")
@@ -109,7 +109,7 @@ Public Class ucComboDetail
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
-            Dim sItemID As Integer = Core.GetID("ItemID", "Item")
+            Dim sItemID As Integer = Core.GetID("ComboID", "Combo")
             Dim sActive As String = String.Empty
             Dim sSql As String = String.Empty
             If chkActive.Checked Then
@@ -120,10 +120,10 @@ Public Class ucComboDetail
             Select Case sMode
                 Case 1
                     sItemID = sID
-                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4} WHERE ComboID={5}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sItemID))
+                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4} WHERE ComboID={5}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sItemID))
                 Case Else
 
-                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active,ItemList) VALUES (N{0},{1},N{2},N{3},{4},N{5})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtDescription.Text), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text))
+                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active,ItemList) VALUES (N{0},N{1},N{2},N{3},{4},N{5})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text))
 
             End Select
             If Var.DBAMain.Execute(sSql) Then

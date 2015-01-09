@@ -29,8 +29,16 @@
 </div>
 
 <div style="margin-top: 18px;">
+
+     <div style="float: left; margin-left: 23px; width: 896px;">
+        <asp:Label ID="Label4" runat="server" Text="Description (Max 250 kí tự)"></asp:Label>
+        <br />
+        <textarea id="txtSubcontent" runat="server" style="width: 709px; height: 103px;" maxlength="250"></textarea>
+        <br />
+    </div>
+
     <div style="float: left; margin-left: 23px; width: 896px;">
-        <asp:Label ID="Label2" runat="server" Text="Description"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Item List"></asp:Label>
         <br />
         <CKEditor:CKEditorControl ID="txtItemList" BasePath="/ckeditor/" runat="server" Width="726px">
             <table>
@@ -82,12 +90,7 @@
         <br />
     </div>
 
-    <div style="float: left; margin-left: 23px; width: 896px;">
-        <asp:Label ID="Label4" runat="server" Text="Description"></asp:Label>
-        <br />
-        <CKEditor:CKEditorControl ID="txtDescription" BasePath="/ckeditor/" runat="server" Width="726px"></CKEditor:CKEditorControl>
-        <br />
-    </div>
+   
 </div>
 
 
