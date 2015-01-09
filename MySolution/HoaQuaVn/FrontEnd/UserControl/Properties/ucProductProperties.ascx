@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucProductProperties.ascx.vb" Inherits="HoaQuaVn.ucProductProperties" %>
+
 <div class="combo-collection">
     <asp:DataList ID="dtlItemList" runat="server" RepeatColumns="4">
         <ItemTemplate>
@@ -14,4 +15,11 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
+</div>
+<div style="float:left;width:100%;text-align:center;">
+
+    <asp:LinkButton ID="lbPrev" runat="server" OnClick="lbPrev_Click">Trước</asp:LinkButton>        
+    <asp:label id="lblShow" runat="server"></asp:label>
+    <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">Sau</asp:LinkButton>
+   
 </div>

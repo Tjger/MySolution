@@ -21,4 +21,31 @@ Partial Public Class ucProductProperties
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dtlItemList As Global.System.Web.UI.WebControls.DataList
+
+    '''<summary>
+    '''lbPrev control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbPrev As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''lblShow control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblShow As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbNext control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbNext As Global.System.Web.UI.WebControls.LinkButton
 End Class
