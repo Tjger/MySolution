@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px; height: 241px;">
+            <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px; ">
 
                 <div class="combo-1">
                     <span>
