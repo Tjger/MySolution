@@ -936,7 +936,14 @@
     <Content Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx" />
     <Content Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx" />
     <Content Include="FrontEnd\UserControl\Properties\ucProperties.ascx" />
-    <Content Include="UpLoad\Images\3-Details.png" />
+    <Content Include="UpLoad\Images\01.jpg" />
+    <Content Include="UpLoad\Images\02.jpg" />
+    <Content Include="UpLoad\Images\03.jpg" />
+    <Content Include="UpLoad\Images\06.jpg" />
+    <Content Include="UpLoad\Images\11.jpg" />
+    <Content Include="UpLoad\Images\12.jpg" />
+    <Content Include="UpLoad\Images\News\hang12-9fb57.JPG" />
+    <Content Include="UpLoad\Images\News\tu-40fcc.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -202,7 +202,7 @@
                 </div>
 
             </div>
-            <div class="list-combo" style="height: 1201px;">
+            <div class="list-combo" >
 
                 <form id="form1" runat="server">
                     

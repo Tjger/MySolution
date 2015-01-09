@@ -101,6 +101,7 @@ Public Class ucItemDetail
         End Try
 
     End Sub
+
     Private Sub LoadCboGroup()
         Try
             Dim sSql As String = "SELECT * FROM ItemGroup"
@@ -169,8 +170,8 @@ Public Class ucItemDetail
 
                    
                 Case Else
-                    sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo,ItemImageURL)"
-                    sSql &= String.Format(" VALUES (N{0},N{1},{2},N{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13})" _
+                    sSql = "INSERT INTO Item ( ItemName, Description, GroupID, ItemPrice, Active, FromWhere, UnitValue, Hot, AdultVitamin, AdultEnergy, ChildVitamin, ChildEnergy, ElementInfo,ItemImageURL, CreatedDate)"
+                    sSql &= String.Format(" VALUES (N{0},N{1},{2},N{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13},GETDATE())" _
                                         , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                           , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
                                           , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _

@@ -433,7 +433,7 @@ border-left: 1px solid #e5e5e5;
     background: none repeat scroll 0 0 #fff;
     float: right;
     width: 909px;
-	height:1160px;
+	height:auto;
 }
 
 .h-combo
@@ -932,7 +932,7 @@ float : left;
     background-color: white;
 width: 278px;
 
-    height:795px;
+    height:auto;
     z-index: -1000;
 }
 
@@ -1361,5 +1361,5 @@ margin-top: 10px;
     left: -20px;
 }
 
-border: none; background: none; color: white; padding-left: 0;
-}
+/*border: none; background: none; color: white; padding-left: 0;
+}*/
