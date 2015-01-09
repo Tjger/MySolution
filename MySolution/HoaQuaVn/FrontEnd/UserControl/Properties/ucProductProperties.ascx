@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucProductProperties.ascx.vb" Inherits="HoaQuaVn.ucProductProperties" %>
+
 <div class="combo-collection">
     <asp:DataList ID="dtlItemList" runat="server" RepeatColumns="4">
         <ItemTemplate>

@@ -26,6 +26,13 @@ Public Class ucProductProperties
                 pagingDataList.PageSize = 12
                 pagingDataList.CurrentPageIndex = CurrentPage
                 lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
+                If pagingDataList.PageCount > 1 Then
+
+                    lbNext.Visible = True
+                Else
+                    lbNext.Visible = False
+                End If
+
                 ViewState("iCount") = pagingDataList.PageCount.ToString()
                 dtlItemList.DataSource = pagingDataList
                 dtlItemList.DataBind()
