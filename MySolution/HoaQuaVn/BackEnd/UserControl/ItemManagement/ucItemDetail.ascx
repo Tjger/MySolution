@@ -4,27 +4,27 @@
 <script type="text/javascript">
     function previewFile() {
         var preview = document.querySelector('#<%=Avatar.ClientID %>');
-            var file = document.querySelector('#<%=FileUpload1.ClientID%>').files[0];
-            var reader = new FileReader();
+        var file = document.querySelector('#<%=FileUpload1.ClientID%>').files[0];
+        var reader = new FileReader();
 
-            reader.onloadend = function () {
-                preview.src = reader.result;
-            }
-
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                preview.src = "";
-            }
+        reader.onloadend = function () {
+            preview.src = reader.result;
         }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
     </script>
 
 <div style="height: 200px; width: 200px;">
 
-    <div style="height: 200px; width: 200px;border: 1px solid #d3d3d3;margin-bottom:10px;">
-       <asp:Image ID="Avatar" Width="200px" Height="200px" runat="server" style="padding: 5px;" />
+    <div style="height: 200px; width: 200px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+        <asp:Image ID="Avatar" Width="200px" Height="200px" runat="server" Style="padding: 5px;" />
     </div>
-  
+
     <div>
         <asp:FileUpload ID="FileUpload1" runat="server" onchange="previewFile()" />
     </div>
@@ -44,15 +44,15 @@
             <td>
                 <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
             </td>
-         
+
             <td>
                 <asp:Label ID="Label6" runat="server" Text="Price"></asp:Label>
             </td>
-           
+
             <td>
                 <asp:Label ID="Label13" runat="server" Text="Xuất Xứ"></asp:Label>
             </td>
-            
+
             <td>
                 <asp:Label ID="Label14" runat="server" Text="Unit"></asp:Label>
             </td>
@@ -61,17 +61,17 @@
             <td>
                 <asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
             </td>
-           
+
             <td>
 
                 <asp:TextBox ID="txtItemPrice" runat="server"></asp:TextBox>
             </td>
-            
+
             <td>
 
                 <asp:TextBox ID="txtFromWhere" runat="server"></asp:TextBox>
             </td>
-          
+
             <td>
                 <asp:TextBox ID="txtUnitValue" runat="server"></asp:TextBox>
             </td>
@@ -91,7 +91,7 @@
         <tr>
             <td colspan="2">
                 <asp:Label ID="Label7" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng người lớn/100gr/ngày"></asp:Label></td>
-            
+
         </tr>
         <tr>
             <td>
@@ -99,14 +99,14 @@
             <td>
                 <asp:Label ID="Label9" runat="server" Text="Năng Lượng"></asp:Label>
             </td>
-           
+
         </tr>
         <tr>
             <td>
                 <asp:TextBox ID="txtAdultVitamin" runat="server">5.0%</asp:TextBox></td>
             <td>
                 <asp:TextBox ID="txtAdultEnergy" runat="server">5.0%</asp:TextBox></td>
-            
+
         </tr>
 
         <tr>
@@ -117,7 +117,7 @@
         </tr>
 
         <tr>
-             <td>
+            <td>
                 <asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label></td>
             <td>
                 <asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label></td>
@@ -132,16 +132,23 @@
         </tr>
     </table>
 </div>
-<br />
-<br />
-<div>
-    <span>Thông tin hàm lượng Vitamin và chất khoáng</span>
-    <br />
-    <br />
-    <div>
-        <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">
-<table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
-	<tbody>
+
+<div style="margin-top: 18px;">
+
+    <div style="float: left; width: 896px;">
+        <asp:Label ID="Label4" runat="server" Text="Description (Max 250 kí tự)"></asp:Label>
+        <br />
+        <textarea id="txtDescription" runat="server" style="width: 709px; height: 103px;" maxlength="250"></textarea>
+        <br />
+    </div>
+
+    <div style="float: left; width: 896px;">
+        <span>Thông tin hàm lượng Vitamin và chất khoáng</span>
+        <br />
+        <div>
+            <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">
+                <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
+	                <tbody>
 		<tr>
 			<td>
 				H&agrave;m lượng vitamin</td>
@@ -202,12 +209,13 @@
 </table>
 
 </CKEditor:CKEditorControl>
-    </div>
+        </div>
 
+    </div>
 </div>
 
-<div style="margin-top: 18px; margin-left: 276px;">
-    <div style=" float: left; ">
+<div style="margin-top: 18px; margin-left: 276px;float: left;">
+    <div style="float: left;">
         <div style="float: right; margin-right: 7px;">
             <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
         </div>

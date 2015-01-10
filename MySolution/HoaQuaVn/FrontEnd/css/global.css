@@ -415,15 +415,18 @@ width: 400px;
 }
 .description-detail
 {
-    font-size: 11px;
-    margin-bottom: 25px;
+     font-size: 11px;
+    height: 65px;
+  
     margin-left: 9px;
     margin-top: 8px;
     text-align: center;
     text-transform: uppercase;
 }
 .combo-details {
-    height:350px;
+    height:auto;
+    margin-left: 40px;
+    float:left;
 }
 
 .combo-details table
@@ -448,7 +451,7 @@ border-left: 1px solid #e5e5e5;
 {
     color: black;
     float: right;
- height: 415px;
+ height: auto;
     width: 909px;
 }
 
@@ -559,6 +562,21 @@ color:white;
     margin-top: 17px;
     width: 242px;
 	height: 397px;
+	margin-right:12px;
+}
+
+.combo-row-2
+{
+    float: right;
+     width: 418px;
+      margin-top: 0px;
+       height: 165px;
+   
+    border: 1px solid #83e361;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    margin-left: 42px;
+
 	margin-right:12px;
 }
 
@@ -913,8 +931,24 @@ display: block;
  font-family: "Roboto Condensed";
 }
 .guest-title
-{ border-bottom: 1px solid #ccc;
-    width: 809px;}
+{ float: left;
+
+}
+
+.combo-title
+{ margin-left: 17px;
+  border-bottom: 1px solid #ccc;
+  width: 809px;
+  float:left;
+  margin-top:20px;
+   text-transform: uppercase;
+}
+
+.item-relative
+{ float: left;
+
+}
+
 .guest-order-detail-combo
 {
  float: left;
@@ -1116,13 +1150,15 @@ width: 278px;
     line-height: 13px;
     margin-left: 5px;
     width: 235px;
-       height: 100px;
+       height: 90px;
+        border: 1px dotted;
+        background: none repeat scroll 0 0 whitesmoke;
 }
 
     .combo-info table
     {
-        background: none repeat scroll 0 0 whitesmoke;
-        border: 1px dotted;
+        /*background: none repeat scroll 0 0 whitesmoke;*/
+        /*border: 1px dotted;*/
       
         width: 230px;
     }

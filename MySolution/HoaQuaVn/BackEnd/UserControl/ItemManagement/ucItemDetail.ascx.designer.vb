@@ -230,6 +230,24 @@ Partial Public Class ucItemDetail
     Protected WithEvents txtChildEnergy As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Label4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtDescription control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDescription As Global.System.Web.UI.HtmlControls.HtmlTextArea
+
+    '''<summary>
     '''txtVitaminElement control.
     '''</summary>
     '''<remarks>

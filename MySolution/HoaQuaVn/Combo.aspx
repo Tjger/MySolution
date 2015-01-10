@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="product-icon" style="background: none; margin-left: 17px;">THÔNG TIN CHI TIẾT</div>
+    <div class="product-icon" style="background: none; margin-left: 17px;"></div>
     <div class="h-combo">
         <div style="width: 826px;">
 
@@ -11,13 +11,10 @@
                 <div>
                     <img src="FrontEnd/image/combo/c1.png">
                 </div>
-                <div class="price-format" style="color: #83e361;">
-                    <span>
-                        <asp:Label ID="lblPrice" runat="server" Text="Label"></asp:Label></span>
-                </div>
+
             </div>
 
-            <div class="combo-row-1" style="float: right; width: 418px; margin-top: 0px; height: 241px;">
+            <div class="combo-row-2">
 
                 <div class="combo-1">
                     <span>
@@ -28,19 +25,26 @@
                     <span>
                         <asp:Label ID="lblDescription" runat="server" Text="Label"></asp:Label></span>
                 </div>
-                <div class="combo-details">
-                    <asp:Label ID="lblItemList" runat="server" Text="Label"></asp:Label>
+
+                <div class="price-format" style="color: #83e361;">
+                    <span>
+                        <asp:Label ID="lblPrice" runat="server" Text="Label"></asp:Label></span>
                 </div>
 
 
-            </div>
 
+
+            </div>
+             <div class="combo-title"><span >Thông Tin Chi Tiết</span></div>
+            <div class="combo-details">
+                <asp:Label ID="lblItemList" runat="server" Text="Label"></asp:Label>
+            </div>
         </div>
 
     </div>
 
     <div class="guest-title">
-        <div><span style="margin-left: 17px;">THÔNG TIN KHÁCH HÀNG </span></div>
+        <div class="combo-title"><span>THÔNG TIN KHÁCH HÀNG </span></div>
         <div class="guest-info">
             <table colspacing="17px" cellpadding="3">
                 <tr>
@@ -86,8 +90,8 @@
         </div>
 
     </div>
-    <div style="float: left;">
-        <div style="margin-left: 17px;">SẢN PHẨM CÙNG LOẠI</div>
+    <div class="item-relative">
+        <div class="combo-title">SẢN PHẨM CÙNG LOẠI</div>
 
         <asp:DataList ID="dtlComboRelateList" runat="server" RepeatColumns="3">
             <ItemTemplate>

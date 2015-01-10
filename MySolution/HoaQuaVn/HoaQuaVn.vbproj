@@ -862,8 +862,6 @@
     <Content Include="FrontEnd\css\jqx.base.css" />
     <Content Include="FrontEnd\css\social.css" />
     <Content Include="Combo.aspx" />
-    <Content Include="Detail2.aspx" />
-    <Content Include="Detail3.aspx" />
     <Content Include="Images\wood_pattern.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="FrontEnd\js\countDownTimer.js" />
@@ -896,9 +894,6 @@
     <Content Include="List-News.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
-    <Content Include="News2.aspx" />
-    <Content Include="News3.aspx" />
-    <Content Include="News4.aspx" />
     <Content Include="FrontEnd\src\jquery.remodal.css" />
     <Content Include="FrontEnd\src\jquery.remodal.js" />
     <Content Include="Admin.aspx" />
@@ -1099,20 +1094,6 @@
       <DependentUpon>Combo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Detail2.aspx.designer.vb">
-      <DependentUpon>Detail2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Detail2.aspx.vb">
-      <DependentUpon>Detail2.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Detail3.aspx.designer.vb">
-      <DependentUpon>Detail3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Detail3.aspx.vb">
-      <DependentUpon>Detail3.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="FrontEnd\Home.Master.designer.vb">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
@@ -1167,27 +1148,6 @@
     </Compile>
     <Compile Include="News.aspx.vb">
       <DependentUpon>News.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="News2.aspx.designer.vb">
-      <DependentUpon>News2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="News2.aspx.vb">
-      <DependentUpon>News2.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="News3.aspx.designer.vb">
-      <DependentUpon>News3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="News3.aspx.vb">
-      <DependentUpon>News3.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="News4.aspx.designer.vb">
-      <DependentUpon>News4.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="News4.aspx.vb">
-      <DependentUpon>News4.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

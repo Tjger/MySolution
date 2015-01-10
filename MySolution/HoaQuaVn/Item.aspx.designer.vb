@@ -23,15 +23,6 @@ Partial Public Class Item
     Protected WithEvents ItemImage As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''lblItemPrice control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblItemPrice As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblName control.
     '''</summary>
     '''<remarks>
@@ -48,6 +39,15 @@ Partial Public Class Item
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDescription As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblItemPrice control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblItemPrice As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblItemList control.

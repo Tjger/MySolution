@@ -43,9 +43,9 @@ Public Class ucItemDetail
                     txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemName")
                 End If
 
-                'If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
-                '    txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
-                'End If
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
+                    txtDescription.InnerText = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                End If
 
                 If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("GroupID")) Then
                     cboGroup.SelectedValue = ds.Tables("LoadItemInfo").Rows(0)("GroupID")
@@ -139,6 +139,7 @@ Public Class ucItemDetail
             Else
                 sHot = "0"
             End If
+            sDescription = txtDescription.InnerText
             If FileUpload1.FileName = "" Then
                 bSaveImage = False
             Else

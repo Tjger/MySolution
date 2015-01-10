@@ -45,6 +45,8 @@ Public Class Combo
     Sub LoadComboDetail()
         Dim sSQL As String = String.Empty
         Dim ds As New DataSet
+        Dim sDecription As String = ""
+        Dim sItemList As String = ""
         Try
             If sID <> "" Then
                 sSQL = "SELECT * FROM Combo WHERE ComboID=" & Core.SQLStr(sID) & " AND Active='1'"
@@ -59,6 +61,24 @@ Public Class Combo
                 sSQL = "SELECT * FROM Combo WHERE ComboID <>" & Core.SQLStr(sID) & " AND Active='1'"
                 Var.DBAMain.FillDataset(sSQL, ds, "LoadComboRelateDetail")
                 If ds.Tables("LoadComboRelateDetail").Rows.Count > 0 Then
+                    For Each row As DataRow In ds.Tables("LoadComboRelateDetail").Rows
+                        If Core.IsDBNullOrStringEmpty(row("Description")) = False Then
+                            If row("Description").ToString.Length > 120 Then
+                                sDecription = row("Description").ToString.Substring(0, 120) & " ..."
+                                row("Description") = sDecription
+                            End If
+                        End If
+                        If Core.IsDBNullOrStringEmpty(row("ItemList")) = False Then
+                            If row("ItemList").ToString.Length > 520 Then
+                                If row("ItemList").ToString.Contains("<table>") = False Then
+                                    sItemList = row("ItemList").ToString.Substring(0, 520) & " ..."
+                                    row("ItemList") = sItemList
+                                End If
+
+
+                            End If
+                        End If
+                    Next
                     dtlComboRelateList.DataSource = ds.Tables("LoadComboRelateDetail")
                     dtlComboRelateList.DataBind()
                 End If
