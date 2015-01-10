@@ -87,12 +87,14 @@ Public Class ucItemDetail
                     txtChildEnergy.Text = ds.Tables("LoadItemInfo").Rows(0)("ChildEnergy")
                 End If
 
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")) Then
-                    txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
-                End If
-
                 If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")) Then
                     Avatar.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")
+                End If
+
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")) Then
+                    txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
+                Else
+                    txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
                 End If
             End If
 

@@ -422,6 +422,10 @@ width: 400px;
     text-align: center;
     text-transform: uppercase;
 }
+.combo-details {
+    height:350px;
+}
+
 .combo-details table
 {
  
@@ -444,7 +448,7 @@ border-left: 1px solid #e5e5e5;
 {
     color: black;
     float: right;
- 
+ height: 415px;
     width: 909px;
 }
 
