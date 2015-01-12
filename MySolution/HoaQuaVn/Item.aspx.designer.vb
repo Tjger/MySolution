@@ -120,4 +120,13 @@ Partial Public Class Item
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''dtlItemRelativeLists control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtlItemRelativeLists As Global.System.Web.UI.WebControls.DataList
 End Class

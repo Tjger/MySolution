@@ -148,6 +148,7 @@
     <Content Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx" />
+    <Content Include="BackEnd\UserControl\ReceiptManagement\ucReceiptDetail.ascx" />
     <Content Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
@@ -892,6 +893,7 @@
     <Content Include="BackEnd\js\jquery.placeholder.min.js" />
     <Content Include="BackEnd\js\modernizr.custom.63321.js" />
     <Content Include="Item.aspx" />
+    <Content Include="List-News.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="News2.aspx" />
@@ -942,7 +944,10 @@
     <Content Include="UpLoad\Images\06.jpg" />
     <Content Include="UpLoad\Images\11.jpg" />
     <Content Include="UpLoad\Images\12.jpg" />
+    <Content Include="UpLoad\Images\News\c2.jpg" />
+    <Content Include="UpLoad\Images\News\capcuu-1420774880_180x108.jpg" />
     <Content Include="UpLoad\Images\News\hang12-9fb57.JPG" />
+    <Content Include="UpLoad\Images\News\MG-0503-1151-1420777823_180x108.jpg" />
     <Content Include="UpLoad\Images\News\tu-40fcc.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1026,6 +1031,13 @@
     </Compile>
     <Compile Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx.vb">
       <DependentUpon>ucNewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ReceiptManagement\ucReceiptDetail.ascx.designer.vb">
+      <DependentUpon>ucReceiptDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ReceiptManagement\ucReceiptDetail.ascx.vb">
+      <DependentUpon>ucReceiptDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx.designer.vb">
@@ -1134,6 +1146,13 @@
     </Compile>
     <Compile Include="Item.aspx.vb">
       <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="List-News.aspx.designer.vb">
+      <DependentUpon>List-News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="List-News.aspx.vb">
+      <DependentUpon>List-News.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.vb">

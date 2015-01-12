@@ -5,7 +5,7 @@
         <ItemTemplate>
 
             <div class="news-row-1">
-                <div style="float: left; width: 305px;">
+                <div class="news-uc-title" >
                     <span>
                         <a href="../../News.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "AutoID")%>">
                             <asp:Label ID="lblNewTitle" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Title")%>'></asp:Label></a>

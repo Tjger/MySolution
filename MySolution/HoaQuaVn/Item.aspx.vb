@@ -18,6 +18,7 @@ Public Class Item
     Sub LoadComboDetail()
         Dim sSQL As String = String.Empty
         Dim ds As New DataSet
+        Dim sGroupID As String = ""
         Try
             If sID <> "" Then
                 sSQL = "SELECT * FROM Item WHERE ItemID=" & Core.SQLStr(sID) & " AND Active='1'"
@@ -38,12 +39,21 @@ Public Class Item
                     If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadComboDetail").Rows(0)("ItemPrice")) Then
                         lblItemPrice.Text = ds.Tables("LoadComboDetail").Rows(0)("ItemPrice")
                     End If
-
-
-
-
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadComboDetail").Rows(0)("GroupID")) Then
+                        sGroupID = ds.Tables("LoadComboDetail").Rows(0)("GroupID")
+                    End If
 
                 End If
+                If sGroupID <> "" Then
+                    sSQL = "SELECT * FROM Item WHERE ItemID<>" & Core.SQLStr(sID) & " AND Active='1' AND GroupID=" & Core.SQLStr(sGroupID)
+                    Var.DBAMain.FillDataset(sSQL, ds, "LoadItemRelativeDetail")
+                    If ds.Tables("LoadItemRelativeDetail").Rows.Count > 0 Then
+                        dtlItemRelativeLists.DataSource = ds.Tables("LoadItemRelativeDetail")
+                        dtlItemRelativeLists.DataBind()
+                    End If
+                End If
+
+               
             End If
 
 

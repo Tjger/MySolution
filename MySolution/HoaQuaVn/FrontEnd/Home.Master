@@ -51,7 +51,7 @@
                 <ul>
                     <li><a href="Index.aspx">Trang chủ</a></li>
                     <li><a href="Introduce.aspx">Giới thiệu</a></li>
-                    <li><a href="News.aspx">Tin Tức</a></li>
+                    <li><a href="List-News.aspx">Tin Tức</a></li>
                     <li><a href="Contact.aspx">Liên hệ</a></li>
                 </ul>
             </div>

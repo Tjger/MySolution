@@ -11,7 +11,7 @@
                 <div>
                     <img src="FrontEnd/image/combo/c1.png">
                 </div>
-                <div class="price-format" style="color:#83e361;">
+                <div class="price-format" style="color: #83e361;">
                     <span>
                         <asp:Label ID="lblPrice" runat="server" Text="Label"></asp:Label></span>
                 </div>
@@ -89,65 +89,38 @@
     <div style="float: left;">
         <div style="margin-left: 17px;">SẢN PHẨM CÙNG LOẠI</div>
 
-        <div class="combo-row-1">
-            <div class="combo-1">
-                <span>COMBO 2</span>
-            </div>
-            <div class="image-combo">
-                <img class="image-padding" src="FrontEnd/image/combo/c11.png" />
-            </div>
-            <div class="text-description">
-                <span>Thích hợp làm quà biếu, trao gửi yêu thương, trao gửi trái cây tuyệt vời</span>
-            </div>
-            <div class="combo-info">
-                <table>
-                    <tr>
-                        <td>Bưởi da xanh</td>
-                        <td>1,0 - 1,2 kg</td>
-                        <td>Bến Tre</td>
+        <asp:DataList ID="dtlComboRelateList" runat="server" RepeatColumns="3">
+            <ItemTemplate>
+                <div class="combo-row-1">
+                    <div class="combo-1">
+                        <span>
+                            <asp:Label ID="lblComboRelativeName" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ComboName")%>'>
 
+                            </asp:Label></span>
+                    </div>
+                    <div class="image-combo">
+                        <img class="image-padding" src="FrontEnd/image/combo/c11.png" />
+                    </div>
+                    <div class="text-description">
+                        <span>
+                            <asp:Label ID="lblComboRelativeDescription" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label></span>
+                    </div>
+                    <div class="combo-info">
+                        <asp:Label ID="lblComboRelativeItemList" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemList")%>'></asp:Label>
+                    </div>
+                    <div class="purchase">
+                        <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Combo.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ComboID")%>">Chi Tiết</a></span></div>
+                    </div>
+                    <div class="combo-price">
+                        <div class="price-format">
+                            <asp:Label ID="lblComboRelativePrice" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ComboPrice")%>'></asp:Label>
 
-                    </tr>
-                    <tr>
-                        <td>Ổi sữa Đài Loan</td>
-                        <td>1,0 - 1,6 kg</td>
-                        <td>Tiền Giang</td>
-
-
-                    </tr>
-                    <tr>
-                        <td>Xoài cát Hòa Lộc</td>
-                        <td>1,2 - 1,6 kg</td>
-                        <td>Xoài cát Hòa Lộc</td>
-
-
-                    </tr>
-                    <tr>
-                        <td>Sapoche</td>
-                        <td>1,6 -2,4  kg</td>
-                        <td>Tiền Giang</td>
-
-
-                    </tr>
-                    <tr>
-                        <td>Cam Khe Mây</td>
-                        <td>1,0 - 1,6 kg</td>
-                        <td>Hà Tĩnh</td>
-
-
-                    </tr>
-                </table>
-            </div>
-            <div class="purchase">
-                <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Detail2.aspx">Chi Tiết</a></span></div>
-            </div>
-            <div class="combo-price">
-                <div class="price-format">
-                    400.000 VNĐ
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
- 
+            </ItemTemplate>
+        </asp:DataList>
+
     </div>
 
 </asp:Content>

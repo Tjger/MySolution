@@ -1,12 +1,19 @@
 ﻿Imports Common
 Public Class ucNews
     Inherits System.Web.UI.UserControl
-    Private ClsName = "ucListProduct"
+    Private ClsName = "ucNews"
+    Private sID As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
+            If Request.QueryString.Count > 0 Then
+                sID = Request.QueryString("id")
+
+
+            End If
             LoadCombo()
+
         End If
     End Sub
 

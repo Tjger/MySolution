@@ -7,7 +7,7 @@ Public Class ucProductProperties
     Public sAction As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        lbPrev.Visible = False
+        ' lbPrev.Visible = False
         Core.InitAppSettingForDBA()
         Var.DBAMain = New Common.DBA(False)
         If Not IsPostBack Then
@@ -19,24 +19,26 @@ Public Class ucProductProperties
                 If sAction = "next" Then
                     CurrentPage += 1
 
-                    If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
-                        lbNext.Visible = False
-                        lbPrev.Visible = True
-                        LoadCombo()
-                    Else
-                        LoadCombo()
-                    End If
+                    'If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
+                    '    'lbNext.Visible = False
+                    '    'lbPrev.Visible = True
+                    '    LoadCombo()
+                    'Else
+                    '    LoadCombo()
+                    'End If
+                    LoadCombo()
                 Else
-                    CurrentPage -= 1
-                    If CurrentPage = 0 Then
-                        lbPrev.Visible = False
-                        lbNext.Visible = True
-                        LoadCombo()
+                    'CurrentPage -= 1
+                    'If CurrentPage = 0 Then
+                    '    'lbPrev.Visible = False
+                    '    'lbNext.Visible = True
+                    '    LoadCombo()
 
-                    Else
+                    'Else
 
-                        LoadCombo()
-                    End If
+                    '    LoadCombo()
+                    'End If
+                    LoadCombo()
                 End If
             End If
 
