@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Combo
 
     '''<summary>
-    '''lblPrice control.
+    '''ItemImage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ItemImage As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
     '''lblComboName control.
@@ -39,6 +39,15 @@ Partial Public Class Combo
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDescription As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblPrice control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblItemList control.

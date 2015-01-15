@@ -1,11 +1,33 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucProductProperties.ascx.vb" Inherits="HoaQuaVn.ucProductProperties" %>
 
-<div class="combo-collection">
-    <asp:DataList ID="dtlItemList" runat="server" RepeatColumns="4">
+<script type="text/javascript">
+    $(function () {
+
+
+        $("#<%= lbNext.ClientID%>").click(function (event) {
+
+            event.preventDefault();
+            $("#dataItem").load("index.aspx?action=next #dataItem");
+
+
+        });
+        $("#<%= lblPrev.ClientID%>").click(function (event) {
+
+            event.preventDefault();
+            $("#dataItem").load("index.aspx?action=prev #dataItem");
+
+
+        });
+
+    });
+</script>
+<div class="combo-collection" id="dataItem">
+
+    <asp:DataList ID="dtlItemList" runat="server" RepeatColumns="2">
         <ItemTemplate>
             <div class="box combo-cycle">
                 <div class="imagecombo">
-                    <asp:Image ID="NewImage" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
+                    <asp:Image ID="NewImage" Width="168px" Height="128px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
                 </div>
                 <div class="comboname ">
                     <span>
@@ -15,11 +37,12 @@
             </div>
         </ItemTemplate>
     </asp:DataList>
-</div>
-<div style="float:left;width:100%;text-align:center;">
+    <div style="float: left; width: 100%; text-align: center;">
 
-    <asp:LinkButton ID="lblPrev" runat="server" OnClick="lbPrev_Click">Trước</asp:LinkButton>        
-    <asp:label id="lblShow" runat="server"></asp:label>
-    <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">Sau</asp:LinkButton>
-   
+        <asp:LinkButton ID="lblPrev" runat="server" OnClick="lbPrev_Click"><<</asp:LinkButton>
+        <asp:Label ID="lblShow" runat="server"></asp:Label>
+        <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">>></asp:LinkButton>
+
+    </div>
 </div>
+

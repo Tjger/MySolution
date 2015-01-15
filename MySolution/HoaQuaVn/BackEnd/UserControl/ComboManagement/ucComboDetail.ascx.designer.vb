@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class ucComboDetail
 
     '''<summary>
+    '''AvatarC control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AvatarC As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''FileUpload1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
     '''chkActive control.
     '''</summary>
     '''<remarks>
@@ -59,24 +77,6 @@ Partial Public Class ucComboDetail
     Protected WithEvents txtItemPrice As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Label2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtItemList control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtItemList As Global.CKEditor.NET.CKEditorControl
-
-    '''<summary>
     '''Label4 control.
     '''</summary>
     '''<remarks>
@@ -93,6 +93,24 @@ Partial Public Class ucComboDetail
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtSubcontent As Global.System.Web.UI.HtmlControls.HtmlTextArea
+
+    '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtItemList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtItemList As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''btnSave control.

@@ -5,7 +5,7 @@
 <uc3:ucListProduct ID="ucListProduct1" runat="server" />
 <div class="combo-option">
     <div class="product-title" style="float: left"></div>
+    <div class="product-news" style="margin-right: 228px; float: right;"></div>
     <uc1:ucProductProperties ID="ucProductProperties1" runat="server" />
-    <div class="product-news" style="margin-right: 228px; float: left;"></div>
     <uc2:ucNews ID="ucNews1" runat="server" />
 </div>

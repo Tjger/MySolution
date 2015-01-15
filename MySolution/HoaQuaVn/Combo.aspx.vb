@@ -56,6 +56,9 @@ Public Class Combo
                     lblDescription.Text = ds.Tables("LoadComboDetail").Rows(0)("Description")
                     lblItemList.Text = ds.Tables("LoadComboDetail").Rows(0)("ItemList")
                     lblPrice.Text = ds.Tables("LoadComboDetail").Rows(0)("ComboPrice")
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadComboDetail").Rows(0)("ComboImageURL")) Then
+                        ItemImage.ImageUrl = ds.Tables("LoadComboDetail").Rows(0)("ComboImageURL")
+                    End If
                 End If
 
                 sSQL = "SELECT * FROM Combo WHERE ComboID <>" & Core.SQLStr(sID) & " AND Active='1'"
@@ -63,8 +66,8 @@ Public Class Combo
                 If ds.Tables("LoadComboRelateDetail").Rows.Count > 0 Then
                     For Each row As DataRow In ds.Tables("LoadComboRelateDetail").Rows
                         If Core.IsDBNullOrStringEmpty(row("Description")) = False Then
-                            If row("Description").ToString.Length > 120 Then
-                                sDecription = row("Description").ToString.Substring(0, 120) & " ..."
+                            If row("Description").ToString.Length > 80 Then
+                                sDecription = row("Description").ToString.Substring(0, 80) & " ..."
                                 row("Description") = sDecription
                             End If
                         End If

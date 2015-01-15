@@ -9,7 +9,7 @@
 
             <div style="float: left; width: 350px; text-align: center;">
                 <div>
-                    <img src="FrontEnd/image/combo/c1.png">
+                      <asp:Image ID="ItemImage" runat="server" Width="209px" Height="152px" />
                 </div>
 
             </div>
@@ -103,15 +103,15 @@
                             </asp:Label></span>
                     </div>
                     <div class="image-combo">
-                        <img class="image-padding" src="FrontEnd/image/combo/c11.png" />
+                         <asp:Image ID="NewImage" CssClass="image-padding" Width="145px" Height="100px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ComboImageURL")%>' />
                     </div>
                     <div class="text-description">
                         <span>
                             <asp:Label ID="lblComboRelativeDescription" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label></span>
                     </div>
-                    <div class="combo-info">
+                   <%-- <div class="combo-info">
                         <asp:Label ID="lblComboRelativeItemList" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemList")%>'></asp:Label>
-                    </div>
+                    </div>--%>
                     <div class="purchase">
                         <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Combo.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ComboID")%>">Chi Tiết</a></span></div>
                     </div>

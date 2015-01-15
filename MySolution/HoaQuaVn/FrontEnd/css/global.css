@@ -12,6 +12,7 @@ body
     margin: 0 auto;
     font-family: "Roboto Condensed";
     overflow-x: hidden;
+    font-size:14px;
 }
 .news-image {
  
@@ -124,7 +125,7 @@ position: relative;
 }
 .news-uc-title{
      float: left;
-    width: 800px;
+    width: 400px;
 }
 .news-image-title
 {
@@ -138,7 +139,7 @@ float:left;
     font-size: 14px;
     margin-left: 10px;
     margin-top: 11px;
-    width: 600px;
+    width: 265px;
 	color:#5e5e5e;
 }
 
@@ -458,8 +459,8 @@ border-left: 1px solid #e5e5e5;
 .image-combo
 {
    border-bottom: 1px dashed #e4e5e3;
-    height: 58px;
-    margin-top: 22px;
+    height: auto;
+    margin-top: 10px;
 }
 
 .combo-price
@@ -478,12 +479,12 @@ border-left: 1px solid #e5e5e5;
 
 .text-description
 {
-    margin-bottom: 25px;
-    font-size: 12px;
+   
+    
     margin-top: 8px;
     margin-left: 9px;
     width: 218px;
-    height: 34px;
+    height: 65px;
 }
 
 .purchase
@@ -494,7 +495,7 @@ border-left: 1px solid #e5e5e5;
     height: 28px;
     margin-bottom: 3px;
     margin-left: 61px;
-    margin-top: 130px;
+  
     padding-top: 10px;
     text-align: center;
      width: 120px;
@@ -548,8 +549,8 @@ color:white;
 
 .image-padding
 {
-    margin-left: 77px;
-	margin-top: -10px;
+    margin-left: 50px;
+
 }
 
 .combo-row-1
@@ -561,7 +562,7 @@ color:white;
     margin-left: 42px;
     margin-top: 17px;
     width: 242px;
-	height: 397px;
+	height: 329px;
 	margin-right:12px;
 }
 
@@ -606,8 +607,8 @@ color:white;
 {
     
     float: left;
-    margin-left:22px;
-    width: 442px;
+   
+    width: 430px;
 }
 .combo-option
 {
@@ -617,7 +618,7 @@ color:white;
 
 .combo-collection
 {
-    width: 100%;
+    width: 454px;
     float:left;
 }
 

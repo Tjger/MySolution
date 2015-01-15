@@ -14,7 +14,7 @@ Public Class ucTopseller
         Dim sSQL As String = String.Empty
         Dim ds As New DataSet
         Try
-            sSQL = "SELECT TOP 5 * FROM Item WHERE Active='1' AND Hot = '1' ORDER BY CreatedDate DESC "
+            sSQL = "SELECT * FROM Item WHERE Active='1' AND Hot = '1' ORDER BY CreatedDate DESC "
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
                 dtlHotItemList.DataSource = ds.Tables("LoadCombo")

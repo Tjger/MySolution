@@ -17,7 +17,7 @@
             preview.src = "";
         }
     }
-    </script>
+</script>
 
 <div style="height: 200px; width: 200px;">
 
@@ -29,6 +29,7 @@
         <asp:FileUpload ID="FileUpload1" runat="server" onchange="previewFile()" />
     </div>
 </div>
+
 <div style="line-height: 30px; margin-top: 36px;" class="item-info">
 
     <table>
@@ -88,62 +89,21 @@
                 </asp:DropDownList>
             </td>
         </tr>
-        <tr>
-            <td colspan="2">
-                <asp:Label ID="Label7" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng người lớn/100gr/ngày"></asp:Label></td>
-
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="Label8" runat="server" Text="Vitamin"></asp:Label></td>
-            <td>
-                <asp:Label ID="Label9" runat="server" Text="Năng Lượng"></asp:Label>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <asp:TextBox ID="txtAdultVitamin" runat="server">5.0%</asp:TextBox></td>
-            <td>
-                <asp:TextBox ID="txtAdultEnergy" runat="server">5.0%</asp:TextBox></td>
-
-        </tr>
-
-        <tr>
-            <td colspan="2">
-
-                <asp:Label ID="Label10" runat="server" Text="Tỷ lệ đáp ứng nhu cầu dinh dưỡng trẻ em/100gr/ngày"></asp:Label>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <asp:Label ID="Label11" runat="server" Text="Vitamin"></asp:Label></td>
-            <td>
-                <asp:Label ID="Label12" runat="server" Text="Năng Lượng"></asp:Label></td>
-        </tr>
-
-        <tr>
-            <td>
-                <asp:TextBox ID="txtChildVitamin" runat="server">5.0%</asp:TextBox>
-            </td>
-            <td>
-                <asp:TextBox ID="txtChildEnergy" runat="server">5.0%</asp:TextBox></td>
-        </tr>
+       
     </table>
 </div>
 
 <div style="margin-top: 18px;">
 
     <div style="float: left; width: 896px;">
-        <asp:Label ID="Label4" runat="server" Text="Description (Max 250 kí tự)"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Giới Thiệu (Max 250 kí tự)"></asp:Label>
         <br />
         <textarea id="txtDescription" runat="server" style="width: 709px; height: 103px;" maxlength="250"></textarea>
         <br />
     </div>
 
     <div style="float: left; width: 896px;">
-        <span>Thông tin hàm lượng Vitamin và chất khoáng</span>
+        <span>Mô Tả</span>
         <br />
         <div>
             <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">

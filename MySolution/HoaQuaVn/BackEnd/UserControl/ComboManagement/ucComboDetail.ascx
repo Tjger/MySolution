@@ -1,7 +1,36 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucComboDetail.ascx.vb" Inherits="HoaQuaVn.ucComboDetail" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
-<div class="item-info">
+<script type="text/javascript">
+    function previewFile() {
+        var preview = document.querySelector('#<%=AvatarC.ClientID%>');
+        var file = document.querySelector('#<%=FileUpload1.ClientID%>').files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
+</script>
+
+<div style="height: 200px; width: 200px;">
+
+    <div style="height: 200px; width: 200px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+        <asp:Image ID="AvatarC" Width="200px" Height="200px" runat="server" Style="padding: 5px;" />
+    </div>
+
+    <div>
+        <asp:FileUpload ID="FileUpload1" runat="server" onchange="previewFile()" />
+    </div>
+</div>
+
+<div class="item-info" style="line-height: 30px; margin-top: 36px;">
 
     <table>
         <tr>
@@ -31,14 +60,14 @@
 <div style="margin-top: 18px;">
 
      <div style="float: left; margin-left: 23px; width: 896px;">
-        <asp:Label ID="Label4" runat="server" Text="Description (Max 250 kí tự)"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Giới Thiệu (Max 250 kí tự)"></asp:Label>
         <br />
         <textarea id="txtSubcontent" runat="server" style="width: 709px; height: 103px;" maxlength="250"></textarea>
         <br />
     </div>
 
     <div style="float: left; margin-left: 23px; width: 896px;">
-        <asp:Label ID="Label2" runat="server" Text="Item List"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Mô Tả"></asp:Label>
         <br />
         <CKEditor:CKEditorControl ID="txtItemList" BasePath="/ckeditor/" runat="server" Width="726px">
             <table>

@@ -18,13 +18,13 @@ Public Class ucListProduct
         Dim sDecription As String = ""
         Dim sItemList As String = ""
         Try
-            sSQL = "SELECT TOP 3 * FROM Combo WHERE Active='1' ORDER BY AutoID DESC"
+            sSQL = "SELECT * FROM Combo WHERE Active='1' ORDER BY AutoID DESC"
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
                 For Each row As DataRow In ds.Tables("LoadCombo").Rows
                     If Core.IsDBNullOrStringEmpty(row("Description")) = False Then
-                        If row("Description").ToString.Length > 120 Then
-                            sDecription = row("Description").ToString.Substring(0, 120) & " ..."
+                        If row("Description").ToString.Length > 80 Then
+                            sDecription = row("Description").ToString.Substring(0, 80) & " ..."
                             row("Description") = sDecription
                         End If
                     End If

@@ -2,17 +2,46 @@
 Public Class ucProductProperties
     Inherits System.Web.UI.UserControl
     Private ClsName = "ucProductProperties"
-    'Public PagingDataList As New PagedDataSource()
+    Private PagingDataList As New PagedDataSource()
     Public iCount As Integer = 0
+    Public sAction As String = String.Empty
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            lblPrev.Visible = False
-            lblShow.Visible = False
-            lbNext.Visible = False
+            'lblPrev.Visible = False
+            'lblShow.Visible = False
+            'lbNext.Visible = False
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
             LoadCombo()
+            If Request.QueryString.Count > 0 Then
+                sAction = Request.QueryString("action")
+
+                If sAction = "next" Then
+                    CurrentPage += 1
+
+                    'If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
+                    '    'lbNext.Visible = False
+                    '    'lbPrev.Visible = True
+                    '    LoadCombo()
+                    'Else
+                    '    LoadCombo()
+                    'End If
+                    LoadCombo()
+                Else
+                    'CurrentPage -= 1
+                    'If CurrentPage = 0 Then
+                    '    'lbPrev.Visible = False
+                    '    'lbNext.Visible = True
+                    '    LoadCombo()
+
+                    'Else
+
+                    '    LoadCombo()
+                    'End If
+                    LoadCombo()
+                End If
+            End If
         End If
     End Sub
 
@@ -24,23 +53,23 @@ Public Class ucProductProperties
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
            
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
-                'pagingDataList.DataSource = ds.Tables("LoadCombo").DefaultView()
-                'pagingDataList.AllowPaging = True
-                'pagingDataList.PageSize = 12
-                'pagingDataList.CurrentPageIndex = CurrentPage
-                'lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
-                'If pagingDataList.PageCount > 1 Then
+              pagingDataList.DataSource = ds.Tables("LoadCombo").DefaultView()
+                pagingDataList.AllowPaging = True
+                PagingDataList.PageSize = 6
+                pagingDataList.CurrentPageIndex = CurrentPage
+                If Not IsPostBack Then
+                    lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
+                End If
 
-                '    lbNext.Visible = True
-                'Else
-                '    lbNext.Visible = False
-                'End If
 
-                'ViewState("iCount") = pagingDataList.PageCount.ToString()
-                'dtlItemList.DataSource = pagingDataList
-                'dtlItemList.DataBind()
-                dtlItemList.DataSource = ds.Tables("LoadCombo")
+
+
+                ViewState("iCount") = pagingDataList.PageCount.ToString()
+                dtlItemList.DataSource = pagingDataList
                 dtlItemList.DataBind()
+
+                'dtlItemList.DataSource = ds.Tables("LoadCombo")
+                'dtlItemList.DataBind()
             End If
 
         Catch ex As Exception
