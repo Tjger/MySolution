@@ -16,8 +16,6 @@ Public Class ucEmp
         End Try
     End Sub
 
-
-
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             lblErrMes.Text = ""
@@ -38,10 +36,6 @@ Public Class ucEmp
             Else
                 lblErrMes.Text = "Old password not correct!"
             End If
-
-
-
-
         Catch ex As Exception
             Log.LogError(ClsName, "btnSave_Click", ex.Message)
         End Try
@@ -54,4 +48,23 @@ Public Class ucEmp
     End Sub
 
 
+
+    Protected Sub btnCreatEmp_Click(sender As Object, e As EventArgs) Handles btnCreatEmp.Click
+        Try
+            If txtSuperAdminPassword.Text.ToUpper.Equals(Var.sSuperAdminPass.ToUpper) Then
+                Dim sSql As String = String.Format("INSERT INTO Emp (LoginID, Pass) VALUES({0}, {1})", Core.SQLStr(txtEmpLoginName.Text), Core.SQLStr(txtEmpLoginpass.Text))
+                If Var.DBAMain.Execute(sSql) Then
+                    lblErrMes.Text = "Create emp success!"
+                Else
+                    lblErrMes.Text = "Error!"
+                End If
+            Else
+                lblErrMes.Text = "Super admin password not correct"
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

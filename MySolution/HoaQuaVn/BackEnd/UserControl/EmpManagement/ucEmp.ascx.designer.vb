@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class ucEmp
 
     '''<summary>
+    '''Label9 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label9 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -68,15 +77,6 @@ Partial Public Class ucEmp
     Protected WithEvents txtRenewPas As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lblErrMes control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblErrMes As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''btnSave control.
     '''</summary>
     '''<remarks>
@@ -93,4 +93,85 @@ Partial Public Class ucEmp
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Label8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtEmpLoginName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtEmpLoginName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtEmpLoginpass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtEmpLoginpass As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtSuperAdminPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSuperAdminPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnCreatEmp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCreatEmp As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblErrMes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblErrMes As Global.System.Web.UI.WebControls.Label
 End Class
