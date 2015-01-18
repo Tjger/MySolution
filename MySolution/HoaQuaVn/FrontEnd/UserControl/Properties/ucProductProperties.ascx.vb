@@ -2,15 +2,14 @@
 Public Class ucProductProperties
     Inherits System.Web.UI.UserControl
     Private ClsName = "ucProductProperties"
-    Private PagingDataList As New PagedDataSource()
+
     Public iCount As Integer = 0
     Public sAction As String = String.Empty
+    Public Shared CurrentPage As Integer = 0
+    Public Shared TotalPage As Integer = 1
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            'lblPrev.Visible = False
-            'lblShow.Visible = False
-            'lbNext.Visible = False
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
             LoadCombo()
@@ -19,26 +18,17 @@ Public Class ucProductProperties
 
                 If sAction = "next" Then
                     CurrentPage += 1
+                    If CurrentPage > TotalPage - 1 Then
+                        CurrentPage = 0
+                    End If
 
-                    'If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
-                    '    'lbNext.Visible = False
-                    '    'lbPrev.Visible = True
-                    '    LoadCombo()
-                    'Else
-                    '    LoadCombo()
-                    'End If
                     LoadCombo()
                 Else
-                    'CurrentPage -= 1
-                    'If CurrentPage = 0 Then
-                    '    'lbPrev.Visible = False
-                    '    'lbNext.Visible = True
-                    '    LoadCombo()
+                    CurrentPage -= 1
+                    If CurrentPage < 0 Then
+                        CurrentPage = TotalPage
+                    End If
 
-                    'Else
-
-                    '    LoadCombo()
-                    'End If
                     LoadCombo()
                 End If
             End If
@@ -47,9 +37,10 @@ Public Class ucProductProperties
 
     Sub LoadCombo()
         Dim sSQL As String = String.Empty
+        Dim PagingDataList As New PagedDataSource()
         Dim ds As New DataSet
         Try
-            sSQL = "SELECT * FROM Item WHERE Active='1' "
+            sSQL = "SELECT * FROM Item WHERE Active='1' ORDER BY CreatedDate DESC"
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
            
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
@@ -57,15 +48,14 @@ Public Class ucProductProperties
                 pagingDataList.AllowPaging = True
                 PagingDataList.PageSize = 6
                 pagingDataList.CurrentPageIndex = CurrentPage
-                If Not IsPostBack Then
-                    lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
-                End If
+                'If Not IsPostBack Then
+                '    lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
+                'End If
 
-
-
-
-                ViewState("iCount") = pagingDataList.PageCount.ToString()
-                dtlItemList.DataSource = pagingDataList
+                'ViewState("iCount") = pagingDataList.PageCount.ToString()
+                TotalPage = PagingDataList.PageCount
+                dtlItemList.DataSource = PagingDataList
+                dtlItemList.DataKeyField = "ItemID"
                 dtlItemList.DataBind()
 
                 'dtlItemList.DataSource = ds.Tables("LoadCombo")
@@ -77,33 +67,29 @@ Public Class ucProductProperties
         End Try
     End Sub
 
-    Public Property CurrentPage() As Integer
-        Get
-            Dim s1 As Object = Me.ViewState("CurrentPage")
-            If s1 Is Nothing Then
-                Return 0
-            Else
-                Return CInt(s1)
-            End If
-        End Get
-        Set(ByVal value As Integer)
-            Me.ViewState("CurrentPage") = value
-        End Set
-    End Property
+    'Public Property CurrentPage() As Integer
+    '    Get
+    '        Dim s1 As Object = Me.ViewState("CurrentPage")
+    '        If s1 Is Nothing Then
+    '            Return 0
+    '        Else
+    '            Return CInt(s1)
+    '        End If
+    '    End Get
+    '    Set(ByVal value As Integer)
+    '        Me.ViewState("CurrentPage") = value
+    '    End Set
+    'End Property
 
     Protected Sub lbPrev_Click(sender As Object, e As EventArgs)
         Try
             CurrentPage -= 1
             If CurrentPage = 0 Then
-                lblPrev.Visible = False
-                lbNext.Visible = True
-                LoadCombo()
+                CurrentPage = TotalPage
 
-            Else
 
-                LoadCombo()
             End If
-
+            LoadCombo()
 
         Catch ex As Exception
             Log.LogError(ClsName, "LoadCombo", ex.Message)
@@ -114,10 +100,9 @@ Public Class ucProductProperties
         Try
             CurrentPage += 1
 
-            If CurrentPage = Int32.Parse(ViewState("iCount").ToString() - 1) Then
-                lbNext.Visible = False
-                lblPrev.Visible = True
-                LoadCombo()
+            If CurrentPage = TotalPage Then
+                CurrentPage = 1
+
             Else
                 LoadCombo()
             End If

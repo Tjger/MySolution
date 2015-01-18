@@ -83,7 +83,7 @@
                         <img class="img-circle" src="images/photos/profile.png" alt="">
                     </a>--%>
                     <div class="media-body">
-                        <h4 class="media-heading">Admin</h4>
+                        <h4 class="media-heading"><a href="Admin.aspx?module=10">Admin</a></h4>
                         <small class="text-muted">Management</small>
                     </div>
                 </div>
@@ -99,6 +99,7 @@
                     <li ><a href="Admin.aspx?module=3"><i class="fa fa-navicon"></i><span>Combo</span></a></li>
                     <li ><a href="Admin.aspx?module=4"><i class="fa fa-magic"></i><span>SEO</span></a></li>
                     <li><a href="Admin.aspx?module=5"><i class="fa fa-pencil-square-o"></i><span>Tin Tức</span></a></li>
+                         <li><a href="Admin.aspx?module=11"><i class="fa fa-check-circle"></i><span>Config</span></a></li>
                 </ul>
             </div>
             <!-- leftpanel -->

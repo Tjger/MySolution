@@ -12,7 +12,7 @@ body
     margin: 0 auto;
     font-family: "Roboto Condensed";
     overflow-x: hidden;
-    font-size:14px;
+
 }
 .news-image {
  
@@ -105,10 +105,9 @@ position: relative;
 
 .register-logo
     {
-   margin-top: -130px;
-        background-image:  url('../image/Register.png');
-        width: 138px;
-        height: 73px;
+     height: 73px;
+    margin-top: 2px;
+    width: 190px;
     }
 	
 	
@@ -549,7 +548,7 @@ color:white;
 
 .image-padding
 {
-    margin-left: 50px;
+    margin-left: 68px;
 
 }
 
@@ -562,7 +561,7 @@ color:white;
     margin-left: 42px;
     margin-top: 17px;
     width: 242px;
-	height: 329px;
+	height: 313px;
 	margin-right:12px;
 }
 
@@ -964,7 +963,7 @@ display: block;
 
 .guest-order-action
 {
- float: right;
+ float: left;
     height: 70px;
     margin-right: 246px;
     margin-top: 15px;

@@ -934,4 +934,15 @@ ByVal cchData As Integer) As Integer
 
         End Try
     End Sub
+
+    Public Shared Function LoadEmpInfo(ByVal sID As String) As String
+        Dim sReturn As String = ""
+        Try
+            Dim sSql As String = String.Format("SELECT Pass FROM Emp WHERE LoginID = {0}", Core.SQLStr(sID))
+            sReturn = Var.DBAMain.ExecuteScalar(sSql)
+        Catch ex As Exception
+            Log.LogError("Core", "LoadItemInfo", ex.Message)
+        End Try
+        Return sReturn
+    End Function
 End Class

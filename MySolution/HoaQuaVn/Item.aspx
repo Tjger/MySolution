@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Item.aspx.vb" Inherits="HoaQuaVn.Item" %>
-
+<%@ Register Src="~/FrontEnd/UserControl/Capcha/ucCapCha.ascx" TagPrefix="uc1" TagName="ucCapCha" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -52,7 +52,7 @@
 
                     <td>
                         <asp:TextBox ID="txtGuestName" runat="server" CssClass="guest-info-box"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtGuestName" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                   <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="*"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="guest-info-box"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtGuestMobile" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                   <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="*"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -71,6 +71,13 @@
                     <td>
                         <asp:TextBox ID="txtGuestMail" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
                 </tr>
+                 <tr>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="txtGuestAddress" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
+                </tr>
                 <tr>
                     <td>Message</td>
                 </tr>
@@ -79,11 +86,15 @@
                         <textarea id="txtMessage" runat="server" style="width: 550px; height: 95px;"></textarea></td>
                 </tr>
             </table>
+                        <%-- Capcha --%>
+            <uc1:ucCapCha runat="server" id="ucCapCha" />
+            <%-- End Capcha --%>
             <div class="guest-order-action">
                 <%--<asp:Button ID="btnBack" runat="server" Text="Quay lại" CssClass="remodal-cancel" OnClick="btnBack_Click"/>--%>
                 <a class="remodal-cancel" href="index.aspx">Quay lại</a>
                 <%--           <a class="remodal-confirm" href="#">Đặt hàng</a>--%>
                 <asp:Button ID="btnOk" runat="server" Text="Đặt hàng" CssClass="remodal-confirm" OnClick="btnOk_Click" />
+                  <asp:Label ID="lblErrMes" runat="server" ForeColor="Red"></asp:Label>
             </div>
         </div>
 

@@ -13,6 +13,8 @@ Public Class index
         ComboDetail = 7
         NewsDetail = 8
         ReceiptDetail = 9
+        EmpManagement = 10
+        ConfigManagement = 11
     End Enum
 
     Private sModule As String = String.Empty
@@ -53,6 +55,12 @@ Public Class index
                             Panel1.Controls.Add(uc)
                         Case ModuleType.ReceiptDetail
                             Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ReceiptManagement/ucReceiptDetail.ascx")
+                            Panel1.Controls.Add(uc)
+                        Case ModuleType.EmpManagement
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/EmpManagement/ucEmp.ascx")
+                            Panel1.Controls.Add(uc)
+                        Case ModuleType.ConfigManagement
+                            Dim uc As UserControl = LoadControl("~/BackEnd/UserControl/ConfigManagement/ucConfig.ascx")
                             Panel1.Controls.Add(uc)
                     End Select
                 Else

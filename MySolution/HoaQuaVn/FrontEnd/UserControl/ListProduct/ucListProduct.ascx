@@ -13,7 +13,7 @@
                         </asp:Label></span>
                 </div>
                 <div class="image-combo">
-                    <asp:Image ID="NewImage" CssClass="image-padding" Width="145px" Height="100px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ComboImageURL")%>' />
+                    <asp:Image ID="NewImage" CssClass="image-padding" Width="108px" Height="80px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ComboImageURL")%>' />
                     
                      <%--<img class="image-padding" src="FrontEnd/image/combo/c11.png" />--%>
                 </div>

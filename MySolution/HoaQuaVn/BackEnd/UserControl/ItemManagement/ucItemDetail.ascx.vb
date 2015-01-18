@@ -27,7 +27,7 @@ Public Class ucItemDetail
                 End If
             End If
         Catch ex As Exception
-            Log.LogError(ClsName, "LoadItemInfo", ex.Message)
+            Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try
 
 

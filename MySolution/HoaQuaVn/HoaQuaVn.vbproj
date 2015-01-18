@@ -145,6 +145,8 @@
     <Content Include="BackEnd\js\nicEdit-latest.js" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucCombo.ascx" />
     <Content Include="BackEnd\UserControl\ComboManagement\ucComboDetail.ascx" />
+    <Content Include="BackEnd\UserControl\ConfigManagement\ucConfig.ascx" />
+    <Content Include="BackEnd\UserControl\EmpManagement\ucEmp.ascx" />
     <Content Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx" />
@@ -507,7 +509,12 @@
     <Content Include="ckeditor\skins\v2\skin.js" />
     <Content Include="ckeditor\skins\v2\templates.css" />
     <Content Include="ckeditor\themes\default\theme.js" />
-    <Content Include="Contact.aspx" />
+    <Content Include="FrontEnd\image\captcha\captcha1.gif" />
+    <Content Include="FrontEnd\image\captcha\captcha1.png" />
+    <Content Include="FrontEnd\image\captcha\captcha2.jpg" />
+    <Content Include="FrontEnd\image\captcha\captcha3.jpg" />
+    <Content Include="FrontEnd\UserControl\Capcha\ucCapCha.ascx" />
+    <Content Include="Lien-He.aspx" />
     <Content Include="BackEnd\css\demo.css" />
     <Content Include="BackEnd\css\font-awesome.css" />
     <Content Include="BackEnd\css\style.css" />
@@ -887,11 +894,11 @@
     <Content Include="FrontEnd\js\jssor.js" />
     <Content Include="FrontEnd\js\jssor.slider.js" />
     <Content Include="FrontEnd\libs\jquery-loader.js" />
-    <Content Include="Introduce.aspx" />
+    <Content Include="Gioi-Thieu.aspx" />
     <Content Include="BackEnd\js\jquery.placeholder.min.js" />
     <Content Include="BackEnd\js\modernizr.custom.63321.js" />
     <Content Include="Item.aspx" />
-    <Content Include="List-News.aspx" />
+    <Content Include="Tin-Tuc.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="FrontEnd\src\jquery.remodal.css" />
@@ -920,6 +927,7 @@
     <Content Include="BackEnd\fonts\fontawesome-webfont.ttf" />
     <Content Include="BackEnd\fonts\fontawesome-webfont.woff" />
     <Content Include="ckeditor\.htaccess" />
+    <Content Include="FrontEnd\UserControl\Capcha\GetImgText.ashx" />
     <None Include="My Project\PublishProfiles\Publish.pubxml" />
     <None Include="My Project\PublishProfiles\Tj.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -1007,6 +1015,20 @@
       <DependentUpon>ucComboDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="BackEnd\UserControl\ConfigManagement\ucConfig.ascx.designer.vb">
+      <DependentUpon>ucConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\ConfigManagement\ucConfig.ascx.vb">
+      <DependentUpon>ucConfig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\EmpManagement\ucEmp.ascx.designer.vb">
+      <DependentUpon>ucEmp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\EmpManagement\ucEmp.ascx.vb">
+      <DependentUpon>ucEmp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="BackEnd\UserControl\ItemManagement\ucItemDetail.ascx.designer.vb">
       <DependentUpon>ucItemDetail.ascx</DependentUpon>
     </Compile>
@@ -1042,11 +1064,23 @@
       <DependentUpon>ucSEO.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.vb">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="FrontEnd\UserControl\Capcha\GetImgText.ashx.vb">
+      <DependentUpon>GetImgText.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.vb">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="FrontEnd\UserControl\Capcha\Letter.vb" />
+    <Compile Include="FrontEnd\UserControl\Capcha\SecurityHelper.vb" />
+    <Compile Include="FrontEnd\UserControl\Capcha\ucCapCha.ascx.designer.vb">
+      <DependentUpon>ucCapCha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\UserControl\Capcha\ucCapCha.ascx.vb">
+      <DependentUpon>ucCapCha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lien-He.aspx.designer.vb">
+      <DependentUpon>Lien-He.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lien-He.aspx.vb">
+      <DependentUpon>Lien-He.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx.designer.vb">
@@ -1115,11 +1149,11 @@
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Introduce.aspx.designer.vb">
-      <DependentUpon>Introduce.aspx</DependentUpon>
+    <Compile Include="Gioi-Thieu.aspx.designer.vb">
+      <DependentUpon>Gioi-Thieu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Introduce.aspx.vb">
-      <DependentUpon>Introduce.aspx</DependentUpon>
+    <Compile Include="Gioi-Thieu.aspx.vb">
+      <DependentUpon>Gioi-Thieu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Item.aspx.designer.vb">
@@ -1129,11 +1163,11 @@
       <DependentUpon>Item.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="List-News.aspx.designer.vb">
-      <DependentUpon>List-News.aspx</DependentUpon>
+    <Compile Include="Tin-Tuc.aspx.designer.vb">
+      <DependentUpon>Tin-Tuc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="List-News.aspx.vb">
-      <DependentUpon>List-News.aspx</DependentUpon>
+    <Compile Include="Tin-Tuc.aspx.vb">
+      <DependentUpon>Tin-Tuc.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.vb">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="List-News.aspx.vb" Inherits="HoaQuaVn.List_News" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Tin-Tuc.aspx.vb" Inherits="HoaQuaVn.List_News" %>
 
 <%@ Register Src="~/FrontEnd/UserControl/News/ucNews.ascx" TagPrefix="uc1" TagName="ucNews" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="news-title">Tin Tức</div>
     <div id="powered"></div>
-    <div style="height: 1200px;">
+    <div style="height: 1200px; margin-left: 15px;">
         <div class="box-news">
             <asp:DataList ID="dtlComboList" runat="server" RepeatColumns="1">
                 <ItemTemplate>
