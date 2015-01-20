@@ -680,118 +680,6 @@
     <Content Include="BackEnd\holder.js\100x120.html" />
     <Content Include="BackEnd\holder.js\60x60.html" />
     <Content Include="BackEnd\holder.js\_div style=.html" />
-    <Content Include="BackEnd\images\calendar-arrow.png" />
-    <Content Include="BackEnd\images\close-white.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_background.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_hex.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_b.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_h.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_hsb_s.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_indic.gif" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_overlay.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_b.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_g.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_rgb_r.png" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_select.gif" />
-    <Content Include="BackEnd\images\colorpicker\colorpicker_submit.png" />
-    <Content Include="BackEnd\images\colorpicker\select2.png" />
-    <Content Include="BackEnd\images\datatables\sort_asc.png" />
-    <Content Include="BackEnd\images\datatables\sort_desc.png" />
-    <Content Include="BackEnd\images\droparrows.png" />
-    <Content Include="BackEnd\images\dropdown-arrow.png" />
-    <Content Include="BackEnd\images\loaders\loader1.gif" />
-    <Content Include="BackEnd\images\loaders\loader10.gif" />
-    <Content Include="BackEnd\images\loaders\loader11.gif" />
-    <Content Include="BackEnd\images\loaders\loader12.gif" />
-    <Content Include="BackEnd\images\loaders\loader13.gif" />
-    <Content Include="BackEnd\images\loaders\loader14.gif" />
-    <Content Include="BackEnd\images\loaders\loader15.gif" />
-    <Content Include="BackEnd\images\loaders\loader16.gif" />
-    <Content Include="BackEnd\images\loaders\loader17.gif" />
-    <Content Include="BackEnd\images\loaders\loader18.gif" />
-    <Content Include="BackEnd\images\loaders\loader19.gif" />
-    <Content Include="BackEnd\images\loaders\loader2.gif" />
-    <Content Include="BackEnd\images\loaders\loader20.gif" />
-    <Content Include="BackEnd\images\loaders\loader21.gif" />
-    <Content Include="BackEnd\images\loaders\loader22.gif" />
-    <Content Include="BackEnd\images\loaders\loader23.gif" />
-    <Content Include="BackEnd\images\loaders\loader24.gif" />
-    <Content Include="BackEnd\images\loaders\loader25.gif" />
-    <Content Include="BackEnd\images\loaders\loader26.gif" />
-    <Content Include="BackEnd\images\loaders\loader27.gif" />
-    <Content Include="BackEnd\images\loaders\loader28.gif" />
-    <Content Include="BackEnd\images\loaders\loader29.gif" />
-    <Content Include="BackEnd\images\loaders\loader3.gif" />
-    <Content Include="BackEnd\images\loaders\loader30.gif" />
-    <Content Include="BackEnd\images\loaders\loader4.gif" />
-    <Content Include="BackEnd\images\loaders\loader5.gif" />
-    <Content Include="BackEnd\images\loaders\loader6.gif" />
-    <Content Include="BackEnd\images\loaders\loader7.gif" />
-    <Content Include="BackEnd\images\loaders\loader8.gif" />
-    <Content Include="BackEnd\images\loaders\loader9.gif" />
-    <Content Include="BackEnd\images\logo-primary.png" />
-    <Content Include="BackEnd\images\logo.png" />
-    <Content Include="BackEnd\images\photos\media-audio.png" />
-    <Content Include="BackEnd\images\photos\media-doc.png" />
-    <Content Include="BackEnd\images\photos\media1.jpg" />
-    <Content Include="BackEnd\images\photos\media2.png" />
-    <Content Include="BackEnd\images\photos\media3.png" />
-    <Content Include="BackEnd\images\photos\media4.png" />
-    <Content Include="BackEnd\images\photos\media5.png" />
-    <Content Include="BackEnd\images\photos\media6.png" />
-    <Content Include="BackEnd\images\photos\media7.png" />
-    <Content Include="BackEnd\images\photos\profile-big.jpg" />
-    <Content Include="BackEnd\images\photos\profile.png" />
-    <Content Include="BackEnd\images\photos\user1.png" />
-    <Content Include="BackEnd\images\photos\user2.png" />
-    <Content Include="BackEnd\images\photos\user3.png" />
-    <Content Include="BackEnd\images\photos\user4.png" />
-    <Content Include="BackEnd\images\photos\user5.png" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\btnNext.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\btnPrevious.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\contentPattern.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\loader.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\sprite.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_rounded\_div style=.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_square\btnNext.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_square\btnPrevious.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_square\loader.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_square\sprite.html" />
-    <Content Include="BackEnd\images\prettyphoto\dark_square\_div style=.html" />
-    <Content Include="BackEnd\images\prettyphoto\default_thumb.png" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\btnNext.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\btnPrevious.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternBottom.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternLeft.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternRight.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\contentPatternTop.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\default_thumbnail.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\loader.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\sprite.html" />
-    <Content Include="BackEnd\images\prettyphoto\facebook\_div style=.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_rounded\btnNext.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_rounded\btnPrevious.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_rounded\loader.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_rounded\sprite.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_rounded\_div style=.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_square\btnNext.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_square\btnPrevious.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_square\sprite.html" />
-    <Content Include="BackEnd\images\prettyphoto\light_square\_div style=.html" />
-    <Content Include="BackEnd\images\prettyphoto\loader.gif" />
-    <Content Include="BackEnd\images\prettyphoto\sprite.png" />
-    <Content Include="BackEnd\images\prettyphoto\sprite_next.png" />
-    <Content Include="BackEnd\images\prettyphoto\sprite_prev.png" />
-    <Content Include="BackEnd\images\prettyphoto\sprite_x.png" />
-    <Content Include="BackEnd\images\prettyphoto\sprite_y.png" />
-    <Content Include="BackEnd\images\select2-spinner.gif" />
-    <Content Include="BackEnd\images\select2.png" />
-    <Content Include="BackEnd\images\select2x2.png" />
-    <Content Include="BackEnd\images\spritemap%402x.html" />
-    <Content Include="BackEnd\images\spritemap.html" />
-    <Content Include="BackEnd\images\themeforest.png" />
-    <Content Include="BackEnd\images\uploadfile.png" />
-    <Content Include="BackEnd\images\_div style=.html" />
     <Content Include="BackEnd\js\bootstrap-timepicker.min.js" />
     <Content Include="BackEnd\js\bootstrap-wizard.min.js" />
     <Content Include="BackEnd\js\bootstrap-wysihtml5.js" />
@@ -922,7 +810,6 @@
     <Content Include="FrontEnd\UserControl\News\ucNews.ascx" />
     <Content Include="FrontEnd\UserControl\Popup\ucPopupDetails.ascx" />
     <Content Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx" />
-    <Content Include="FrontEnd\UserControl\Properties\ucProperties.ascx" />
     <Content Include="UpLoad\Images\01.jpg" />
     <Content Include="UpLoad\Images\02.jpg" />
     <Content Include="UpLoad\Images\03.jpg" />
@@ -1211,13 +1098,6 @@
     </Compile>
     <Compile Include="FrontEnd\UserControl\Properties\ucProductProperties.ascx.vb">
       <DependentUpon>ucProductProperties.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\UserControl\Properties\ucProperties.ascx.designer.vb">
-      <DependentUpon>ucProperties.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\UserControl\Properties\ucProperties.ascx.vb">
-      <DependentUpon>ucProperties.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">

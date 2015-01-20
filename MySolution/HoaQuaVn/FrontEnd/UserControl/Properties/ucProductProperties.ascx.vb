@@ -13,26 +13,29 @@ Public Class ucProductProperties
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
             LoadCombo()
-            If Request.QueryString.Count > 0 Then
-                sAction = Request.QueryString("action")
-
-                If sAction = "next" Then
-                    CurrentPage += 1
-                    If CurrentPage > TotalPage - 1 Then
-                        CurrentPage = 0
-                    End If
-
-                    LoadCombo()
-                Else
-                    CurrentPage -= 1
-                    If CurrentPage < 0 Then
-                        CurrentPage = TotalPage
-                    End If
-
-                    LoadCombo()
-                End If
-            End If
+            
         End If
+        'If Request.QueryString.Count > 0 Then
+        '    sAction = Request.QueryString("action")
+
+        '    If sAction = "next" Then
+        '        CurrentPage += 1
+
+        '        If CurrentPage >= TotalPage Then
+        '            CurrentPage = 0
+
+        '        End If
+        '        LoadCombo()
+        '    Else
+        '        CurrentPage -= 1
+        '        If CurrentPage < 0 Then
+        '            CurrentPage = TotalPage - 1
+
+
+        '        End If
+        '        LoadCombo()
+        '    End If
+        'End If
     End Sub
 
     Sub LoadCombo()
@@ -57,7 +60,7 @@ Public Class ucProductProperties
                 dtlItemList.DataSource = PagingDataList
                 dtlItemList.DataKeyField = "ItemID"
                 dtlItemList.DataBind()
-
+                UpdatePanel1.Update()
                 'dtlItemList.DataSource = ds.Tables("LoadCombo")
                 'dtlItemList.DataBind()
             End If
@@ -81,11 +84,11 @@ Public Class ucProductProperties
     '    End Set
     'End Property
 
-    Protected Sub lbPrev_Click(sender As Object, e As EventArgs)
+    Protected Sub lbPrev_Click(sender As Object, e As EventArgs) Handles lblPrev.Click
         Try
             CurrentPage -= 1
-            If CurrentPage = 0 Then
-                CurrentPage = TotalPage
+            If CurrentPage < 0 Then
+                CurrentPage = TotalPage - 1
 
 
             End If
@@ -96,17 +99,15 @@ Public Class ucProductProperties
         End Try
     End Sub
 
-    Protected Sub lbNext_Click(sender As Object, e As EventArgs)
+    Protected Sub lbNext_Click(sender As Object, e As EventArgs) Handles lbNext.Click
         Try
             CurrentPage += 1
 
-            If CurrentPage = TotalPage Then
-                CurrentPage = 1
+            If CurrentPage >= TotalPage Then
+                CurrentPage = 0
 
-            Else
-                LoadCombo()
             End If
-
+            LoadCombo()
         Catch ex As Exception
             Log.LogError(ClsName, "LoadCombo", ex.Message)
         End Try

@@ -112,8 +112,8 @@
                             <%-- Hoa Quả Việt Nam Cam Kết--%>
                         </div>
                     </div>
-                    <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px; width: 470px;">
-                        <div style="padding-top: 10px; padding-left: 10px; width: 450px;">
+                    <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px;">
+                        <div style="padding-top: 10px; padding-left: 10px;">
                             <asp:Label ID="txtInWhite2" runat="server" Text="Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng"></asp:Label>
                             <%--     Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng--%>
                         </div>
@@ -225,7 +225,7 @@
             <div class="list-combo">
 
                 <form id="form1" runat="server">
-
+                    
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
 

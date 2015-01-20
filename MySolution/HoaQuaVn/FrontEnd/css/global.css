@@ -237,7 +237,7 @@ text-align: center;
     height: 80px;
  text-align: center;
     vertical-align: middle;
-    width: 450px;
+    width: auto;
 }
 
     .page-title-bg span
@@ -253,7 +253,7 @@ text-align: center;
     height: 60px;
 text-align: center;
     vertical-align: middle;
-    width: 400px;
+    width: 450px;
 }
 
     .page-subtitle-bg span
