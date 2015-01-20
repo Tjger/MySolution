@@ -129,4 +129,22 @@ Partial Public Class Home
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+    '''<summary>
+    '''lblShowRegisterLogo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblShowRegisterLogo As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblRegisterUrl control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRegisterUrl As Global.System.Web.UI.WebControls.HiddenField
 End Class

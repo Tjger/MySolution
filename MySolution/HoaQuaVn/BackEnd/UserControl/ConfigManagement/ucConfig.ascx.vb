@@ -28,7 +28,7 @@ Public Class ucConfig
                 sSql = "SELECT * FROM ComboItem "
                 Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
                 For Each row As DataRow In ds.Tables("LoadItemInfo").Rows
-                    If Not Core.IsDBNullOrStringEmpty(row("ItemID")) Then
+                    If Not Core.IsDBNullOrStringEmpty(row("ComboID")) Then
                         Select Case row("ComboID")
                             Case "ImageURL1"
                                 Image1.ImageUrl = row("ItemID")
@@ -48,7 +48,10 @@ Public Class ucConfig
                                 txtInWhite2.Text = row("ItemID")
                             Case "TextInWhite3"
                                 txtInWhite3.Text = row("ItemID")
-
+                            Case "ShowRegisterLogo"
+                                chkShowRegisterLogo.Checked = row("ItemID")
+                            Case "RegisterLogoURL"
+                                txtRegisterUrl.Text = row("ItemID")
                         End Select
 
                     End If
@@ -118,7 +121,8 @@ Public Class ucConfig
                     UpdateDB("TextInWhite1", txtInWhite1.Text)
                     UpdateDB("TextInWhite2", txtInWhite2.Text)
                     UpdateDB("TextInWhite3", txtInWhite3.Text)
-
+                    UpdateDB("ShowRegisterLogo", chkShowRegisterLogo.Checked)
+                    UpdateDB("RegisterLogoURL", txtRegisterUrl.Text)
                     If bSaveImage1 Then
                         UpdateDB("ImageURL1", sFileName1)
                     End If
@@ -140,6 +144,8 @@ Public Class ucConfig
                     SaveDB("ImageURL1", sFileName1)
                     SaveDB("ImageURL2", sFileName2)
                     SaveDB("ImageURL3", sFileName3)
+                    SaveDB("ShowRegisterLogo", chkShowRegisterLogo.Checked)
+                    SaveDB("RegisterLogoURL", txtRegisterUrl.Text)
             End Select
 
 

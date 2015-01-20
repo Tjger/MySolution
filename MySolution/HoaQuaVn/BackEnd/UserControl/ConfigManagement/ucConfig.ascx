@@ -78,7 +78,7 @@
         <tr>
             <td>
 
-                <div style="height: 100px; width: 400px;  margin-top: 75px;">
+                <div style="height: 100px; width: 400px; margin-top: 75px;">
                     <asp:Label ID="Label6" runat="server" Text="Image 2 (Rộng : 1920px, Dài 500px)"></asp:Label>
                     <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
                         <asp:Image ID="Image2" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
@@ -96,7 +96,7 @@
         <tr>
             <td>
 
-                <div style="height: 100px; width: 400px;  margin-top: 75px;">
+                <div style="height: 100px; width: 400px; margin-top: 75px;">
                     <asp:Label ID="Label13" runat="server" Text="Image 3 (Rộng : 1920px, Dài 500px)"></asp:Label>
                     <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
                         <asp:Image ID="Image3" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
@@ -197,6 +197,24 @@
             <td colspan="2">
 
                 <asp:TextBox ID="txtInWhite3" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <asp:CheckBox ID="chkShowRegisterLogo" Text="Show Register Logo" runat="server" Checked="False" />
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+
+                <asp:Label ID="Label16" runat="server" Text="Register Url"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+
+                <asp:TextBox ID="txtRegisterUrl" runat="server"></asp:TextBox>
             </td>
         </tr>
     </table>

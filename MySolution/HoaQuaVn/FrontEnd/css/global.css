@@ -103,13 +103,20 @@ position: relative;
         height: 124px;
     }
 
-.register-logo
+.register-logo-visible
     {
      height: 73px;
     margin-top: 2px;
     width: 190px;
+     float: right;
+     cursor:pointer;
     }
-	
+
+.register-logo-invisible
+    {
+     
+     display:none;
+    }	
 	
 .nav-menu ul li
 {
