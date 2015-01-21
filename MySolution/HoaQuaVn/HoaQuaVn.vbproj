@@ -813,6 +813,9 @@
     <Content Include="UpLoad\Images\01.jpg" />
     <Content Include="UpLoad\Images\02.jpg" />
     <Content Include="UpLoad\Images\03.jpg" />
+    <Content Include="UpLoad\Images\03.png" />
+    <Content Include="UpLoad\Images\04.jpg" />
+    <Content Include="UpLoad\Images\04.png" />
     <Content Include="UpLoad\Images\06.jpg" />
     <Content Include="UpLoad\Images\11.jpg" />
     <Content Include="UpLoad\Images\12.jpg" />

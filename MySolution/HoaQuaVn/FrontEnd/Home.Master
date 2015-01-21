@@ -91,13 +91,13 @@
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/p1.jpg" />
                     <%--   <img src="FrontEnd/image/p1.jpg" />--%>
                     <div class=" page-title-bg " t="T" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInRed1" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
                             <%-- Hoa Quả Việt Nam Cam Kết--%>
                         </div>
                     </div>
                     <div class=" page-subtitle-bg " t="B" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInWhite1" runat="server" Text="Chỉ Bán Hoa Quả Sạch"></asp:Label>
                             <%-- Chỉ Bán Hoa Quả Sạch--%>
                         </div>
@@ -107,13 +107,13 @@
                     <asp:Image ID="Image2" runat="server" ImageUrl="~/FrontEnd/image/p2.jpg" />
                     <%--      <img src="FrontEnd/image/p2.jpg" />--%>
                     <div class=" page-title-bg " t="TORTUOUS|VB" u="caption" du="2000" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInRed2" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
                             <%-- Hoa Quả Việt Nam Cam Kết--%>
                         </div>
                     </div>
                     <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInWhite2" runat="server" Text="Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng"></asp:Label>
                             <%--     Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng--%>
                         </div>
@@ -123,13 +123,13 @@
                     <asp:Image ID="Image3" runat="server" ImageUrl="~/FrontEnd/image/p3.jpg" />
                     <%--         <img src="FrontEnd/image/p3.jpg" />--%>
                     <div class=" page-title-bg " t="ATTACK|BR" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInRed3" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
                             <%--Hoa Quả Việt Nam Cam Kết--%>
                         </div>
                     </div>
                     <div class=" page-subtitle-bg " t="CLIP|LR" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
                             <asp:Label ID="txtInWhite3" runat="server" Text="Miễn Phí Đổi Trả Hàng Dập Nát"></asp:Label>
                             <%--Miễn Phí Đổi Trả Hàng Dập Nát--%>
                         </div>

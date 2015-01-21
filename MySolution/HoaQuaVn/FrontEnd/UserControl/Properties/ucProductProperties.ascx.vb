@@ -60,7 +60,7 @@ Public Class ucProductProperties
                 dtlItemList.DataSource = PagingDataList
                 dtlItemList.DataKeyField = "ItemID"
                 dtlItemList.DataBind()
-                UpdatePanel1.Update()
+                'UpdatePanel1.Update()
                 'dtlItemList.DataSource = ds.Tables("LoadCombo")
                 'dtlItemList.DataBind()
             End If
