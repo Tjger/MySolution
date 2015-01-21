@@ -17,1460 +17,314 @@
     <link rel="stylesheet" href="src/jquery.remodal.css" />
     <link rel="stylesheet" href="css/jqx.base.css" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jquery-1.9.1.min.js")%>"></script>
+     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
+     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.slider.js")%>"></script>
+     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
 
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jquery-1.9.1.min.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jssor.slider.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jqxcore.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jqxdatetimeinput.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/jqxcalendar.js")%>"></script>
-    <script src="<%: ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
-        <script src="<%: ResolveUrl("~/FrontEnd/js/nav2.2.js")%>"></script>
     <title>Hoa Qua Viet Nam</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#JqueryMenu").navPlugin();
-
-            $("#sub-menu").navPlugin({
-                'itemWidth': 'auto',
-                'itemHeight': 30,
-                'navEffect': 'fade',
-                'speed': 500
-            });
-
-        });
-    </script>
 </head>
 
 <body>
-    <div id="page-default">
-        <div class="page-logo">
+    <form id="form1" runat="server">
+        <div id="page-default">
+            <div class="page-logo">
+            </div>
+            <div class="form-search">
+                <!--<label for="search">Search:</label>-->
+                <input type="text" maxlength="128" class="input-text" value="" name="q" id="search" placeholder="Tìm kiếm">
+                <button class="button button-search" title="Search" type="submit">
+                    <!--<span><span>Search</span></span> -->
+                </button>
+                <div class="search-autocomplete" id="search_autocomplete" style="display: none;"></div>
+
+            </div>
+
+            <div class="nav-menu">
+                <div class="iconhome"></div>
+                <div class="menu-pađing">
+
+                    <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem Text="Home" NavigateUrl="home.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Categories"></asp:MenuItem>
+                                <asp:MenuItem Text="Products"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" NavigateUrl="AboutUs.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Contact Us"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    <%--<ul id="sub-menu">
+                        <li><a href="Index.aspx">Trang chủ</a></li>
+                        <li><a href="Introduce.aspx">Giới thiệu</a></li>
+                        <li><a href="List-News.aspx">Tin Tức</a></li>
+                        <li><a href="Contact.aspx">Liên hệ</a></li>
+                        <li><a href="#">Đặc tính</a>
+                            <ul style="background: #78b078;">
+                                <li><a href="#">Item 4 A</a></li>
+                                <li><a href="#">A long Item 4 B</a>
+                                    <ul>
+                                        <li><a href="#">B 1</a></li>
+                                        <li><a href="#">B 2</a></li>
+                                        <li><a href="#">B 3</a></li>
+                                        <li><a href="#">B 4</a></li>
+                                        <li><a href="#">B 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Item 4 C</a></li>
+                                <li><a href="#">Item 4 D</a>
+                                    <ul>
+                                        <li><a href="#">D 1</a></li>
+                                        <li><a href="#">D 2</a></li>
+                                        <li><a href="#">D 3</a></li>
+                                        <li><a href="#">D 4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <%--  <asp:Menu ID="Menu1" runat="server"></asp:Menu>--%>
+      
+                </div>
+                <div class="social-icons">
+                    <div class="social-icon social-email"><a href="mailto:hoaquavietnam168@gmail.com" target="_blank" data-original-title="Email">Email</a></div>
+                    <div class="social-icon social-skype"><a href="#" target="_blank" data-original-title="Skype">Skype</a></div>
+                    <div class="social-icon social-yahoo"><a href="#" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
+                    <div class="social-icon social-facebook"><a href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                    <div class="social-icon social-googleplus"><a href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
+                </div>
+            </div>
         </div>
-        <div class="form-search">
-            <!--<label for="search">Search:</label>-->
-            <input type="text" maxlength="128" class="input-text" value="" name="q" id="search" placeholder="Tìm kiếm">
-            <button class="button button-search" title="Search" type="submit">
-                <!--<span><span>Search</span></span> -->
-            </button>
-            <div class="search-autocomplete" id="search_autocomplete" style="display: none;"></div>
-
+        <div id="wraper">
         </div>
+        <div id="page-slider">
+            <div id="slider1_container" style="position: relative; width: 1920px; height: 500px; overflow: hidden;">
+                <style>
+                    /* this line can be removed, but it really helps in case of css conflicts in your page */
+                    .slider1 div {
+                        position: relative;
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                </style>
 
-        <div class="nav-menu">
-            <div class="iconhome"></div>
-            <div class="menu-pađing">
-                <ul id="sub-menu">
-                    <li><a href="Index.aspx">Trang chủ</a></li>
-                    <li><a href="Introduce.aspx">Giới thiệu</a></li>
-                    <li><a href="List-News.aspx">Tin Tức</a></li>
-                    <li><a href="Contact.aspx">Liên hệ</a></li>
-                    <li><a href="#">Đặc tính</a>
-                        <ul  style="background:#78b078;">
-                            <li><a href="#">Item 4 A</a></li>
-                            <li><a href="#">A long Item 4 B</a>
-                                <ul>
-                                    <li><a href="#">B 1</a></li>
-                                    <li><a href="#">B 2</a></li>
-                                    <li><a href="#">B 3</a></li>
-                                    <li><a href="#">B 4</a></li>
-                                    <li><a href="#">B 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Item 4 C</a></li>
-                            <li><a href="#">Item 4 D</a>
-                                <ul>
-                                    <li><a href="#">D 1</a></li>
-                                    <li><a href="#">D 2</a></li>
-                                    <li><a href="#">D 3</a></li>
-                                    <li><a href="#">D 4</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                  <%--  <asp:Menu ID="Menu1" runat="server"></asp:Menu>--%>
-                </ul>
-            </div>
-            <div class="social-icons">
-                <div class="social-icon social-email"><a href="mailto:hoaquavietnam168@gmail.com" target="_blank" data-original-title="Email">Email</a></div>
-                <div class="social-icon social-skype"><a href="#" target="_blank" data-original-title="Skype">Skype</a></div>
-                <div class="social-icon social-yahoo"><a href="#" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
-                <div class="social-icon social-facebook"><a href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></div>
-                <div class="social-icon social-googleplus"><a href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
-            </div>
-        </div>
-    </div>
-    <div id="wraper">
-    </div>
-    <div id="page-slider">
-        <div id="slider1_container" style="position: relative; width: 1920px; height: 500px; overflow: hidden;">
-            <style>
-                /* this line can be removed, but it really helps in case of css conflicts in your page */
-                .slider1 div {
-                    position: relative;
-                    margin: 0px;
-                    padding: 0px;
-                }
-            </style>
-
-             <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-            </div>
-
-            <!-- Slides Container -->
-            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1920px; height: 500px; overflow: hidden;">
-                <div style="margin-bottom: 8px;">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/p1.jpg" />
-                    <%--   <img src="FrontEnd/image/p1.jpg" />--%>
-                    <div class=" page-title-bg " t="T" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInRed1" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
-                            <%-- Hoa Quả Việt Nam Cam Kết--%>
-                        </div>
+                <!-- Loading Screen -->
+                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
                     </div>
-                    <div class=" page-subtitle-bg " t="B" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInWhite1" runat="server" Text="Chỉ Bán Hoa Quả Sạch"></asp:Label>
-                            <%-- Chỉ Bán Hoa Quả Sạch--%>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/FrontEnd/image/p2.jpg" />
-                    <%--      <img src="FrontEnd/image/p2.jpg" />--%>
-                    <div class=" page-title-bg " t="TORTUOUS|VB" u="caption" du="2000" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInRed2" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
-                            <%-- Hoa Quả Việt Nam Cam Kết--%>
-                        </div>
-                    </div>
-                    <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInWhite2" runat="server" Text="Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng"></asp:Label>
-                            <%--     Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng--%>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <asp:Image ID="Image3" runat="server" ImageUrl="~/FrontEnd/image/p3.jpg" />
-                    <%--         <img src="FrontEnd/image/p3.jpg" />--%>
-                    <div class=" page-title-bg " t="ATTACK|BR" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInRed3" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
-                            <%--Hoa Quả Việt Nam Cam Kết--%>
-                        </div>
-                    </div>
-                    <div class=" page-subtitle-bg " t="CLIP|LR" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
-                            <asp:Label ID="txtInWhite3" runat="server" Text="Miễn Phí Đổi Trả Hàng Dập Nát"></asp:Label>
-                            <%--Miễn Phí Đổi Trả Hàng Dập Nát--%>
-                        </div>
+                    <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
                     </div>
                 </div>
 
-                <!-- Example to add fixed static QR code in slider END -->
-            </div>
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1920px; height: 500px; overflow: hidden;">
+                    <div style="margin-bottom: 8px;">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/p1.jpg" />
+                        <%--   <img src="FrontEnd/image/p1.jpg" />--%>
+                        <div class=" page-title-bg " t="T" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInRed1" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                                <%-- Hoa Quả Việt Nam Cam Kết--%>
+                            </div>
+                        </div>
+                        <div class=" page-subtitle-bg " t="B" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInWhite1" runat="server" Text="Chỉ Bán Hoa Quả Sạch"></asp:Label>
+                                <%-- Chỉ Bán Hoa Quả Sạch--%>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/FrontEnd/image/p2.jpg" />
+                        <%--      <img src="FrontEnd/image/p2.jpg" />--%>
+                        <div class=" page-title-bg " t="TORTUOUS|VB" u="caption" du="2000" style="position: absolute; color: white; top: 200px; left: 1000px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInRed2" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                                <%-- Hoa Quả Việt Nam Cam Kết--%>
+                            </div>
+                        </div>
+                        <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInWhite2" runat="server" Text="Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng"></asp:Label>
+                                <%--     Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng--%>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <asp:Image ID="Image3" runat="server" ImageUrl="~/FrontEnd/image/p3.jpg" />
+                        <%--         <img src="FrontEnd/image/p3.jpg" />--%>
+                        <div class=" page-title-bg " t="ATTACK|BR" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInRed3" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                                <%--Hoa Quả Việt Nam Cam Kết--%>
+                            </div>
+                        </div>
+                        <div class=" page-subtitle-bg " t="CLIP|LR" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
+                            <div style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+                                <asp:Label ID="txtInWhite3" runat="server" Text="Miễn Phí Đổi Trả Hàng Dập Nát"></asp:Label>
+                                <%--Miễn Phí Đổi Trả Hàng Dập Nát--%>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Bullet Navigator Skin Begin -->
-            <style>
-                /* jssor slider bullet navigator skin 03 css */
-                /*
+                    <!-- Example to add fixed static QR code in slider END -->
+                </div>
+
+                <!-- Bullet Navigator Skin Begin -->
+                <style>
+                    /* jssor slider bullet navigator skin 03 css */
+                    /*
                 .jssorb03 div           (normal)
                 .jssorb03 div:hover     (normal mouseover)
                 .jssorb03 .av           (active)
                 .jssorb03 .av:hover     (active mouseover)
                 .jssorb03 .dn           (mousedown)
                 */
-                .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
-                    background: url(../img/b03.png) no-repeat;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-
-                .jssorb03 div {
-                    background-position: -5px -4px;
-                }
-
-                    .jssorb03 div:hover, .jssorb03 .av:hover {
-                        background-position: -35px -4px;
+                    .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+                        background: url(../img/b03.png) no-repeat;
+                        overflow: hidden;
+                        cursor: pointer;
                     }
 
-                .jssorb03 .av {
-                    background-position: -65px -4px;
-                }
+                    .jssorb03 div {
+                        background-position: -5px -4px;
+                    }
 
-                .jssorb03 .dn, .jssorb03 .dn:hover {
-                    background-position: -95px -4px;
-                }
-            </style>
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb03" style="position: absolute; bottom: 16px; left: 6px;">
-                <!-- bullet navigator item prototype -->
-                <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align: center; line-height: 21px; color: White; font-size: 12px;">
-                    <numbertemplate></numbertemplate>
-                </div>
-            </div>
+                        .jssorb03 div:hover, .jssorb03 .av:hover {
+                            background-position: -35px -4px;
+                        }
 
-            <span u="arrowleft" class="jssora20l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora20r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-            <!-- Arrow Navigator Skin End -->
-            <a style="display: none" href="http://www.jssor.com">image slider</a>
-        </div>
+                    .jssorb03 .av {
+                        background-position: -65px -4px;
+                    }
 
-    </div>
-    <div id="wraper">
-
-        <div id="main-menu">
-
-            <div class="title-category">
-                <!-- <div class="category-padding">Đặc tính</div> -->
-                <div id="menu5">
-                </div>
-                <div class="testimo">
-                    <div class="pic-comment">
-                        <img class="img-circle" src="FrontEnd/image/award.png">
+                    .jssorb03 .dn, .jssorb03 .dn:hover {
+                        background-position: -95px -4px;
+                    }
+                </style>
+                <!-- bullet navigator container -->
+                <div u="navigator" class="jssorb03" style="position: absolute; bottom: 16px; left: 6px;">
+                    <!-- bullet navigator item prototype -->
+                    <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align: center; line-height: 21px; color: White; font-size: 12px;">
+                        <numbertemplate></numbertemplate>
                     </div>
                 </div>
-                <div class="bg-testimo">
-                    <h4>Business hours</h4>
-                    <span>Monday - Sunday</span>
-                    <strong>08:00 Am - 10:00 Pm</strong>
-                </div>
-                <div class="bg-testimo">
-                    <h4>Call for support</h4>
-                    <span>0914.081.180</span>
-                </div>
-                <div class="empty">
-                    <div class="topseller"></div>
-                    <uc2:ucTopseller ID="ucTopseller1" runat="server" />
-                </div>
 
+                <span u="arrowleft" class="jssora20l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora20r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
+                <!-- Arrow Navigator Skin End -->
+                <a style="display: none" href="http://www.jssor.com">image slider</a>
             </div>
+
         </div>
-        <div id="main-content">
-            <div class="top-pic">
-                <div class="pic-one">
+        <div id="wraper">
+
+            <div id="main-menu">
+
+                <div class="title-category">
+                    <!-- <div class="category-padding">Đặc tính</div> -->
+                    <div id="menu5">
+                    </div>
+                    <div class="testimo">
+                        <div class="pic-comment">
+                            <img class="img-circle" src="FrontEnd/image/award.png">
+                        </div>
+                    </div>
+                    <div class="bg-testimo">
+                        <h4>Business hours</h4>
+                        <span>Monday - Sunday</span>
+                        <strong>08:00 Am - 10:00 Pm</strong>
+                    </div>
+                    <div class="bg-testimo">
+                        <h4>Call for support</h4>
+                        <span>0914.081.180</span>
+                    </div>
+                    <div class="empty">
+                        <div class="topseller"></div>
+                        <uc2:ucTopseller ID="ucTopseller1" runat="server" />
+                    </div>
+
                 </div>
-
             </div>
-            <div class="list-combo">
+            <div id="main-content">
+                <div class="top-pic">
+                    <div class="pic-one">
+                    </div>
 
-                <form id="form1" runat="server">
+                </div>
+                <div class="list-combo">
+
+
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
 
-                             <asp:HiddenField ID="lblShowRegisterLogo" runat="server" Value="0"></asp:HiddenField>
+                    <asp:HiddenField ID="lblShowRegisterLogo" runat="server" Value="0"></asp:HiddenField>
                     <asp:HiddenField ID="lblRegisterUrl" runat="server" Value=""></asp:HiddenField>
-                </form>
+
+
+                </div>
 
             </div>
+            <div id="powered"></div>
+            <div id="footer">
+                <div class="page-logo" style="float: left;">
+                </div>
+                <div class="infomation">
+                    <div class="ft-title"><span>Quy Định Chung</span></div>
+                    <ul>
+                        <li><a href="#">Chính Sách Đổi Trả Hàng</a></li>
+                        <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="#">Phương Thức Thanh Toán</a></li>
+                        <li><a href="#">Phương Thức Vận Chuyển</a></li>
+                        <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                    </ul>
+                </div>
+                <div class="infomation">
+                    <div class="ft-title"><span>LIÊN HỆ</span></div>
+                    <ul>
+                        <li>Hoa Quả Việt Nam</li>
+                        <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
+                        <li>ĐT: 0914.081.180</li>
+                        <li>hoaquavietnam168@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="infomation">
+                    <div class="ft-title"><span>THÔNG TIN</span></div>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div id="Register-Div">
 
+                    <a id="RegisterLogoURL">
+                        <img src="FrontEnd/image/Register.png" />
+                    </a>
+                </div>
+            </div>
         </div>
-        <div id="powered"></div>
-        <div id="footer">
-            <div class="page-logo" style="float: left;">
-            </div>
-            <div class="infomation">
-                <div class="ft-title"><span>Quy Định Chung</span></div>
-                <ul>
-                    <li><a href="#">Chính Sách Đổi Trả Hàng</a></li>
-                    <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
-                    <li><a href="#">Phương Thức Thanh Toán</a></li>
-                    <li><a href="#">Phương Thức Vận Chuyển</a></li>
-                    <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
-                    <li><a href="#">Chính Sách Bảo Hành</a></li>
-                </ul>
-            </div>
-            <div class="infomation">
-                <div class="ft-title"><span>LIÊN HỆ</span></div>
-                <ul>
-                    <li>Hoa Quả Việt Nam</li>
-                    <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
-                    <li>ĐT: 0914.081.180</li>
-                    <li>hoaquavietnam168@gmail.com</li>
-                </ul>
-            </div>
-            <div class="infomation">
-                <div class="ft-title"><span>THÔNG TIN</span></div>
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                </ul>
-            </div>
-                       <div id="Register-Div">
-
-                <a id="RegisterLogoURL">
-                    <img src="FrontEnd/image/Register.png" />
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="powered">
-        <div class="container">
-            <div class="copyright">
-                <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
+        <div id="powered">
+            <div class="container">
+                <div class="copyright">
+                    <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
                     </span>
+                </div>
+                <div class="mutilestore hidden-phone"></div>
             </div>
-            <div class="mutilestore hidden-phone"></div>
         </div>
-    </div>
 
 
-    <!-- BEGIN Modal PANEL -->
-    <div class="remodal" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/01.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Bưởi da xanh</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
 
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal2 PANEL -->
-    <div class="remodal" data-remodal-id="modal2" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/02.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Ối Sữa Đài Loan</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
 
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal3 PANEL -->
-    <div class="remodal" data-remodal-id="modal3" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/03.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Cam Khe Mây</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal4 PANEL -->
-    <div class="remodal" data-remodal-id="modal4" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/04.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Xoài Cát Hòa Lộc</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal5 PANEL -->
-    <div class="remodal" data-remodal-id="modal5" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/05.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Bưởi da xanh</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal6 PANEL -->
-    <div class="remodal" data-remodal-id="modal6" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/06.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Dâu Tây</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal7 PANEL -->
-    <div class="remodal" data-remodal-id="modal7" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/07.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Xoài Cát Chu</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal8 PANEL -->
-    <div class="remodal" data-remodal-id="modal8" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/08.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Chuối</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal9 PANEL -->
-    <div class="remodal" data-remodal-id="modal9" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/09.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Nho</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-    <!-- BEGIN Modal10PANEL -->
-    <div class="remodal" data-remodal-id="modal10" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/10.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Bưởi Năm Roi</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-
-    <!-- BEGIN Modal11 PANEL -->
-    <div class="remodal" data-remodal-id="modal11" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/11.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Chôm Chôm</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-
-    <!-- BEGIN Modal12 PANEL -->
-    <div class="remodal" data-remodal-id="modal12" data-remodal-options="hashTracking: false">
-        <div class="detail-combo">
-            <img src="FrontEnd/image/combo/12.jpg" />
-        </div>
-        <div class="product-name">
-            <h2>Vú Sữa Lò Rèn</h2>
-            <p>Giá trị dinh dưỡng</p>
-        </div>
-        <div class="row-1">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng người lớn /100gr/ngày</span>
-
-            </div>
-            <div class="icon-desc">
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent">
-                    <span>7.0 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent">
-                    <span>4.5 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="member-description">
-                <span>Tỷ lệ đáp ứng nhu cầu dĩnh dưỡng trẻ em 4-7 tuổi /100gr/ngày</span>
-            </div>
-            <div class="icon-child"></div>
-            <div class="vitamin">
-                <div class="text-title">Vitamin</div>
-                <div class="persent-2">
-                    <span>8.8 %</span>
-                </div>
-            </div>
-            <div class="vitamin">
-                <div class="text-title">Năng lượng</div>
-                <div class="persent-2">
-                    <span>5.6 %</span>
-                </div>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng vitamin</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Vitamin A - 76 IU</li>
-                        <li>Vitamin B1 (thiamine) - 0.037mg</li>
-                        <li>Vitamin B2 (riboflavin) - 0.086mg</li>
-                        <li>Niacin - 0.785 mg</li>
-                        <li>Axit Folic - 24 mcg</li>
-                        <li>Axit Pantothenic - 0.394 mg</li>
-                        <li>Vitamin B6 - 0.433 mg</li>
-                        <li>Vitamin C - 10.3 mg</li>
-                        <li>Vitamin E - 0.12 mg</li>
-                        <li>Vitamin K - 0.6 mcg</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-info">
-                <div class="text-title">
-                    <span>Hàm lượng chất khoáng</span>
-                </div>
-                <div class="info-detail">
-                    <ul>
-                        <li>Kali - 422 mg</li>
-                        <li>Phốt pho - 26mg</li>
-                        <li>Ma giê - 32mg</li>
-                        <li>Canxi - 6mg</li>
-                        <li>Natri - 1mg</li>
-                        <li>Sắt - 0.31 mg</li>
-                        <li>Selen - 1.2 mcg</li>
-                        <li>Mangan - 0.319mg</li>
-                        <li>Đồng - 0.092 mg</li>
-                        <li>Kẽm - 0.18 mg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 28px;">
-            <a class="remodal-cancel" href="#" style="margin-top: 44px; margin-bottom: -41px;">Đóng</a>
-        </div>
-    </div>
-    <!-- END Modal PANEL -->
-
-    <script src="<%: ResolveUrl("~/FrontEnd/src/jquery.remodal.js")%>"></script>
+    </form>
 
     <!-- Events -->
-    <script>
-        $(document).on('open', '.remodal', function () {
-            console.log('open');
-        });
-
-        $(document).on('opened', '.remodal', function () {
-            console.log('opened');
-        });
-
-        $(document).on('close', '.remodal', function () {
-            console.log('close');
-        });
-
-        $(document).on('closed', '.remodal', function () {
-            console.log('closed');
-        });
-
-        $(document).on('confirm', '.remodal', function () {
-            console.log('confirm');
-        });
-
-        $(document).on('cancel', '.remodal', function () {
-            console.log('cancel');
-        });
-
-        //    You can open or close it like this:
-        //    $(function () {
-        //        var inst = $.remodal.lookup[$('[data-remodal-id=modal]').data('remodal')];
-        //        inst.open();
-        //        inst.close();
-        //    });
-
-        //  Or init in this way:
-        var inst = $('[data-remodal-id=modal2]').remodal();
-        //  inst.open();
-    </script>
+  
     <script>
 
         jQuery(document).ready(function ($) {
@@ -1671,6 +525,8 @@
             //                       window.location.href = sUrl;
             //});
         });
-        </script>
+    </script>
+
 </body>
+
 </html>

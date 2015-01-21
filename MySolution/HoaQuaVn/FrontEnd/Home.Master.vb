@@ -4,9 +4,11 @@ Public Class Home
     Private ClsName = "ucConfig"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
+            Page.Header.DataBind()
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA()
             LoadItemInfo()
+            GetMenu()
         Catch ex As Exception
             Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try
@@ -64,4 +66,48 @@ Public Class Home
 
     End Sub
 
+
+    Sub GetMenu()
+        Try
+            Dim sSQL As String = String.Empty
+            Dim ds As New DataSet
+            Dim dt As New DataTable
+            sSQL = "SELECT * FROM ItemGroup"
+            Var.DBAMain.FillDataset(sSQL, ds, "Menu")
+            dt = ds.Tables("Menu")
+            Dim dr() As DataRow = dt.Select("ParentID = -1")
+            For Each row As DataRow In dr
+                Dim mn As New MenuItem(row("GroupName"), row("GroupID"), "", "")
+                Menu1.FindItem("Products").ChildItems.Add(mn)
+            Next
+            '        For Each item As DataRow In dr
+
+            '            Dim mn As New MenuItem(item("GroupName").ToString(), item("GroupID").ToString(), "", "")
+            '            Menu1.FindItem(item("ParentID").ToString()).ChildItems.Add(mn)
+
+            '        Next
+
+            '         foreach (DataRow dr in drowpar)
+            '{
+            '    menuBar.Items.Add(new MenuItem(dr["MenuName"].ToString(), 
+            '            dr["MenuID"].ToString(), "", 
+            '            dr["MenuLocation"].ToString()));
+            '}
+
+            'foreach (DataRow dr in dt.Select("ParentID >" + 0))
+            '{
+            '    MednuItem mnu = new MenuItem(dr["MenuName"].ToString(), 
+            '                   dr["MenuID"].ToString(), 
+            '                   "", dr["MenuLocation"].ToString());
+            '    menuBar.FindItem(dr["ParentID"].ToString()).ChildItems.Add(mnu);
+            '}
+
+
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

@@ -1332,7 +1332,10 @@ div.product-name
     margin-bottom: -10px;
 }
 
-
+.sub-menu{
+     margin-top: -21px;
+     float:left;
+}
  .social-icons
 {
        float: right;
@@ -1346,7 +1349,7 @@ div.product-name
         display: inline-block;
         float: none;
         margin: 0 5px 5px 0;
-        background-color: rgba(0,0,0,0.05) !important;
+        /*background-color: rgba(0,0,0,0.05) !important;*/
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
