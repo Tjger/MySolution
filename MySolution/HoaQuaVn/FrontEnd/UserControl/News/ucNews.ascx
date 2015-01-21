@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucNews.ascx.vb" Inherits="HoaQuaVn.ucNews" %>
 
-<div class="box-news">
+<div class="box-news" >
     <asp:DataList ID="dtlComboList" runat="server" RepeatColumns="1">
         <ItemTemplate>
 

@@ -27,7 +27,7 @@ Public Class ucItemDetail
                 End If
             End If
         Catch ex As Exception
-            Log.LogError(ClsName, "LoadItemInfo", ex.Message)
+            Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try
 
 
@@ -43,9 +43,9 @@ Public Class ucItemDetail
                     txtItemName.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemName")
                 End If
 
-                'If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
-                '    txtDescription.Text = ds.Tables("LoadItemInfo").Rows(0)("Description")
-                'End If
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Description")) Then
+                    txtDescription.InnerText = ds.Tables("LoadItemInfo").Rows(0)("Description")
+                End If
 
                 If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("GroupID")) Then
                     cboGroup.SelectedValue = ds.Tables("LoadItemInfo").Rows(0)("GroupID")
@@ -71,28 +71,14 @@ Public Class ucItemDetail
                     txtUnitValue.Text = ds.Tables("LoadItemInfo").Rows(0)("UnitValue")
                 End If
 
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("AdultVitamin")) Then
-                    txtAdultVitamin.Text = ds.Tables("LoadItemInfo").Rows(0)("AdultVitamin")
-                End If
-
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("AdultEnergy")) Then
-                    txtAdultEnergy.Text = ds.Tables("LoadItemInfo").Rows(0)("AdultEnergy")
-                End If
-
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ChildVitamin")) Then
-                    txtChildVitamin.Text = ds.Tables("LoadItemInfo").Rows(0)("ChildVitamin")
-                End If
-
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ChildEnergy")) Then
-                    txtChildEnergy.Text = ds.Tables("LoadItemInfo").Rows(0)("ChildEnergy")
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")) Then
+                    Avatar.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")
                 End If
 
                 If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")) Then
                     txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
-                End If
-
-                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")) Then
-                    Avatar.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ItemImageURL")
+                Else
+                    txtVitaminElement.Text = ds.Tables("LoadItemInfo").Rows(0)("ElementInfo")
                 End If
             End If
 
@@ -137,6 +123,7 @@ Public Class ucItemDetail
             Else
                 sHot = "0"
             End If
+            sDescription = txtDescription.InnerText
             If FileUpload1.FileName = "" Then
                 bSaveImage = False
             Else
@@ -158,13 +145,13 @@ Public Class ucItemDetail
                         sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description=N{1}, GroupID={2}, ItemPrice=N{3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12},ItemImageURL={13} WHERE ItemID={14}" _
                                        , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                          , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
-                                         , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                         , Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr("") _
                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName), Core.SQLStr(sItemID))
                     Else
                         sSql = String.Format("UPDATE Item SET ItemName=N{0}, Description=N{1}, GroupID={2}, ItemPrice=N{3}, Active={4}, FromWhere=N{5}, UnitValue=N{6}, Hot={7}, AdultVitamin={8}, AdultEnergy={9}, ChildVitamin={10}, ChildEnergy={11},ElementInfo=N{12} WHERE ItemID={13}" _
                                        , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                          , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
-                                         , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                         , Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr("") _
                                          , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sItemID))
                     End If
 
@@ -174,7 +161,7 @@ Public Class ucItemDetail
                     sSql &= String.Format(" VALUES (N{0},N{1},{2},N{3},{4},N{5},N{6},{7},{8},{9},{10},{11},N{12},{13},GETDATE())" _
                                         , Core.SQLStr(txtItemName.Text), Core.SQLStr(sDescription), Core.SQLStr(cboGroup.SelectedValue), Core.SQLStr(txtItemPrice.Text) _
                                           , Core.SQLStr(sActive), Core.SQLStr(txtFromWhere.Text), Core.SQLStr(txtUnitValue.Text), Core.SQLStr(sHot) _
-                                          , Core.SQLStr(txtAdultVitamin.Text), Core.SQLStr(txtAdultEnergy.Text), Core.SQLStr(txtChildVitamin.Text), Core.SQLStr(txtChildEnergy.Text) _
+                                          , Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr(""), Core.SQLStr("") _
                                           , Core.SQLStr(txtVitaminElement.Text), Core.SQLStr(sFileName))
 
             End Select

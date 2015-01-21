@@ -14,11 +14,29 @@ Option Explicit On
 Partial Public Class Index1
 
     '''<summary>
-    '''ucProperties1 control.
+    '''ucListProduct control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ucProperties1 As Global.HoaQuaVn.ucProperties
+    Protected WithEvents ucListProduct As Global.HoaQuaVn.ucListProduct
+
+    '''<summary>
+    '''ucProductProperties control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ucProductProperties As Global.HoaQuaVn.ucProductProperties
+
+    '''<summary>
+    '''ucNews control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ucNews As Global.HoaQuaVn.ucNews
 End Class

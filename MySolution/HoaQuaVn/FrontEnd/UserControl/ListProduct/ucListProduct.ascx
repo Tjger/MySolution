@@ -13,16 +13,18 @@
                         </asp:Label></span>
                 </div>
                 <div class="image-combo">
-                    <img class="image-padding" src="FrontEnd/image/combo/c11.png" />
+                    <asp:Image ID="NewImage" CssClass="image-padding" Width="108px" Height="80px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ComboImageURL")%>' />
+                    
+                     <%--<img class="image-padding" src="FrontEnd/image/combo/c11.png" />--%>
                 </div>
                 <div class="text-description">
                     <span>
                         <asp:Label ID="lblDescription" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label></span>
                 </div>
-                <div class="combo-info">
+<%--                <div class="combo-info">
                     <asp:Label ID="lblItemList" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemList")%>'></asp:Label>
                     
-                </div>
+                </div>--%>
                 <div class="purchase">
                     <div style="margin-top: -8px; font-weight: bold;"><span><a href="../../Combo.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ComboID")%>">Chi Tiết</a></span></div>
                 </div>

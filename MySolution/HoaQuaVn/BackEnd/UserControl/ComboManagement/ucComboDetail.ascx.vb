@@ -1,4 +1,6 @@
 ﻿Imports Common
+Imports System.IO
+
 Public Class ucComboDetail
     Inherits System.Web.UI.UserControl
     Private ClsName = "ucComboDetail"
@@ -31,7 +33,7 @@ Public Class ucComboDetail
         Catch ex As Exception
             Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try
-       
+
     End Sub
 
     Private Sub LoadItemInfo(ByVal sID As String)
@@ -58,72 +60,56 @@ Public Class ucComboDetail
                     If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ItemList")) Then
                         txtItemList.Text = ds.Tables("LoadItemInfo").Rows(0)("ItemList")
                     End If
+                    If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("ComboImageURL")) Then
+                        AvatarC.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ComboImageURL")
+                    End If
                 End If
                 'sSql = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
 
                 'Var.DBAMain.FillDataset(sSql, ds, "LoadComboItem")
                 'dtComboItem = ds.Tables("LoadComboItem")
             End If
-          
+
         Catch ex As Exception
             Log.LogError(ClsName, "LoadItemInfo", ex.Message)
         End Try
 
     End Sub
 
-
-
-    'Private Sub LoadItemList()
-    '    Try
-    '        Dim sSql As String = "SELECT ItemID,ItemName FROM Item WHERE Active='1'"
-    '        Dim ds As New DataSet
-    '        Var.DBAMain.FillDataset(sSql, ds, "LoadItemList")
-    '        chkItemList.DataSource = ds
-
-    '        chkItemList.DataTextField = "ItemName"
-
-    '        chkItemList.DataValueField = "ItemID"
-
-    '        chkItemList.DataBind()
-
-    '        If Core.IsDBNullOrStringEmpty(dtComboItem) = False Then
-
-    '            If dtComboItem.Rows.Count > 0 Then
-    '                For Each li As ListItem In chkItemList.Items
-    '                    Dim dr() As DataRow = dtComboItem.Select("ItemID=" & Core.SQLStr(li.Value))
-    '                    If dr.Count > 0 Then
-    '                        li.Selected = True
-    '                    End If
-
-    '                Next
-    '            End If
-
-    '        End If
-
-
-
-    '    Catch ex As Exception
-    '        Log.LogError(ClsName, "LoadItemList", ex.Message)
-    '    End Try
-    'End Sub
-
     Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             Dim sItemID As Integer = Core.GetID("ComboID", "Combo")
             Dim sActive As String = String.Empty
             Dim sSql As String = String.Empty
+            Dim bSaveImage As Boolean = True
+            Dim sFileName As String = String.Empty
             If chkActive.Checked Then
                 sActive = "1"
             Else
                 sActive = "0"
             End If
+            If FileUpload1.FileName = "" Then
+                bSaveImage = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+
+                'Dim sFileNameThums As String = String.Empty
+                sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
+                FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+
+            End If
             Select Case sMode
                 Case 1
                     sItemID = sID
-                    sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4} WHERE ComboID={5}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sItemID))
+                    If bSaveImage Then
+                        sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4},ComboImageURL={5} WHERE ComboID={6}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sFileName), Core.SQLStr(sItemID))
+                    Else
+                        sSql = String.Format("UPDATE Combo SET ComboName=N{0},ComboPrice=N{1}, Description=N{2},Active={3}, ItemList= N{4} WHERE ComboID={5}", Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sItemID))
+                    End If
+
                 Case Else
 
-                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active,ItemList) VALUES (N{0},N{1},N{2},N{3},{4},N{5})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text))
+                    sSql = String.Format("INSERT INTO Combo (ComboID, ComboName,ComboPrice, Description,Active,ItemList,ComboImageURL) VALUES (N{0},N{1},N{2},N{3},{4},N{5},{6})", Core.SQLStr(sItemID), Core.SQLStr(txtItemName.Text), Core.SQLStr(txtItemPrice.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sActive), Core.SQLStr(txtItemList.Text), Core.SQLStr(sFileName))
 
             End Select
             If Var.DBAMain.Execute(sSql) Then
@@ -133,35 +119,26 @@ Public Class ucComboDetail
         Catch ex As Exception
             Log.LogError(ClsName, "btnSave_Click", ex.Message)
         End Try
-       
+
 
     End Sub
 
 
-    'Private Sub AddComboItem()
-    '    Try
-    '        Dim sSql As String = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
-    '        Dim ds As New DataSet
-    '        Var.DBAMain.FillDataset(sSql, ds, "DeleteOldItem")
-
-    '        If ds.Tables("DeleteOldItem").Rows.Count > 0 Then
-    '            sSql = "DELETE FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
-    '            Var.DBAMain.Execute(sSql)
-    '        End If
-
-    '        For Each li As ListItem In chkItemList.Items
-    '            If li.Selected Then
-    '                sSql = String.Format("INSERT INTO ComboItem (ComboID,ItemID) VALUES ({0},{1})", Core.SQLStr(sID), Core.SQLStr(li.Value))
-    '                Var.DBAMain.Execute(sSql)
-    '            End If
-    '        Next
-
-
-
-    '    Catch ex As Exception
-    '        Log.LogError(ClsName, "AddComboItem", ex.Message)
-    '    End Try
-    'End Sub
+    Public Function getSaveFileNameUpload(sFileName As String) As String
+        Dim FileName As String = String.Empty
+        Try
+            Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+            Dim savepath As String = Me.Context.Server.MapPath(tempPath)
+            Dim FileNameSave As String = savepath & Convert.ToString("Images\")
+            FileName = Convert.ToString(savepath & Convert.ToString("Images\")) & sFileName
+            If Not Directory.Exists(FileNameSave) Then
+                Directory.CreateDirectory(FileNameSave)
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "getSaveFileNameUpload", ex.Message)
+        End Try
+        Return FileName
+    End Function
 
     Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Response.Redirect("Admin.aspx?module=3")

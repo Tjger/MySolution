@@ -15,10 +15,30 @@ Public Class ucListProduct
     Sub LoadCombo()
         Dim sSQL As String = String.Empty
         Dim ds As New DataSet
+        Dim sDecription As String = ""
+        Dim sItemList As String = ""
         Try
-            sSQL = "SELECT TOP 3 * FROM Combo WHERE Active='1' ORDER BY AutoID DESC"
+            sSQL = "SELECT * FROM Combo WHERE Active='1' ORDER BY AutoID DESC"
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
+                For Each row As DataRow In ds.Tables("LoadCombo").Rows
+                    If Core.IsDBNullOrStringEmpty(row("Description")) = False Then
+                        If row("Description").ToString.Length > 80 Then
+                            sDecription = row("Description").ToString.Substring(0, 80) & " ..."
+                            row("Description") = sDecription
+                        End If
+                    End If
+                    If Core.IsDBNullOrStringEmpty(row("ItemList")) = False Then
+                        If row("ItemList").ToString.Length > 520 Then
+                            If row("ItemList").ToString.Contains("<table>") = False Then
+                                sItemList = row("ItemList").ToString.Substring(0, 520) & " ..."
+                                row("ItemList") = sItemList
+                            End If
+
+
+                        End If
+                    End If
+                Next
                 dtlComboList.DataSource = ds.Tables("LoadCombo")
                 dtlComboList.DataBind()
             End If

@@ -53,7 +53,7 @@ Public Class Item
                     End If
                 End If
 
-               
+
             End If
 
 
@@ -65,23 +65,52 @@ Public Class Item
 
     Protected Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         Try
-            Dim sSubject As String = "Đơn Hàng - Combo1 - " & Date.Today.ToString("dd/MM/yyyy")
-            Dim sBody As String = "Tên: " & txtGuestName.Text & vbCrLf
-            sBody &= "Điện Thoại: " & txtGuestMobile.Text & vbCrLf
-            sBody &= "Email: " & txtGuestMail.Text & vbCrLf
-            sBody &= "Message: " & txtMessage.Value & vbCrLf
-            If clsEmail.SendEmail(sSubject, "hoaquavietnam168@gmail.com", sBody) Then
+            If txtGuestName.Text = "" Or txtGuestMobile.Text = "" Then
+                lblErrMes.Text = "Vui Lòng Điền Đầy Đủ Thông Tin Cần Thiết"
+                Exit Sub
+            End If
+            If ucCapCha.IsValid = False Then
+                lblErrMes.Text = "Vui Lòng Điền Đúng Mã Bảo Vệ"
+                Exit Sub
+            End If
+
+            If SaveReceipt() Then
                 Dim myStringVariable As String = String.Empty
                 myStringVariable = "Cảm Ơn Quý Khách, Chúng Tôi Sẽ Nhanh Chóng Liên Hệ Để Xác Nhận Đơn Hàng"
                 ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
-
             End If
+
+            'Dim sSubject As String = "Đơn Hàng - Combo1 - " & Date.Today.ToString("dd/MM/yyyy")
+            'Dim sBody As String = "Tên: " & txtGuestName.Text & vbCrLf
+            'sBody &= "Điện Thoại: " & txtGuestMobile.Text & vbCrLf
+            'sBody &= "Email: " & txtGuestMail.Text & vbCrLf
+            'sBody &= "Message: " & txtMessage.Value & vbCrLf
+            'If clsEmail.SendEmail(sSubject, "hoaquavietnam168@gmail.com", sBody) Then
+            '    Dim myStringVariable As String = String.Empty
+            '    myStringVariable = "Cảm Ơn Quý Khách, Chúng Tôi Sẽ Nhanh Chóng Liên Hệ Để Xác Nhận Đơn Hàng"
+            '    ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
+
+            'End If
             txtGuestName.Text = ""
             txtGuestMobile.Text = ""
             txtGuestMail.Text = ""
+            txtGuestAddress.Text = ""
             txtMessage.Value = ""
         Catch ex As Exception
 
         End Try
     End Sub
+
+    Private Function SaveReceipt() As Boolean
+        Dim bFlag As Boolean = False
+        Try
+            Dim sSubject As String = "Đơn Hàng - " & lblName.Text & " - " & Date.Today.ToString("dd/MM/yyyy")
+            Dim sSql As String = String.Format("INSERT INTO Receipt (GuestName, GuestMobile, GuestEmail, GuestAddress,Status, CreatedDate, Message) VALUES(N{0}, N{1},N{2}, N{3},N{4}, N{5},N{6})", Core.SQLStr(txtGuestName.Text), Core.SQLStr(txtGuestMobile.Text), Core.SQLStr(txtGuestMail.Text), Core.SQLStr(txtGuestAddress.Text), Core.SQLStr(1), Core.SQLStr(Core.SQLDate(DateTime.Now)), Core.SQLStr(sSubject & " - " & txtMessage.Value))
+            bFlag = Var.DBAMain.Execute(sSql)
+        Catch ex As Exception
+
+        End Try
+        Return bFlag
+    End Function
+
 End Class

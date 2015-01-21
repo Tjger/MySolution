@@ -1,25 +1,38 @@
-﻿Public Class Login1
+﻿Imports Common
+Public Class Login1
     Inherits System.Web.UI.Page
-    Dim sUserName As String = "admin"
-    Dim sPassword As String = "3w3ll"
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private ClsName = "Login1"
 
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            If Not IsPostBack Then
+                Core.InitAppSettingForDBA()
+                Var.DBAMain = New Common.DBA(False)
+            End If
+        Catch ex As Exception
+            Log.LogError(ClsName, "Page_Load", ex.Message)
+        End Try
     End Sub
 
     Protected Sub btnLogin_Click(sender As Object, e As EventArgs)
         Dim sName, sPwd As String
-        sName = txtUserName.Text
-        sPwd = txtPwd.Text
         Try
-            If sName.Equals(sUserName) And sPwd.Equals(sPassword) Then
-                Session("isLogin") = txtUserName.Text
+
+            If txtUserName.Text.ToUpper.Equals(Var.sSuperAdminUser.ToUpper) And txtPwd.Text.ToUpper.Equals(Var.sSuperAdminPass.ToUpper) Then
+                Session("isLogin") = "SuperAdmin"
                 Response.Redirect("Admin.aspx")
             Else
-                Session("isLogin") = String.Empty
-                Response.Redirect("Login.aspx")
+                sName = txtUserName.Text.ToUpper
+                sPwd = Core.LoadEmpInfo(sName)
+                If sPwd.Equals(txtPwd.Text) Then
+                    Session("isLogin") = txtUserName.Text
+                    Response.Redirect("Admin.aspx")
+                Else
+                    Session("isLogin") = String.Empty
+                    Response.Redirect("Login.aspx")
 
+                End If
             End If
-
         Catch ex As Exception
 
         End Try

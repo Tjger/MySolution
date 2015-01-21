@@ -34,7 +34,7 @@
         $(document).ready(function () {
             $("#JqueryMenu").navPlugin();
 
-            $("#JqueryMenu2").navPlugin({
+            $("#sub-menu").navPlugin({
                 'itemWidth': 'auto',
                 'itemHeight': 30,
                 'navEffect': 'fade',
@@ -62,7 +62,7 @@
         <div class="nav-menu">
             <div class="iconhome"></div>
             <div class="menu-pađing">
-                <ul id="JqueryMenu2">
+                <ul id="sub-menu">
                     <li><a href="Index.aspx">Trang chủ</a></li>
                     <li><a href="Introduce.aspx">Giới thiệu</a></li>
                     <li><a href="List-News.aspx">Tin Tức</a></li>

@@ -64,14 +64,29 @@ Public Class ucReceiptDetail
 
     Private Sub LoadCboGroup()
         Try
-            Dim sSql As String = "SELECT * FROM ReceiptStatus"
-            Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSql, ds, "LoadCboGroup")
-            cboStatus.DataSource = ds.Tables("LoadCboGroup")
+            Dim dt As New DataTable
+            dt.Columns.Add("StatusName", GetType(String))
+            dt.Columns.Add("StatusID", GetType(String))
+            Dim dr As DataRow = dt.NewRow
+            dr("StatusName") = Var.FruiltReceiptStatus.News.ToString
+            dr("StatusID") = Var.FruiltReceiptStatus.News
+            dt.Rows.Add(dr)
 
+            dr = dt.NewRow
+            dr("StatusName") = Var.FruiltReceiptStatus.Close.ToString
+            dr("StatusID") = Var.FruiltReceiptStatus.Close
+            dt.Rows.Add(dr)
+
+            dr = dt.NewRow
+            dr("StatusName") = Var.FruiltReceiptStatus.Spam.ToString
+            dr("StatusID") = Var.FruiltReceiptStatus.Spam
+            dt.Rows.Add(dr)
+
+            cboStatus.DataSource = dt
             cboStatus.DataTextField = "StatusName"
             cboStatus.DataValueField = "StatusID"
             cboStatus.DataBind()
+
         Catch ex As Exception
             Log.LogError(ClsName, "LoadCboGroup", ex.Message)
         End Try
@@ -83,7 +98,7 @@ Public Class ucReceiptDetail
             Dim sActive As String = String.Empty
             Dim sSql As String = String.Empty
            
-            sSql = String.Format("UPDATE Receipt SET Status={0} WHERE ReceiptNo={1}", Core.SQLStr(cboStatus.SelectedValue), Core.SQLStr(sID))
+            sSql = String.Format("UPDATE Receipt SET Status={0},GuestName ={1}, GuestMobile={2}, GuestEmail={3}, GuestAddress={4}, Message={5} WHERE ReceiptNo={6}", Core.SQLStr(cboStatus.SelectedValue), Core.SQLStr(txtName.Text), Core.SQLStr(txtMobile.Text), Core.SQLStr(txtEmail.Text), Core.SQLStr(txtAddress.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sID))
             If Var.DBAMain.Execute(sSql) Then
 
                 Response.Redirect("Admin.aspx")

@@ -20,19 +20,19 @@ Public Class ucReceipt
 
     Private Sub LoadReceipt()
         Try
-            Dim sSql As String = String.Format("SELECT *,'' AS StatusView FROM Receipt WHERE DATEDIFF(DAY,CONVERT(VARCHAR(10),CreatedDate,110),{0}) = 0", Core.SQLStr(Core.SQLDate(ReceiptCalendar.SelectedDate)))
+            Dim sSql As String = String.Format("SELECT *,'' AS StatusView FROM Receipt WHERE DATEDIFF(DAY,CONVERT(VARCHAR(10),CreatedDate,110),{0}) = 0 ORDER BY Status ", Core.SQLStr(Core.SQLDate(ReceiptCalendar.SelectedDate)))
             Dim ds As New DataSet
    
             Var.DBAMain.FillDataset(sSql, ds, "Receipt")
             If ds.Tables("Receipt").Rows.Count > 0 Then
                 For Each row As DataRow In ds.Tables("Receipt").Rows
                     Select Case row("Status")
-                        Case 1
-                            row("StatusView") = "Mới"
-                        Case 2
-                            row("StatusView") = "Đang Xử Lý"
-                        Case 3
-                            row("StatusView") = "Đóng"
+                        Case Var.FruiltReceiptStatus.News
+                            row("StatusView") = "News"
+                        Case Var.FruiltReceiptStatus.Spam
+                            row("StatusView") = "Spam"
+                        Case Var.FruiltReceiptStatus.Close
+                            row("StatusView") = "Close"
                     End Select
 
                 Next

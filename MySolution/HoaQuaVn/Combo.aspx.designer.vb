@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Combo
 
     '''<summary>
-    '''lblPrice control.
+    '''ItemImage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ItemImage As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
     '''lblComboName control.
@@ -41,6 +41,15 @@ Partial Public Class Combo
     Protected WithEvents lblDescription As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''lblPrice control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblPrice As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''lblItemList control.
     '''</summary>
     '''<remarks>
@@ -59,13 +68,13 @@ Partial Public Class Combo
     Protected WithEvents txtGuestName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''RequiredFieldValidator1 control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtGuestMobile control.
@@ -77,13 +86,13 @@ Partial Public Class Combo
     Protected WithEvents txtGuestMobile As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''RequiredFieldValidator2 control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtGuestMail control.
@@ -95,6 +104,15 @@ Partial Public Class Combo
     Protected WithEvents txtGuestMail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''txtGuestAddress control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtGuestAddress As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtMessage control.
     '''</summary>
     '''<remarks>
@@ -104,6 +122,15 @@ Partial Public Class Combo
     Protected WithEvents txtMessage As Global.System.Web.UI.HtmlControls.HtmlTextArea
 
     '''<summary>
+    '''ucCapCha control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ucCapCha As Global.HoaQuaVn.ucCapCha
+
+    '''<summary>
     '''btnOk control.
     '''</summary>
     '''<remarks>
@@ -111,6 +138,15 @@ Partial Public Class Combo
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblErrMes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblErrMes As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''dtlComboRelateList control.
