@@ -115,7 +115,7 @@
                 }
             </style>
 
-            <!-- Loading Screen -->
+             <!-- Loading Screen -->
             <div u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
                 </div>
@@ -126,30 +126,51 @@
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1920px; height: 500px; overflow: hidden;">
                 <div style="margin-bottom: 8px;">
-                    <img src="FrontEnd/image/p1.jpg" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/p1.jpg" />
+                    <%--   <img src="FrontEnd/image/p1.jpg" />--%>
                     <div class=" page-title-bg " t="T" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">Hoa Quả Việt Nam Cam Kết</div>
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInRed1" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                            <%-- Hoa Quả Việt Nam Cam Kết--%>
+                        </div>
                     </div>
                     <div class=" page-subtitle-bg " t="B" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">Chỉ Bán Hoa Quả Sạch</div>
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInWhite1" runat="server" Text="Chỉ Bán Hoa Quả Sạch"></asp:Label>
+                            <%-- Chỉ Bán Hoa Quả Sạch--%>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <img u="image" src="FrontEnd/image/p2.jpg" />
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/FrontEnd/image/p2.jpg" />
+                    <%--      <img src="FrontEnd/image/p2.jpg" />--%>
                     <div class=" page-title-bg " t="TORTUOUS|VB" u="caption" du="2000" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">Hoa Quả Việt Nam Cam Kết</div>
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInRed2" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                            <%-- Hoa Quả Việt Nam Cam Kết--%>
+                        </div>
                     </div>
-                    <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px; width: 470px;">
-                        <div style="padding-top: 10px; padding-left: 10px; width: 450px;">Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng</div>
+                    <div class=" page-subtitle-bg " t="T|IE*IE" u="caption" du="2000" style="position: absolute; color: black; top: 270px; left: 700px;">
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInWhite2" runat="server" Text="Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng"></asp:Label>
+                            <%--     Chỉ Bán Hoa Quả Có Nguồn Gốc Rõ Ràng--%>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <img u="image" src="FrontEnd/image/p3.jpg" />
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/FrontEnd/image/p3.jpg" />
+                    <%--         <img src="FrontEnd/image/p3.jpg" />--%>
                     <div class=" page-title-bg " t="ATTACK|BR" u="caption" du="1500" style="position: absolute; color: white; top: 200px; left: 1000px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">Hoa Quả Việt Nam Cam Kết</div>
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInRed3" runat="server" Text="Hoa Quả Việt Nam Cam Kết"></asp:Label>
+                            <%--Hoa Quả Việt Nam Cam Kết--%>
+                        </div>
                     </div>
                     <div class=" page-subtitle-bg " t="CLIP|LR" u="caption" du="1500" style="position: absolute; color: black; top: 270px; left: 700px;">
-                        <div style="padding-top: 10px; padding-left: 10px;">Miễn Phí Đổi Trả Hàng Dập Nát</div>
+                        <div style="padding-top: 10px; padding-left: 10px;padding-right: 10px;">
+                            <asp:Label ID="txtInWhite3" runat="server" Text="Miễn Phí Đổi Trả Hàng Dập Nát"></asp:Label>
+                            <%--Miễn Phí Đổi Trả Hàng Dập Nát--%>
+                        </div>
                     </div>
                 </div>
 
@@ -246,7 +267,8 @@
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
 
-
+                             <asp:HiddenField ID="lblShowRegisterLogo" runat="server" Value="0"></asp:HiddenField>
+                    <asp:HiddenField ID="lblRegisterUrl" runat="server" Value=""></asp:HiddenField>
                 </form>
 
             </div>
@@ -284,7 +306,12 @@
                     <li><a href="#">Tin tức</a></li>
                 </ul>
             </div>
-            <%-- <div class="register-logo" style="float: right;">--%>
+                       <div id="Register-Div">
+
+                <a id="RegisterLogoURL">
+                    <img src="FrontEnd/image/Register.png" />
+                </a>
+            </div>
         </div>
     </div>
     <div id="powered">
@@ -1628,6 +1655,22 @@
             //responsive code end
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            var sValue = document.getElementById('lblShowRegisterLogo').value;
+            if (sValue == "False") {
+                $("#Register-Div").addClass("register-logo-invisible");
 
+            }
+            else { $("#Register-Div").addClass("register-logo-visible"); }
+
+            var sUrl = document.getElementById('lblRegisterUrl').value;
+            $("#RegisterLogoURL").attr("href", sUrl);
+            //$("#RegisterLogoURL").click(function () {
+            //    var sUrl = document.getElementById('lblRegisterUrl').value;
+            //                       window.location.href = sUrl;
+            //});
+        });
+        </script>
 </body>
 </html>

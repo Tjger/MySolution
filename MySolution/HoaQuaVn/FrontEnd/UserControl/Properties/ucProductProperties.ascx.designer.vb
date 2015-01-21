@@ -23,13 +23,13 @@ Partial Public Class ucProductProperties
     Protected WithEvents dtlItemList As Global.System.Web.UI.WebControls.DataList
 
     '''<summary>
-    '''lbPrev control.
+    '''lblPrev control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbPrev As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents lblPrev As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''lbNext control.

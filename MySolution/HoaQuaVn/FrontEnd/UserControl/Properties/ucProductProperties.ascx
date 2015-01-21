@@ -43,7 +43,7 @@
 
     <div style="float: left; width: 100%; text-align: center;">
 
-        <asp:LinkButton ID="lblPrev" runat="server" OnClick="lbPrev_Click"><<</asp:LinkButton>
+        <asp:LinkButton ID="lblPrev" runat="server" OnClick="lbPrev_Click" ><<</asp:LinkButton>
 
         <asp:LinkButton ID="lbNext" runat="server" OnClick="lbNext_Click">>></asp:LinkButton>
 
