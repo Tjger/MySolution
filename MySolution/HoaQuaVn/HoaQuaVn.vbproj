@@ -633,6 +633,7 @@
     <Content Include="FrontEnd\image\social\icons\zootool.png" />
     <Content Include="FrontEnd\image\step.png" />
     <Content Include="FrontEnd\image\t01.png" />
+    <Content Include="FrontEnd\js\nav2.2.js" />
     <Content Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bg.jpg" />

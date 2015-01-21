@@ -2,7 +2,7 @@
 
 <%@ Register Src="~/FrontEnd/UserControl/Popup/ucPopupDetails.ascx" TagName="ucPopupDetails" TagPrefix="uc1" %>
 
-<%@ Register src="UserControl/Topseller/ucTopseller.ascx" tagname="ucTopseller" tagprefix="uc2" %>
+<%@ Register Src="UserControl/Topseller/ucTopseller.ascx" TagName="ucTopseller" TagPrefix="uc2" %>
 
 <!DOCTYPE html>
 
@@ -25,10 +25,24 @@
     <script src="<%: ResolveUrl("~/FrontEnd/js/jqxdatetimeinput.js")%>"></script>
     <script src="<%: ResolveUrl("~/FrontEnd/js/jqxcalendar.js")%>"></script>
     <script src="<%: ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
-
+        <script src="<%: ResolveUrl("~/FrontEnd/js/nav2.2.js")%>"></script>
     <title>Hoa Qua Viet Nam</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#JqueryMenu").navPlugin();
+
+            $("#JqueryMenu2").navPlugin({
+                'itemWidth': 'auto',
+                'itemHeight': 30,
+                'navEffect': 'fade',
+                'speed': 500
+            });
+
+        });
+    </script>
 </head>
 
 <body>
@@ -48,11 +62,35 @@
         <div class="nav-menu">
             <div class="iconhome"></div>
             <div class="menu-pađing">
-                <ul>
+                <ul id="JqueryMenu2">
                     <li><a href="Index.aspx">Trang chủ</a></li>
                     <li><a href="Introduce.aspx">Giới thiệu</a></li>
                     <li><a href="List-News.aspx">Tin Tức</a></li>
                     <li><a href="Contact.aspx">Liên hệ</a></li>
+                    <li><a href="#">Đặc tính</a>
+                        <ul  style="background:#78b078;">
+                            <li><a href="#">Item 4 A</a></li>
+                            <li><a href="#">A long Item 4 B</a>
+                                <ul>
+                                    <li><a href="#">B 1</a></li>
+                                    <li><a href="#">B 2</a></li>
+                                    <li><a href="#">B 3</a></li>
+                                    <li><a href="#">B 4</a></li>
+                                    <li><a href="#">B 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Item 4 C</a></li>
+                            <li><a href="#">Item 4 D</a>
+                                <ul>
+                                    <li><a href="#">D 1</a></li>
+                                    <li><a href="#">D 2</a></li>
+                                    <li><a href="#">D 3</a></li>
+                                    <li><a href="#">D 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                  <%--  <asp:Menu ID="Menu1" runat="server"></asp:Menu>--%>
                 </ul>
             </div>
             <div class="social-icons">
@@ -173,7 +211,6 @@
             <div class="title-category">
                 <!-- <div class="category-padding">Đặc tính</div> -->
                 <div id="menu5">
-
                 </div>
                 <div class="testimo">
                     <div class="pic-comment">
@@ -190,7 +227,7 @@
                     <span>0914.081.180</span>
                 </div>
                 <div class="empty">
-                    <div class="topseller"></div>                   
+                    <div class="topseller"></div>
                     <uc2:ucTopseller ID="ucTopseller1" runat="server" />
                 </div>
 
@@ -202,14 +239,14 @@
                 </div>
 
             </div>
-            <div class="list-combo" >
+            <div class="list-combo">
 
                 <form id="form1" runat="server">
-                    
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                   
-                  
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
                 </form>
 
             </div>
@@ -247,19 +284,19 @@
                     <li><a href="#">Tin tức</a></li>
                 </ul>
             </div>
-           <%-- <div class="register-logo" style="float: right;">--%>
-            </div>
+            <%-- <div class="register-logo" style="float: right;">--%>
         </div>
-        <div id="powered">
-            <div class="container">
-                <div class="copyright">
-                    <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
+    </div>
+    <div id="powered">
+        <div class="container">
+            <div class="copyright">
+                <span>Copyright 2014 Hoa Quả Việt Nam. All Rights Reserved.
                     </span>
-                </div>
-                <div class="mutilestore hidden-phone"></div>
             </div>
+            <div class="mutilestore hidden-phone"></div>
         </div>
- 
+    </div>
+
 
     <!-- BEGIN Modal PANEL -->
     <div class="remodal" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
