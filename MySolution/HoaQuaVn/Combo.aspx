@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Combo.aspx.vb" Inherits="HoaQuaVn.Combo" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="Combo.aspx.vb" Inherits="HoaQuaVn.Combo" %>
 
 <%@ Register Src="~/FrontEnd/UserControl/Capcha/ucCapCha.ascx" TagPrefix="uc1" TagName="ucCapCha" %>
 

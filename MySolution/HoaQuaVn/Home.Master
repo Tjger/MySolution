@@ -2,7 +2,7 @@
 
 <%@ Register Src="~/FrontEnd/UserControl/Popup/ucPopupDetails.ascx" TagName="ucPopupDetails" TagPrefix="uc1" %>
 
-<%@ Register Src="UserControl/Topseller/ucTopseller.ascx" TagName="ucTopseller" TagPrefix="uc2" %>
+<%@ Register Src="~/FrontEnd/UserControl/Topseller/ucTopseller.ascx" TagName="ucTopseller" TagPrefix="uc2" %>
 
 <!DOCTYPE html>
 
@@ -12,10 +12,10 @@
 
     <meta http-equiv="REFRESH" content="1800" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <link rel="stylesheet" type="text/css" href="css/global.css" />
-    <link rel="stylesheet" type="text/css" href="css/social.css" />
-    <link rel="stylesheet" href="src/jquery.remodal.css" />
-    <link rel="stylesheet" href="css/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="FrontEnd/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="FrontEnd/css/social.css" />
+    <link rel="stylesheet" type="text/css" href="FrontEnd/src/jquery.remodal.css" />
+    <link rel="stylesheet" type="text/css" href="FrontEnd/css/jqx.base.css"  />
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jquery-1.9.1.min.js")%>"></script>
      <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
@@ -49,11 +49,11 @@
 
                     <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
                             <Items>
-                                <asp:MenuItem Text="Home" NavigateUrl="home.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Categories"></asp:MenuItem>
-                                <asp:MenuItem Text="Products"></asp:MenuItem>
-                                <asp:MenuItem Text="About Us" NavigateUrl="AboutUs.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Contact Us"></asp:MenuItem>
+                                <asp:MenuItem Text="Trang Chủ" NavigateUrl="Index.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Giới Thiệu" NavigateUrl="Gioi-Thieu.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Liên Hệ" NavigateUrl="Lien-He.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Tin Tức" NavigateUrl="Tin-Tuc.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Sản Phẩm"></asp:MenuItem>
                             </Items>
                         </asp:Menu>
                     <%--<ul id="sub-menu">

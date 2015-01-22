@@ -54,8 +54,6 @@ Public Class Home
 
                 Next
 
-                'lblShowRegisterLogo.Value = 1
-                'lblRegisterUrl.Value = "http://www.moit.gov.vn/vn/Pages/Trangchu.aspx"
             End If
 
             
@@ -71,40 +69,26 @@ Public Class Home
         Try
             Dim sSQL As String = String.Empty
             Dim ds As New DataSet
-            Dim dt As New DataTable
+            Dim dtGroup As New DataTable
+            Dim dtItem As New DataTable
             sSQL = "SELECT * FROM ItemGroup"
-            Var.DBAMain.FillDataset(sSQL, ds, "Menu")
-            dt = ds.Tables("Menu")
-            Dim dr() As DataRow = dt.Select("ParentID = -1")
-            For Each row As DataRow In dr
-                Dim mn As New MenuItem(row("GroupName"), row("GroupID"), "", "")
-                Menu1.FindItem("Products").ChildItems.Add(mn)
+            Var.DBAMain.FillDataset(sSQL, ds, "Group")
+            dtGroup = ds.Tables("Group")
+
+            sSQL = "SELECT Item.*, ItemGroup.GroupName FROM Item INNER JOIN ItemGroup ON Item.GroupID = ItemGroup.GroupID Where Active = '1'"
+
+
+            Var.DBAMain.FillDataset(sSQL, ds, "Item")
+            dtItem = ds.Tables("Item")
+            For i As Integer = 0 To dtGroup.Rows.Count - 1
+                Dim mn As New MenuItem(dtGroup.Rows(i)("GroupName"), dtGroup.Rows(i)("GroupID"), "", "")
+                Menu1.FindItem("Sản Phẩm").ChildItems.Add(mn)
+                Dim dr() As DataRow = dtItem.Select("GroupName=" & Core.SQLStr(dtGroup.Rows(i)("GroupName")))
+                For Each r As DataRow In dr
+                    Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", "Item.aspx?action=view&id=" & r("ItemID"))
+                    Menu1.FindItem("Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
+                Next
             Next
-            '        For Each item As DataRow In dr
-
-            '            Dim mn As New MenuItem(item("GroupName").ToString(), item("GroupID").ToString(), "", "")
-            '            Menu1.FindItem(item("ParentID").ToString()).ChildItems.Add(mn)
-
-            '        Next
-
-            '         foreach (DataRow dr in drowpar)
-            '{
-            '    menuBar.Items.Add(new MenuItem(dr["MenuName"].ToString(), 
-            '            dr["MenuID"].ToString(), "", 
-            '            dr["MenuLocation"].ToString()));
-            '}
-
-            'foreach (DataRow dr in dt.Select("ParentID >" + 0))
-            '{
-            '    MednuItem mnu = new MenuItem(dr["MenuName"].ToString(), 
-            '                   dr["MenuID"].ToString(), 
-            '                   "", dr["MenuLocation"].ToString());
-            '    menuBar.FindItem(dr["ParentID"].ToString()).ChildItems.Add(mnu);
-            '}
-
-
-
-
 
         Catch ex As Exception
 

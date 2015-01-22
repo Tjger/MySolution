@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Gioi-Thieu.aspx.vb" Inherits="HoaQuaVn.Introduce" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="Gioi-Thieu.aspx.vb" Inherits="HoaQuaVn.Introduce" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -24,7 +24,7 @@ chân đến những vùng đất ấy chúng ta không quên mang về thắp h
 làm quà biếu ông bà,cha mẹ, người thân, bạn bè mà cả người nhận và người tặng đều trân 
 
 trọng, nâng niu…
-            <br></br>
+            <br/>
 
                 Hoaquavietnam.com.vn xin được là một nhịp cầu đưa các loại trái cây, hoa quả đặc sản các vùng 
 

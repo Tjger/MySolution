@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Tin-Tuc.aspx.vb" Inherits="HoaQuaVn.List_News" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="Tin-Tuc.aspx.vb" Inherits="HoaQuaVn.List_News" %>
 
 <%@ Register Src="~/FrontEnd/UserControl/News/ucNews.ascx" TagPrefix="uc1" TagName="ucNews" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

@@ -790,7 +790,7 @@
     <Content Include="BackEnd\fonts\weathericons-regular-webfontd41d.eot" />
     <Content Include="BackEnd\AdminPage.Master" />
     <Content Include="FrontEnd\font\Pacifico.ttf" />
-    <Content Include="FrontEnd\Home.Master" />
+    <Content Include="Home.Master" />
     <Content Include="FrontEnd\image\step.psd" />
     <Content Include="FrontEnd\image\text-list.psd" />
     <Content Include="BackEnd\css\.DS_Store" />
@@ -1001,10 +1001,10 @@
       <DependentUpon>Combo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="FrontEnd\Home.Master.designer.vb">
+    <Compile Include="Home.Master.designer.vb">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Home.Master.vb">
+    <Compile Include="Home.Master.vb">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

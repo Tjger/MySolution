@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/FrontEnd/Home.Master" CodeBehind="Index.aspx.vb" Inherits="HoaQuaVn.Index1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="Index.aspx.vb" Inherits="HoaQuaVn.Index1" %>
 
 <%@ Register Src="~/FrontEnd/UserControl/ListProduct/ucListProduct.ascx" TagPrefix="uc1" TagName="ucListProduct" %>
 <%@ Register Src="~/FrontEnd/UserControl/Properties/ucProductProperties.ascx" TagPrefix="uc1" TagName="ucProductProperties" %>
