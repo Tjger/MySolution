@@ -4,11 +4,15 @@ Public Class Home
     Private ClsName = "ucConfig"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            Page.Header.DataBind()
-            Core.InitAppSettingForDBA()
-            Var.DBAMain = New Common.DBA()
-            LoadItemInfo()
-            GetMenu()
+            If Not IsPostBack Then
+                Page.Header.DataBind()
+                Core.InitAppSettingForDBA()
+                Var.DBAMain = New Common.DBA()
+                LoadItemInfo()
+                GetMenu()
+            End If
+
+            
         Catch ex As Exception
             Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try

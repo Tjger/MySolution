@@ -8,7 +8,7 @@
     </tr>
     <tr>
         <td valign="middle">
-            <asp:Label ID="LblMsg" runat="server" Text="Enter the above code here:"></asp:Label>
+            <asp:Label ID="LblMsg" runat="server" Text="Nhập mã bảo vệ:"></asp:Label>
             
           
         </td>
@@ -20,8 +20,7 @@
     <tr>
         <td colspan="2" valign="middle">
             <asp:LinkButton ID="btnTryNewWords" runat="server" Font-Names="Tahoma" 
-                Font-Size="Smaller" onclick="btnTryNewWords_Click">Can&#39;t read? Try different 
-            words.</asp:LinkButton>
+                Font-Size="Smaller" onclick="btnTryNewWords_Click">Lấy mã bảo vệ khác</asp:LinkButton>
         </td>
     </tr>
 </table>

@@ -15,13 +15,13 @@
     <link rel="stylesheet" type="text/css" href="FrontEnd/css/global.css" />
     <link rel="stylesheet" type="text/css" href="FrontEnd/css/social.css" />
     <link rel="stylesheet" type="text/css" href="FrontEnd/src/jquery.remodal.css" />
-    <link rel="stylesheet" type="text/css" href="FrontEnd/css/jqx.base.css"  />
+    <link rel="stylesheet" type="text/css" href="FrontEnd/css/jqx.base.css" />
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jquery-1.9.1.min.js")%>"></script>
-     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
-     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.slider.js")%>"></script>
-     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
-
+    <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.slider.js")%>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
     <title>Hoa Qua Viet Nam</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -45,52 +45,27 @@
 
             <div class="nav-menu">
                 <div class="iconhome"></div>
-                <div class="menu-pađing">
-
-                    <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
-                            <Items>
-                                <asp:MenuItem Text="Trang Chủ" NavigateUrl="Index.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Giới Thiệu" NavigateUrl="Gioi-Thieu.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Liên Hệ" NavigateUrl="Lien-He.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Tin Tức" NavigateUrl="Tin-Tuc.aspx"></asp:MenuItem>
-                                <asp:MenuItem Text="Sản Phẩm"></asp:MenuItem>
-                            </Items>
-                        </asp:Menu>
-                    <%--<ul id="sub-menu">
+                <div class="menu-pađing" id="navmenu">
+                    <ul>
                         <li><a href="Index.aspx">Trang chủ</a></li>
-                        <li><a href="Introduce.aspx">Giới thiệu</a></li>
-                        <li><a href="List-News.aspx">Tin Tức</a></li>
-                        <li><a href="Contact.aspx">Liên hệ</a></li>
-                        <li><a href="#">Đặc tính</a>
-                            <ul style="background: #78b078;">
-                                <li><a href="#">Item 4 A</a></li>
-                                <li><a href="#">A long Item 4 B</a>
-                                    <ul>
-                                        <li><a href="#">B 1</a></li>
-                                        <li><a href="#">B 2</a></li>
-                                        <li><a href="#">B 3</a></li>
-                                        <li><a href="#">B 4</a></li>
-                                        <li><a href="#">B 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Item 4 C</a></li>
-                                <li><a href="#">Item 4 D</a>
-                                    <ul>
-                                        <li><a href="#">D 1</a></li>
-                                        <li><a href="#">D 2</a></li>
-                                        <li><a href="#">D 3</a></li>
-                                        <li><a href="#">D 4</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li><a href="Gioi-Thieu.aspx">Giới thiệu</a></li>
+                        <li><a href="Tin-Tuc.aspx">Tin Tức</a></li>
+                        <li><a href="Lien-He.aspx">Liên hệ</a></li>
+                        <li>
+                            <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem Text="Sản Phẩm"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
                         </li>
-                        <%--  <asp:Menu ID="Menu1" runat="server"></asp:Menu>--%>
-      
+                    </ul>
+
+
                 </div>
                 <div class="social-icons">
                     <div class="social-icon social-email"><a href="mailto:hoaquavietnam168@gmail.com" target="_blank" data-original-title="Email">Email</a></div>
-                    <div class="social-icon social-skype"><a href="#" target="_blank" data-original-title="Skype">Skype</a></div>
-                    <div class="social-icon social-yahoo"><a href="#" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
+                    <div class="social-icon social-skype"><a href="skype:pantherit86?chat" target="_blank" data-original-title="Skype">Skype</a></div>
+                    <div class="social-icon social-yahoo"><a href="ymsgr:sendim?bwtjger" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
                     <div class="social-icon social-facebook"><a href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></div>
                     <div class="social-icon social-googleplus"><a href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
                 </div>
@@ -256,7 +231,8 @@
                 </div>
                 <div class="list-combo">
 
-
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
@@ -268,6 +244,8 @@
                 </div>
 
             </div>
+
+
             <div id="powered"></div>
             <div id="footer">
                 <div class="page-logo" style="float: left;">
@@ -324,7 +302,7 @@
     </form>
 
     <!-- Events -->
-  
+
     <script>
 
         jQuery(document).ready(function ($) {
@@ -520,10 +498,7 @@
 
             var sUrl = document.getElementById('lblRegisterUrl').value;
             $("#RegisterLogoURL").attr("href", sUrl);
-            //$("#RegisterLogoURL").click(function () {
-            //    var sUrl = document.getElementById('lblRegisterUrl').value;
-            //                       window.location.href = sUrl;
-            //});
+
         });
     </script>
 
