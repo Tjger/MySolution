@@ -211,13 +211,13 @@ body.remodal_active .remodal {
 
 .remodal-confirm,
 .remodal-cancel {
-    font-size: 13pt;
+    font-size: 23px;
 
     display: inline-block;
 
     width: 120px;
     margin: 0 0 5px 0;
-    padding: 9px 0;
+    padding: 2px 0;
 
     cursor: pointer;
     -webkit-transition: all 0.2s linear;
@@ -234,21 +234,22 @@ body.remodal_active .remodal {
 
 .remodal-confirm {
     color: #f4f4f4;
-    border: 2px solid #16a085;
-    background: #16a085;
+    border: 2px solid #83e361;
+    background: #83e361;
 	
 }
 
 .remodal-confirm:hover,
 .remodal-confirm:active {
-    color: #16a085;
-    background: #f4f4f4;
+    color: white;
+    background: #de4243;
+    border: 2px solid #de4243;
 }
 
 .remodal-cancel {
     color: #f4f4f4;
-    border: 2px solid #c0392b;
-    background: #c0392b;
+    border: 2px solid #f97627;
+    background: #f97627;
 }
 .remodal-confirm a {
 text-decoration: none;
@@ -256,8 +257,9 @@ text-decoration: none;
 
 .remodal-cancel:hover,
 .remodal-cancel:active {
-    color: #c0392b;
-    background: #f4f4f4;
+    color: white;
+    background: #de4243;
+     border: 2px solid #de4243;
 }
 
 /* Media queries

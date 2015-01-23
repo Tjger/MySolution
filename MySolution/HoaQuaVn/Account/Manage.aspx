@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage Account" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="HoaQuaVn.Manage" %>
+﻿<%@ Page Title="Manage Account" Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="Manage.aspx.vb" Inherits="HoaQuaVn.Manage" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 <%@ Import Namespace="Microsoft.AspNet.Membership.OpenAuth" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">

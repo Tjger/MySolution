@@ -2,9 +2,6 @@
 Public Class ucProductProperties
     Inherits System.Web.UI.UserControl
     Private ClsName = "ucProductProperties"
-
-    Public iCount As Integer = 0
-    Public sAction As String = String.Empty
     Public Shared CurrentPage As Integer = 0
     Public Shared TotalPage As Integer = 1
 
@@ -15,27 +12,7 @@ Public Class ucProductProperties
             LoadCombo()
 
         End If
-        'If Request.QueryString.Count > 0 Then
-        '    sAction = Request.QueryString("action")
-
-        '    If sAction = "next" Then
-        '        CurrentPage += 1
-
-        '        If CurrentPage >= TotalPage Then
-        '            CurrentPage = 0
-
-        '        End If
-        '        LoadCombo()
-        '    Else
-        '        CurrentPage -= 1
-        '        If CurrentPage < 0 Then
-        '            CurrentPage = TotalPage - 1
-
-
-        '        End If
-        '        LoadCombo()
-        '    End If
-        'End If
+        
     End Sub
 
     Sub LoadCombo()
@@ -51,18 +28,10 @@ Public Class ucProductProperties
                 pagingDataList.AllowPaging = True
                 PagingDataList.PageSize = 6
                 pagingDataList.CurrentPageIndex = CurrentPage
-                'If Not IsPostBack Then
-                '    lblShow.Text = "Trang số: " & (CurrentPage + 1).ToString() & " của " & pagingDataList.PageCount.ToString()
-                'End If
-
-                'ViewState("iCount") = pagingDataList.PageCount.ToString()
                 TotalPage = PagingDataList.PageCount
                 dtlItemList.DataSource = PagingDataList
                 dtlItemList.DataKeyField = "ItemID"
                 dtlItemList.DataBind()
-                'UpdatePanel1.Update()
-                'dtlItemList.DataSource = ds.Tables("LoadCombo")
-                'dtlItemList.DataBind()
             End If
 
         Catch ex As Exception

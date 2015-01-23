@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="RegisterExternalLogin.aspx.vb" Inherits="HoaQuaVn.RegisterExternalLogin" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Home.Master" CodeBehind="RegisterExternalLogin.aspx.vb" Inherits="HoaQuaVn.RegisterExternalLogin" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <hgroup class="title">
         <h1>Register with your <%: ProviderDisplayName %> account</h1>

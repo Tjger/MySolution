@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.vb" Inherits="HoaQuaVn.Register" %>
+﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Register.aspx.vb" Inherits="HoaQuaVn.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Log in" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.vb" Inherits="HoaQuaVn.Login" %>
+﻿<%@ Page Title="Log in" Language="VB" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Login.aspx.vb" Inherits="HoaQuaVn.Login" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">

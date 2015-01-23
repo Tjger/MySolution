@@ -33,7 +33,7 @@ miền Việt Nam đến với Người Hà Nội. Những hoa quả, trái cây
 kết là những sản phẩm có nguồn gốc xuất xứ Việt Nam, chúng tôi luôn đảm bảo tiêu chí Tươi 
 
 ngon- Đa Dạng và thật sự An Toàn. 
-            <br></br>
+            <br/>
                 Xin cảm ơn Quý vị độc giả đã quan tâm và Chúng tôi mong ước được phục vụ Quý vị!
             </p>
         </div>

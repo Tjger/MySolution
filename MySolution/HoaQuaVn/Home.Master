@@ -21,7 +21,6 @@
     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.js")%>"></script>
     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/jssor.slider.js")%>"></script>
     <script type="text/javascript" src="<%# ResolveUrl("~/FrontEnd/js/globalization/globalize.js")%>"></script>
-    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
     <title>Hoa Qua Viet Nam</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

@@ -660,8 +660,6 @@
     <Content Include="BackEnd\css\dropzone.css" />
     <Content Include="BackEnd\css\font-awesome.min.css" />
     <Content Include="BackEnd\css\fullcalendar.css" />
-    <Content Include="BackEnd\css\images\animated-overlay.html" />
-    <Content Include="BackEnd\css\images\_div style=.html" />
     <Content Include="BackEnd\css\jquery-ui-1.10.3.css" />
     <Content Include="BackEnd\css\jquery.gritter.css" />
     <Content Include="BackEnd\css\jquery.tagsinput.css" />
@@ -677,10 +675,6 @@
     <Content Include="BackEnd\fonts\fontawesome-webfont862f.svg" />
     <Content Include="BackEnd\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="BackEnd\fonts\weathericons-regular-webfont.svg" />
-    <Content Include="BackEnd\holder.js\100x100.html" />
-    <Content Include="BackEnd\holder.js\100x120.html" />
-    <Content Include="BackEnd\holder.js\60x60.html" />
-    <Content Include="BackEnd\holder.js\_div style=.html" />
     <Content Include="BackEnd\js\bootstrap-timepicker.min.js" />
     <Content Include="BackEnd\js\bootstrap-wizard.min.js" />
     <Content Include="BackEnd\js\bootstrap-wysihtml5.js" />
