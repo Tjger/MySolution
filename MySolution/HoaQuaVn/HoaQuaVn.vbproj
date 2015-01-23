@@ -509,17 +509,6 @@
     <Content Include="ckeditor\skins\v2\skin.js" />
     <Content Include="ckeditor\skins\v2\templates.css" />
     <Content Include="ckeditor\themes\default\theme.js" />
-    <Content Include="FrontEnd\image\captcha\captcha1.gif" />
-    <Content Include="FrontEnd\image\captcha\captcha1.png" />
-    <Content Include="FrontEnd\image\captcha\captcha2.jpg" />
-    <Content Include="FrontEnd\image\captcha\captcha3.jpg" />
-    <Content Include="FrontEnd\UserControl\Capcha\ucCapCha.ascx" />
-    <Content Include="Lien-He.aspx" />
-    <Content Include="BackEnd\css\demo.css" />
-    <Content Include="BackEnd\css\font-awesome.css" />
-    <Content Include="BackEnd\css\style.css" />
-    <Content Include="BackEnd\fonts\fontawesome-webfont.svg" />
-    <Content Include="Dll\CKEditor.NET.dll" />
     <Content Include="FrontEnd\image\award.png" />
     <Content Include="FrontEnd\image\back-dice-02.jpg" />
     <Content Include="FrontEnd\image\back-dice.png" />
@@ -527,6 +516,10 @@
     <Content Include="FrontEnd\image\best.png" />
     <Content Include="FrontEnd\image\border-coppyright.png" />
     <Content Include="FrontEnd\image\browser-icons.png" />
+    <Content Include="FrontEnd\image\captcha\captcha1.gif" />
+    <Content Include="FrontEnd\image\captcha\captcha1.png" />
+    <Content Include="FrontEnd\image\captcha\captcha2.jpg" />
+    <Content Include="FrontEnd\image\captcha\captcha3.jpg" />
     <Content Include="FrontEnd\image\child.png" />
     <Content Include="FrontEnd\image\close.png" />
     <Content Include="FrontEnd\image\combo.png" />
@@ -622,6 +615,13 @@
     <Content Include="FrontEnd\image\social\icons\zootool.png" />
     <Content Include="FrontEnd\image\step.png" />
     <Content Include="FrontEnd\image\t01.png" />
+    <Content Include="FrontEnd\UserControl\Capcha\ucCapCha.ascx" />
+    <Content Include="Lien-He.aspx" />
+    <Content Include="BackEnd\css\demo.css" />
+    <Content Include="BackEnd\css\font-awesome.css" />
+    <Content Include="BackEnd\css\style.css" />
+    <Content Include="BackEnd\fonts\fontawesome-webfont.svg" />
+    <Content Include="Dll\CKEditor.NET.dll" />
     <Content Include="FrontEnd\js\nav2.2.js" />
     <Content Include="FrontEnd\UserControl\Topseller\ucTopseller.ascx" />
     <Content Include="Images\accent.png" />
@@ -785,14 +785,14 @@
     <Content Include="BackEnd\AdminPage.Master" />
     <Content Include="FrontEnd\font\Pacifico.ttf" />
     <Content Include="Home.Master" />
-    <Content Include="FrontEnd\image\step.psd" />
-    <Content Include="FrontEnd\image\text-list.psd" />
     <Content Include="BackEnd\css\.DS_Store" />
     <Content Include="BackEnd\fonts\fontawesome-webfont.eot" />
     <Content Include="BackEnd\fonts\fontawesome-webfont.ttf" />
     <Content Include="BackEnd\fonts\fontawesome-webfont.woff" />
     <Content Include="ckeditor\.htaccess" />
     <Content Include="FrontEnd\UserControl\Capcha\GetImgText.ashx" />
+    <Content Include="FrontEnd\image\step.psd" />
+    <Content Include="FrontEnd\image\text-list.psd" />
     <None Include="My Project\PublishProfiles\Publish.pubxml" />
     <None Include="My Project\PublishProfiles\Tj.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -1130,6 +1130,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="FrontEnd\home\" />
+    <Folder Include="FrontEnd\UserControl\Capcha\image\captcha\" />
+    <Folder Include="FrontEnd\UserControl\Capcha\image\combo\" />
+    <Folder Include="FrontEnd\UserControl\Capcha\image\news\" />
+    <Folder Include="FrontEnd\UserControl\Capcha\image\social-icons\" />
+    <Folder Include="FrontEnd\UserControl\Capcha\image\social\icons\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.vbproj">
