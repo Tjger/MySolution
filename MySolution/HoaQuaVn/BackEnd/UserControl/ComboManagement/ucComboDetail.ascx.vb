@@ -64,10 +64,7 @@ Public Class ucComboDetail
                         AvatarC.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("ComboImageURL")
                     End If
                 End If
-                'sSql = "SELECT * FROM ComboItem WHERE ComboID =" & Core.SQLStr(sID)
-
-                'Var.DBAMain.FillDataset(sSql, ds, "LoadComboItem")
-                'dtComboItem = ds.Tables("LoadComboItem")
+             
             End If
 
         Catch ex As Exception

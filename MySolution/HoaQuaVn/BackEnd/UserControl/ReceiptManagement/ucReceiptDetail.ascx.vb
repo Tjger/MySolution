@@ -69,17 +69,17 @@ Public Class ucReceiptDetail
             dt.Columns.Add("StatusID", GetType(String))
             Dim dr As DataRow = dt.NewRow
             dr("StatusName") = Var.FruiltReceiptStatus.News.ToString
-            dr("StatusID") = Var.FruiltReceiptStatus.News
+            dr("StatusID") = CInt(Var.FruiltReceiptStatus.News)
             dt.Rows.Add(dr)
 
             dr = dt.NewRow
             dr("StatusName") = Var.FruiltReceiptStatus.Close.ToString
-            dr("StatusID") = Var.FruiltReceiptStatus.Close
+            dr("StatusID") = CInt(Var.FruiltReceiptStatus.Close)
             dt.Rows.Add(dr)
 
             dr = dt.NewRow
             dr("StatusName") = Var.FruiltReceiptStatus.Spam.ToString
-            dr("StatusID") = Var.FruiltReceiptStatus.Spam
+            dr("StatusID") = CInt(Var.FruiltReceiptStatus.Spam)
             dt.Rows.Add(dr)
 
             cboStatus.DataSource = dt
@@ -98,7 +98,7 @@ Public Class ucReceiptDetail
             Dim sActive As String = String.Empty
             Dim sSql As String = String.Empty
            
-            sSql = String.Format("UPDATE Receipt SET Status={0},GuestName ={1}, GuestMobile={2}, GuestEmail={3}, GuestAddress={4}, Message={5} WHERE ReceiptNo={6}", Core.SQLStr(cboStatus.SelectedValue), Core.SQLStr(txtName.Text), Core.SQLStr(txtMobile.Text), Core.SQLStr(txtEmail.Text), Core.SQLStr(txtAddress.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sID))
+            sSql = String.Format("UPDATE Receipt SET Status={0},GuestName =N{1}, GuestMobile={2}, GuestEmail=N{3}, GuestAddress=N{4}, Message=N{5} WHERE ReceiptNo={6}", Core.SQLStr(cboStatus.SelectedValue), Core.SQLStr(txtName.Text), Core.SQLStr(txtMobile.Text), Core.SQLStr(txtEmail.Text), Core.SQLStr(txtAddress.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(sID))
             If Var.DBAMain.Execute(sSql) Then
 
                 Response.Redirect("Admin.aspx")

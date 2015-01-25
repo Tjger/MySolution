@@ -70,7 +70,7 @@
         <asp:Label ID="Label2" runat="server" Text="Mô Tả"></asp:Label>
         <br />
         <CKEditor:CKEditorControl ID="txtItemList" BasePath="/ckeditor/" runat="server" Width="726px">
-            <table>
+       <%--     <table>
 	<tbody>
 		<tr>
 			<td>
@@ -113,7 +113,7 @@
 				H&agrave; Tĩnh</td>
 		</tr>
 	</tbody>
-</table>
+</table>--%>
 
         </CKEditor:CKEditorControl>
         <br />

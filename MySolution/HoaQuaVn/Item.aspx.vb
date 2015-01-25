@@ -75,9 +75,10 @@ Public Class Item
             End If
 
             If SaveReceipt() Then
-                Dim myStringVariable As String = String.Empty
-                myStringVariable = "Cảm Ơn Quý Khách, Chúng Tôi Sẽ Nhanh Chóng Liên Hệ Để Xác Nhận Đơn Hàng"
-                ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
+                Response.Redirect("Index.aspx?action=1")
+                'Dim myStringVariable As String = String.Empty
+                'myStringVariable = "Cảm Ơn Quý Khách, Chúng Tôi Sẽ Nhanh Chóng Liên Hệ Để Xác Nhận Đơn Hàng"
+                'ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
             End If
 
             'Dim sSubject As String = "Đơn Hàng - Combo1 - " & Date.Today.ToString("dd/MM/yyyy")
@@ -91,11 +92,11 @@ Public Class Item
             '    ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
 
             'End If
-            txtGuestName.Text = ""
-            txtGuestMobile.Text = ""
-            txtGuestMail.Text = ""
-            txtGuestAddress.Text = ""
-            txtMessage.Value = ""
+            'txtGuestName.Text = ""
+            'txtGuestMobile.Text = ""
+            'txtGuestMail.Text = ""
+            'txtGuestAddress.Text = ""
+            'txtMessage.Value = ""
         Catch ex As Exception
 
         End Try

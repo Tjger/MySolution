@@ -107,7 +107,7 @@
         <br />
         <div>
             <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">
-                <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
+           <%--     <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
 	                <tbody>
 		<tr>
 			<td>
@@ -166,7 +166,7 @@
 			</td>
 		</tr>
 	</tbody>
-</table>
+</table>--%>
 
 </CKEditor:CKEditorControl>
         </div>

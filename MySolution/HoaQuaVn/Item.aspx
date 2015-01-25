@@ -41,64 +41,74 @@
 
     </div>
 
-    <div class="guest-title">
-        <div class="combo-title"><span>THÔNG TIN KHÁCH HÀNG </span></div>
-        <div class="guest-info">
-            <table colspacing="17px" cellpadding="3">
-                <tr>
-                    <td>Tên</td>
-                </tr>
-                <tr>
+    
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnOk" EventName="Click" />
+        </Triggers>
+        <ContentTemplate>
+            <div class="guest-title">
+                <div class="combo-title"><span>THÔNG TIN KHÁCH HÀNG </span></div>
+                <div class="guest-info">
+                    <table colspacing="17px" cellpadding="3">
+                        <tr>
+                            <td>Tên</td>
+                        </tr>
+                        <tr>
 
-                    <td>
-                        <asp:TextBox ID="txtGuestName" runat="server" CssClass="guest-info-box"></asp:TextBox>
-                                   <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="*"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Số điện thoại</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="guest-info-box"></asp:TextBox>
-                                   <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="*"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="txtGuestMail" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
-                </tr>
-                 <tr>
-                    <td>Address</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="txtGuestAddress" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
-                </tr>
-                <tr>
-                    <td>Message</td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea id="txtMessage" runat="server" style="width: 550px; height: 95px;"></textarea></td>
-                </tr>
-            </table>
-                        <%-- Capcha --%>
-            <uc1:ucCapCha runat="server" id="ucCapCha" />
-            <%-- End Capcha --%>
-            <div class="guest-order-action">
-                <%--<asp:Button ID="btnBack" runat="server" Text="Quay lại" CssClass="remodal-cancel" OnClick="btnBack_Click"/>--%>
-                <a class="remodal-cancel" href="index.aspx">Quay lại</a>
-                <%--           <a class="remodal-confirm" href="#">Đặt hàng</a>--%>
-                <asp:Button ID="btnOk" runat="server" Text="Đặt hàng" CssClass="remodal-confirm" OnClick="btnOk_Click" />
-                  <asp:Label ID="lblErrMes" runat="server" ForeColor="Red"></asp:Label>
+                            <td>
+                                <asp:TextBox ID="txtGuestName" runat="server" CssClass="guest-info-box"></asp:TextBox>
+                                <asp:Label ID="Label1" runat="server" BackColor="White" ForeColor="#FF3300" Text="*"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="txtGuestMobile" runat="server" CssClass="guest-info-box"></asp:TextBox>
+                                <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="*"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="txtGuestMail" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="txtGuestAddress" runat="server" CssClass="guest-info-box"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>Message</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="txtMessage" runat="server" style="width: 550px; height: 95px;"></textarea></td>
+                        </tr>
+
+                    </table>
+                    <%-- Capcha --%>
+                    <uc1:ucCapCha runat="server" ID="ucCapCha" />
+                    <%-- End Capcha --%>
+
+                    <div class="guest-order-action">
+                        <a class="remodal-cancel" href="index.aspx">Quay lại</a>
+                        <asp:Button ID="btnOk" runat="server" Text="Đặt hàng" CssClass="remodal-confirm" OnClick="btnOk_Click" />
+                        <asp:Label ID="lblErrMes" runat="server" ForeColor="Red"></asp:Label>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 
-    </div>
+
     <div style="float: left;">
        <div class="combo-title">SẢN PHẨM CÙNG LOẠI</div>
 

@@ -165,4 +165,49 @@ Partial Public Class Home
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblRegisterUrl As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblEmails control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblEmails As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblSkype control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblSkype As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblYahoo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblYahoo As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblFacebookUrl control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblFacebookUrl As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''lblGooglePlusUrl control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblGooglePlusUrl As Global.System.Web.UI.WebControls.HiddenField
 End Class

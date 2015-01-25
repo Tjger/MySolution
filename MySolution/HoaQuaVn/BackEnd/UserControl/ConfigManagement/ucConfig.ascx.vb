@@ -5,6 +5,7 @@ Public Class ucConfig
     Inherits System.Web.UI.UserControl
     Private ClsName = "ucConfig"
     Private Shared sMode As String = String.Empty
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Not IsPostBack Then
@@ -20,49 +21,52 @@ Public Class ucConfig
     Private Sub LoadItemInfo()
         Try
             Dim sSql As String = ""
-            sSql = "SELECT * FROM ComboItem Where ComboID ='ImageURL1'"
             Dim ds As New DataSet
-            Var.DBAMain.FillDataset(sSql, ds, "CheckItemInfo")
-            If ds.Tables("CheckItemInfo").Rows.Count > 0 Then
-                sMode = 1
-                sSql = "SELECT * FROM ComboItem "
-                Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
-                For Each row As DataRow In ds.Tables("LoadItemInfo").Rows
-                    If Not Core.IsDBNullOrStringEmpty(row("ComboID")) Then
-                        Select Case row("ComboID")
-                            Case "ImageURL1"
-                                Image1.ImageUrl = row("ItemID")
-                            Case "ImageURL2"
-                                Image2.ImageUrl = row("ItemID")
-                            Case "ImageURL3"
-                                Image3.ImageUrl = row("ItemID")
-                            Case "TextInRed1"
-                                txtInRed1.Text = row("ItemID")
-                            Case "TextInRed2"
-                                txtInRed2.Text = row("ItemID")
-                            Case "TextInRed3"
-                                txtInRed3.Text = row("ItemID")
-                            Case "TextInWhite1"
-                                txtInWhite1.Text = row("ItemID")
-                            Case "TextInWhite2"
-                                txtInWhite2.Text = row("ItemID")
-                            Case "TextInWhite3"
-                                txtInWhite3.Text = row("ItemID")
-                            Case "ShowRegisterLogo"
-                                chkShowRegisterLogo.Checked = row("ItemID")
-                            Case "RegisterLogoURL"
-                                txtRegisterUrl.Text = row("ItemID")
-                        End Select
+            sSql = "SELECT * FROM SysPara "
+            Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
+            For Each row As DataRow In ds.Tables("LoadItemInfo").Rows
+                If Not Core.IsDBNullOrStringEmpty(row("ComboID")) Then
+                    Select Case row("ComboID")
+                        Case "ImageURL1"
+                            Image1.ImageUrl = row("ItemID")
+                        Case "ImageURL2"
+                            Image2.ImageUrl = row("ItemID")
+                        Case "ImageURL3"
+                            Image3.ImageUrl = row("ItemID")
+                        Case "TextInRed1"
+                            txtInRed1.Text = row("ItemID")
+                        Case "TextInRed2"
+                            txtInRed2.Text = row("ItemID")
+                        Case "TextInRed3"
+                            txtInRed3.Text = row("ItemID")
+                        Case "TextInWhite1"
+                            txtInWhite1.Text = row("ItemID")
+                        Case "TextInWhite2"
+                            txtInWhite2.Text = row("ItemID")
+                        Case "TextInWhite3"
+                            txtInWhite3.Text = row("ItemID")
+                        Case "ShowRegisterLogo"
+                            chkShowRegisterLogo.Checked = row("ItemID")
+                        Case "RegisterLogoURL"
+                            txtRegisterUrl.Text = row("ItemID")
+                        Case "Email"
+                            txtEmails.Text = row("ItemID")
+                        Case "Skype"
+                            txtSkype.Text = row("ItemID")
+                        Case "Yahoo"
+                            txtYahoo.Text = row("ItemID")
+                        Case "Facebook"
+                            txtFacebook.Text = row("ItemID")
+                        Case "GooglePlus"
+                            txtGoogle.Text = row("ItemID")
+                        Case "Introduce"
+                            txtIntroduce.Text = row("ItemID")
+                        Case "Contacts"
+                            txtContact.Text = row("ItemID")
+                    End Select
 
-                    End If
-
-                    
-                Next
-                
-
-            Else
-
-            End If
+                End If
+            Next
 
         Catch ex As Exception
             Log.LogError(ClsName, "LoadItemInfo", ex.Message)
@@ -112,44 +116,36 @@ Public Class ucConfig
                 FileUpload3.SaveAs(getSaveFileNameUpload(FileUpload3.FileName))
 
             End If
+            If bSaveImage1 Then
+                SaveDB("ImageURL1", sFileName1)
+            End If
 
-            Select Case sMode
-                Case 1
-                    UpdateDB("TextInRed1", txtInRed1.Text)
-                    UpdateDB("TextInRed2", txtInRed2.Text)
-                    UpdateDB("TextInRed3", txtInRed3.Text)
-                    UpdateDB("TextInWhite1", txtInWhite1.Text)
-                    UpdateDB("TextInWhite2", txtInWhite2.Text)
-                    UpdateDB("TextInWhite3", txtInWhite3.Text)
-                    UpdateDB("ShowRegisterLogo", chkShowRegisterLogo.Checked)
-                    UpdateDB("RegisterLogoURL", txtRegisterUrl.Text)
-                    If bSaveImage1 Then
-                        UpdateDB("ImageURL1", sFileName1)
-                    End If
+            If bSaveImage2 Then
+                SaveDB("ImageURL2", sFileName2)
+            End If
 
-                    If bSaveImage2 Then
-                        UpdateDB("ImageURL2", sFileName2)
-                    End If
+            If bSaveImage3 Then
+                SaveDB("ImageURL3", sFileName3)
+            End If
 
-                    If bSaveImage3 Then
-                        UpdateDB("ImageURL3", sFileName3)
-                    End If
-                Case Else
-                    SaveDB("TextInRed1", txtInRed1.Text)
-                    SaveDB("TextInRed2", txtInRed2.Text)
-                    SaveDB("TextInRed3", txtInRed3.Text)
-                    SaveDB("TextInWhite1", txtInWhite1.Text)
-                    SaveDB("TextInWhite2", txtInWhite2.Text)
-                    SaveDB("TextInWhite3", txtInWhite3.Text)
-                    SaveDB("ImageURL1", sFileName1)
-                    SaveDB("ImageURL2", sFileName2)
-                    SaveDB("ImageURL3", sFileName3)
-                    SaveDB("ShowRegisterLogo", chkShowRegisterLogo.Checked)
-                    SaveDB("RegisterLogoURL", txtRegisterUrl.Text)
-            End Select
+            SaveDB("TextInRed1", txtInRed1.Text)
+            SaveDB("TextInRed2", txtInRed2.Text)
+            SaveDB("TextInRed3", txtInRed3.Text)
+            SaveDB("TextInWhite1", txtInWhite1.Text)
+            SaveDB("TextInWhite2", txtInWhite2.Text)
+            SaveDB("TextInWhite3", txtInWhite3.Text)
+          
+            SaveDB("ShowRegisterLogo", chkShowRegisterLogo.Checked)
+            SaveDB("RegisterLogoURL", txtRegisterUrl.Text)
 
+            SaveDB("Email", txtEmails.Text)
+            SaveDB("Skype", txtSkype.Text)
+            SaveDB("Yahoo", txtYahoo.Text)
+            SaveDB("Facebook", txtFacebook.Text)
+            SaveDB("GooglePlus", txtGoogle.Text)
 
-
+            SaveDB("Introduce", txtIntroduce.Text)
+            SaveDB("Contacts", txtContact.Text)
             Response.Redirect("Admin.aspx")
         Catch ex As Exception
             Log.LogError(ClsName, "btnSave_Click", ex.Message)
@@ -157,10 +153,17 @@ Public Class ucConfig
 
     End Sub
 
-    Private Function UpdateDB(ByVal sKey As String, ByVal sValue As String)
+    Private Function SaveDB(ByVal sKey As String, ByVal sValue As String)
         Dim bFlag As Boolean = False
         Try
-            Dim sSql As String = String.Format("UPDATE ComboItem SET ItemID =N{0} WHERE ComboID={1}", Core.SQLStr(sValue), Core.SQLStr(sKey))
+            Dim ds As New DataSet
+            Dim sSql As String = String.Format("SELECT * FROM SysPara WHERE ComboID={0}", Core.SQLStr(sKey))
+            Var.DBAMain.FillDataset(sSql, ds, "SaveDB")
+            If ds.Tables("SaveDB").Rows.Count > 0 Then
+                sSql = String.Format("UPDATE SysPara SET ItemID =N{0} WHERE ComboID={1}", Core.SQLStr(sValue), Core.SQLStr(sKey))
+            Else
+                sSql = String.Format("INSERT INTO SysPara (ComboID, ItemID) VALUES(N{0}, N{1})", Core.SQLStr(sKey), Core.SQLStr(sValue))
+            End If
             bFlag = Var.DBAMain.Execute(sSql)
         Catch ex As Exception
             Log.LogError(ClsName, "SaveDB", ex.Message)
@@ -168,16 +171,6 @@ Public Class ucConfig
         Return bFlag
     End Function
 
-    Private Function SaveDB(ByVal sKey As String, ByVal sValue As String)
-        Dim bFlag As Boolean = False
-        Try
-            Dim sSql As String = String.Format("INSERT INTO ComboItem (ComboID, ItemID) VALUES(N{0}, N{1})", Core.SQLStr(sKey), Core.SQLStr(sValue))
-            bFlag = Var.DBAMain.Execute(sSql)
-        Catch ex As Exception
-            Log.LogError(ClsName, "SaveDB", ex.Message)
-        End Try
-        Return bFlag
-    End Function
     Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Response.Redirect("Admin.aspx?module=2")
     End Sub

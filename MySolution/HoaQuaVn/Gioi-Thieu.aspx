@@ -5,37 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="news-title">Giới Thiệu</div>
     <div id="powered"></div>
-    <div style="height: 1200px;">
+    <div style="height: 1500px;">
         <div class="news-image" style="height: 141px;">
-            <img src="FrontEnd/image/logo.png">
+            <img src="FrontEnd/image/logo.png"/>
         </div>
         <div class="news-body">
-            <p style="text-align: left;">
-                Trên mảnh đất nhiệt đới hình chữ S, nơi bốn mùa hoa thơm trái ngọt, ở nơi đây mỗi địa danh 
-
-gắn liền với một mùa trái chín, loài cây trái rất đặc trưng, như Mận Lạng Sơn, Nhãn lồng Hưng 
-
-Yên, Cam Vinh, Chôm Chôm Đồng Nai, Vú Sữa Lò Rèn, Nho Ninh Thuận, Táo Ninh Thuận…
-
-Trái cây không những mang giá trị dinh dưỡng cao mà còn là những món quà quý để mỗi khi đặt 
-
-chân đến những vùng đất ấy chúng ta không quên mang về thắp hương lên bàn thờ tổ tiên và 
-
-làm quà biếu ông bà,cha mẹ, người thân, bạn bè mà cả người nhận và người tặng đều trân 
-
-trọng, nâng niu…
-            <br/>
-
-                Hoaquavietnam.com.vn xin được là một nhịp cầu đưa các loại trái cây, hoa quả đặc sản các vùng 
-
-miền Việt Nam đến với Người Hà Nội. Những hoa quả, trái cây trên hoaquavietnam.com.vn cam 
-
-kết là những sản phẩm có nguồn gốc xuất xứ Việt Nam, chúng tôi luôn đảm bảo tiêu chí Tươi 
-
-ngon- Đa Dạng và thật sự An Toàn. 
-            <br/>
-                Xin cảm ơn Quý vị độc giả đã quan tâm và Chúng tôi mong ước được phục vụ Quý vị!
-            </p>
+             <asp:Label ID="lblContent" runat="server" Text="Label"></asp:Label>
+           
         </div>
         <div class="subtitle">
         </div>

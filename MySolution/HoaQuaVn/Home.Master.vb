@@ -22,7 +22,7 @@ Public Class Home
         Try
             Dim sSql As String = ""
             Dim ds As New DataSet
-            sSql = "SELECT * FROM ComboItem "
+            sSql = "SELECT * FROM SysPara "
             Var.DBAMain.FillDataset(sSql, ds, "LoadItemInfo")
             If Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo")) = False Then
                 For Each row As DataRow In ds.Tables("LoadItemInfo").Rows
@@ -48,9 +48,18 @@ Public Class Home
                                 txtInWhite3.Text = row("ItemID")
                             Case "ShowRegisterLogo"
                                 lblShowRegisterLogo.Value = row("ItemID")
-
                             Case "RegisterLogoURL"
                                 lblRegisterUrl.Value = row("ItemID")
+                            Case "Email"
+                                lblEmails.Value = "mailto:" & row("ItemID")
+                            Case "Skype"
+                                lblSkype.Value = "skype:" & row("ItemID") & "?chat"
+                            Case "Yahoo"
+                                lblYahoo.Value = "ymsgr:sendim?" & row("ItemID")
+                            Case "Facebook"
+                                lblFacebookUrl.Value = row("ItemID")
+                            Case "GooglePlus"
+                                lblGooglePlusUrl.Value = row("ItemID")
                         End Select
 
                     End If

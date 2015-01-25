@@ -30,7 +30,9 @@ body {
     line-height: 29px;
     margin-left: 20px;
 }
-
+.news-body p {
+    text-align: left;
+}
 .news-detail {
     margin-top: 30px;
     color: green;
@@ -117,25 +119,7 @@ body {
 {
    
 }*/
-.news-uc-title {
-    float: left;
-    width: 400px;
-}
 
-.news-image-title {
-    margin-top: 11px;
-    width: 153px;
-    float: left;
-}
-
-.news-des {
-    float: left;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-top: 11px;
-    width: 265px;
-    color: #5e5e5e;
-}
 
 .nav-menu a:link, .nav-menu a:visited {
     display: block;
@@ -526,10 +510,6 @@ div .product1 img {
         font-size: 24px;
     }
 
-.box-news {
-    float: left;
-    width: 430px;
-}
 
 .combo-option {
     float: right;
@@ -955,7 +935,7 @@ div .product1 img {
     text-align: center;
 }
 
-    .comboname span a, .best-title-text span a, .news-row-1 span a {
+    .comboname span a, .best-title-text span a, .news-row-1 span a, .uc-news-row-1 span a {
         text-decoration: none;
         cursor: pointer;
     }
@@ -964,7 +944,26 @@ div .product1 img {
             color: #1c500a;
         }
 
+        .box-news {
+    float: left;
+    width: 100%;
+}
+
+        .uc-box-news {
+    float: left;
+    width: 430px;
+}
+
 .news-row-1 {
+   border-bottom: 1px dashed #dbdbdb;
+    float: left;
+    height: 175px;
+   width:100%;
+    margin-top: 11px;
+    padding-bottom: 5px;
+}
+
+.uc-news-row-1 {
    border-bottom: 1px dashed #dbdbdb;
     float: left;
     height: 175px;
@@ -972,10 +971,51 @@ div .product1 img {
     margin-top: 11px;
     padding-bottom: 5px;
 }
-
     .news-row-1 span a:hover {
         color: #f97627;
     }
+
+        .uc-news-row-1 span a:hover {
+        color: #f97627;
+    }
+    .news-uc-title {
+    float: left;
+    width: 100%;
+}
+
+        .uc-news-uc-title {
+    float: left;
+    width: 400px;
+}
+
+.news-image-title {
+    margin-top: 11px;
+    width: 153px;
+    float: left;
+}
+
+.uc-news-image-title {
+    margin-top: 11px;
+    width: 153px;
+    float: left;
+}
+.news-des {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 11px;
+    width: 75%;
+    color: #5e5e5e;
+}
+
+.uc-news-des {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 11px;
+    width: 265px;
+    color: #5e5e5e;
+}
 
 .title-details span {
     color: blue;
@@ -1311,7 +1351,7 @@ img, a img {
     border-radius: 50%;
     float: left;
     height: 46px;
-    line-height: 34px;
+    line-height: 40px;
     width: 46px;
     cursor: pointer;
     font-size: 50px;

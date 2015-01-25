@@ -58,15 +58,14 @@
                             </asp:Menu>
                         </li>
                     </ul>
-
-
+                                         
                 </div>
                 <div class="social-icons">
-                    <div class="social-icon social-email"><a href="mailto:hoaquavietnam168@gmail.com" target="_blank" data-original-title="Email">Email</a></div>
-                    <div class="social-icon social-skype"><a href="skype:pantherit86?chat" target="_blank" data-original-title="Skype">Skype</a></div>
-                    <div class="social-icon social-yahoo"><a href="ymsgr:sendim?bwtjger" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
-                    <div class="social-icon social-facebook"><a href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></div>
-                    <div class="social-icon social-googleplus"><a href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
+                    <div class="social-icon social-email"><a id="EmailHoaQuaVn" href="mailto:hoaquavietnam168@gmail.com" target="_self" data-original-title="Email">Email</a></div>
+                    <div class="social-icon social-skype"><a id="SkypeHoaQuaVn" href="skype:pantherit86?chat" target="_blank" data-original-title="Skype">Skype</a></div>
+                    <div class="social-icon social-yahoo"><a id="YahooHoaQuaVn" href="ymsgr:sendim?bwtjger" target="_blank" data-original-title="Yahoo">Yahoo</a></div>
+                    <div class="social-icon social-facebook"><a id="FacebookHoaQuaVn" href="https://www.facebook.com/hoaquavietnam168" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                    <div class="social-icon social-googleplus"><a id="GoogleHoaQuaVn" href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
                 </div>
             </div>
         </div>
@@ -238,7 +237,11 @@
 
                     <asp:HiddenField ID="lblShowRegisterLogo" runat="server" Value="0"></asp:HiddenField>
                     <asp:HiddenField ID="lblRegisterUrl" runat="server" Value=""></asp:HiddenField>
-
+                    <asp:HiddenField ID="lblEmails" runat="server" Value=""></asp:HiddenField>
+                    <asp:HiddenField ID="lblSkype" runat="server" Value=""></asp:HiddenField>
+                    <asp:HiddenField ID="lblYahoo" runat="server" Value=""></asp:HiddenField>
+                    <asp:HiddenField ID="lblFacebookUrl" runat="server" Value=""></asp:HiddenField>
+                    <asp:HiddenField ID="lblGooglePlusUrl" runat="server" Value=""></asp:HiddenField>
 
                 </div>
 
@@ -498,9 +501,23 @@
             var sUrl = document.getElementById('lblRegisterUrl').value;
             $("#RegisterLogoURL").attr("href", sUrl);
 
+            var sUrl1 = document.getElementById('lblEmails').value;
+            $("#EmailHoaQuaVn").attr("href", sUrl1);
+
+            var sUrl2 = document.getElementById('lblSkype').value;
+            $("#SkypeHoaQuaVn").attr("href", sUrl2);
+
+            var sUrl3 = document.getElementById('lblYahoo').value;
+            $("#YahooHoaQuaVn").attr("href", sUrl3);
+
+            var sUrl4 = document.getElementById('lblFacebookUrl').value;
+            $("#FacebookHoaQuaVn").attr("href", sUrl4);
+
+            var sUrl5 = document.getElementById('lblGooglePlusUrl').value;
+            $("#GoogleHoaQuaVn").attr("href", sUrl5);
         });
     </script>
-
+    
 </body>
 
 </html>
