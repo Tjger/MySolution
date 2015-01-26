@@ -60,8 +60,8 @@ Public Class Home
                                 lblFacebookUrl.Value = row("ItemID")
                             Case "GooglePlus"
                                 lblGooglePlusUrl.Value = row("ItemID")
-                            Case "Contacts"
-                                lblContatcFooters.Text = row("ItemID")
+                                'Case "Contacts"
+                                '    lblContatcFooters.Text = row("ItemID")
                         End Select
 
                     End If

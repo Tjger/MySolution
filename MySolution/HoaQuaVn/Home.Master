@@ -268,14 +268,20 @@
                 </div>
                 <div class="infomation">
                     <div class="ft-title"><span>LIÊN HỆ</span></div>
-                    <asp:Label ID="lblContatcFooters" runat="server" Text=""></asp:Label>
+                    <ul>
+                        <li>Hoa Quả Việt Nam</li>
+                        <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
+                        <li>ĐT: 0914.081.180</li>
+                        <li>hoaquavietnam168@gmail.com</li>
+                    </ul>
+                   <%-- <asp:Label ID="lblContatcFooters" runat="server" Text=""></asp:Label>--%>
                 </div>
                 <div class="infomation">
                     <div class="ft-title"><span>THÔNG TIN</span></div>
                     <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="Index.aspx">Trang chủ</a></li>
+                        <li><a href="Gioi-Thieu.aspx">Giới thiệu</a></li>
+                        <li><a href="Tin-Tuc.aspx">Tin tức</a></li>
                     </ul>
                 </div>
                 <div id="Register-Div">

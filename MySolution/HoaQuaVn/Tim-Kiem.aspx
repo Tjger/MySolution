@@ -19,7 +19,7 @@
                             <div class="news-row-1">
                                 <div class="news-uc-title">
                                     <span>
-                                        <a href="../../Item.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                                        <a href="../../<%# DataBinder.Eval(Container.DataItem, "ItemUrl")%>">
                                             <asp:Label ID="lblNewTitle" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a>
                                     </span>
 
@@ -29,7 +29,7 @@
                                     <asp:Image ID="NewImage" runat="server" Width="154px" Height="110px" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
                                 </div>
                                 <div class="news-des">
-                                    <asp:Label ID="lblNewDes" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label>
+                                    <asp:Label ID="lblNewDes" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemDescription")%>'></asp:Label>
 
                                 </div>
                             </div>

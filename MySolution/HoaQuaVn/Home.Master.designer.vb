@@ -228,13 +228,4 @@ Partial Public Class Home
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblGooglePlusUrl As Global.System.Web.UI.WebControls.HiddenField
-
-    '''<summary>
-    '''lblContatcFooters control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblContatcFooters As Global.System.Web.UI.WebControls.Label
 End Class

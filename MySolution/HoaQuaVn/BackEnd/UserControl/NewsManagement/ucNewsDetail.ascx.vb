@@ -57,6 +57,9 @@ Public Class ucNewsDetail
                 If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("Image")) Then
                     Avatar.ImageUrl = ds.Tables("LoadItemInfo").Rows(0)("Image")
                 End If
+                If Not Core.IsDBNullOrStringEmpty(ds.Tables("LoadItemInfo").Rows(0)("KeySearch")) Then
+                    txtKeySearch.Text = ds.Tables("LoadItemInfo").Rows(0)("KeySearch")
+                End If
             End If
 
         Catch ex As Exception
@@ -94,20 +97,20 @@ Public Class ucNewsDetail
                 Case 1
 
                     If bSaveImage Then
-                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4}, Image={5} WHERE AutoID={6}" _
+                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4}, Image={5}, KeySearch=N{6} WHERE AutoID={7}" _
               , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text) _
-                , Core.SQLStr(sActive), Core.SQLStr(Date.Now), Core.SQLStr(sFileName), Core.SQLStr(sID))
+                , Core.SQLStr(sActive), Core.SQLStr(DateTime.Now), Core.SQLStr(sFileName), Core.SQLStr(txtKeySearch.Text), Core.SQLStr(sID))
                     Else
-                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4} WHERE AutoID={5}" _
+                        sSql = String.Format("UPDATE News SET Title=N{0}, SubContent=N{1}, MainContent=N{2}, Active={3}, DateInput={4}, KeySearch=N{5} WHERE AutoID={6}" _
                                      , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text) _
-                                       , Core.SQLStr(sActive), Core.SQLStr(Date.Now), Core.SQLStr(sID))
+                                       , Core.SQLStr(sActive), Core.SQLStr(DateTime.Now), Core.SQLStr(txtKeySearch.Text), Core.SQLStr(sID))
                     End If
                  
                 Case Else
-                    sSql = "INSERT INTO News ( Title, SubContent, MainContent, Image, Active, DateInput)"
-                    sSql &= String.Format(" VALUES (N{0},N{1},N{2},{3},{4},{5})" _
+                    sSql = "INSERT INTO News ( Title, SubContent, MainContent, Image, Active, DateInput,KeySearch)"
+                    sSql &= String.Format(" VALUES (N{0},N{1},N{2},{3},{4},{5},N{6})" _
                                         , Core.SQLStr(txtTitle.Text), Core.SQLStr(txtSubcontent.InnerText), Core.SQLStr(txtMaincontent.Text), Core.SQLStr(sFileName) _
-                                          , Core.SQLStr(sActive), Core.SQLStr(Date.Now))
+                                          , Core.SQLStr(sActive), Core.SQLStr(DateTime.Now), Core.SQLStr(txtKeySearch.Text))
 
             End Select
 

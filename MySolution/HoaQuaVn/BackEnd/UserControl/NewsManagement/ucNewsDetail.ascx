@@ -41,22 +41,26 @@
                 <asp:Label ID="Label1" runat="server" Text="Title (Max 250 kí tự)"></asp:Label>
             </td>
 
-
+             <td colspan="2">
+                <asp:Label ID="Label2" runat="server" Text="Key Search (Max 250 kí tự)"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td colspan="2">
                 <asp:TextBox ID="txtTitle" runat="server" MaxLength="250"></asp:TextBox>
             </td>
-
+            <td colspan="2">
+                <asp:TextBox ID="txtKeySearch" runat="server" MaxLength="250"></asp:TextBox>
+            </td>
 
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="4">
                 <asp:Label ID="Label7" runat="server" Text="Mô Tả (Max 250 kí tự)"></asp:Label></td>
 
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="4">
                 <textarea ID="txtSubcontent" runat="server" style="width: 709px; height: 103px;" maxlength="250"></textarea>
             </td>
 
