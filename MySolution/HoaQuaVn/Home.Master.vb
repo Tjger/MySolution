@@ -60,6 +60,8 @@ Public Class Home
                                 lblFacebookUrl.Value = row("ItemID")
                             Case "GooglePlus"
                                 lblGooglePlusUrl.Value = row("ItemID")
+                            Case "Contacts"
+                                lblContatcFooters.Text = row("ItemID")
                         End Select
 
                     End If
@@ -106,5 +108,13 @@ Public Class Home
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim sSearch As String = TextBox1.Text
+        If sSearch.Trim <> "" Then
+            Response.Redirect("Tim-Kiem.aspx?action=s&k=" & TextBox1.Text)
+        End If
+
     End Sub
 End Class

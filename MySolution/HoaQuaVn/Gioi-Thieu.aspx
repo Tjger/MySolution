@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="news-title">Giới Thiệu</div>
     <div id="powered"></div>
-    <div style="height: 1500px;">
+    <div>
         <div class="news-image" style="height: 141px;">
             <img src="FrontEnd/image/logo.png"/>
         </div>

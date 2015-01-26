@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="height: 1500px;">
+    <div >
         <div class="news-title">Liên Hệ</div>
         <div id="powered"></div>
         <div class="location-image">

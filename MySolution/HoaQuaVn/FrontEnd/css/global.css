@@ -240,16 +240,16 @@ div .product1 img {
 /* main menu */
 #main-menu {
     float: left;
-    margin-top: -73px;
+    margin-top: 5px;
     width: 279px;
-    position: absolute;
+     border-right: 1px solid #e5e5e5;
 }
 
 #main-content {
     background-color: #fff;
     float: left;
     height: auto;
-    padding-bottom: 158px;
+    padding-bottom: 58px;
 }
 
 #main-content-detail {
@@ -258,7 +258,7 @@ div .product1 img {
 
 .title-category {
     color: white;
-    height: 60px;
+    height: auto;
 }
 
 .category-padding {
@@ -278,6 +278,7 @@ div .product1 img {
 
 .testimo {
     height: 415px;
+    margin-top: -77px;
 }
 
 .pic-comment {
@@ -293,10 +294,10 @@ div .product1 img {
 
 
 .top-pic {
-    border-left: 1px solid #e5e5e5;
-    float: right;
+    /*border-left: 1px solid #e5e5e5;*/
+    float: left;
     height: 260px;
-    width: 909px;
+    width: 900px;
 }
 
 .combo-cycle {
@@ -371,16 +372,16 @@ div .product1 img {
     }
 
 .list-combo {
-    border-left: 1px solid #e5e5e5;
+    /*border-left: 1px solid #e5e5e5;*/
     background: none repeat scroll 0 0 #fff;
-    float: right;
-    width: 909px;
+    float: left;
+    width: 900px;
     height: auto;
 }
 
 .h-combo {
     color: black;
-    float: right;
+    float: left;
     height: auto;
     width: 909px;
 }
@@ -512,7 +513,7 @@ div .product1 img {
 
 
 .combo-option {
-    float: right;
+    float: left;
     width: 909px;
 }
 
@@ -649,7 +650,7 @@ div .product1 img {
 #footer {
     background-color: white;
     float: left;
-    height: 230px;
+    height: auto;
     width: 100%;
     color: #676767;
 }
@@ -1351,7 +1352,7 @@ img, a img {
     border-radius: 50%;
     float: left;
     height: 46px;
-    line-height: 40px;
+    line-height: 35px;
     width: 46px;
     cursor: pointer;
     font-size: 50px;

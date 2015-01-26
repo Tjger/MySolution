@@ -34,10 +34,12 @@
             </div>
             <div class="form-search">
                 <!--<label for="search">Search:</label>-->
-                <input type="text" maxlength="128" class="input-text" value="" name="q" id="search" placeholder="Tìm kiếm">
-                <button class="button button-search" title="Search" type="submit">
+                <asp:TextBox CssClass="input-text" ID="TextBox1" runat="server" MaxLength="128"></asp:TextBox>
+                <%--                <input type="text" maxlength="128" class="input-text" value="" name="q" id="search" placeholder="Tìm kiếm">--%>
+                <asp:Button CssClass="button-search" ID="Button1" runat="server" Text="" />
+                <%--<button class="button button-search" title="Search" type="submit">
                     <!--<span><span>Search</span></span> -->
-                </button>
+                </button>--%>
                 <div class="search-autocomplete" id="search_autocomplete" style="display: none;"></div>
 
             </div>
@@ -48,8 +50,10 @@
                     <ul>
                         <li><a href="Index.aspx">Trang chủ</a></li>
                         <li><a href="Gioi-Thieu.aspx">Giới thiệu</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Quy Định</a></li>
                         <li><a href="Tin-Tuc.aspx">Tin Tức</a></li>
                         <li><a href="Lien-He.aspx">Liên hệ</a></li>
+
                         <li>
                             <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
                                 <Items>
@@ -57,8 +61,9 @@
                                 </Items>
                             </asp:Menu>
                         </li>
+
                     </ul>
-                                         
+
                 </div>
                 <div class="social-icons">
                     <div class="social-icon social-email"><a id="EmailHoaQuaVn" href="mailto:hoaquavietnam168@gmail.com" target="_self" data-original-title="Email">Email</a></div>
@@ -68,9 +73,9 @@
                     <div class="social-icon social-googleplus"><a id="GoogleHoaQuaVn" href="https://plus.google.com/u/0/105098412418458851173/posts" target="_blank" data-original-title="googleplus">Google+</a></div>
                 </div>
             </div>
+
         </div>
-        <div id="wraper">
-        </div>
+
         <div id="page-slider">
             <div id="slider1_container" style="position: relative; width: 1920px; height: 500px; overflow: hidden;">
                 <style>
@@ -194,34 +199,32 @@
         </div>
         <div id="wraper">
 
-            <div id="main-menu">
 
-                <div class="title-category">
-                    <!-- <div class="category-padding">Đặc tính</div> -->
-                    <div id="menu5">
-                    </div>
-                    <div class="testimo">
-                        <div class="pic-comment">
-                            <img class="img-circle" src="FrontEnd/image/award.png">
-                        </div>
-                    </div>
-                    <div class="bg-testimo">
-                        <h4>Business hours</h4>
-                        <span>Monday - Sunday</span>
-                        <strong>08:00 Am - 10:00 Pm</strong>
-                    </div>
-                    <div class="bg-testimo">
-                        <h4>Call for support</h4>
-                        <span>0914.081.180</span>
-                    </div>
-                    <div class="empty">
-                        <div class="topseller"></div>
-                        <uc2:ucTopseller ID="ucTopseller1" runat="server" />
-                    </div>
-
-                </div>
-            </div>
             <div id="main-content">
+                <div id="main-menu">
+
+                    <div class="title-category">
+                        <div class="testimo">
+                            <div class="pic-comment">
+                                <img class="img-circle" src="FrontEnd/image/award.png">
+                            </div>
+                        </div>
+                        <div class="bg-testimo">
+                            <h4>Business hours</h4>
+                            <span>Monday - Sunday</span>
+                            <strong>08:00 Am - 10:00 Pm</strong>
+                        </div>
+                        <div class="bg-testimo">
+                            <h4>Call for support</h4>
+                            <span>0914.081.180</span>
+                        </div>
+                        <div class="empty">
+                            <div class="topseller"></div>
+                            <uc2:ucTopseller ID="ucTopseller1" runat="server" />
+                        </div>
+
+                    </div>
+                </div>
                 <div class="top-pic">
                     <div class="pic-one">
                     </div>
@@ -255,22 +258,17 @@
                 <div class="infomation">
                     <div class="ft-title"><span>Quy Định Chung</span></div>
                     <ul>
-                        <li><a href="#">Chính Sách Đổi Trả Hàng</a></li>
-                        <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
-                        <li><a href="#">Phương Thức Thanh Toán</a></li>
-                        <li><a href="#">Phương Thức Vận Chuyển</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
-                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Chính Sách Đổi Trả Hàng</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Phương Thức Thanh Toán</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Phương Thức Vận Chuyển</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx">Chính Sách Bảo Hành</a></li>
                     </ul>
                 </div>
                 <div class="infomation">
                     <div class="ft-title"><span>LIÊN HỆ</span></div>
-                    <ul>
-                        <li>Hoa Quả Việt Nam</li>
-                        <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
-                        <li>ĐT: 0914.081.180</li>
-                        <li>hoaquavietnam168@gmail.com</li>
-                    </ul>
+                    <asp:Label ID="lblContatcFooters" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="infomation">
                     <div class="ft-title"><span>THÔNG TIN</span></div>
@@ -517,7 +515,7 @@
             $("#GoogleHoaQuaVn").attr("href", sUrl5);
         });
     </script>
-    
+
 </body>
 
 </html>

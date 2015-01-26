@@ -63,6 +63,8 @@ Public Class ucConfig
                             txtIntroduce.Text = row("ItemID")
                         Case "Contacts"
                             txtContact.Text = row("ItemID")
+                        Case "Role"
+                            txtRole.Text = row("ItemID")
                     End Select
 
                 End If
@@ -146,6 +148,7 @@ Public Class ucConfig
 
             SaveDB("Introduce", txtIntroduce.Text)
             SaveDB("Contacts", txtContact.Text)
+            SaveDB("Role", txtRole.Text)
             Response.Redirect("Admin.aspx")
         Catch ex As Exception
             Log.LogError(ClsName, "btnSave_Click", ex.Message)

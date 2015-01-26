@@ -383,6 +383,24 @@ Partial Public Class ucConfig
     Protected WithEvents txtContact As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
+    '''Label17 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label17 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtRole control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtRole As Global.CKEditor.NET.CKEditorControl
+
+    '''<summary>
     '''btnSave control.
     '''</summary>
     '''<remarks>

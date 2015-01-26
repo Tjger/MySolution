@@ -10,7 +10,7 @@
         <asp:CheckBoxField DataField="Hot" HeaderText="Hot" />
         <asp:BoundField DataField="ItemPrice" HeaderText="Price" />
         <asp:BoundField DataField="FromWhere" HeaderText="Xuất xứ" />
-        <asp:BoundField DataField="UnitValue" HeaderText="Đơn Vị" />
+        <asp:BoundField DataField="UnitValue" HeaderText="Key Search" />
         <asp:HyperLinkField DataNavigateUrlFields="ItemID" DataNavigateUrlFormatString="~/Admin.aspx?module=6&m=1&Id={0}" Text="View Detail" />
     </Columns>
 

@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="news-title">Tin Tức</div>
     <div id="powered"></div>
-    <div style="height: 1500px; margin-left: 15px;">
+    <div style="margin-left: 15px;">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="lblPrevs" EventName="Click" />

@@ -763,6 +763,8 @@
     <Content Include="BackEnd\js\jquery.placeholder.min.js" />
     <Content Include="BackEnd\js\modernizr.custom.63321.js" />
     <Content Include="Item.aspx" />
+    <Content Include="Quy-Dinh-Chung.aspx" />
+    <Content Include="Tim-Kiem.aspx" />
     <Content Include="Tin-Tuc.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="News.aspx" />
@@ -1028,6 +1030,20 @@
     </Compile>
     <Compile Include="Item.aspx.vb">
       <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quy-Dinh-Chung.aspx.designer.vb">
+      <DependentUpon>Quy-Dinh-Chung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quy-Dinh-Chung.aspx.vb">
+      <DependentUpon>Quy-Dinh-Chung.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tim-Kiem.aspx.designer.vb">
+      <DependentUpon>Tim-Kiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tim-Kiem.aspx.vb">
+      <DependentUpon>Tim-Kiem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Tin-Tuc.aspx.designer.vb">

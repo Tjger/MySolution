@@ -309,6 +309,24 @@
     </div>
 </div>
 
+<div class="item-info-config">
+    <div class="item-config">
+     <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label17" runat="server" Text="Quy Định Chung"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtRole" BasePath="/ckeditor/" runat="server" Width="400px" Height="310px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 <div style="margin-top: 18px; margin-left: 276px; float: left;">
     <div style="float: left;">
         <div style="float: right; margin-right: 7px;">
