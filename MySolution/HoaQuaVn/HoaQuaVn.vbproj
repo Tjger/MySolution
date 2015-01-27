@@ -151,6 +151,7 @@
     <Content Include="BackEnd\UserControl\NewsManagement\ucNews.ascx" />
     <Content Include="BackEnd\UserControl\NewsManagement\ucNewsDetail.ascx" />
     <Content Include="BackEnd\UserControl\ReceiptManagement\ucReceiptDetail.ascx" />
+    <Content Include="BackEnd\UserControl\RoleManagement\ucRole.ascx" />
     <Content Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
@@ -924,6 +925,13 @@
     </Compile>
     <Compile Include="BackEnd\UserControl\ReceiptManagement\ucReceiptDetail.ascx.vb">
       <DependentUpon>ucReceiptDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\RoleManagement\ucRole.ascx.designer.vb">
+      <DependentUpon>ucRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\UserControl\RoleManagement\ucRole.ascx.vb">
+      <DependentUpon>ucRole.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\UserControl\SeoManagement\ucSEO.ascx.designer.vb">

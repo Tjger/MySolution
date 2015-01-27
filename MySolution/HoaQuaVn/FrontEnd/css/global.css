@@ -98,9 +98,12 @@ body {
 }
 
     #page-default .page-logo, #footer .page-logo {
-        background-image: url('../image/logo.png');
-        width: 423px;
+               width: 423px;
         height: 124px;
+    }
+
+    .logo{
+        margin-top:-2px
     }
 
 .register-logo-visible {
@@ -306,7 +309,7 @@ div .product1 img {
 }
 
 .pic-one {
-    background-image: url("../image/step.png");
+
     background-size: cover;
     border-radius: 2%;
     float: left;
@@ -1201,6 +1204,7 @@ div.product-name {
      margin-left: -30px;
     margin-top: -25px;
     float: left;
+    width:500px;
 }
 
 .social-icons {
@@ -1333,7 +1337,7 @@ img, a img {
     height: 40px;
     position: relative;
     white-space: nowrap;
-    width: 120px;
+    width: 205px;
 }
 
 .nav-menu ul li {

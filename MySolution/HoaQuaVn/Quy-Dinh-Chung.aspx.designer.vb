@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Quy_Dinh_Chung
 
     '''<summary>
+    '''lblNewTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblNewTitle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''lblContents control.
     '''</summary>
     '''<remarks>

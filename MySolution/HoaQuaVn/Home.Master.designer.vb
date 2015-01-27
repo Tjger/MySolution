@@ -32,6 +32,15 @@ Partial Public Class Home
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Image4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image4 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''TextBox1 control.
     '''</summary>
     '''<remarks>
@@ -149,6 +158,15 @@ Partial Public Class Home
     Protected WithEvents ucTopseller1 As Global.HoaQuaVn.ucTopseller
 
     '''<summary>
+    '''Image6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image6 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''ScriptManager1 control.
     '''</summary>
     '''<remarks>
@@ -228,4 +246,13 @@ Partial Public Class Home
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblGooglePlusUrl As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''Image5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image5 As Global.System.Web.UI.WebControls.Image
 End Class

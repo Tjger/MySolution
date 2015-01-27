@@ -60,8 +60,11 @@ Public Class Home
                                 lblFacebookUrl.Value = row("ItemID")
                             Case "GooglePlus"
                                 lblGooglePlusUrl.Value = row("ItemID")
-                                'Case "Contacts"
-                                '    lblContatcFooters.Text = row("ItemID")
+                            Case "LogoPic"
+                                Image4.ImageUrl = row("ItemID")
+                                Image5.ImageUrl = row("ItemID")
+                            Case "PicOne"
+                                Image6.ImageUrl = row("ItemID")
                         End Select
 
                     End If
@@ -97,14 +100,34 @@ Public Class Home
             dtItem = ds.Tables("Item")
             For i As Integer = 0 To dtGroup.Rows.Count - 1
                 Dim mn As New MenuItem(dtGroup.Rows(i)("GroupName"), dtGroup.Rows(i)("GroupID"), "", "")
-                Menu1.FindItem("Sản Phẩm").ChildItems.Add(mn)
+                Menu1.FindItem("Đặc Tính Sản Phẩm").ChildItems.Add(mn)
                 Dim dr() As DataRow = dtItem.Select("GroupName=" & Core.SQLStr(dtGroup.Rows(i)("GroupName")))
                 For Each r As DataRow In dr
                     Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", "Item.aspx?action=view&id=" & r("ItemID"))
-                    Menu1.FindItem("Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
+                    Menu1.FindItem("Đặc Tính Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
                 Next
             Next
 
+            For ii As Integer = 1 To 6
+                Dim sName As String = ""
+                Select Case ii
+                    Case 1
+                        sName = "Chính Sách Đổi Trả Hàng"
+                    Case 2
+                        sName = "Hướng Dẫn Mua Hàng"
+                    Case 3
+                        sName = "Phương Thức Thanh Toán"
+                    Case 4
+                        sName = "Phương Thức Vận Chuyển"
+                    Case 5
+                        sName = "Chính Sách Bảo Mật Thông Tin"
+                    Case 6
+                        sName = "Chính Sách Bảo Hành"
+                End Select
+
+                Dim mnu As New MenuItem(sName, ii, "", "Quy-Dinh-Chung.aspx?action=view&id=" & ii)
+                Menu1.FindItem("Quy Định Chung").ChildItems.Add(mnu)
+            Next
         Catch ex As Exception
 
         End Try

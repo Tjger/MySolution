@@ -79,7 +79,7 @@
 </div>
 <br />
 
-<div style="margin-top: 18px; margin-left: 276px;">
+<div class="SaveCancel">
     <div style=" float: left; ">
         <div style="float: right; margin-right: 7px;">
             <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />

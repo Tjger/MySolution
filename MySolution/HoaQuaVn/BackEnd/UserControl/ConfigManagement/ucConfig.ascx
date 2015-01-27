@@ -48,6 +48,38 @@
             preview.src = "";
         }
     }
+
+    function previewFile4() {
+        var preview = document.querySelector('#<%=Image4.ClientID%>');
+         var file = document.querySelector('#<%=FileUpload4.ClientID%>').files[0];
+         var reader = new FileReader();
+
+         reader.onloadend = function () {
+             preview.src = reader.result;
+         }
+
+         if (file) {
+             reader.readAsDataURL(file);
+         } else {
+             preview.src = "";
+         }
+    }
+
+    function previewFile5() {
+        var preview = document.querySelector('#<%=Image5.ClientID%>');
+         var file = document.querySelector('#<%=FileUpload5.ClientID%>').files[0];
+         var reader = new FileReader();
+
+         reader.onloadend = function () {
+             preview.src = reader.result;
+         }
+
+         if (file) {
+             reader.readAsDataURL(file);
+         } else {
+             preview.src = "";
+         }
+     }
 </script>
 
 
@@ -103,6 +135,38 @@
 
                         <div>
                             <asp:FileUpload ID="FileUpload3" runat="server" onchange="previewFile3()" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <div style="height: 100px; width: 400px; margin-top: 75px;">
+                        <asp:Label ID="Label20" runat="server" Text="Logo"></asp:Label>
+                        <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+                            <asp:Image ID="Image4" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
+                        </div>
+
+                        <div>
+                            <asp:FileUpload ID="FileUpload4" runat="server" onchange="previewFile4()" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <div style="height: 100px; width: 400px; margin-top: 75px;">
+                        <asp:Label ID="Label23" runat="server" Text="Pic Top"></asp:Label>
+                        <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+                            <asp:Image ID="Image5" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
+                        </div>
+
+                        <div>
+                            <asp:FileUpload ID="FileUpload5" runat="server" onchange="previewFile5()" />
                         </div>
                     </div>
                 </td>
@@ -284,7 +348,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtIntroduce" BasePath="/ckeditor/" runat="server" Width="400px" Height="310px"></CKEditor:CKEditorControl>
+                    <CKEditor:CKEditorControl ID="txtIntroduce" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
                 </td>
             </tr>
         </table>
@@ -293,7 +357,7 @@
 
 <div class="item-info-config">
     <div class="item-config">
-     <table>
+        <table>
             <tr>
                 <td colspan="2">
 
@@ -302,32 +366,14 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtContact" BasePath="/ckeditor/" runat="server" Width="400px" Height="310px"></CKEditor:CKEditorControl>
+                    <CKEditor:CKEditorControl ID="txtContact" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
                 </td>
             </tr>
         </table>
     </div>
 </div>
 
-<div class="item-info-config">
-    <div class="item-config">
-     <table>
-            <tr>
-                <td colspan="2">
-
-                    <asp:Label ID="Label17" runat="server" Text="Quy Định Chung"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtRole" BasePath="/ckeditor/" runat="server" Width="400px" Height="310px"></CKEditor:CKEditorControl>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<div style="margin-top: 18px; margin-left: 276px; float: left;">
+<div  class="SaveCancel">
     <div style="float: left;">
         <div style="float: right; margin-right: 7px;">
             <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
