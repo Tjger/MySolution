@@ -7,12 +7,102 @@
             <tr>
                 <td colspan="2">
 
-                    <asp:Label ID="Label17" runat="server" Text="Quy Định Chung"></asp:Label>
+                    <asp:Label ID="Label12" runat="server" Text="Chính Sách Đổi Trả Hàng"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtRole" BasePath="/ckeditor/" runat="server" Width="400px" Height="310px"></CKEditor:CKEditorControl>
+                    <CKEditor:CKEditorControl ID="txtTraHang" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label1" runat="server" Text="Hướng Dẫn Mua Hàng"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtMuaHang" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label2" runat="server" Text="Phương Thức Thanh Toán"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtThanhToan" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label3" runat="server" Text="Phương Thức Vận Chuyển"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtVanChuyen" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label4" runat="server" Text="Chính Sách Bảo Mật Thông Tin"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtBaoMat" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label5" runat="server" Text="Chính Sách Bảo Hành"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtBaoHanh" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
                 </td>
             </tr>
         </table>

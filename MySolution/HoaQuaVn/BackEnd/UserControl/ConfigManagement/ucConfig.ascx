@@ -265,14 +265,14 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <asp:CheckBox ID="chkShowRegisterLogo" Text="Show Register Logo" runat="server" Checked="False" />
+                    <asp:CheckBox ID="chkShowRegisterLogo" Text="Hiển Thị Logo Bộ Công Thương" runat="server" Checked="False" />
 
                 </td>
             </tr>
             <tr>
                 <td colspan="4">
 
-                    <asp:Label ID="Label16" runat="server" Text="Register Url"></asp:Label>
+                    <asp:Label ID="Label16" runat="server" Text="Đường Dẫn Đến Bộ Công Thương"></asp:Label>
                 </td>
             </tr>
             <tr>

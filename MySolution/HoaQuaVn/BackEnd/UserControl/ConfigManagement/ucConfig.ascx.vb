@@ -63,7 +63,10 @@ Public Class ucConfig
                             txtIntroduce.Text = row("ItemID")
                         Case "Contacts"
                             txtContact.Text = row("ItemID")
-                       
+                        Case "LogoPic"
+                            Image4.ImageUrl = row("ItemID")
+                        Case "PicOne"
+                            Image5.ImageUrl = row("ItemID")
                     End Select
 
                 End If
@@ -81,9 +84,13 @@ Public Class ucConfig
             Dim bSaveImage1 As Boolean = True
             Dim bSaveImage2 As Boolean = True
             Dim bSaveImage3 As Boolean = True
+            Dim bSaveImage4 As Boolean = True
+            Dim bSaveImage5 As Boolean = True
             Dim sFileName1 As String = String.Empty
             Dim sFileName2 As String = String.Empty
             Dim sFileName3 As String = String.Empty
+            Dim sFileName4 As String = String.Empty
+            Dim sFileName5 As String = String.Empty
 
             If FileUpload1.FileName = "" Then
                 bSaveImage1 = False
@@ -117,6 +124,30 @@ Public Class ucConfig
                 FileUpload3.SaveAs(getSaveFileNameUpload(FileUpload3.FileName))
 
             End If
+
+
+            If FileUpload4.FileName = "" Then
+                bSaveImage4 = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+
+                'Dim sFileNameThums As String = String.Empty
+                sFileName4 = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload4.FileName
+                FileUpload4.SaveAs(getSaveFileNameUpload(FileUpload4.FileName))
+
+            End If
+
+
+            If FileUpload5.FileName = "" Then
+                bSaveImage5 = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+
+                'Dim sFileNameThums As String = String.Empty
+                sFileName5 = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload5.FileName
+                FileUpload5.SaveAs(getSaveFileNameUpload(FileUpload5.FileName))
+
+            End If
             If bSaveImage1 Then
                 SaveDB("ImageURL1", sFileName1)
             End If
@@ -129,6 +160,13 @@ Public Class ucConfig
                 SaveDB("ImageURL3", sFileName3)
             End If
 
+            If bSaveImage4 Then
+                SaveDB("LogoPic", sFileName4)
+            End If
+
+            If bSaveImage5 Then
+                SaveDB("PicOne", sFileName5)
+            End If
             SaveDB("TextInRed1", txtInRed1.Text)
             SaveDB("TextInRed2", txtInRed2.Text)
             SaveDB("TextInRed3", txtInRed3.Text)
@@ -174,7 +212,7 @@ Public Class ucConfig
     End Function
 
     Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Response.Redirect("Admin.aspx?module=2")
+        Response.Redirect("Admin.aspx")
     End Sub
 
 
