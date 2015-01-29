@@ -352,12 +352,12 @@ div .product1 img {
 }
 
 .description-detail {
-    font-size: 11px;
-    height: 65px;
-    margin-left: 9px;
+    font-size: 20px;
+    height: auto;
+    float:left;
     margin-top: 8px;
-    text-align: center;
-    text-transform: uppercase;
+ 
+        
 }
 
 .combo-details {
@@ -457,6 +457,17 @@ div .product1 img {
     padding-top: 18px;
 }
 
+.price-format2 {
+     color: #ee2c2c;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+    margin-top: 23px;
+   
+    width: 100%;
+}
+
 .purchase span a {
     text-decoration: none;
     color: white;
@@ -483,15 +494,13 @@ div .product1 img {
 }
 
 .combo-row-2 {
-    float: right;
+    float: left;
     width: 418px;
     margin-top: 0px;
-    height: 165px;
-    border: 1px solid #83e361;
-    border-radius: 6px;
-    margin-bottom: 5px;
-    margin-left: 42px;
-    margin-right: 12px;
+    height: auto;
+   
+   
+  
 }
 
 .combo-1 {
@@ -499,6 +508,15 @@ div .product1 img {
     font-weight: bold;
     margin-top: 14px;
     text-align: center;
+}
+
+.combo-2 {
+    color: #63ae12;
+    font-weight: bold;
+font-size:25px;
+    float: left;
+      margin-right: 12px;
+      width:100%;
 }
 
 .title-list {

@@ -6,30 +6,32 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="product-icon" style="background: none; margin-left: 17px;"></div>
-    <div class="h-combo">
+  <%--  <div class="product-icon" style="background: none; margin-left: 10px;"></div>--%>
+    <div class="h-combo" style="background: none; margin-top: 10px;">
         <div style="width: 826px;">
 
-            <div style="float: left; width: 350px; text-align: center;">
+            <div style="float: left; width: 350px; text-align: center;height: 225px;">
                 <div>
-                    <asp:Image ID="ItemImage" runat="server" Width="209px" Height="152px" />
+                    <asp:Image ID="ItemImage" runat="server" Width="209px" Height="225px" />
                 </div>
 
             </div>
 
             <div class="combo-row-2">
 
-                <div class="combo-1">
+                <div class="combo-2">
                     <span>
                         <asp:Label ID="lblComboName" runat="server" Text="Label"></asp:Label></span>
                 </div>
+
+              
 
                 <div class="description-detail">
                     <span>
                         <asp:Label ID="lblDescription" runat="server" Text="Label"></asp:Label></span>
                 </div>
 
-                <div class="price-format" style="color: #83e361;">
+                  <div class="price-format2" >
                     <span>
                         <asp:Label ID="lblPrice" runat="server" Text="Label"></asp:Label></span>
                 </div>
