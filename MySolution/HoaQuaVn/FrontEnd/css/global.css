@@ -356,7 +356,7 @@ div .product1 img {
     height: auto;
     float:left;
     margin-top: 8px;
- 
+ 	color: #777777;
         
 }
 
@@ -399,7 +399,7 @@ div .product1 img {
     background: none repeat scroll 0 0 #83e361;
     border-radius: 0 0 2px 2px;
     color: white;
-    height: 70px;
+    height: 85px;
 }
 
     .combo-price span {
@@ -489,7 +489,7 @@ div .product1 img {
     margin-left: 42px;
     margin-top: 17px;
     width: 242px;
-    height: 313px;
+    height: auto;
     margin-right: 12px;
 }
 
