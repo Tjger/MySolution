@@ -13,17 +13,17 @@
                     <div class="uc-news-row-1">
                         <div class="uc-news-uc-title">
                             <span>
-                                <a href="../../News.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "AutoID")%>">
-                                    <asp:Label ID="lblNewTitle" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Title")%>'></asp:Label></a>
+                                 <asp:HyperLink ID="hlTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Title")%>' NavigateUrl='<%#GenerateURL(DataBinder.Eval(Container.DataItem,"Title"),DataBinder.Eval(Container.DataItem,"Id"))%>'></asp:HyperLink>  
+                               
                             </span>
-
+                           
                         </div>
 
                         <div class="uc-news-image-title">
                             <asp:Image ID="NewImage" runat="server" Width="154px" Height="110px" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "Image")%>' />
                         </div>
                         <div class="uc-news-des">
-                            <asp:Label ID="lblNewDes" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "SubContent")%>'></asp:Label>
+                            <asp:Label ID="lblNewDes" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label>
 
                         </div>
                     </div>

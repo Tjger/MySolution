@@ -24,7 +24,7 @@ Public Class ucNews
         Dim ds As New DataSet
         Dim PagingDataList As New PagedDataSource()
         Try
-            sSQL = "SELECT * FROM News WHERE Active='1' ORDER BY AutoID DESC"
+            sSQL = "select AutoID as Id,Title,SubContent as Description,Image fROM News WHERE Active='1' ORDER BY AutoID DESC"
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
                 PagingDataList.DataSource = ds.Tables("LoadCombo").DefaultView()
@@ -33,7 +33,7 @@ Public Class ucNews
                 PagingDataList.CurrentPageIndex = CurrentPage
                 TotalPage = PagingDataList.PageCount
                 dtlComboList.DataSource = PagingDataList
-                dtlComboList.DataKeyField = "AutoID"
+                dtlComboList.DataKeyField = "Id"
                 dtlComboList.DataBind()
             End If
 
@@ -71,5 +71,55 @@ Public Class ucNews
         End Try
 
     End Sub
+
+
+
+    Public Shared Function GenerateURL(Title As Object, strId As Object) As String
+        Dim strTitle As String = Title.ToString()
+
+       
+        strTitle = strTitle.Trim()
+
+
+        strTitle = strTitle.Trim("-"c)
+
+        strTitle = strTitle.ToLower()
+        Dim chars As Char() = "$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray()
+        strTitle = strTitle.Replace("c#", "C-Sharp")
+        strTitle = strTitle.Replace("vb.net", "VB-Net")
+        strTitle = strTitle.Replace("asp.net", "Asp-Net")
+
+
+        strTitle = strTitle.Replace(".", "-")
+
+        For i As Integer = 0 To chars.Length - 1
+            Dim strChar As String = chars.GetValue(i).ToString()
+            If strTitle.Contains(strChar) Then
+                strTitle = strTitle.Replace(strChar, String.Empty)
+            End If
+        Next
+
+
+        strTitle = strTitle.Replace(" ", "-")
+
+
+        strTitle = strTitle.Replace("--", "-")
+        strTitle = strTitle.Replace("---", "-")
+        strTitle = strTitle.Replace("----", "-")
+        strTitle = strTitle.Replace("-----", "-")
+        strTitle = strTitle.Replace("----", "-")
+        strTitle = strTitle.Replace("---", "-")
+        strTitle = strTitle.Replace("--", "-")
+
+    
+        strTitle = strTitle.Trim()
+
+
+        strTitle = strTitle.Trim("-"c)
+     
+        strTitle = (Convert.ToString("~/Tin-Tuc/") & strTitle) & "-" & strId & ".aspx"
+
+        Return strTitle
+    End Function
 
 End Class
