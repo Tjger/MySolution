@@ -514,6 +514,8 @@
     <Content Include="ckeditor\skins\v2\skin.js" />
     <Content Include="ckeditor\skins\v2\templates.css" />
     <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="Dll\Intelligencia.UrlRewriter.dll" />
+    <Content Include="Dll\Intelligencia.UrlRewriter.xml" />
     <Content Include="FrontEnd\image\award.png" />
     <Content Include="FrontEnd\image\back-dice-02.jpg" />
     <Content Include="FrontEnd\image\back-dice.png" />
@@ -800,6 +802,7 @@
     <Content Include="FrontEnd\UserControl\Capcha\GetImgText.ashx" />
     <Content Include="FrontEnd\image\step.psd" />
     <Content Include="FrontEnd\image\text-list.psd" />
+    <Content Include="Dll\Intelligencia.UrlRewriter.dll.refresh" />
     <None Include="My Project\PublishProfiles\Publish.pubxml" />
     <None Include="My Project\PublishProfiles\Tj.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
