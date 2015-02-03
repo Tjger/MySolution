@@ -10,7 +10,7 @@ Public Class ucNews
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
             If Request.QueryString.Count > 0 Then
-                sID = Request.QueryString("MyTitleId")
+                sID = Request.QueryString("id")
 
 
             End If

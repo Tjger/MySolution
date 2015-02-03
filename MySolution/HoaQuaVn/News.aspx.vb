@@ -8,9 +8,9 @@ Public Class News
         If Not IsPostBack Then
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
-            If Request.QueryString.Count > 0 Then
-                sID = Request.QueryString("id")
-            End If
+
+            sID = Request.QueryString("MyTitleId")
+
             LoadComboDetail()
         End If
     End Sub
