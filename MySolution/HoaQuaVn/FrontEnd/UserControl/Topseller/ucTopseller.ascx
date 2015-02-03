@@ -6,7 +6,7 @@
             <div class="powered1 bestseller">Hot</div>
             <div class="best-title-text">
                 <span>
-                    <a href="../../Item.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                    <a href='<%#GenerateURL(DataBinder.Eval(Container.DataItem, "ItemName"))%>'>
                         <asp:Label ID="lblItemName" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a>
                 </span>
 

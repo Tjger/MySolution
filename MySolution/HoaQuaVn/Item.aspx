@@ -122,7 +122,7 @@
                         </div>
                         <div class="comboname ">
                             <span>
-                                <a href="../../Item.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                                <a href='<%#GenerateURL(DataBinder.Eval(Container.DataItem, "ItemName"))%>'>
                                     <asp:Label ID="lblItemNameRelative" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a></span>
                         </div>
                     </div>

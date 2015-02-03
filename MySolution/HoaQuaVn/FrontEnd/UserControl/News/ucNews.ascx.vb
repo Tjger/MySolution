@@ -74,10 +74,10 @@ Public Class ucNews
 
 
 
-    Public Shared Function GenerateURL(Title As Object, strId As Object) As String
+    Public Shared Function GenerateURL(Title As Object) As String
         Dim strTitle As String = Title.ToString()
 
-       
+
         strTitle = strTitle.Trim()
 
 
@@ -111,13 +111,13 @@ Public Class ucNews
         strTitle = strTitle.Replace("---", "-")
         strTitle = strTitle.Replace("--", "-")
 
-    
+
         strTitle = strTitle.Trim()
 
 
         strTitle = strTitle.Trim("-"c)
-     
-        strTitle = (Convert.ToString("~/Tin-Tuc/") & strTitle) & "-" & strId & ".aspx"
+
+        strTitle = (Convert.ToString("~/Tin-Tuc/") & strTitle) & ".aspx"
 
         Return strTitle
     End Function

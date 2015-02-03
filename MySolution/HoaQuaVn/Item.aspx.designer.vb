@@ -59,6 +59,15 @@ Partial Public Class Item
     Protected WithEvents lblItemList As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''UpdatePanel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''txtGuestName control.
     '''</summary>
     '''<remarks>

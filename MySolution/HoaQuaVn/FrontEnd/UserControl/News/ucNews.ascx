@@ -12,7 +12,7 @@
                     <div class="uc-news-row-1">
                         <div class="uc-news-uc-title">
                             <span>
-                                 <asp:HyperLink ID="hlTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Title")%>' NavigateUrl= '<%#GenerateURL(DataBinder.Eval(Container.DataItem,"Title"),DataBinder.Eval(Container.DataItem,"Id"))%>'></asp:HyperLink>  
+                                 <asp:HyperLink ID="hlTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Title")%>' NavigateUrl= '<%#GenerateURL(DataBinder.Eval(Container.DataItem, "Title"))%>'></asp:HyperLink>  
                                
                             </span>
                            
