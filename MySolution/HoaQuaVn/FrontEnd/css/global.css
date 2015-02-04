@@ -94,7 +94,7 @@ body {
     height: 150px;
     margin: 0 auto;
     padding-top: 0;
-    width: 1350px;
+    width: 1260px;
 }
 
     #page-default .page-logo, #footer .page-logo {
@@ -142,7 +142,7 @@ body {
 
     margin-top: -7px;
     padding-top: 2px;
-    width: 1350px;
+    width: 1260px;
 }
 /*  Slider */
 #page-slider {
@@ -288,8 +288,8 @@ div .product1 img {
 
 .pic-comment {
     float: left;
-    height: 103px;
-    width: 116px;
+    height: 402px;
+    width: 280px;
     float: left;
 }
 
@@ -543,58 +543,6 @@ font-size:25px;
 .combo-collection {
     width: 454px;
     float: left;
-}
-
-.c1 {
-    background-image: url("../image/combo/01.jpg");
-}
-
-.c2 {
-    background-image: url("../image/combo/02.jpg");
-}
-
-.c3 {
-    background-image: url("../image/combo/03.jpg");
-}
-
-.c4 {
-    background-image: url("../image/combo/04.jpg");
-}
-
-.c5 {
-    background-image: url("../image/combo/05.jpg");
-}
-
-.c6 {
-    background-image: url("../image/combo/06.jpg");
-}
-
-.c7 {
-    background-image: url("../image/combo/07.jpg");
-}
-
-.c8 {
-    background-image: url("../image/combo/08.jpg");
-}
-
-.c9 {
-    background-image: url("../image/combo/09.jpg");
-}
-
-.c10 {
-    background-image: url("../image/combo/10.jpg");
-}
-
-.c11 {
-    background-image: url("../image/combo/11.jpg");
-}
-
-.c12 {
-    background-image: url("../image/combo/12.jpg");
-}
-
-.special {
-    background-image: url("../image/special.png");
 }
 
 .imagecombo {

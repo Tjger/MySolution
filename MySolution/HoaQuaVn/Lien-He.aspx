@@ -6,9 +6,7 @@
     <div >
         <div class="news-title">Liên Hệ</div>
         <div id="powered"></div>
-<%--        <div class="location-image">
-            <img src="FrontEnd/image/combo/location.jpg" />
-        </div>--%>
+
          <div class="news-body">
              <asp:Label ID="lblContents" runat="server" Text="Label"></asp:Label>
            

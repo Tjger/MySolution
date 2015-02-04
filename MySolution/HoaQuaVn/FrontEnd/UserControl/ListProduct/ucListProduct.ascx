@@ -15,7 +15,7 @@
                 <div class="image-combo">
                     <asp:Image ID="NewImage" CssClass="image-padding" Width="108px" Height="80px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ComboImageURL")%>' />
                     
-                     <%--<img class="image-padding" src="FrontEnd/image/combo/c11.png" />--%>
+                    
                 </div>
                 <div class="text-description">
                     <span>
@@ -26,7 +26,7 @@
                     
                 </div>--%>
                 <div class="purchase">
-                    <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/Combo/")%>'>Chi Tiết</a></span></div>
+                    <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/combo/")%>'>Chi Tiết</a></span></div>
                 </div>
                 <div class="combo-price">
                     <div class="price-format">

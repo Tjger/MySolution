@@ -20,7 +20,7 @@
                             <div class="news-row-1">
                                 <div class="news-uc-title">
                                     <span>
-                                        <a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "Title"), DataBinder.Eval(Container.DataItem, "Id"), "/Tin-Tuc/")%>'>
+                                        <a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "Title"), DataBinder.Eval(Container.DataItem, "Id"), "/tin-tuc/")%>'>
                                             <asp:Label ID="lblNewTitle" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Title")%>'></asp:Label></a>
                                     </span>
 

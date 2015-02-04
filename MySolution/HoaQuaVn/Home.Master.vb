@@ -113,7 +113,7 @@ Public Class Home
                 Menu2.FindItem("Đặc Tính Sản Phẩm").ChildItems.Add(mn)
                 Dim dr() As DataRow = dtItem.Select("GroupName=" & Core.SQLStr(dtGroup.Rows(i)("GroupName")))
                 For Each r As DataRow In dr
-                    Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", Core.GenerateURL(r("ItemName"), r("ItemID"), "/San-Pham/"))
+                    Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", Core.GenerateURL(r("ItemName"), r("ItemID"), "/san-pham/"))
                     Menu2.FindItem("Đặc Tính Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
                 Next
             Next
@@ -135,7 +135,7 @@ Public Class Home
                         sName = "Chính Sách Bảo Hành"
                 End Select
 
-                Dim mnu As New MenuItem(sName, ii, "", Core.GenerateURL(sName, ii, "/Quy-Dinh-Chung/"))
+                Dim mnu As New MenuItem(sName, ii, "", Core.GenerateURL(sName, ii, "/quy-dinh-chung/"))
                 Menu1.FindItem("Quy Định Chung").ChildItems.Add(mnu)
             Next
         Catch ex As Exception

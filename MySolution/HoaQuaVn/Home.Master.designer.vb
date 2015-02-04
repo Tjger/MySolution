@@ -158,6 +158,15 @@ Partial Public Class Home
     Protected WithEvents txtInWhite3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Image8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image8 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''ucTopseller1 control.
     '''</summary>
     '''<remarks>

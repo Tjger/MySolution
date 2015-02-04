@@ -50,10 +50,10 @@
                 <div class="iconhome"></div>
                 <div class="menu-pađing" id="navmenu">
                     <ul>
-                        <li><a href="/Home/">Trang chủ</a></li>
-                        <li><a href="/Gioi-Thieu/">Giới thiệu</a></li>
-                        <li><a href="/Tin-Tuc/">Tin Tức</a></li>
-                        <li style="margin-left: -15px;"><a href="/Lien-He/">Liên hệ</a></li>
+                        <li><a href="/home/">Trang chủ</a></li>
+                        <li><a href="/gioi-thieu/">Giới thiệu</a></li>
+                        <li><a href="/tin-tuc/">Tin Tức</a></li>
+                        <li style="margin-left: -15px;"><a href="/lien-he/">Liên hệ</a></li>
                         <li>
                             <asp:Menu ID="Menu2" CssClass="sub-menu2" runat="server" Orientation="Horizontal">
                                 <Items>
@@ -223,7 +223,8 @@
                     <div class="title-category">
                         <div class="testimo">
                             <div class="pic-comment">
-                                <img class="img-circle" src="FrontEnd/image/award.png">
+                                <asp:Image ID="Image8" CssClass="img-circle" runat="server" ImageUrl="~/FrontEnd/image/award.png" />
+                             <%--   <img class="img-circle" src="FrontEnd/image/award.png"/>--%>
                             </div>
                         </div>
                         <div class="bg-testimo">
@@ -278,12 +279,12 @@
                 <div class="infomation">
                     <div class="ft-title"><span>Quy Định Chung</span></div>
                     <ul>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=1">Chính Sách Đổi Trả Hàng</a></li>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=2">Hướng Dẫn Mua Hàng</a></li>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=3">Phương Thức Thanh Toán</a></li>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=4">Phương Thức Vận Chuyển</a></li>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=5">Chính Sách Bảo Mật Thông Tin</a></li>
-                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=6">Chính Sách Bảo Hành</a></li>
+                        <li><a href="/quy-dinh-chung/chính-sách-đổi-trả-hàng-1">Chính Sách Đổi Trả Hàng</a></li>
+                        <li><a href="/quy-dinh-chung/hướng-dẫn-mua-hàng-2">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="/quy-dinh-chung/phương-thức-thanh-toán-3">Phương Thức Thanh Toán</a></li>
+                        <li><a href="/quy-dinh-chung/phương-thức-vận-chuyển-4">Phương Thức Vận Chuyển</a></li>
+                        <li><a href="/quy-dinh-chung/chính-sách-bảo-mật-thông-tin-5">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="/quy-dinh-chung/chính-sách-bảo-hành-6">Chính Sách Bảo Hành</a></li>
                     </ul>
                 </div>
                 <div class="infomation">
@@ -299,9 +300,9 @@
                 <div class="infomation">
                     <div class="ft-title"><span>THÔNG TIN</span></div>
                     <ul>
-                        <li><a href="/Home/">Trang chủ</a></li>
-                        <li><a href="/Gioi-Thieu/">Giới thiệu</a></li>
-                        <li><a href="/Tin-Tuc/">Tin tức</a></li>
+                        <li><a href="/home/">Trang chủ</a></li>
+                        <li><a href="/gioi-thieu/">Giới thiệu</a></li>
+                        <li><a href="/tin-tuc/">Tin tức</a></li>
                     </ul>
                 </div>
                 <div id="Register-Div">

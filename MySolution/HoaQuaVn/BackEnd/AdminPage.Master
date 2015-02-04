@@ -24,7 +24,7 @@
     <header>
         <div class="headerwrapper">
             <div class="header-left">
-                <a href="index.aspx" class="logo">
+                <a href="/home/" class="logo">
                     <img src="FrontEnd/image/logo-small.png" alt="" />
                 </a>
                 <div class="pull-right">
