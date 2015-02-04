@@ -91,7 +91,7 @@ Public Class ucListProduct
 
         strTitle = strTitle.Trim("-"c)
 
-        strTitle = (Convert.ToString("~/Combo/") & strTitle) & ".aspx"
+        strTitle = (Convert.ToString("/Combo/") & strTitle) & ".aspx"
 
         Return strTitle
     End Function

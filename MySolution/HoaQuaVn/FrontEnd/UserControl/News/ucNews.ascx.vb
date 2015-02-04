@@ -74,7 +74,7 @@ Public Class ucNews
 
 
 
-    Public Shared Function GenerateURL(Title As Object) As String
+   Public Shared Function GenerateURL(Title As Object) As String
         Dim strTitle As String = Title.ToString()
 
 

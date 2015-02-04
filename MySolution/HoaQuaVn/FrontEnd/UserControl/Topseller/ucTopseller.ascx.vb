@@ -69,7 +69,7 @@ Public Class ucTopseller
 
         strTitle = strTitle.Trim("-"c)
 
-        strTitle = (Convert.ToString("~/San-Pham/") & strTitle) & ".aspx"
+        strTitle = (Convert.ToString("/San-Pham/") & strTitle) & ".aspx"
 
         Return strTitle
     End Function
