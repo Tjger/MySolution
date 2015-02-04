@@ -118,11 +118,11 @@
                 <ItemTemplate>
                     <div class="box combo-cycle">
                         <div class="imagecombo">
-                            <asp:Image ID="NewImageRelative" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
+                            <asp:Image ID="NewImageRelative" Width="168px" Height="128px" runat="server" ImageUrl=' <%# DataBinder.Eval(Container.DataItem, "ItemImageURL")%>' />
                         </div>
                         <div class="comboname ">
                             <span>
-                                <a href='<%#GenerateURL(DataBinder.Eval(Container.DataItem, "ItemName"))%>'>
+                                <a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ItemName"), DataBinder.Eval(Container.DataItem, "ItemID"), "/San-Pham/")%>'>
                                     <asp:Label ID="lblItemNameRelative" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a></span>
                         </div>
                     </div>

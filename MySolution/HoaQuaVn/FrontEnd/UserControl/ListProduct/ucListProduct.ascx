@@ -26,7 +26,7 @@
                     
                 </div>--%>
                 <div class="purchase">
-                    <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"))%>'>Chi Tiết</a></span></div>
+                    <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/Combo/")%>'>Chi Tiết</a></span></div>
                 </div>
                 <div class="combo-price">
                     <div class="price-format">

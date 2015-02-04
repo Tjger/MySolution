@@ -19,7 +19,7 @@ Public Class List_News
         Dim ds As New DataSet
         Dim PagingDataList As New PagedDataSource()
         Try
-            sSQL = "SELECT * FROM News WHERE Active='1' ORDER BY AutoID DESC"
+            sSQL = "select AutoID as Id,Title,SubContent as Description,Image fROM News WHERE Active='1' ORDER BY AutoID DESC"
             Var.DBAMain.FillDataset(sSQL, ds, "LoadCombo")
             If ds.Tables("LoadCombo").Rows.Count > 0 Then
                 PagingDataList.DataSource = ds.Tables("LoadCombo").DefaultView()
@@ -28,7 +28,7 @@ Public Class List_News
                 PagingDataList.CurrentPageIndex = CurrentPage
                 TotalPage = PagingDataList.PageCount
                 dtlComboList.DataSource = PagingDataList
-                dtlComboList.DataKeyField = "AutoID"
+                dtlComboList.DataKeyField = "Id"
                 dtlComboList.DataBind()
             End If
 

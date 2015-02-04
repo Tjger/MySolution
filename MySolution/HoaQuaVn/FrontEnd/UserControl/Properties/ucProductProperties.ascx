@@ -15,7 +15,7 @@
                         </div>
                         <div class="comboname ">
                             <span>
-                                <a href="../../Item.aspx?action=view&id=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                                <a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ItemName"), DataBinder.Eval(Container.DataItem, "ItemID"), "/San-Pham/")%>'>
                                     <asp:Label ID="lblItemName" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a></span>
                         </div>
                     </div>

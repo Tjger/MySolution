@@ -10,7 +10,7 @@ Public Class Quy_Dinh_Chung
                 Core.InitAppSettingForDBA()
                 Var.DBAMain = New Common.DBA()
                 If Request.QueryString.Count > 0 Then
-                    sID = Request.QueryString("id")
+                    sID = Request.QueryString("MyTitleId")
                 End If
                 LoadItemInfo()
 

@@ -59,6 +59,15 @@ Partial Public Class Home
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Menu2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Menu2 As Global.System.Web.UI.WebControls.Menu
+
+    '''<summary>
     '''Menu1 control.
     '''</summary>
     '''<remarks>
@@ -255,4 +264,22 @@ Partial Public Class Home
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Image5 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''lblContatcFooter control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblContatcFooter As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Image7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image7 As Global.System.Web.UI.WebControls.Image
 End Class

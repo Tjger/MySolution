@@ -50,18 +50,31 @@
                 <div class="iconhome"></div>
                 <div class="menu-pađing" id="navmenu">
                     <ul>
-                        <li><a href="Index.aspx">Trang chủ</a></li>
-                        <li><a href="Gioi-Thieu.aspx">Giới thiệu</a></li>
-                        <li><a href="Tin-Tuc.aspx">Tin Tức</a></li>
-                        <li><a href="Lien-He.aspx">Liên hệ</a></li>
+                        <li><a href="/Home/">Trang chủ</a></li>
+                        <li><a href="/Gioi-Thieu/">Giới thiệu</a></li>
+                        <li><a href="/Tin-Tuc/">Tin Tức</a></li>
+                        <li style="margin-left: -15px;"><a href="/Lien-He/">Liên hệ</a></li>
+                        <li>
+                            <asp:Menu ID="Menu2" CssClass="sub-menu2" runat="server" Orientation="Horizontal">
+                                <Items>
+
+                                    <asp:MenuItem Text="Đặc Tính Sản Phẩm"></asp:MenuItem>
+
+
+                                </Items>
+                            </asp:Menu>
+                        </li>
+
 
                         <li>
-                            <asp:Menu ID="Menu1" CssClass="sub-menu" runat="server" Orientation="Horizontal">
+                            <asp:Menu ID="Menu1" CssClass="sub-menu1" runat="server" Orientation="Horizontal">
                                 <Items>
-                                    <asp:MenuItem Text="Đặc Tính Sản Phẩm"></asp:MenuItem>
-                                     <asp:MenuItem Text="Quy Định Chung"></asp:MenuItem>
-                                    
-                                   
+                                    <%-- <asp:MenuItem Text="Trang chủ" NavigateUrl="Index.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Giới thiệu" NavigateUrl="Gioi-Thieu.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Tin Tức" NavigateUrl="Tin-Tuc.aspx"></asp:MenuItem>--%>
+
+                                    <asp:MenuItem Text="Quy Định Chung"></asp:MenuItem>
+                                    <%--<asp:MenuItem Text="Liên hệ" NavigateUrl="Lien-He.aspx"></asp:MenuItem>--%>
                                 </Items>
                             </asp:Menu>
                         </li>
@@ -262,44 +275,44 @@
                     <asp:Image ID="Image5" CssClass="logo" Height="119px" Width="423px" runat="server" ImageUrl="~/FrontEnd/image/logo.png" />
 
                 </div>
-            <div class="infomation">
-                <div class="ft-title"><span>Quy Định Chung</span></div>
-                <ul>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=1">Chính Sách Đổi Trả Hàng</a></li>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=2">Hướng Dẫn Mua Hàng</a></li>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=3">Phương Thức Thanh Toán</a></li>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=4">Phương Thức Vận Chuyển</a></li>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=5">Chính Sách Bảo Mật Thông Tin</a></li>
-                    <li><a href="Quy-Dinh-Chung.aspx?action=view&id=6">Chính Sách Bảo Hành</a></li>
-                </ul>
-            </div>
-            <div class="infomation">
-                <div class="ft-title"><span>LIÊN HỆ</span></div>
-                <ul>
-                    <li>Hoa Quả Việt Nam</li>
-                    <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
-                    <li>ĐT: 0914.081.180</li>
-                    <li>hoaquavietnam168@gmail.com</li>
-                </ul>
-                <%-- <asp:Label ID="lblContatcFooters" runat="server" Text=""></asp:Label>--%>
-            </div>
-            <div class="infomation">
-                <div class="ft-title"><span>THÔNG TIN</span></div>
-                <ul>
-                    <li><a href="Index.aspx">Trang chủ</a></li>
-                    <li><a href="Gioi-Thieu.aspx">Giới thiệu</a></li>
-                    <li><a href="Tin-Tuc.aspx">Tin tức</a></li>
-                </ul>
-            </div>
-            <div id="Register-Div">
+                <div class="infomation">
+                    <div class="ft-title"><span>Quy Định Chung</span></div>
+                    <ul>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=1">Chính Sách Đổi Trả Hàng</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=2">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=3">Phương Thức Thanh Toán</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=4">Phương Thức Vận Chuyển</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=5">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="Quy-Dinh-Chung.aspx?MyTitleId=6">Chính Sách Bảo Hành</a></li>
+                    </ul>
+                </div>
+                <div class="infomation">
+                    <div class="ft-title"><span>LIÊN HỆ</span></div>
+                   <%-- <ul>
+                        <li>Hoa Quả Việt Nam</li>
+                        <li>124 Thanh Bình - Hà Đông - Hà Nội.</li>
+                        <li>ĐT: 0914.081.180</li>
+                        <li>hoaquavietnam168@gmail.com</li>
+                    </ul>--%>
+                     <asp:Label ID="lblContatcFooter" runat="server" Text=""></asp:Label>
+                </div>
+                <div class="infomation">
+                    <div class="ft-title"><span>THÔNG TIN</span></div>
+                    <ul>
+                        <li><a href="/Home/">Trang chủ</a></li>
+                        <li><a href="/Gioi-Thieu/">Giới thiệu</a></li>
+                        <li><a href="/Tin-Tuc/">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div id="Register-Div">
 
-                <a id="RegisterLogoURL">
-                    <img src="FrontEnd/image/Register.png" />
-                </a>
+                    <a id="RegisterLogoURL">
+                        <asp:Image ID="Image7" CssClass="logo" Height="81px" Width="186px" runat="server" ImageUrl="~/FrontEnd/image/Register.png" />
+                    </a>
+                </div>
             </div>
         </div>
-        </div>
-       
+
         <div id="powered">
             <div class="container">
                 <div class="copyright">

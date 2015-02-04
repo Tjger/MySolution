@@ -49,7 +49,13 @@ Public Class Home
                             Case "ShowRegisterLogo"
                                 lblShowRegisterLogo.Value = row("ItemID")
                             Case "RegisterLogoURL"
-                                lblRegisterUrl.Value = row("ItemID")
+
+                                If row("ItemID").ToString.Contains("http://") Then
+                                    lblRegisterUrl.Value = row("ItemID")
+                                Else
+                                    lblRegisterUrl.Value = "http://" & row("ItemID").ToString.Trim
+                                End If
+
                             Case "Email"
                                 lblEmails.Value = "mailto:" & row("ItemID")
                             Case "Skype"
@@ -65,6 +71,10 @@ Public Class Home
                                 Image5.ImageUrl = row("ItemID")
                             Case "PicOne"
                                 Image6.ImageUrl = row("ItemID")
+                            Case "RegisterLogo"
+                                Image7.ImageUrl = row("ItemID")
+                            Case "ContactsFooter"
+                                lblContatcFooter.Text = row("ItemID")
                         End Select
 
                     End If
@@ -100,11 +110,11 @@ Public Class Home
             dtItem = ds.Tables("Item")
             For i As Integer = 0 To dtGroup.Rows.Count - 1
                 Dim mn As New MenuItem(dtGroup.Rows(i)("GroupName"), dtGroup.Rows(i)("GroupID"), "", "")
-                Menu1.FindItem("Đặc Tính Sản Phẩm").ChildItems.Add(mn)
+                Menu2.FindItem("Đặc Tính Sản Phẩm").ChildItems.Add(mn)
                 Dim dr() As DataRow = dtItem.Select("GroupName=" & Core.SQLStr(dtGroup.Rows(i)("GroupName")))
                 For Each r As DataRow In dr
-                    Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", "Item.aspx?action=view&id=" & r("ItemID"))
-                    Menu1.FindItem("Đặc Tính Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
+                    Dim mnu As New MenuItem(r("ItemName"), r("ItemID"), "", Core.GenerateURL(r("ItemName"), r("ItemID"), "/San-Pham/"))
+                    Menu2.FindItem("Đặc Tính Sản Phẩm").ChildItems.Item(i).ChildItems.Add(mnu)
                 Next
             Next
 
@@ -125,7 +135,7 @@ Public Class Home
                         sName = "Chính Sách Bảo Hành"
                 End Select
 
-                Dim mnu As New MenuItem(sName, ii, "", "Quy-Dinh-Chung.aspx?action=view&id=" & ii)
+                Dim mnu As New MenuItem(sName, ii, "", Core.GenerateURL(sName, ii, "/Quy-Dinh-Chung/"))
                 Menu1.FindItem("Quy Định Chung").ChildItems.Add(mnu)
             Next
         Catch ex As Exception

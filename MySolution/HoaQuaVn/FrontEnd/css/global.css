@@ -90,11 +90,11 @@ body {
     }
 
 #page-default {
-    background: none repeat scroll 0 0 #fff;
+        background: none repeat scroll 0 0 #fff;
     height: 150px;
     margin: 0 auto;
     padding-top: 0;
-    width: 1188px;
+    width: 1350px;
 }
 
     #page-default .page-logo, #footer .page-logo {
@@ -127,7 +127,7 @@ body {
 .nav-menu a:link, .nav-menu a:visited {
     display: block;
     color: #fff;
-    width: 120px;
+    width: 85px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -137,10 +137,12 @@ body {
 }
 
 .nav-menu {
-    background: none repeat scroll 0 0 #9cca42;
+      background: none repeat scroll 0 0 #9cca42;
     height: 58px;
+
     margin-top: -7px;
     padding-top: 2px;
+    width: 1350px;
 }
 /*  Slider */
 #page-slider {
@@ -1218,12 +1220,7 @@ div.product-name {
     margin-bottom: -10px;
 }
 
-.sub-menu {
-     margin-left: -30px;
-    margin-top: -25px;
-    float: left;
-    width:500px;
-}
+
 
 .social-icons {
     float: right;
@@ -1355,7 +1352,59 @@ img, a img {
     height: 40px;
     position: relative;
     white-space: nowrap;
-    width: 205px;
+    width: 215px;
+}
+
+#Menu1 a.popout {
+    background: none !important;
+}
+
+.sub-menu1 {
+     margin-left: 20px;
+    margin-top: -25px;
+    float: left;
+    width:1350px;
+}
+
+.sub-menu2 {
+     margin-left: -40px;
+    margin-top: -25px;
+    float: left;
+    width:1350px;
+}
+
+.sub-menu {
+     margin-left: -60px;
+    margin-top: -25px;
+    float: left;
+    width:1350px;
+}
+
+#Menu2 ul {
+    font-size: 15px;
+    list-style: outside none none;
+    padding-left: 33px;
+    text-transform: uppercase;
+    width: 80px;
+    font-weight: bold;
+    float: left;
+}
+
+#Menu2 li {
+    background: none repeat scroll 0 0 #9cca42;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    list-style: outside none none;
+    height: 40px;
+    position: relative;
+    white-space: nowrap;
+    width: 150px;
+}
+
+#Menu2 a.popout {
+    background: none !important;
 }
 
 .nav-menu ul li {
@@ -1397,6 +1446,4 @@ img, a img {
     margin-left: 37%;
 }
 
-#Menu1 a.popout {
-    background: none !important;
-}
+

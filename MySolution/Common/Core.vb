@@ -945,4 +945,52 @@ ByVal cchData As Integer) As Integer
         End Try
         Return sReturn
     End Function
+
+    Public Shared Function GenerateURL(Title As Object, strId As Object, strModule As Object) As String
+        Dim strTitle As String = Title.ToString()
+
+
+        strTitle = strTitle.Trim()
+
+
+        strTitle = strTitle.Trim("-"c)
+
+        strTitle = strTitle.ToLower()
+        Dim chars As Char() = "$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray()
+        strTitle = strTitle.Replace("c#", "C-Sharp")
+        strTitle = strTitle.Replace("vb.net", "VB-Net")
+        strTitle = strTitle.Replace("asp.net", "Asp-Net")
+
+
+        strTitle = strTitle.Replace(".", "-")
+
+        For i As Integer = 0 To chars.Length - 1
+            Dim strChar As String = chars.GetValue(i).ToString()
+            If strTitle.Contains(strChar) Then
+                strTitle = strTitle.Replace(strChar, String.Empty)
+            End If
+        Next
+
+
+        strTitle = strTitle.Replace(" ", "-")
+
+
+        strTitle = strTitle.Replace("--", "-")
+        strTitle = strTitle.Replace("---", "-")
+        strTitle = strTitle.Replace("----", "-")
+        strTitle = strTitle.Replace("-----", "-")
+        strTitle = strTitle.Replace("----", "-")
+        strTitle = strTitle.Replace("---", "-")
+        strTitle = strTitle.Replace("--", "-")
+
+
+        strTitle = strTitle.Trim()
+
+
+        strTitle = strTitle.Trim("-"c)
+
+        strTitle = (Convert.ToString(strModule) & strTitle) & "-" & strId '& ".aspx"
+
+        Return strTitle
+    End Function
 End Class

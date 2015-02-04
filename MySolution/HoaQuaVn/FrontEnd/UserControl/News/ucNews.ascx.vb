@@ -10,7 +10,7 @@ Public Class ucNews
             Core.InitAppSettingForDBA()
             Var.DBAMain = New Common.DBA(False)
             If Request.QueryString.Count > 0 Then
-                sID = Request.QueryString("id")
+                sID = Request.QueryString("MyTitleId")
 
 
             End If
@@ -73,53 +73,5 @@ Public Class ucNews
     End Sub
 
 
-
-   Public Shared Function GenerateURL(Title As Object) As String
-        Dim strTitle As String = Title.ToString()
-
-
-        strTitle = strTitle.Trim()
-
-
-        strTitle = strTitle.Trim("-"c)
-
-        strTitle = strTitle.ToLower()
-        Dim chars As Char() = "$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray()
-        strTitle = strTitle.Replace("c#", "C-Sharp")
-        strTitle = strTitle.Replace("vb.net", "VB-Net")
-        strTitle = strTitle.Replace("asp.net", "Asp-Net")
-
-
-        strTitle = strTitle.Replace(".", "-")
-
-        For i As Integer = 0 To chars.Length - 1
-            Dim strChar As String = chars.GetValue(i).ToString()
-            If strTitle.Contains(strChar) Then
-                strTitle = strTitle.Replace(strChar, String.Empty)
-            End If
-        Next
-
-
-        strTitle = strTitle.Replace(" ", "-")
-
-
-        strTitle = strTitle.Replace("--", "-")
-        strTitle = strTitle.Replace("---", "-")
-        strTitle = strTitle.Replace("----", "-")
-        strTitle = strTitle.Replace("-----", "-")
-        strTitle = strTitle.Replace("----", "-")
-        strTitle = strTitle.Replace("---", "-")
-        strTitle = strTitle.Replace("--", "-")
-
-
-        strTitle = strTitle.Trim()
-
-
-        strTitle = strTitle.Trim("-"c)
-
-        strTitle = (Convert.ToString("~/Tin-Tuc/") & strTitle) & ".aspx"
-
-        Return strTitle
-    End Function
 
 End Class

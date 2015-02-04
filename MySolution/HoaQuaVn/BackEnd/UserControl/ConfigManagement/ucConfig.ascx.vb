@@ -63,10 +63,14 @@ Public Class ucConfig
                             txtIntroduce.Text = row("ItemID")
                         Case "Contacts"
                             txtContact.Text = row("ItemID")
+                        Case "ContactsFooter"
+                            txtContactFooters.Text = row("ItemID")
                         Case "LogoPic"
                             Image4.ImageUrl = row("ItemID")
                         Case "PicOne"
                             Image5.ImageUrl = row("ItemID")
+                        Case "RegisterLogo"
+                            Image6.ImageUrl = row("ItemID")
                     End Select
 
                 End If
@@ -86,12 +90,13 @@ Public Class ucConfig
             Dim bSaveImage3 As Boolean = True
             Dim bSaveImage4 As Boolean = True
             Dim bSaveImage5 As Boolean = True
+            Dim bSaveImage6 As Boolean = True
             Dim sFileName1 As String = String.Empty
             Dim sFileName2 As String = String.Empty
             Dim sFileName3 As String = String.Empty
             Dim sFileName4 As String = String.Empty
             Dim sFileName5 As String = String.Empty
-
+            Dim sFileName6 As String = String.Empty
             If FileUpload1.FileName = "" Then
                 bSaveImage1 = False
             Else
@@ -148,6 +153,18 @@ Public Class ucConfig
                 FileUpload5.SaveAs(getSaveFileNameUpload(FileUpload5.FileName))
 
             End If
+
+            If FileUpload6.FileName = "" Then
+                bSaveImage6 = False
+            Else
+                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+
+                'Dim sFileNameThums As String = String.Empty
+                sFileName6 = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload6.FileName
+                FileUpload6.SaveAs(getSaveFileNameUpload(FileUpload6.FileName))
+
+            End If
+
             If bSaveImage1 Then
                 SaveDB("ImageURL1", sFileName1)
             End If
@@ -167,6 +184,11 @@ Public Class ucConfig
             If bSaveImage5 Then
                 SaveDB("PicOne", sFileName5)
             End If
+
+            If bSaveImage6 Then
+                SaveDB("RegisterLogo", sFileName6)
+            End If
+
             SaveDB("TextInRed1", txtInRed1.Text)
             SaveDB("TextInRed2", txtInRed2.Text)
             SaveDB("TextInRed3", txtInRed3.Text)
@@ -185,7 +207,7 @@ Public Class ucConfig
 
             SaveDB("Introduce", txtIntroduce.Text)
             SaveDB("Contacts", txtContact.Text)
-
+            SaveDB("ContactsFooter", txtContactFooters.Text)
             Response.Redirect("Admin.aspx")
         Catch ex As Exception
             Log.LogError(ClsName, "btnSave_Click", ex.Message)

@@ -293,6 +293,33 @@ Partial Public Class ucConfig
     Protected WithEvents chkShowRegisterLogo As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
+    '''Label24 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label24 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Image6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image6 As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''FileUpload6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents FileUpload6 As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
     '''Label16 control.
     '''</summary>
     '''<remarks>
@@ -435,6 +462,24 @@ Partial Public Class ucConfig
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtContact As Global.CKEditor.NET.CKEditorControl
+
+    '''<summary>
+    '''Label17 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label17 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtContactFooters control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtContactFooters As Global.CKEditor.NET.CKEditorControl
 
     '''<summary>
     '''btnSave control.

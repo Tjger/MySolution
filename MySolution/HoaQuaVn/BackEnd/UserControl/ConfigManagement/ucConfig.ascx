@@ -51,35 +51,51 @@
 
     function previewFile4() {
         var preview = document.querySelector('#<%=Image4.ClientID%>');
-         var file = document.querySelector('#<%=FileUpload4.ClientID%>').files[0];
-         var reader = new FileReader();
+        var file = document.querySelector('#<%=FileUpload4.ClientID%>').files[0];
+        var reader = new FileReader();
 
-         reader.onloadend = function () {
-             preview.src = reader.result;
-         }
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
 
-         if (file) {
-             reader.readAsDataURL(file);
-         } else {
-             preview.src = "";
-         }
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
     }
 
     function previewFile5() {
         var preview = document.querySelector('#<%=Image5.ClientID%>');
-         var file = document.querySelector('#<%=FileUpload5.ClientID%>').files[0];
-         var reader = new FileReader();
+        var file = document.querySelector('#<%=FileUpload5.ClientID%>').files[0];
+        var reader = new FileReader();
 
-         reader.onloadend = function () {
-             preview.src = reader.result;
-         }
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
 
-         if (file) {
-             reader.readAsDataURL(file);
-         } else {
-             preview.src = "";
-         }
-     }
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
+
+    function previewFile6() {
+        var preview = document.querySelector('#<%=Image6.ClientID%>');
+        var file = document.querySelector('#<%=FileUpload6.ClientID%>').files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
 </script>
 
 
@@ -272,6 +288,21 @@
             <tr>
                 <td colspan="4">
 
+                    <div style="height: 175px; width: 400px;">
+                        <asp:Label ID="Label24" runat="server" Text="Ảnh Logo Bộ Công Thương"></asp:Label>
+                        <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+                            <asp:Image ID="Image6" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
+                        </div>
+
+                        <div>
+                            <asp:FileUpload ID="FileUpload6" runat="server" onchange="previewFile6()" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+
                     <asp:Label ID="Label16" runat="server" Text="Đường Dẫn Đến Bộ Công Thương"></asp:Label>
                 </td>
             </tr>
@@ -366,14 +397,28 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtContact" BasePath="/ckeditor/" runat="server" Width="700px" Height="580px"></CKEditor:CKEditorControl>
+                    <CKEditor:CKEditorControl ID="txtContact" BasePath="/ckeditor/" runat="server" Width="700px" Height="230px"></CKEditor:CKEditorControl>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label17" runat="server" Text="Liên Hệ Footer"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtContactFooters" BasePath="/ckeditor/" runat="server" Width="700px" Height="220px"></CKEditor:CKEditorControl>
                 </td>
             </tr>
         </table>
     </div>
 </div>
 
-<div  class="SaveCancel">
+<div class="SaveCancel">
     <div style="float: left;">
         <div style="float: right; margin-right: 7px;">
             <asp:Button ID="btnSave" runat="server" Text="Save" Width="80px" />
