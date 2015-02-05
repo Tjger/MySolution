@@ -389,10 +389,10 @@
         <table>
             <tr>
                 <td>
-                    <div style="height: 180px; width: 400px;">
+                    <div style="height: 475px; width: 400px;">
                         <asp:Label ID="Label26" runat="server" Text="Image In Panel (Rộng : 280px, Dài 400px)"></asp:Label>
-                        <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
-                            <asp:Image ID="Image7" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
+                        <div style="height: 400px; width: 280px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+                            <asp:Image ID="Image7" Width="280px" Height="400px" runat="server" Style="padding: 5px;" />
                         </div>
 
                         <div>
@@ -413,7 +413,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <CKEditor:CKEditorControl ID="txtTextPanel" BasePath="/ckeditor/" runat="server" Width="700px" Height="400px"></CKEditor:CKEditorControl>
+                    <CKEditor:CKEditorControl ID="txtTextPanel" BasePath="/ckeditor/" runat="server" Width="700px" Height="200px"></CKEditor:CKEditorControl>
                 </td>
             </tr>
         </table>
