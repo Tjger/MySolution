@@ -96,6 +96,22 @@
             preview.src = "";
         }
     }
+
+    function previewFile7() {
+        var preview = document.querySelector('#<%=Image7.ClientID%>');
+        var file = document.querySelector('#<%=FileUpload7.ClientID%>').files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
 </script>
 
 
@@ -363,6 +379,42 @@
                     <asp:TextBox ID="txtGoogle" runat="server"></asp:TextBox>
                 </td>
 
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="item-info-config">
+    <div class="item-config">
+        <table>
+            <tr>
+                <td>
+                    <div style="height: 180px; width: 400px;">
+                        <asp:Label ID="Label26" runat="server" Text="Image In Panel (Rộng : 280px, Dài 400px)"></asp:Label>
+                        <div style="height: 100px; width: 400px; border: 1px solid #d3d3d3; margin-bottom: 10px;">
+                            <asp:Image ID="Image7" Width="400px" Height="100px" runat="server" Style="padding: 5px;" />
+                        </div>
+
+                        <div>
+                            <asp:FileUpload ID="FileUpload7" runat="server" onchange="previewFile7()" />
+                        </div>
+                    </div>
+                </td>
+
+
+
+
+            </tr>
+            <tr>
+                <td colspan="2">
+
+                    <asp:Label ID="Label25" runat="server" Text="Text In Panel"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <CKEditor:CKEditorControl ID="txtTextPanel" BasePath="/ckeditor/" runat="server" Width="700px" Height="400px"></CKEditor:CKEditorControl>
+                </td>
             </tr>
         </table>
     </div>

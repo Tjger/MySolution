@@ -12,7 +12,7 @@ Public Class Home
                 GetMenu()
             End If
 
-            
+
         Catch ex As Exception
             Log.LogError(ClsName, "Page_Load", ex.Message)
         End Try
@@ -75,6 +75,10 @@ Public Class Home
                                 Image7.ImageUrl = row("ItemID")
                             Case "ContactsFooter"
                                 lblContatcFooter.Text = row("ItemID")
+                            Case "PicPanel"
+                                Image8.ImageUrl = row("ItemID")
+                            Case "TextPanel"
+                                lblTextPanel.Text = row("ItemID")
                         End Select
 
                     End If
@@ -84,7 +88,7 @@ Public Class Home
 
             End If
 
-            
+
 
         Catch ex As Exception
             Log.LogError(ClsName, "LoadItemInfo", ex.Message)
@@ -146,7 +150,20 @@ Public Class Home
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim sSearch As String = TextBox1.Text
         If sSearch.Trim <> "" Then
-            Response.Redirect("/tim-kiem/key-search-" & TextBox1.Text)
+            Dim sFinal As String = ""
+            Dim sArrSearch() As String = sSearch.Split("")
+            If sArrSearch.Length > 0 Then
+                For i As Integer = 0 To sArrSearch.Length - 1
+                    If i = sArrSearch.Length - 1 Then
+                        sFinal &= sArrSearch(i)
+                    Else
+                        sFinal &= sArrSearch(i) & "-"
+                    End If
+                Next
+                Response.Redirect("/tim-kiem/key-search-" & sFinal)
+            End If
+
+
         End If
 
     End Sub

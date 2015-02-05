@@ -223,19 +223,14 @@
                     <div class="title-category">
                         <div class="testimo">
                             <div class="pic-comment">
-                                <asp:Image ID="Image8" CssClass="img-circle" runat="server" ImageUrl="~/FrontEnd/image/award.png" />
+                                <asp:Image ID="Image8" Height="400px" Width="280px" runat="server" ImageUrl="~/FrontEnd/image/award.png" />
                              <%--   <img class="img-circle" src="FrontEnd/image/award.png"/>--%>
                             </div>
                         </div>
                         <div class="bg-testimo">
-                            <h4>Business hours</h4>
-                            <span>Monday - Sunday</span>
-                            <strong>08:00 Am - 10:00 Pm</strong>
+                            <asp:Label ID="lblTextPanel" runat="server" Text=""></asp:Label>
                         </div>
-                        <div class="bg-testimo">
-                            <h4>Call for support</h4>
-                            <span>0914.081.180</span>
-                        </div>
+                       
                         <div class="empty">
                             <div class="topseller"></div>
                             <uc2:ucTopseller ID="ucTopseller1" runat="server" />

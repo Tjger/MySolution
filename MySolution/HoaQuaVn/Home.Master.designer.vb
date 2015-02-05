@@ -167,6 +167,15 @@ Partial Public Class Home
     Protected WithEvents Image8 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
+    '''lblTextPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblTextPanel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''ucTopseller1 control.
     '''</summary>
     '''<remarks>

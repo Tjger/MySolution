@@ -9,15 +9,15 @@ Public Class Global_asax
     End Sub
 
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
-        Dim CurrentURL_Path = Request.Path.ToLower()
+        'Dim CurrentURL_Path = Request.Path.ToLower()
 
-        If CurrentURL_Path.StartsWith("/news/") Then
-            CurrentURL_Path = CurrentURL_Path.Trim("/")
-            Dim NewsID As String = CurrentURL_Path.Substring(CurrentURL_Path.IndexOf("/"))
-            Dim MyContext As HttpContext
-            MyContext = HttpContext.Current
-            MyContext.RewritePath("/news.aspx?id=" + NewsID)
-        End If
+        'If CurrentURL_Path.StartsWith("/news/") Then
+        '    CurrentURL_Path = CurrentURL_Path.Trim("/")
+        '    Dim NewsID As String = CurrentURL_Path.Substring(CurrentURL_Path.IndexOf("/"))
+        '    Dim MyContext As HttpContext
+        '    MyContext = HttpContext.Current
+        '    MyContext.RewritePath("/news.aspx?id=" + NewsID)
+        'End If
 
        
     End Sub
