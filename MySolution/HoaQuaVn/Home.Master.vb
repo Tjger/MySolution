@@ -146,7 +146,7 @@ Public Class Home
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim sSearch As String = TextBox1.Text
         If sSearch.Trim <> "" Then
-            Response.Redirect("Tim-Kiem.aspx?action=s&k=" & TextBox1.Text)
+            Response.Redirect("/tim-kiem/key-search-" & TextBox1.Text)
         End If
 
     End Sub

@@ -7,7 +7,7 @@
         <asp:CheckBoxField DataField="Active" HeaderText="Active" />  
         <asp:BoundField DataField="ComboPrice" HeaderText="Price" />
         <asp:BoundField DataField="Description" HeaderText="Description" />
-        <asp:HyperLinkField DataNavigateUrlFields="ComboID" DataNavigateUrlFormatString="Admin.aspx?module=7&m=1&Id={0}" Text="View Detail" />
+        <asp:HyperLinkField DataNavigateUrlFields="ComboID" DataNavigateUrlFormatString="~/Admin.aspx?module=7&m=1&Id={0}" Text="View Detail" />
     </Columns>
 
     <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />

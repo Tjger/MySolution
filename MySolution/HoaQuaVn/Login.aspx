@@ -11,8 +11,8 @@
     <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="~/BackEnd/css/style.css" />
-    <script src="~/BackEnd/js/modernizr.custom.63321.js"></script>
+    <link rel="stylesheet" type="text/css" href="BackEnd/css/style.css" />
+    <script src="BackEnd/js/modernizr.custom.63321.js"></script>
     <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     <style>
         body {

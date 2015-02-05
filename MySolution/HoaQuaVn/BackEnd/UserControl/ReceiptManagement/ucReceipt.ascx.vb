@@ -20,7 +20,7 @@ Public Class ucReceipt
 
     Private Sub LoadReceipt()
         Try
-            Dim sSql As String = String.Format("SELECT *,'' AS StatusView FROM Receipt WHERE DATEDIFF(DAY,CONVERT(VARCHAR(10),CreatedDate,110),{0}) = 0 ORDER BY Status ", Core.SQLStr(Core.SQLDate(ReceiptCalendar.SelectedDate)))
+            Dim sSql As String = String.Format("SELECT *,'' AS StatusView FROM Receipt WHERE DATEDIFF(DAY,CONVERT(VARCHAR(10),CreatedDate,110),{0}) = 0 AND Status <> {1} ORDER BY Status ", Core.SQLStr(Core.SQLDate(ReceiptCalendar.SelectedDate)), Core.SQLStr(Var.FruiltReceiptStatus.Spam))
             Dim ds As New DataSet
    
             Var.DBAMain.FillDataset(sSql, ds, "Receipt")

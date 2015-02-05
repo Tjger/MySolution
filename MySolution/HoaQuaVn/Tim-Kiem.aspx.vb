@@ -12,7 +12,7 @@ Public Class Tim_Kiem
             Var.DBAMain = New Common.DBA(False)
 
             If Request.QueryString.Count > 0 Then
-                sKeySearch = Request.QueryString("k")
+                sKeySearch = Request.QueryString("MyTitleId")
 
             End If
 
