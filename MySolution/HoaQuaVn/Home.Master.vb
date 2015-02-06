@@ -1,4 +1,6 @@
 ﻿Imports Common
+Imports System.Security.Cryptography
+Imports System.IO
 Public Class Home
     Inherits System.Web.UI.MasterPage
     Private ClsName = "ucConfig"
@@ -151,20 +153,40 @@ Public Class Home
         Dim sSearch As String = TextBox1.Text
         If sSearch.Trim <> "" Then
             Dim sFinal As String = ""
-            Dim sArrSearch() As String = sSearch.Split("")
-            If sArrSearch.Length > 0 Then
-                For i As Integer = 0 To sArrSearch.Length - 1
-                    If i = sArrSearch.Length - 1 Then
-                        sFinal &= sArrSearch(i)
-                    Else
-                        sFinal &= sArrSearch(i) & "-"
-                    End If
-                Next
-                Response.Redirect("/tim-kiem/key-search-" & sFinal)
-            End If
+            'Dim sArrSearch() As String = sSearch.Split("")
+            'If sArrSearch.Length > 0 Then
+            '    For i As Integer = 0 To sArrSearch.Length - 1
+            '        If i = sArrSearch.Length - 1 Then
+            '            sFinal &= sArrSearch(i)
+            '        Else
+            '            sFinal &= sArrSearch(i) & "-"
+            '        End If
+            '    Next
 
-
+            'End If
+            sFinal = HttpUtility.UrlEncode(Encrypt(sSearch))
+            Response.Redirect("/tim-kiem/key-search-" & sFinal)
         End If
 
     End Sub
+
+    Private Function Encrypt(clearText As String) As String
+        Dim EncryptionKey As String = "MAKV2SPBNI99212"
+        Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(clearText)
+        Using encryptor As Aes = Aes.Create()
+            Dim pdb As New Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D, _
+             &H65, &H64, &H76, &H65, &H64, &H65, _
+             &H76})
+            encryptor.Key = pdb.GetBytes(32)
+            encryptor.IV = pdb.GetBytes(16)
+            Using ms As New MemoryStream()
+                Using cs As New CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)
+                    cs.Write(clearBytes, 0, clearBytes.Length)
+                    cs.Close()
+                End Using
+                clearText = Convert.ToBase64String(ms.ToArray())
+            End Using
+        End Using
+        Return clearText
+    End Function
 End Class
