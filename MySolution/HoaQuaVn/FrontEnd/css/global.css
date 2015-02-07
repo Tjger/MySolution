@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+.hidden-box
+{
+    display:none;
+}
 .news-image {
     height: 310px;
     margin-left: 225px;
@@ -145,7 +149,7 @@ body {
     width: 1260px;
 }
 /*  Slider */
-#page-slider {
+#page-slider, #fixbaner {
     margin-top: -33px;
     position: relative;
     z-index: -9899;

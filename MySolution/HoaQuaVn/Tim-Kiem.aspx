@@ -19,7 +19,7 @@
                             <div class="news-row-1">
                                 <div class="news-uc-title">
                                     <span>
-                                        <a href="../../<%# DataBinder.Eval(Container.DataItem, "ItemUrl")%>">
+                                        <a href="<%# DataBinder.Eval(Container.DataItem, "ItemUrl")%>">
                                             <asp:Label ID="lblNewTitle" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemName")%>'></asp:Label></a>
                                     </span>
 
