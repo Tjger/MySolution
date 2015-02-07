@@ -31,6 +31,7 @@ Public Class Home
                     If Not Core.IsDBNullOrStringEmpty(row("ComboID")) Then
                         Select Case row("ComboID")
                             Case "ImageURL1"
+                                Image9.ImageUrl = row("ItemID")
                                 Image1.ImageUrl = row("ItemID")
                             Case "ImageURL2"
                                 Image2.ImageUrl = row("ItemID")

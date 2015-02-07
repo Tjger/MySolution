@@ -9,8 +9,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <uc1:ucListProduct runat="server" ID="ucListProduct" />
 <div class="combo-option">
-    <div class="product-title" style="float: left"></div>
-    <div class="product-news" style="margin-right: 228px; float: right;"></div>
+    <div class="product-title" style="float: left">
+         <asp:Image ID="Image4" runat="server" ImageUrl="~/FrontEnd/image/properti.png" />
+    </div>
+    <div class="product-news" style="margin-right: 228px; float: right;">
+         <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/news.png" />
+    </div>
     <uc1:ucProductProperties runat="server" ID="ucProductProperties" />
     <uc1:ucNews runat="server" ID="ucNews" />
 </div>

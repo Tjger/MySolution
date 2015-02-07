@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <%--  <div class="product-icon" style="background: none; margin-left: 10px;"></div>--%>
+
     <div class="h-combo" style="background: none; margin-top: 10px;">
         <div style="width: 826px;">
 

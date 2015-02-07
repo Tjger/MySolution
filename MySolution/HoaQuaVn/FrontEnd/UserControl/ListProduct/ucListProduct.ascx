@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ucListProduct.ascx.vb" Inherits="HoaQuaVn.ucListProduct" %>
-<div class="product-icon"></div>
+<div class="product-icon">
+      <asp:Image ID="Image1" runat="server" ImageUrl="~/FrontEnd/image/product.png" />
+</div>
  <div class="h-combo">
 <asp:DataList ID="dtlComboList" runat="server" RepeatColumns="3" >
     <ItemTemplate>
@@ -21,10 +23,7 @@
                     <span>
                         <asp:Label ID="lblDescription" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "Description")%>'></asp:Label></span>
                 </div>
-<%--                <div class="combo-info">
-                    <asp:Label ID="lblItemList" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemList")%>'></asp:Label>
-                    
-                </div>--%>
+
                 <div class="purchase">
                     <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/combo/")%>'>Chi Tiết</a></span></div>
                 </div>

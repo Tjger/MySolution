@@ -437,15 +437,15 @@ div .product1 img {
     }
 
 .product-title {
-    background: url("../image/properti.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /*background: url("../image/properti.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
 }
 
 .product-icon {
-    background: url("../image/product.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /*background: url("../image/product.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
 }
 
 .product-news {
-    background: url("../image/news.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    /*background: url("../image/news.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
 }
 
 .product-title, .product-icon, .product-news {
@@ -602,6 +602,7 @@ font-size:25px;
     margin-bottom: 12px;
     margin-left: 22px;
     margin-top: 7px;
+    width:181px;
 }
 
 
