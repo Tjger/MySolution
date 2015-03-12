@@ -33,7 +33,7 @@ Public Class Combo
             End If
 
             If SaveReceipt() Then
-                Response.Redirect("Index.aspx?action=1")
+                Response.Redirect("/home/")
             End If
 
             'Dim sSubject As String = "Đơn Hàng - " & lblComboName.Text & " - " & Date.Today.ToString("dd/MM/yyyy")

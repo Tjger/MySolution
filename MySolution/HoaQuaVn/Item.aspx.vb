@@ -75,7 +75,7 @@ Public Class Item
             End If
 
             If SaveReceipt() Then
-                Response.Redirect("Index.aspx?action=1")
+                Response.Redirect("/home/")
                 'Dim myStringVariable As String = String.Empty
                 'myStringVariable = "Cảm Ơn Quý Khách, Chúng Tôi Sẽ Nhanh Chóng Liên Hệ Để Xác Nhận Đơn Hàng"
                 'ClientScript.RegisterStartupScript(Me.GetType(), "myalert", "alert('" + myStringVariable + "');", True)
