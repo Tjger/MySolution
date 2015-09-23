@@ -107,67 +107,7 @@
         <br />
         <div>
             <CKEditor:CKEditorControl ID="txtVitaminElement" BasePath="/ckeditor/" runat="server" Width="726px">
-           <%--     <table border="0" cellpadding="1" cellspacing="1" style="width: 500px;">
-	                <tbody>
-		<tr>
-			<td>
-				H&agrave;m lượng vitamin</td>
-			<td>
-				H&agrave;m lượng chất kho&aacute;ng</td>
-		</tr>
-		<tr>
-			<td>
-				<ul>
-					<li>
-						Vitamin A - 76 IU</li>
-					<li>
-						Vitamin B1 (thiamine) - 0.037mg</li>
-					<li>
-						Vitamin B2 (riboflavin) - 0.086mg</li>
-					<li>
-						Niacin - 0.785 mg</li>
-					<li>
-						Axit Folic - 24 mcg</li>
-					<li>
-						Axit Pantothenic - 0.394 mg</li>
-					<li>
-						Vitamin B6 - 0.433 mg</li>
-					<li>
-						Vitamin C - 10.3 mg</li>
-					<li>
-						Vitamin E - 0.12 mg</li>
-					<li>
-						Vitamin K - 0.6 mcg</li>
-				</ul>
-			</td>
-			<td>
-				<ul>
-					<li>
-						Kali - 422 mg</li>
-					<li>
-						Phốt pho - 26mg</li>
-					<li>
-						Ma gi&ecirc; - 32mg</li>
-					<li>
-						Canxi - 6mg</li>
-					<li>
-						Natri - 1mg</li>
-					<li>
-						Sắt - 0.31 mg</li>
-					<li>
-						Selen - 1.2 mcg</li>
-					<li>
-						Mangan - 0.319mg</li>
-					<li>
-						Đồng - 0.092 mg</li>
-					<li>
-						Kẽm - 0.18 mg</li>
-				</ul>
-			</td>
-		</tr>
-	</tbody>
-</table>--%>
-
+           
 </CKEditor:CKEditorControl>
         </div>
 
@@ -182,5 +122,5 @@
     </div>
     <div>
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
-    </div>
+    </div>   
 </div>

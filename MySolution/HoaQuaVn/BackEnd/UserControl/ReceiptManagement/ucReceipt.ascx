@@ -7,7 +7,7 @@
     <br />
 </p>
 
-<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1015px" CssClass="table" AutoGenerateColumns="False">
+<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1015px" CssClass="table" AutoGenerateColumns="False" AllowPaging="True" PageSize="15" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound" OnRowDeleting="GridView1_RowDeleting">
     <Columns>
 
         <asp:BoundField DataField="ReceiptNo" HeaderText="Receipt No" />
@@ -18,8 +18,10 @@
         <asp:BoundField DataField="Message" HeaderText="Message" />
              <asp:BoundField DataField="StatusView" HeaderText="Status" />
         <asp:HyperLinkField DataNavigateUrlFields="ReceiptNo" DataNavigateUrlFormatString="~/Admin.aspx?module=9&Id={0}" Text="View Detail" />
+         <asp:CommandField ShowDeleteButton="True" ItemStyle-Width="60"/>
     </Columns>
     <HeaderStyle BackColor="#428bca" Font-Bold="True" ForeColor="White" />
+    <PagerStyle CssClass="gridview" />
 </asp:GridView>
 
 

@@ -59,15 +59,6 @@ Public Class ucSEO
 
     End Sub
 
-    Protected Sub gvPerson_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
-        Try
-            GridView1.PageIndex = e.NewPageIndex
-            BindData()
-        Catch ex As Exception
-            Log.LogError(ClsName, "gvPerson_PageIndexChanging", ex.Message)
-        End Try
-    End Sub
-
     Protected Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs)
         Try
             If e.Row.RowType = DataControlRowType.DataRow Then
@@ -113,4 +104,14 @@ Public Class ucSEO
             Log.LogError(ClsName, "btnSave_Click", ex.Message)
         End Try
     End Sub
+
+    Protected Sub GridView1_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
+        Try
+            GridView1.PageIndex = e.NewPageIndex
+            BindData()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 End Class

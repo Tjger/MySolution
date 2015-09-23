@@ -48,7 +48,7 @@ Public Class ucGroup
 
     End Sub
 
-    Protected Sub gvPerson_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
+    Protected Sub GridView1_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
         Try
             GridView1.PageIndex = e.NewPageIndex
             BindData()
@@ -103,4 +103,5 @@ Public Class ucGroup
 
         End Try
     End Sub
+
 End Class
