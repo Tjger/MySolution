@@ -138,7 +138,7 @@
                         <asp:Label ID="lblComboRelativeItemList" runat="server" Text=' <%# DataBinder.Eval(Container.DataItem, "ItemList")%>'></asp:Label>
                     </div>--%>
                     <div class="purchase">
-                        <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/combo/")%>'>Chi Tiết</a></span></div>
+                        <div style="margin-top: -8px; font-weight: bold;"><span><a href='<%#Common.Core.GenerateURL(DataBinder.Eval(Container.DataItem, "ComboName"), DataBinder.Eval(Container.DataItem, "ComboID"), "/sanpham/")%>'>Chi Tiết</a></span></div>
                     </div>
                     <div class="combo-price">
                         <div class="price-format">

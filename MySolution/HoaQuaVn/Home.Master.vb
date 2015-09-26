@@ -166,7 +166,7 @@ Public Class Home
 
             'End If
             sFinal = HttpUtility.UrlEncode(Encrypt(sSearch))
-            Response.Redirect("/tim-kiem/key-search-" & sFinal)
+            Response.Redirect("/tim-kiem/ks-" & sFinal)
         End If
 
     End Sub
