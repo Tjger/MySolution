@@ -36,7 +36,7 @@ Public Class ucCombo
         Try
             If e.Row.RowType = DataControlRowType.DataRow Then
                 If e.Row.RowState = DataControlRowState.Normal Or e.Row.RowState = DataControlRowState.Alternate Then
-                    DirectCast(e.Row.Cells(6).Controls(0), LinkButton).Attributes("OnClick") = "return confirm('Do you want to delete?')"
+                    DirectCast(e.Row.Cells(7).Controls(0), LinkButton).Attributes("OnClick") = "return confirm('Do you want to delete?')"
                     Dim x As Integer = 1
                 End If
 

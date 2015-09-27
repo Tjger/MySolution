@@ -45,6 +45,7 @@
             <td>
                 <asp:Label ID="Label5" runat="server" Text="Price"></asp:Label>
             </td>
+            
         </tr>
         <tr>
             <td>
@@ -52,7 +53,8 @@
             </td>
             <td>
                 <asp:TextBox ID="txtItemPrice" runat="server" Width="184px"></asp:TextBox>
-            </td>
+
+            </td>          
         </tr>
     </table>
 </div>

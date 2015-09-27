@@ -88,11 +88,16 @@ Public Class ucComboDetail
             If FileUpload1.FileName = "" Then
                 bSaveImage = False
             Else
-                Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
+                Try
+                    Dim tempPath As String = System.Configuration.ConfigurationManager.AppSettings("FolderPath")
 
-                'Dim sFileNameThums As String = String.Empty
-                sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
-                FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+                    'Dim sFileNameThums As String = String.Empty
+                    sFileName = "~/" & (tempPath & Convert.ToString("Images/")) & FileUpload1.FileName
+                    FileUpload1.SaveAs(getSaveFileNameUpload(FileUpload1.FileName))
+                Catch ex As Exception
+                    Log.LogError(ClsName, "btnSave_Click", ex.Message)
+                End Try
+
 
             End If
             Select Case sMode
